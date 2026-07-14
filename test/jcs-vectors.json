@@ -1,0 +1,96 @@
+[
+  {
+    "name": "sorted-keys",
+    "input": {
+      "b": 1,
+      "a": 2,
+      "c": 3
+    },
+    "canonical": "{\"a\":2,\"b\":1,\"c\":3}"
+  },
+  {
+    "name": "nested",
+    "input": {
+      "z": {
+        "y": 2,
+        "x": 1
+      },
+      "a": [
+        3,
+        2,
+        1
+      ]
+    },
+    "canonical": "{\"a\":[3,2,1],\"z\":{\"x\":1,\"y\":2}}"
+  },
+  {
+    "name": "unicode",
+    "input": {
+      "name": "MacArthur Munford",
+      "q": "“For You”",
+      "accent": "Di Meola – café"
+    },
+    "canonical": "{\"accent\":\"Di Meola – café\",\"name\":\"MacArthur Munford\",\"q\":\"“For You”\"}"
+  },
+  {
+    "name": "types",
+    "input": {
+      "n": null,
+      "t": true,
+      "f": false,
+      "i": 17,
+      "neg": -3,
+      "arr": [
+        null,
+        true,
+        {
+          "k": "v"
+        }
+      ]
+    },
+    "canonical": "{\"arr\":[null,true,{\"k\":\"v\"}],\"f\":false,\"i\":17,\"n\":null,\"neg\":-3,\"t\":true}"
+  },
+  {
+    "name": "escapes",
+    "input": {
+      "s": "line1\nline2\ttab \"quote\" backslash"
+    },
+    "canonical": "{\"s\":\"line1\\nline2\\ttab \\\"quote\\\" backslash\"}"
+  },
+  {
+    "name": "ledger-line",
+    "input": {
+      "v": 1,
+      "seq": 17,
+      "ts": "2026-07-20T14:03:05Z",
+      "event": "seal",
+      "entry": "entry-roy-hamilton",
+      "pageHash": "abc123",
+      "credential": "credentials/entry-roy-hamilton.vc.json",
+      "credentialHash": "def456",
+      "prev": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "canonical": "{\"credential\":\"credentials/entry-roy-hamilton.vc.json\",\"credentialHash\":\"def456\",\"entry\":\"entry-roy-hamilton\",\"event\":\"seal\",\"pageHash\":\"abc123\",\"prev\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"seq\":17,\"ts\":\"2026-07-20T14:03:05Z\",\"v\":1}"
+  },
+  {
+    "name": "credential-subject",
+    "input": {
+      "id": "x#main",
+      "name": "Roy Hamilton",
+      "entry": "entry-roy-hamilton",
+      "pageHash": "aa",
+      "record": {
+        "render": true,
+        "charts": [
+          {
+            "class": "genre",
+            "chart": "Billboard R&B",
+            "peak": 1,
+            "year": 1954
+          }
+        ]
+      }
+    },
+    "canonical": "{\"entry\":\"entry-roy-hamilton\",\"id\":\"x#main\",\"name\":\"Roy Hamilton\",\"pageHash\":\"aa\",\"record\":{\"charts\":[{\"chart\":\"Billboard R&B\",\"class\":\"genre\",\"peak\":1,\"year\":1954}],\"render\":true}}"
+  }
+]

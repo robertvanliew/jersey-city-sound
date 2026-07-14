@@ -1,0 +1,1146 @@
+{
+ "entry-stans-square-records.html": {
+  "render": false,
+  "medallions": [
+   {
+    "metal": "gold",
+    "lines": [
+     "BILLBOARD",
+     "R&B LP",
+     "No. 16"
+    ],
+    "caption": "The Persuasions"
+   },
+   {
+    "metal": "broadcast",
+    "lines": [
+     "SATURDAY",
+     "NIGHT LIVE",
+     "1983"
+    ],
+    "caption": "14 Karat Soul"
+   }
+  ],
+  "note": "As producer and label owner, Krause broke The Persuasions (No. 16 R&B, 1972) and 14 Karat Soul (Saturday Night Live, 1983), pushing Jersey City street-corner harmony onto the national stage.",
+  "honors": [],
+  "charts": [
+   {
+    "class": "top40",
+    "chart": "Billboard R&B Albums",
+    "peak": 16,
+    "work": "The Persuasions, Street Corner Symphony",
+    "year": 1972,
+    "qualifier": "as producer / label owner"
+   },
+   {
+    "class": "broadcast",
+    "chart": null,
+    "peak": null,
+    "work": "14 Karat Soul on Saturday Night Live",
+    "year": 1983,
+    "qualifier": "as label owner"
+   }
+  ],
+  "citations": [
+   {
+    "n": 1,
+    "type": "classic-urban-harmony",
+    "title": "Stan Krause / Catamount Records"
+   }
+  ]
+ },
+ "entry-al-caiola.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "gold",
+    "lines": [
+     "BILLBOARD",
+     "HOT 100",
+     "No. 19"
+    ],
+    "caption": "Bonanza"
+   }
+  ],
+  "note": "Instrumental hits “Bonanza” (No. 19, 1961) and “The Magnificent Seven” (No. 38, 1961).",
+  "honors": [],
+  "charts": [
+   {
+    "class": "top40",
+    "chart": "Billboard Hot 100",
+    "peak": 19,
+    "work": "Bonanza",
+    "year": 1961,
+    "qualifier": null
+   }
+  ],
+  "citations": [
+   {
+    "n": 1,
+    "type": "billboard-chart-history",
+    "note": "capture Wayback snapshot at citation time"
+   },
+   {
+    "n": 2,
+    "type": "wikipedia",
+    "title": "Al Caiola"
+   }
+  ],
+  "hub_tier": "top40"
+ },
+ "entry-al-di-meola.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "platinum",
+    "lines": [
+     "BILLBOARD",
+     "200",
+     "No. 58"
+    ],
+    "caption": "Elegant Gypsy"
+   }
+  ],
+  "note": "The album Elegant Gypsy reached No. 58 on the Billboard 200 (1977).",
+  "honors": [
+   "RIAA Gold (Elegant Gypsy)"
+  ],
+  "charts": [
+   {
+    "class": "top40",
+    "chart": "Billboard 200",
+    "peak": 58,
+    "work": "Elegant Gypsy",
+    "year": 1977,
+    "qualifier": null
+   }
+  ],
+  "citations": [
+   {
+    "n": 1,
+    "type": "billboard-chart-history",
+    "note": "capture Wayback snapshot at citation time"
+   },
+   {
+    "n": 2,
+    "type": "wikipedia",
+    "title": "Al Di Meola"
+   }
+  ],
+  "hub_tier": "top40"
+ },
+ "entry-the-duprees.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "gold",
+    "lines": [
+     "BILLBOARD",
+     "HOT 100",
+     "No. 7"
+    ],
+    "caption": "You Belong to Me"
+   }
+  ],
+  "note": "“You Belong to Me” (No. 7, 1962), “My Own True Love” (No. 13, 1962), and “Have You Heard” (No. 18, 1963).",
+  "honors": [],
+  "charts": [
+   {
+    "class": "top40",
+    "chart": "Billboard Hot 100",
+    "peak": 7,
+    "work": "You Belong to Me",
+    "year": 1962,
+    "qualifier": null
+   }
+  ],
+  "citations": [
+   {
+    "n": 1,
+    "type": "billboard-chart-history",
+    "note": "capture Wayback snapshot at citation time"
+   },
+   {
+    "n": 2,
+    "type": "wikipedia",
+    "title": "The Duprees"
+   }
+  ],
+  "hub_tier": "top40"
+ },
+ "entry-marilyn-mccoo.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "gold",
+    "lines": [
+     "BILLBOARD",
+     "HOT 100",
+     "No. 1"
+    ],
+    "caption": "The 5th Dimension"
+   },
+   {
+    "metal": "gold",
+    "lines": [
+     "BILLBOARD",
+     "HOT 100",
+     "No. 1"
+    ],
+    "caption": "with Billy Davis Jr."
+   }
+  ],
+  "note": "Multiple Billboard Hot 100 No. 1s — “Aquarius/Let the Sunshine In” and “Wedding Bell Blues” with The 5th Dimension (1969), and “You Don't Have to Be a Star” with Billy Davis Jr. (1976).",
+  "honors": [
+   "Grammy, Record of the Year (1969, with The 5th Dimension)"
+  ],
+  "charts": [
+   {
+    "class": "no1",
+    "chart": "Billboard Hot 100",
+    "peak": 1,
+    "work": "Aquarius/Let the Sunshine In",
+    "year": 1969,
+    "qualifier": "as lead of The 5th Dimension"
+   },
+   {
+    "class": "no1",
+    "chart": "Billboard Hot 100",
+    "peak": 1,
+    "work": "You Don't Have to Be a Star",
+    "year": 1976,
+    "qualifier": "with Billy Davis Jr."
+   }
+  ],
+  "citations": [
+   {
+    "n": 1,
+    "type": "billboard-chart-history",
+    "note": "capture Wayback snapshot at citation time"
+   },
+   {
+    "n": 2,
+    "type": "wikipedia",
+    "title": "Marilyn McCoo"
+   }
+  ],
+  "hub_tier": "no1"
+ },
+ "entry-christina-milian.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "gold",
+    "lines": [
+     "BILLBOARD",
+     "HOT 100",
+     "No. 5"
+    ],
+    "caption": "Dip It Low"
+   }
+  ],
+  "note": "“Dip It Low” reached No. 5 on the Billboard Hot 100 (2004); “AM to PM” hit No. 27 (2001).",
+  "honors": [],
+  "charts": [
+   {
+    "class": "top40",
+    "chart": "Billboard Hot 100",
+    "peak": 5,
+    "work": "Dip It Low",
+    "year": 2004,
+    "qualifier": null
+   }
+  ],
+  "citations": [
+   {
+    "n": 1,
+    "type": "billboard-chart-history",
+    "note": "capture Wayback snapshot at citation time"
+   },
+   {
+    "n": 2,
+    "type": "wikipedia",
+    "title": "Christina Milian"
+   }
+  ],
+  "hub_tier": "top40"
+ },
+ "entry-nancy-sinatra.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "gold",
+    "lines": [
+     "BILLBOARD",
+     "HOT 100",
+     "No. 1"
+    ],
+    "caption": "These Boots (1966)"
+   },
+   {
+    "metal": "gold",
+    "lines": [
+     "BILLBOARD",
+     "HOT 100",
+     "No. 1"
+    ],
+    "caption": "Somethin' Stupid (1967)"
+   }
+  ],
+  "note": "Two Billboard Hot 100 No. 1 singles — “These Boots Are Made for Walkin'” (1966) and “Somethin' Stupid,” a duet with Frank Sinatra (1967).",
+  "honors": [],
+  "charts": [
+   {
+    "class": "no1",
+    "chart": "Billboard Hot 100",
+    "peak": 1,
+    "work": "These Boots Are Made for Walkin'",
+    "year": 1966,
+    "qualifier": null
+   },
+   {
+    "class": "no1",
+    "chart": "Billboard Hot 100",
+    "peak": 1,
+    "work": "Somethin' Stupid",
+    "year": 1967,
+    "qualifier": "duet with Frank Sinatra"
+   }
+  ],
+  "citations": [
+   {
+    "n": 1,
+    "type": "billboard-chart-history",
+    "note": "capture Wayback snapshot at citation time"
+   },
+   {
+    "n": 2,
+    "type": "wikipedia",
+    "title": "Nancy Sinatra"
+   }
+  ],
+  "hub_tier": "no1"
+ },
+ "entry-kool-and-the-gang.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "gold",
+    "lines": [
+     "BILLBOARD",
+     "HOT 100",
+     "No. 1"
+    ],
+    "caption": "No. 1 Pop Hit"
+   },
+   {
+    "metal": "platinum",
+    "lines": [
+     "RIAA",
+     "CERTIFIED",
+     "31×"
+    ],
+    "caption": "31× Gold & Platinum"
+   },
+   {
+    "metal": "gold",
+    "lines": [
+     "ALBUMS",
+     "SOLD",
+     "70M+"
+    ],
+    "caption": "70M+ Worldwide"
+   }
+  ],
+  "note": "“Celebration” hit No. 1 for two weeks in 1981 · 25 Top-10 R&B and 9 Top-10 pop hits.",
+  "honors": [
+   "Rock and Roll Hall of Fame, 2024"
+  ],
+  "charts": [
+   {
+    "class": "no1",
+    "chart": "Billboard Hot 100",
+    "peak": 1,
+    "work": "Celebration",
+    "year": 1981,
+    "qualifier": null
+   }
+  ],
+  "citations": [
+   {
+    "n": 1,
+    "type": "billboard-chart-history",
+    "note": "capture Wayback snapshot at citation time"
+   },
+   {
+    "n": 2,
+    "type": "wikipedia",
+    "title": "Kool & the Gang"
+   },
+   {
+    "n": 3,
+    "type": "rockhall",
+    "title": "Kool & the Gang, 2024"
+   }
+  ],
+  "hub_tier": "no1"
+ },
+ "entry-the-manhattans.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "gold",
+    "lines": [
+     "BILLBOARD",
+     "HOT 100",
+     "No. 1"
+    ],
+    "caption": "Kiss and Say Goodbye"
+   },
+   {
+    "metal": "platinum",
+    "lines": [
+     "BILLBOARD",
+     "R&B",
+     "45 HITS"
+    ],
+    "caption": "45 Charted R&B Hits"
+   }
+  ],
+  "note": "“Kiss and Say Goodbye” topped the Billboard Hot 100 (1976) and “Shining Star” reached No. 5 (1980), across 45 charted R&B hits.",
+  "honors": [
+   "Grammy, Best R&B Vocal Performance by a Duo or Group (1980)",
+   "RIAA Platinum single (Kiss and Say Goodbye)"
+  ],
+  "charts": [
+   {
+    "class": "no1",
+    "chart": "Billboard Hot 100",
+    "peak": 1,
+    "work": "Kiss and Say Goodbye",
+    "year": 1976,
+    "qualifier": null
+   }
+  ],
+  "citations": [
+   {
+    "n": 1,
+    "type": "billboard-chart-history",
+    "note": "capture Wayback snapshot at citation time"
+   },
+   {
+    "n": 2,
+    "type": "wikipedia",
+    "title": "The Manhattans"
+   }
+  ],
+  "hub_tier": "no1"
+ },
+ "entry-apache.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "gold",
+    "lines": [
+     "HOT RAP",
+     "SINGLES",
+     "No. 11"
+    ],
+    "caption": "Hot Rap Singles"
+   }
+  ],
+  "note": "“Gangsta Bitch” (Q-Tip production) reached No. 11 on Billboard's Hot Rap Singles and No. 67 on the Hot 100 (1993).",
+  "honors": [],
+  "charts": [
+   {
+    "class": "genre",
+    "chart": "Hot Rap Singles",
+    "peak": 11,
+    "work": "Gangsta Bitch",
+    "year": 1993,
+    "qualifier": null
+   }
+  ],
+  "citations": [
+   {
+    "n": 1,
+    "type": "billboard-chart-history",
+    "note": "capture Wayback snapshot at citation time"
+   },
+   {
+    "n": 2,
+    "type": "hiphopwired",
+    "note": "Jersey City birthplace; footnote HipHopDX Newark discrepancy"
+   }
+  ],
+  "hub_tier": "genre"
+ },
+ "entry-the-spellbinders.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "gold",
+    "lines": [
+     "BILLBOARD",
+     "R&B",
+     "TOP 25"
+    ],
+    "caption": "Top-25 R&B Hit"
+   }
+  ],
+  "note": "“For You” reached the Top 25 on the Billboard R&B chart (1965, Columbia Records).",
+  "honors": [],
+  "charts": [
+   {
+    "class": "top40",
+    "chart": "Billboard R&B",
+    "peak": 25,
+    "work": "For You",
+    "year": 1965,
+    "qualifier": null
+   }
+  ],
+  "citations": [
+   {
+    "n": 1,
+    "type": "manifesto",
+    "title": "Obituary of MacArthur Munford (2006)"
+   }
+  ],
+  "hub_tier": "genre"
+ },
+ "entry-macarthur-munford.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "gold",
+    "lines": [
+     "BILLBOARD",
+     "R&B",
+     "TOP 25"
+    ],
+    "caption": "Top-25 R&B Hit"
+   }
+  ],
+  "note": "With The Spellbinders, “For You” reached the Billboard R&B Top 25 (1965).",
+  "honors": [],
+  "charts": [
+   {
+    "class": "top40",
+    "chart": "Billboard R&B",
+    "peak": 25,
+    "work": "For You",
+    "year": 1965,
+    "qualifier": "with The Spellbinders"
+   }
+  ],
+  "citations": [
+   {
+    "n": 1,
+    "type": "manifesto",
+    "title": "Obituary of MacArthur Munford (2006)"
+   }
+  ],
+  "hub_tier": "genre"
+ },
+ "entry-the-persuasions.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "gold",
+    "lines": [
+     "BILLBOARD",
+     "R&B LP",
+     "No. 16"
+    ],
+    "caption": "Street Corner Symphony"
+   },
+   {
+    "metal": "platinum",
+    "lines": [
+     "BILLBOARD",
+     "200",
+     "No. 88"
+    ],
+    "caption": "Billboard 200 (1972)"
+   }
+  ],
+  "note": "Three charting albums in the early 1970s: Street Corner Symphony (No. 16 R&B / No. 88 pop, 1972), We Came to Play (No. 32 R&B, 1971), and Spread the Word (No. 40 R&B, 1972).",
+  "honors": [],
+  "charts": [
+   {
+    "class": "top40",
+    "chart": "Billboard R&B Albums",
+    "peak": 16,
+    "work": "Street Corner Symphony",
+    "year": 1972,
+    "qualifier": null
+   },
+   {
+    "class": "top40",
+    "chart": "Billboard 200",
+    "peak": 88,
+    "work": "Street Corner Symphony",
+    "year": 1972,
+    "qualifier": null
+   }
+  ],
+  "citations": [
+   {
+    "n": 1,
+    "type": "billboard-chart-history",
+    "note": "capture Wayback snapshot at citation time"
+   },
+   {
+    "n": 2,
+    "type": "wikipedia",
+    "title": "The Persuasions"
+   }
+  ],
+  "hub_tier": "top40"
+ },
+ "entry-14-karat-soul.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "broadcast",
+    "lines": [
+     "SATURDAY",
+     "NIGHT LIVE",
+     "1983"
+    ],
+    "caption": "National TV — SNL"
+   }
+  ],
+  "note": "Launched by Stan Krause on Catamount Records; performed on Saturday Night Live (1983) and became a major concert draw in Japan.",
+  "honors": [],
+  "charts": [
+   {
+    "class": "broadcast",
+    "chart": null,
+    "peak": null,
+    "work": "Saturday Night Live",
+    "year": 1983,
+    "qualifier": "national television"
+   }
+  ],
+  "citations": [
+   {
+    "n": 1,
+    "type": "classic-urban-harmony",
+    "title": "Catamount Records label history"
+   }
+  ],
+  "hub_tier": "genre"
+ },
+ "entry-pm-dawn.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "gold",
+    "lines": [
+     "BILLBOARD",
+     "HOT 100",
+     "No. 1"
+    ],
+    "caption": "Set Adrift on Memory Bliss"
+   }
+  ],
+  "charts": [
+   {
+    "class": "no1",
+    "chart": "Billboard Hot 100",
+    "peak": 1,
+    "work": "Set Adrift on Memory Bliss",
+    "year": 1991,
+    "qualifier": "first SoundScan-era No. 1"
+   }
+  ],
+  "honors": [
+   "BRIT Award, Best International Newcomer, 1992"
+  ],
+  "note": "“Set Adrift on Memory Bliss” reached No. 1 on the Billboard Hot 100 (1991), the first No. 1 of the SoundScan era.",
+  "citations": [],
+  "hub_tier": "no1"
+ },
+ "entry-dino-danelli.html": {
+  "render": false,
+  "medallions": [],
+  "charts": [
+   {
+    "class": "no1",
+    "chart": "Billboard Hot 100",
+    "peak": 1,
+    "work": "Good Lovin' / Groovin' / People Got to Be Free",
+    "year": null,
+    "qualifier": "as a member of the Rascals"
+   }
+  ],
+  "honors": [
+   "Rock and Roll Hall of Fame, 1997"
+  ],
+  "note": "Three Hot 100 No. 1s as the Rascals' drummer.",
+  "citations": []
+ },
+ "entry-joe-budden.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "platinum",
+    "lines": [
+     "BILLBOARD",
+     "200",
+     "No. 2"
+    ],
+    "caption": "with Slaughterhouse"
+   }
+  ],
+  "charts": [
+   {
+    "class": "top40",
+    "chart": "Billboard 200",
+    "peak": 2,
+    "work": "Welcome to: Our House (Slaughterhouse)",
+    "year": 2012,
+    "qualifier": "with Slaughterhouse"
+   }
+  ],
+  "honors": [],
+  "note": "Slaughterhouse's Welcome to: Our House debuted at No. 2 on the Billboard 200 (2012); “Pump It Up” reached No. 38 on the Hot 100 (2003, Grammy nominated).",
+  "citations": [],
+  "hub_tier": "top40"
+ },
+ "entry-the-jelly-beans.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "gold",
+    "lines": [
+     "BILLBOARD",
+     "HOT 100",
+     "No. 9"
+    ],
+    "caption": "I Wanna Love Him So Bad"
+   }
+  ],
+  "charts": [
+   {
+    "class": "top40",
+    "chart": "Billboard Hot 100",
+    "peak": 9,
+    "work": "I Wanna Love Him So Bad",
+    "year": 1964,
+    "qualifier": null
+   }
+  ],
+  "honors": [],
+  "note": "“I Wanna Love Him So Bad” reached No. 9 on the Billboard Hot 100 (1964).",
+  "citations": [],
+  "hub_tier": "top40"
+ },
+ "entry-ronnie-and-the-hi-lites.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "gold",
+    "lines": [
+     "BILLBOARD",
+     "HOT 100",
+     "No. 16"
+    ],
+    "caption": "I Wish That We Were Married"
+   }
+  ],
+  "charts": [
+   {
+    "class": "top40",
+    "chart": "Billboard Hot 100",
+    "peak": 16,
+    "work": "I Wish That We Were Married",
+    "year": 1962,
+    "qualifier": null
+   }
+  ],
+  "honors": [],
+  "note": "“I Wish That We Were Married” reached No. 16 on the Billboard Hot 100 (1962).",
+  "citations": [],
+  "hub_tier": "top40"
+ },
+ "entry-heather-b-gardner.html": {
+  "render": false,
+  "medallions": [],
+  "charts": [
+   {
+    "class": "genre",
+    "chart": "Hot Rap Songs",
+    "peak": null,
+    "work": "All Glocks Down",
+    "year": null,
+    "qualifier": "pull exact peak"
+   }
+  ],
+  "honors": [],
+  "note": "Also a broadcast footprint (Sway in the Morning, SiriusXM).",
+  "citations": []
+ },
+ "entry-fit-for-an-autopsy.html": {
+  "render": false,
+  "medallions": [],
+  "charts": [
+   {
+    "class": "top40",
+    "chart": "Billboard 200",
+    "peak": null,
+    "work": "recent albums",
+    "year": null,
+    "qualifier": "as of 2026; pull exact peaks"
+   }
+  ],
+  "honors": [],
+  "note": "",
+  "citations": []
+ },
+ "entry-ransom.html": {
+  "render": false,
+  "medallions": [],
+  "charts": [
+   {
+    "class": "genre",
+    "chart": "Heatseekers Albums",
+    "peak": 6,
+    "work": "album",
+    "year": 2019,
+    "qualifier": "label the chart exactly"
+   }
+  ],
+  "honors": [],
+  "note": "",
+  "citations": []
+ },
+ "entry-richie-havens.html": {
+  "render": false,
+  "medallions": [],
+  "charts": [
+   {
+    "class": "top40",
+    "chart": "Billboard Hot 100",
+    "peak": 16,
+    "work": "Here Comes the Sun",
+    "year": 1971,
+    "qualifier": "RESIDED class"
+   }
+  ],
+  "honors": [],
+  "note": "",
+  "citations": []
+ },
+ "entry-don-ciccone.html": {
+  "render": false,
+  "medallions": [],
+  "charts": [
+   {
+    "class": "no1",
+    "chart": "Billboard Hot 100",
+    "peak": 1,
+    "work": "December, 1963 (Oh, What a Night)",
+    "year": 1976,
+    "qualifier": "member of the Four Seasons; verify JC birth"
+   }
+  ],
+  "honors": [],
+  "note": "",
+  "citations": []
+ },
+ "entry-ed-shaughnessy.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "broadcast",
+    "lines": [
+     "NBC",
+     "TONIGHT",
+     "SHOW"
+    ],
+    "caption": "House drummer, 1962 to 1992"
+   }
+  ],
+  "charts": [
+   {
+    "class": "broadcast",
+    "chart": null,
+    "peak": null,
+    "work": "The Tonight Show house band",
+    "year": null,
+    "qualifier": "1962 to 1992"
+   }
+  ],
+  "honors": [],
+  "note": "House drummer of NBC's The Tonight Show from 1962 to 1992.",
+  "citations": [],
+  "hub_tier": "genre"
+ },
+ "entry-jerry-herman.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "gold",
+    "lines": [
+     "BILLBOARD",
+     "HOT 100",
+     "No. 1"
+    ],
+    "caption": "Hello, Dolly!"
+   }
+  ],
+  "charts": [
+   {
+    "class": "no1",
+    "chart": "Billboard Hot 100",
+    "peak": 1,
+    "work": "Hello, Dolly!",
+    "year": 1964,
+    "qualifier": "as songwriter (Louis Armstrong recording)"
+   }
+  ],
+  "honors": [],
+  "note": "“Hello, Dolly!,” written by Herman, reached No. 1 on the Billboard Hot 100 for Louis Armstrong (1964).",
+  "citations": [],
+  "hub_tier": "no1"
+ },
+ "entry-tommy-west.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "gold",
+    "lines": [
+     "BILLBOARD",
+     "HOT 100",
+     "No. 1"
+    ],
+    "caption": "as producer (Croce)"
+   }
+  ],
+  "charts": [
+   {
+    "class": "no1",
+    "chart": "Billboard Hot 100",
+    "peak": 1,
+    "work": "Bad, Bad Leroy Brown / Time in a Bottle",
+    "year": 1973,
+    "qualifier": "as producer (Jim Croce)"
+   }
+  ],
+  "honors": [],
+  "note": "Produced Jim Croce's Billboard Hot 100 No. 1 singles “Bad, Bad Leroy Brown” and “Time in a Bottle” (1973).",
+  "citations": [],
+  "hub_tier": "no1"
+ },
+ "entry-roy-hamilton.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "gold",
+    "lines": [
+     "BILLBOARD",
+     "R&B",
+     "No. 1"
+    ],
+    "caption": "You'll Never Walk Alone"
+   }
+  ],
+  "charts": [
+   {
+    "class": "genre",
+    "chart": "Billboard R&B",
+    "peak": 1,
+    "work": "You'll Never Walk Alone",
+    "year": 1954,
+    "qualifier": null
+   }
+  ],
+  "honors": [],
+  "note": "“You'll Never Walk Alone” spent eight weeks at No. 1 on the Billboard R&B chart (1954); “Unchained Melody” also reached No. 1 R&B (1955).",
+  "citations": [
+   {
+    "n": 1,
+    "type": "billboard-chart-history",
+    "note": "capture Wayback snapshot"
+   },
+   {
+    "n": 2,
+    "type": "wikipedia",
+    "title": "Roy Hamilton (singer)"
+   }
+  ],
+  "hub_tier": "top40"
+ },
+ "entry-frank-infante.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "gold",
+    "lines": [
+     "BILLBOARD",
+     "HOT 100",
+     "No. 1"
+    ],
+    "caption": "×4 with Blondie"
+   }
+  ],
+  "charts": [
+   {
+    "class": "no1",
+    "chart": "Billboard Hot 100",
+    "peak": 1,
+    "work": "Heart of Glass / Call Me / The Tide Is High / Rapture",
+    "year": null,
+    "qualifier": "as a member of Blondie"
+   }
+  ],
+  "honors": [
+   "Rock and Roll Hall of Fame, 2006"
+  ],
+  "note": "Four Billboard Hot 100 No. 1 singles as a member of Blondie: “Heart of Glass” (1979), “Call Me” (1980), “The Tide Is High” (1980), and “Rapture” (1981).",
+  "citations": [
+   {
+    "n": 1,
+    "type": "wikipedia",
+    "title": "Frank Infante"
+   },
+   {
+    "n": 2,
+    "type": "rockhall",
+    "title": "Blondie, 2006"
+   }
+  ],
+  "hub_tier": "no1"
+ },
+ "entry-ozzie-nelson.html": {
+  "render": false,
+  "medallions": [],
+  "charts": [
+   {
+    "class": "no1",
+    "chart": "National (pre-Billboard)",
+    "peak": 1,
+    "work": "And Then Some",
+    "year": 1935,
+    "qualifier": "Whitburn citation"
+   }
+  ],
+  "honors": [],
+  "note": "“And Then Some” reported as a No. 1 record in 1935, before the Billboard singles chart existed (retrospective ranking, Joel Whitburn's Pop Memories). Badge withheld pending a contemporaneous source.",
+  "citations": []
+ },
+ "entry-flip-wilson.html": {
+  "render": false,
+  "medallions": [],
+  "charts": [
+   {
+    "class": "top40",
+    "chart": "Billboard 200",
+    "peak": null,
+    "work": "The Devil Made Me Buy This Dress",
+    "year": null,
+    "qualifier": "comedy album; confirm peak"
+   }
+  ],
+  "honors": [
+   "Grammy, Best Comedy Recording, 1971"
+  ],
+  "note": "Grammy, Best Comedy Recording, 1971. Charted on the Billboard 200; exact peak pending confirmation, so no numeric badge is shown.",
+  "citations": []
+ },
+ "entry-akon.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "gold",
+    "lines": [
+     "BILLBOARD",
+     "HOT 100",
+     "No. 1"
+    ],
+    "caption": "×2 (2006, 2007)"
+   }
+  ],
+  "note": "Two Billboard Hot 100 No. 1 singles: “I Wanna Love You” (2006) and “Don't Matter” (2007).",
+  "honors": [],
+  "charts": [
+   {
+    "class": "no1",
+    "chart": "Billboard Hot 100",
+    "peak": 1,
+    "work": "I Wanna Love You",
+    "year": 2006,
+    "qualifier": null
+   }
+  ],
+  "citations": [
+   {
+    "n": 1,
+    "type": "billboard-chart-history",
+    "note": "capture Wayback snapshot"
+   },
+   {
+    "n": 2,
+    "type": "wikipedia",
+    "title": "Akon"
+   }
+  ],
+  "hub_tier": "no1"
+ },
+ "entry-stan-krause.html": {
+  "render": true,
+  "medallions": [
+   {
+    "metal": "gold",
+    "lines": [
+     "BILLBOARD",
+     "R&B LP",
+     "No. 16"
+    ],
+    "caption": "The Persuasions"
+   },
+   {
+    "metal": "broadcast",
+    "lines": [
+     "SATURDAY",
+     "NIGHT LIVE",
+     "1983"
+    ],
+    "caption": "14 Karat Soul"
+   }
+  ],
+  "note": "As producer and label owner, Krause broke The Persuasions (No. 16 R&B, 1972) and 14 Karat Soul (Saturday Night Live, 1983), pushing Jersey City street-corner harmony onto the national stage.",
+  "honors": [
+   "Jersey City Living Legend Award, 2016"
+  ],
+  "charts": [
+   {
+    "class": "top40",
+    "chart": "Billboard R&B Albums",
+    "peak": 16,
+    "work": "The Persuasions, Street Corner Symphony",
+    "year": 1972,
+    "qualifier": "as producer / label owner"
+   },
+   {
+    "class": "broadcast",
+    "chart": null,
+    "peak": null,
+    "work": "14 Karat Soul on Saturday Night Live",
+    "year": 1983,
+    "qualifier": "as label owner"
+   }
+  ],
+  "citations": [
+   {
+    "n": 1,
+    "type": "classic-urban-harmony",
+    "title": "Stan Krause / Catamount Records"
+   }
+  ],
+  "hub_tier": "genre"
+ }
+}

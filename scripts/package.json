@@ -1,0 +1,14 @@
+{
+  "name": "jcs-record-seal",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Offline signer + tooling for The Jersey City Sound 'Sealed in the Record' verifiable credentials (RECORD-SEAL-SPEC v1.0).",
+  "scripts": {
+    "seal": "node seal.mjs"
+  },
+  "dependencies": {
+    "@noble/ed25519": "^2.3.0",
+    "node-html-parser": "^7.1.0"
+  }
+}

@@ -1,0 +1,29 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+
+# Raw source scans — the web-optimized, published copies already live in
+# design/assets/media/. Remove this line if you'd rather archive the originals
+# in git too (note: they're large and may carry image-rights considerations
+# for a public repo).
+Archive Photos/
+
+# Record-seal private key — NEVER commit (whoever has it can forge seals)
+keys/
+
+# Node dependencies — reinstall with `npm install` inside scripts/
+node_modules/
+**/node_modules/
+
+# Local clean-photo backups (34M) — only used to re-run watermark_media.py locally
+Media Originals/
+
+# Stray design-skill folders that ended up in the project dir (not part of the site)
+frontend-design/
+ui-ux-pro-max/
