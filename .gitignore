@@ -30,3 +30,6 @@ ui-ux-pro-max/
 
 # Marketing assets (not part of the site)
 Social Media/
+
+# Build/render scratch files
+design/_*.html
