@@ -323,31 +323,27 @@
       "entry_no": "008",
       "name": "DJ J Nice",
       "slug": "dj-j-nice",
-      "status": "handle-provided",
+      "status": "web-verified",
       "roles": [
         "DJ"
       ],
       "genres": [],
       "years_active": "",
       "facts": [
-        "DJ J Nice is a Jersey City DJ who represents a distinct branch of the city's robust mixtape and club DJ networks.",
-        "He is notably distinct from 'Big D Nice', a separate DJ praised in the 2006 WizTV documentary, and is also not the 'DJ Nice' referenced by Mark Cee, a distinction confirmed by DJ DX in a 2026 oral history.",
-        "Clarifying these identities is crucial to the Jersey City Sound archive, as multiple DJs often shared similar aliases during the scene's peak era.",
-        "He remains connected to the modern scene and maintains an active presence on Instagram as @officialjnice1, carrying the tradition of Jersey City DJing into the digital era."
+        "DJ J Nice (@officialjnice1) is a DJ working across the New Jersey and New York club and event circuit, and part of the wider Jersey City DJ network.",
+        "He is the official DJ for Jordan Brand's Jumpman “The One,” for Dyckman Basketball, and for the Shake the Block series.",
+        "He is a separate person from DJ Nyce (@djnyceriley) — a distinct area DJ whose similar name is frequently confused with his."
       ],
       "sources": [
         {
-          "label": "Oral history: DJ DX (Robert Van Liew), The Jersey City Sound, 2026",
-          "note": "Confirms J Nice is not the 'DJ Nice' referenced in the 2006 documentary"
+          "label": "DJ J Nice on Instagram (@officialjnice1)",
+          "url": "https://www.instagram.com/officialjnice1/"
         },
         {
-          "label": "WizTV Presents: The Jersey City DJ Documentary Vol. 1 (2006)",
-          "url": "https://www.youtube.com/watch?v=ZDfRsT0CKeU",
-          "note": "Referenced only to distinguish: the film's 'DJ Nice' mentions are other DJs"
+          "label": "Identity clarification (DJ J Nice is not DJ Nyce), DJ DX (Robert Van Liew), The Jersey City Sound, 2026"
         }
       ],
       "todo_robert": [
-        "Bio from memory",
         "Era, crews, key tapes from memory",
         "Photo"
       ],
@@ -357,7 +353,11 @@
       "card": [
         {
           "label": "Scene",
-          "value": "Jersey City, New Jersey"
+          "value": "New Jersey / New York"
+        },
+        {
+          "label": "Notable",
+          "value": "Official DJ — Jumpman “The One,” Dyckman Basketball, Shake the Block"
         },
         {
           "label": "Instagram",
@@ -365,9 +365,57 @@
         },
         {
           "label": "Note",
-          "value": "Distinct from Big D Nice and other DJ Nice figures in the 2006 documentary"
+          "value": "A different person from DJ Nyce (@djnyceriley)"
         }
       ]
+    },
+    {
+      "entry_no": "229",
+      "name": "DJ Nyce",
+      "slug": "dj-nyce",
+      "type": "person",
+      "status": "web-verified",
+      "roles": [
+        "DJ"
+      ],
+      "genres": [],
+      "years_active": "",
+      "facts": [
+        "DJ Nyce (@djnyceriley), also billed as DjNyce Riley, is a mixtape and club DJ in the New Jersey 201 scene.",
+        "He records the Alchemy Mix Kings mixtape series alongside area DJs including DJ Hazz B and DJ June Bugg.",
+        "He is a separate person from DJ J Nice (@officialjnice1), with whom his name is frequently confused."
+      ],
+      "sources": [
+        {
+          "label": "DJ Nyce on Instagram (@djnyceriley)",
+          "url": "https://www.instagram.com/djnyceriley/"
+        },
+        {
+          "label": "Identity clarification (DJ Nyce is not DJ J Nice), DJ DX (Robert Van Liew), The Jersey City Sound, 2026"
+        }
+      ],
+      "card": [
+        {
+          "label": "Also known as",
+          "value": "DjNyce Riley · “The great one”"
+        },
+        {
+          "label": "Instagram",
+          "value": "@djnyceriley"
+        },
+        {
+          "label": "Note",
+          "value": "A different person from DJ J Nice (@officialjnice1)"
+        }
+      ],
+      "todo_robert": [
+        "Bio, era, crews from memory",
+        "Confirm Jersey City vs wider 201",
+        "Photo"
+      ],
+      "links": {
+        "instagram": "https://www.instagram.com/djnyceriley/"
+      }
     },
     {
       "entry_no": "009",
