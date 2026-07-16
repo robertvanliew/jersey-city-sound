@@ -11633,6 +11633,74 @@
     "Which archive DJs are GFE residents / affiliates?"
    ],
    "links": {}
+  },
+  {
+   "entry_no": "237",
+   "name": "The Vocal-Teens",
+   "slug": "the-vocal-teens",
+   "type": "group",
+   "status": "web-verified",
+   "roles": [
+    "Vocal group",
+    "Doo-wop group"
+   ],
+   "genres": [
+    "Doo-wop",
+    "R&B"
+   ],
+   "years_active": "1958 – 1959",
+   "origin": "Jersey City, New Jersey",
+   "facts": [
+    "The Vocal-Teens were a Jersey City doo-wop group of the late 1950s, formed while its members were still in high school.",
+    "Their signature side, “Be A Slave,” was written and sung by Michael Dennis Kelly at age fourteen; the group cut it with “Till Then” as demo material in 1958–59, and the two sides sat unreleased until 1972, when Downstairs Records issued them as a 45 (Downstairs 1000).",
+    "The record became a sought-after collector's piece among doo-wop enthusiasts, trading hands at auction decades later and circulating online as an example of uptempo Jersey City doo-wop.",
+    "A group photograph preserved by the late Mike Kelly and surfaced through the doo-wop collector community names the lineup as Mike Kelly (lead on “Be A Slave”), Henry Mays (lead on the flip side), Frederick Worrell, Junior Brooks, and Sonny Campbell.",
+    "The group opened the door for Kelly's professional career: he went on to join fellow Jersey City group The Duprees, becoming a permanent lead singer in 1964."
+   ],
+   "galleries": [],
+   "sources": [
+    {
+     "label": "The Vocal-Teens — Doo-Wop Groups (group history)",
+     "url": "https://doo-wop-groups.blogspot.com/2025/02/vocal-teens.html"
+    },
+    {
+     "label": "Vocal-Teens — “Be A Slave” / “Till Then” (Downstairs) — auction record, popsike",
+     "url": "https://www.popsike.com/Doo-Wop-45-VOCALTEENS-Be-A-Slave-Till-Then-on-Downstairs-VG/330851392425.html"
+    },
+    {
+     "label": "Vocal-Teens — “Be A Slave” (audio) — YouTube",
+     "url": "https://www.youtube.com/watch?v=xbBoXFeMqpo"
+    },
+    {
+     "label": "Group photo & lineup — Rare Doo Wop Photos and Footage (community post, from the late Mike Kelly, June 2026)",
+     "url": ""
+    }
+   ],
+   "card": [
+    {
+     "label": "Origin",
+     "value": "Jersey City, New Jersey"
+    },
+    {
+     "label": "Recorded",
+     "value": "1958–59 (released 1972)"
+    },
+    {
+     "label": "Record",
+     "value": "“Be A Slave” / “Till Then” — Downstairs 1000"
+    },
+    {
+     "label": "Legacy",
+     "value": "Mike Kelly → The Duprees (lead, 1964)"
+    }
+   ],
+   "todo_robert": [
+    "Lineup discrepancy: community photo caption says Junior Brooks + Sonny Campbell; the Doo-Wop Groups history lists Charles 'Cator' Brooks and no Campbell — reconcile",
+    "Obtain the group photo (from the Rare Doo Wop Photos post / Paul S Gruber) for a gallery, with credit",
+    "Facebook post URL for the photo source",
+    "Member birth/death details; Mike Kelly's Duprees tenure specifics"
+   ],
+   "links": {}
   }
  ],
  "discovered_candidates": {

@@ -1744,6 +1744,14 @@ window.JCS_ENTRIES = [
   "years": ""
  },
  {
+  "no": "237",
+  "name": "The Vocal-Teens",
+  "href": "entry-the-vocal-teens.html",
+  "role": "Vocal group · Doo-wop group",
+  "type": "group",
+  "years": "1958 – 1959"
+ },
+ {
   "no": "050",
   "name": "Thomas Vincent Cator",
   "href": "entry-thomas-vincent-cator.html",
