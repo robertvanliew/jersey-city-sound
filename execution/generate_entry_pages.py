@@ -1650,8 +1650,8 @@ def write_sources(entries):
 def write_sitemap(entries):
     # Flat .html URLs — matching the actual filenames and canonicals (handoff Task 2).
     # report.html is now indexable (Issue №1 shipped) and included.
-    hubs = ["", "archive.html", "legends.html", "history.html", "report.html", "about.html",
-            "sources.html", "verify.html", "privacy.html", "terms.html", "corrections.html"]
+    hubs = ["", "archive.html", "legends.html", "history.html", "chilltown.html", "report.html",
+            "about.html", "sources.html", "verify.html", "privacy.html", "terms.html", "corrections.html"]
     from datetime import date
     today = date.today().isoformat()
 
@@ -1725,6 +1725,7 @@ def write_root_files(entries=None):
         f"- [On the Charts — Jersey City's Billboard chart history]({SITE}/charts.html)\n"
         f"- [The Archive (A–Z index)]({SITE}/archive.html)\n"
         f"- [History — the scene by era]({SITE}/history.html)\n"
+        f"- [Why is Jersey City called Chilltown? — the documented history of the nickname]({SITE}/chilltown.html)\n"
         f"- [Legends — the memorial wing]({SITE}/legends.html)\n"
         f"- [Sources — master bibliography]({SITE}/sources.html)\n"
         f"- [About & methodology]({SITE}/about.html)\n\n"
