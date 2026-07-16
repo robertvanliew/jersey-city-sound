@@ -638,6 +638,8 @@ def page(entry, by_no, name_links, appearances=None):
     genre_json = json.dumps(genres) if genres else "[]"
     crumb_cat = ("Films" if film else "Venues" if venue else "Groups" if group
                  else "Labels" if label else "DJs" if any(r == "DJ" for r in roles) else "Artists")
+    # DJ entries link up to their hub page (charter: entries <-> hub internal-linking loop)
+    crumb_href = "jersey-city-djs.html" if crumb_cat == "DJs" else "archive.html"
 
     memorial = bool(entry.get("memorial"))
     body_class = ' class="memorial"' if memorial else ""
@@ -828,7 +830,7 @@ def page(entry, by_no, name_links, appearances=None):
 
 <main class="wrap">
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="archive.html">Archive</a><span class="sep">→</span><a href="archive.html">{crumb_cat}</a><span class="sep">→</span><span aria-current="page">{esc(name)}</span>
+    <a href="archive.html">Archive</a><span class="sep">→</span><a href="{crumb_href}">{crumb_cat}</a><span class="sep">→</span><span aria-current="page">{esc(name)}</span>
   </nav>
 
   <header class="entry-header">{memorial_mark}
@@ -1653,8 +1655,9 @@ def write_sources(entries):
 def write_sitemap(entries):
     # Flat .html URLs — matching the actual filenames and canonicals (handoff Task 2).
     # report.html is now indexable (Issue №1 shipped) and included.
-    hubs = ["", "archive.html", "legends.html", "history.html", "chilltown.html", "report.html",
-            "about.html", "sources.html", "verify.html", "privacy.html", "terms.html", "corrections.html"]
+    hubs = ["", "archive.html", "legends.html", "history.html", "chilltown.html", "jersey-city-djs.html",
+            "report.html", "about.html", "sources.html", "verify.html", "privacy.html", "terms.html",
+            "corrections.html"]
     from datetime import date
     today = date.today().isoformat()
 
@@ -1729,6 +1732,7 @@ def write_root_files(entries=None):
         f"- [The Archive (A–Z index)]({SITE}/archive.html)\n"
         f"- [History — the scene by era]({SITE}/history.html)\n"
         f"- [Why is Jersey City called Chilltown? — the documented history of the nickname]({SITE}/chilltown.html)\n"
+        f"- [Jersey City DJs — the documented record of the city's DJ culture]({SITE}/jersey-city-djs.html)\n"
         f"- [Legends — the memorial wing]({SITE}/legends.html)\n"
         f"- [Sources — master bibliography]({SITE}/sources.html)\n"
         f"- [About & methodology]({SITE}/about.html)\n\n"
