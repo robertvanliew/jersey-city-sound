@@ -2,6 +2,9 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": false,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/entry-man-money.html", "destination": "/entry-dj-mad-money.html", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/assets/fonts/(.*)",

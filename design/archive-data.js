@@ -544,12 +544,12 @@ window.JCS_ENTRIES = [
   "years": ""
  },
  {
-  "no": "204",
+  "no": "017",
   "name": "DJ Mad Money",
   "href": "entry-dj-mad-money.html",
   "role": "DJ",
   "type": "person",
-  "years": ""
+  "years": "c. 1989–present"
  },
  {
   "no": "023",
@@ -1070,14 +1070,6 @@ window.JCS_ENTRIES = [
   "role": "Vocalist · Bass singer",
   "type": "person",
   "years": "1960 – 2006"
- },
- {
-  "no": "017",
-  "name": "Mad Money",
-  "href": "entry-man-money.html",
-  "role": "DJ",
-  "type": "person",
-  "years": "c. 1989–present"
  },
  {
   "no": "151",

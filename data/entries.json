@@ -925,8 +925,8 @@
   },
   {
    "entry_no": "017",
-   "name": "Mad Money",
-   "slug": "man-money",
+   "name": "DJ Mad Money",
+   "slug": "dj-mad-money",
    "status": "doc-verified",
    "roles": [
     "DJ"
@@ -937,28 +937,30 @@
     "Mixtapes"
    ],
    "years_active": "c. 1989–present",
+   "origin": "Jersey City, New Jersey",
    "facts": [
-    "Mad Money, also billed as Man Money, is a Jersey City mixtape DJ who has been active since approximately 1989, making him one of the longest-running figures in the scene's documented history.",
-    "He is the producer of the Street Blends series, including Phase 20 and Phase 21 -- tape series spanning decades that reflect the sustained output of a career DJ.",
-    "In the 2006 WizTV documentary he recalls the era when a Jersey City mixtape could earn a DJ $2,000 or more, and names Devil Seven as a peer from that period, placing the city's tape economy in historical context."
+    "DJ Mad Money — born James Gadsden, and billed over the years as Mad Money and Man Money — is a Jersey City mixtape DJ active since approximately 1989, one of the longest-running figures in the scene's documented history.",
+    "He is the producer of the Street Blends series, including Phase 20 and Phase 21 — tape series spanning decades that reflect the sustained output of a career DJ.",
+    "In the 2006 WizTV documentary he recalls the era when a Jersey City mixtape could earn a DJ $2,000 or more, and names Devil Seven as a peer from that period, placing the city's tape economy in historical context.",
+    "His classic, high-energy “Jersey City-style” mixes from the Chilltown circuit remain highly regarded, and he is counted among the influential DJs of the city's hip-hop and mixtape community."
    ],
    "sources": [
     {
      "label": "WizTV Presents: The Jersey City DJ Documentary Vol. 1 (2006)",
      "url": "https://www.youtube.com/watch?v=ZDfRsT0CKeU"
+    },
+    {
+     "label": "Community identification (real name; one person across billings, confirmed by DJ DX, 2026)"
     }
    ],
-   "todo_robert": [
-    "Confirm preferred billing: Man Money vs Mad Money",
-    "Street Blends discography",
-    "IG handle",
-    "Photo"
-   ],
-   "links": {},
    "card": [
     {
-     "label": "Also known as",
-     "value": "Mad Money"
+     "label": "Real name",
+     "value": "James Gadsden"
+    },
+    {
+     "label": "Also billed as",
+     "value": "Mad Money · Man Money"
     },
     {
      "label": "Scene",
@@ -976,7 +978,13 @@
      "label": "Documented in",
      "value": "Jersey City DJ Documentary Vol. 1 (2006)"
     }
-   ]
+   ],
+   "todo_robert": [
+    "Street Blends discography",
+    "IG handle",
+    "Photo"
+   ],
+   "links": {}
   },
   {
    "entry_no": "018",
@@ -10110,42 +10118,6 @@
     "Photo permission"
    ],
    "links": {}
-  },
-  {
-   "name": "DJ Mad Money",
-   "slug": "dj-mad-money",
-   "status": "community-verified",
-   "roles": [
-    "DJ"
-   ],
-   "genres": [
-    "Hip-hop",
-    "Mixtapes"
-   ],
-   "years_active": "",
-   "origin": "Jersey City, New Jersey",
-   "facts": [
-    "DJ Mad Money, born James Gadsden, is a celebrated veteran of the Jersey City mixtape scene, well known for his classic, high-energy \"Jersey City-style\" mixes.",
-    "His classic tracks and older mixtape sets from the Chilltown circuit remain highly regarded, and he is counted among the influential DJs of the city's hip-hop and mixtape community."
-   ],
-   "sources": [
-    {
-     "label": "Community identification, The Jersey City Sound, 2026"
-    }
-   ],
-   "todo_robert": [
-    "Bio, era, and crews from memory",
-    "Instagram / streaming handles",
-    "Photo permission"
-   ],
-   "links": {},
-   "entry_no": "204",
-   "card": [
-    {
-     "label": "Real name",
-     "value": "James Gadsden"
-    }
-   ]
   },
   {
    "name": "DJ Hazz B",
