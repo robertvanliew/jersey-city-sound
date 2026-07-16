@@ -11658,7 +11658,31 @@
     "The group opened the door for Kelly's professional career: he went on to join fellow Jersey City group The Duprees, becoming a permanent lead singer in 1964.",
     "Family testimony corroborates the lineup: Errol Mallory — nephew of member Frederick Worrell and named after him — confirmed in a 2026 collector-community thread that “Freddy Errol Worrell” was his father's brother, placing the Worrell family in the heart of Jersey City's 1950s–60s vocal-group scene."
    ],
-   "galleries": [],
+   "galleries": [
+    {
+     "id": "photographs",
+     "title": "Photographs & The Record",
+     "intro": "From the collection of the late Mike Kelly, surfaced through the doo-wop collector community; label scan of the 1972 Downstairs 45.",
+     "images": [
+      {
+       "src": "assets/media/the-vocal-teens/photographs/the-vocal-teens.jpg",
+       "alt": "The Vocal-Teens of Jersey City, five members posing in a line, late 1950s",
+       "caption": "The Vocal-Teens, Jersey City, late 1950s — per the collector-community caption: Mike Kelly (lead on “Be A Slave”), Henry Mays (lead on the flip), Frederick Worrell, Junior Brooks, and Sonny Campbell. From the collection of the late Mike Kelly.",
+       "tags": [
+        "the-vocal-teens"
+       ]
+      },
+      {
+       "src": "assets/media/the-vocal-teens/photographs/the-vocal-teens-till-then.jpg",
+       "alt": "Orange Downstairs Records 45 label of Till Then by The Vocal-Teens, catalog 1000",
+       "caption": "“Till Then” (Wood–Seiler–Marcus) — the flip side of “Be A Slave.” Downstairs Records 1000 (D-102), issued 1972 from the 1958–59 session; the label seated at 55 West 42nd St., New York.",
+       "tags": [
+        "the-vocal-teens"
+       ]
+      }
+     ]
+    }
+   ],
    "sources": [
     {
      "label": "The Vocal-Teens — Doo-Wop Groups (group history)",
