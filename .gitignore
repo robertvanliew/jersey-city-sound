@@ -33,3 +33,6 @@ Social Media/
 
 # Build/render scratch files
 design/_*.html
+
+# Reels (video assets)
+Reels/

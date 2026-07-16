@@ -168,6 +168,14 @@ window.JCS_ENTRIES = [
   "years": "1964 – 2016"
  },
  {
+  "no": "234",
+  "name": "CF201 (Constant Flow)",
+  "href": "entry-cf201.html",
+  "role": "Rapper · MC",
+  "type": "person",
+  "years": "1993–present"
+ },
+ {
   "no": "185",
   "name": "Champagne",
   "href": "entry-champagne.html",
@@ -472,6 +480,14 @@ window.JCS_ENTRIES = [
   "years": "c. 1970s–present"
  },
  {
+  "no": "231",
+  "name": "DJ Handz",
+  "href": "entry-dj-handz.html",
+  "role": "DJ · Turntablist",
+  "type": "person",
+  "years": ""
+ },
+ {
   "no": "205",
   "name": "DJ Hazz B",
   "href": "entry-dj-hazz-b.html",
@@ -494,6 +510,14 @@ window.JCS_ENTRIES = [
   "role": "DJ",
   "type": "person",
   "years": ""
+ },
+ {
+  "no": "235",
+  "name": "DJ J Money",
+  "href": "entry-dj-j-money.html",
+  "role": "DJ · Producer",
+  "type": "person",
+  "years": "2021–present"
  },
  {
   "no": "008",
@@ -592,6 +616,14 @@ window.JCS_ENTRIES = [
   "years": "early 1980s –"
  },
  {
+  "no": "232",
+  "name": "DJ SupermanSpin",
+  "href": "entry-dj-supermanspin.html",
+  "role": "DJ",
+  "type": "person",
+  "years": ""
+ },
+ {
   "no": "003",
   "name": "DJ Swill B",
   "href": "entry-dj-swill-b.html",
@@ -672,6 +704,14 @@ window.JCS_ENTRIES = [
   "years": ""
  },
  {
+  "no": "233",
+  "name": "Exit 14 DJs",
+  "href": "entry-exit-14-djs.html",
+  "role": "DJ collective",
+  "type": "group",
+  "years": ""
+ },
+ {
   "no": "114",
   "name": "Fit for an Autopsy",
   "href": "entry-fit-for-an-autopsy.html",
@@ -732,6 +772,14 @@ window.JCS_ENTRIES = [
   "name": "Gerry Rosenthal",
   "href": "entry-gerry-rosenthal.html",
   "role": "Musician",
+  "type": "person",
+  "years": ""
+ },
+ {
+  "no": "236",
+  "name": "Get Focused Entertainment",
+  "href": "entry-get-focused-entertainment.html",
+  "role": "Nightlife & events company · Party promoter",
   "type": "person",
   "years": ""
  },
@@ -1158,6 +1206,14 @@ window.JCS_ENTRIES = [
   "role": "Artist",
   "type": "person",
   "years": ""
+ },
+ {
+  "no": "230",
+  "name": "Mr. Low Kash 'N Da Shady Bunch",
+  "href": "entry-mr-low-kash.html",
+  "role": "Rap group · MC",
+  "type": "group",
+  "years": "1990s"
  },
  {
   "no": "148",
