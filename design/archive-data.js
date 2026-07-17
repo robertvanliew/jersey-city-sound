@@ -688,6 +688,14 @@ window.JCS_ENTRIES = [
   "years": "late 1980s – 1990s"
  },
  {
+  "no": "238",
+  "name": "Double XX Posse",
+  "href": "entry-double-xx-posse.html",
+  "role": "Rap group",
+  "type": "group",
+  "years": "c. 1990 – 1995"
+ },
+ {
   "no": "181",
   "name": "E-Square",
   "href": "entry-e-square.html",
