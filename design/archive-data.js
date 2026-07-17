@@ -512,20 +512,20 @@ window.JCS_ENTRIES = [
   "years": ""
  },
  {
-  "no": "235",
-  "name": "DJ J Money",
-  "href": "entry-dj-j-money.html",
-  "role": "DJ · Producer",
-  "type": "person",
-  "years": "2021–present"
- },
- {
   "no": "008",
   "name": "DJ J Nice",
   "href": "entry-dj-j-nice.html",
   "role": "DJ",
   "type": "person",
   "years": ""
+ },
+ {
+  "no": "235",
+  "name": "DJ J-Money",
+  "href": "entry-dj-j-money.html",
+  "role": "DJ · Producer",
+  "type": "person",
+  "years": "2021–present"
  },
  {
   "no": "215",
