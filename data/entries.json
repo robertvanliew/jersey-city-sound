@@ -158,9 +158,11 @@
     "Jersey club",
     "Gospel club"
    ],
-   "years_active": "2012–present",
+   "years_active": "c. mid-1990s – present",
    "facts": [
-    "Mista Quietman (Antwan Anderson) is a Jersey City DJ and remixer active since at least 2012, and a key figure in preserving the city's DJ scene history online.",
+    "Mista Quietman (Antwan Anderson) is a Jersey City DJ, blend-tape producer, and remixer whose documented work runs from the city's 1990s mixtape era to today, and a key figure in preserving the scene's history online.",
+    "His tape catalog, preserved in his personal archive, includes The Intimate Thoughts of Mista Quiet Man (Club Traxx), Mista Quiet Man's Birthday Bash, Now That's What I Call Blenden', and The Past Versus the Present Artist, with covers by the Harlem mixtape shop Pro Art and Jersey City's own Blaze-In-Arts.",
+    "The Club Traxx shout-outs are a primary document of the 1990s scene: he thanks the staff of Albert's, which he calls one of the hottest night clubs in Jersey City, naming Donald \"Wiz\" Davis, DJ Trever-D, and Wimpy-B, along with Omar X and Isaac of Supreme Production and the Friday nights at Mahogany's.",
     "He produced 'The 201 High School Anthem', a Jersey City rework of DJ Sliink's 'High School Anthem', calling out Lincoln, Ferris, Dickinson, and Snyder high schools -- a local anthem of the city's school-era DJ culture.",
     "His SoundCloud catalog dating to 2012 includes Jersey club loops, remixes, and gospel club mixes such as 'The Sharpbounce 2ktwelve' and 'C4 Rock'.",
     "He runs The Real Mista Quietman YouTube channel, where he has preserved the full upload of WizTV's Jersey City DJ Documentary Vol. 1 (2006), making one of the most important documents in Jersey City music history accessible to the public.",
@@ -182,11 +184,16 @@
     {
      "label": "The Real Mista Quietman channel — documentary upload",
      "url": "https://www.youtube.com/watch?v=ZDfRsT0CKeU"
+    },
+    {
+     "label": "Mista Quietman personal archive: tape covers and photographs, shared with The Jersey City Sound, 2026 (see galleries)"
     }
    ],
    "todo_robert": [
-    "Era details, residencies, crews from memory",
-    "Photo permission"
+    "Confirm with Quietman: is The Unspeakable one of his own billings?",
+    "Confirm birth date (Birthday Bash sides are themed 9/15/77 and 9/15/96)",
+    "Where was the Music Hut located?",
+    "Era details, residencies, crews from memory"
    ],
    "links": {
     "instagram": "https://www.instagram.com/mistaquietman/"
@@ -211,6 +218,88 @@
     {
      "label": "Style",
      "value": "Jersey club, gospel club, remixes"
+    }
+   ],
+   "galleries": [
+    {
+     "id": "photographs",
+     "title": "Photographs",
+     "intro": "From the personal archive of Mista Quietman, shared 2026.",
+     "images": [
+      {
+       "src": "assets/media/mista-quietman/photographs/quietman-first-studio.jpg",
+       "alt": "Basement studio with turntables, a cassette deck, records, and Big L, Foxy Brown, and Stress magazine posters",
+       "caption": "Where it all started: the first studio. Turntables, a cassette deck, crates, and the walls of the era: Big L of Diggin' in the Crates, Foxy Brown, and a Stress magazine Ghostface cover.",
+       "tags": [
+        "mista-quietman"
+       ]
+      },
+      {
+       "src": "assets/media/mista-quietman/photographs/quietman-speakers-and-crates.jpg",
+       "alt": "A young Mista Quietman seated among speaker cabinets and milk crates of records",
+       "caption": "Classic DJ picture: a young Quietman with the tools of the trade, speaker boxes and crates of records.",
+       "tags": [
+        "mista-quietman"
+       ]
+      },
+      {
+       "src": "assets/media/mista-quietman/photographs/quietman-music-hut.jpg",
+       "alt": "Mista Quietman posed at the doorway of the Music Hut, a music store advertising DJ mixed tapes",
+       "caption": "At the Music Hut, arms wide. The signage tells the economy: highest quality DJ mixed tapes, beepers, and the copy center that printed the flyers.",
+       "tags": [
+        "mista-quietman"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "covers",
+     "title": "The Tape Covers",
+     "intro": "Blend-tape and CD covers from the catalog, designed by Pro Art of Harlem and Jersey City's Blaze-In-Arts.",
+     "images": [
+      {
+       "src": "assets/media/mista-quietman/covers/intimate-thoughts-club-traxx-cover.jpg",
+       "alt": "The Intimate Thoughts of Mista Quiet Man Club Traxx tape cover in pink and black by Pro Art",
+       "caption": "The Intimate Thoughts of Mista Quiet Man (Club Traxx), cover by Pro Art. The shout-outs name the staff of Albert's night club in Jersey City, Donald Wiz Davis, DJ Trever-D, Wimpy-B, Omar X and Isaac of Supreme Production, and the Friday nights at Mahogany's.",
+       "tags": [
+        "mista-quietman"
+       ]
+      },
+      {
+       "src": "assets/media/mista-quietman/covers/birthday-bash-cover.jpg",
+       "alt": "Mista Quiet Man's Birthday Bash tape cover in orange with two tracklists themed 1977 and 1996",
+       "caption": "Mista Quiet Man's Birthday Bash, remastered, with sides themed to September 15 of 1977 and 1996. Cover carries the Blaze-In-Arts mark.",
+       "tags": [
+        "mista-quietman",
+        "blaze-in-arts"
+       ]
+      },
+      {
+       "src": "assets/media/mista-quietman/covers/now-thats-what-i-call-blenden-cover.jpg",
+       "alt": "Now That's What I Call Blenden' tape cover with A and B side blend tracklists",
+       "caption": "Now That's What I Call Blenden', produced by Mista Quiet Man, early 2000s. The tracklist works 201 blends through the hits of the day.",
+       "tags": [
+        "mista-quietman"
+       ]
+      },
+      {
+       "src": "assets/media/mista-quietman/covers/past-versus-present-artist-cover.jpg",
+       "alt": "The Past Versus the Present Artist R&B tape cover collage by Blaze-In-Arts",
+       "caption": "The Past Versus the Present Artist: Where Are They Now?, an R&B blend tape. The fine print offers hard to find R&B acapellas and carries the Blaze-In-Arts card for covers and flyers.",
+       "tags": [
+        "mista-quietman",
+        "blaze-in-arts"
+       ]
+      },
+      {
+       "src": "assets/media/mista-quietman/covers/blazen-hot-blends-2-death-cover.jpg",
+       "alt": "The Unspeakable Presents Blazen' Hot Blends 2 Death tape cover",
+       "caption": "The Unspeakable Presents: Blazen' Hot Blends 2 Death. From Quietman's archive of the era's blend tapes.",
+       "tags": [
+        "mista-quietman"
+       ]
+      }
+     ]
     }
    ]
   },
@@ -12795,7 +12884,19 @@
     "Omar X",
     "Grandmaster Crash",
     "Grand Wizard Capone (also named in DJ Thurmie Thurm's entry)",
-    "Which DJ Nyce is in the turntable photo, confirm with Flash"
+    "Which DJ Nyce is in the turntable photo, confirm with Flash",
+    "DJ Trever-D (Albert's, per Club Traxx shout-outs)",
+    "D-Swift from Place Essa (same source; possibly the DJ Swift already on the legends candidate list)",
+    "Omar X and Isaac, Supreme Production (Omar X also in the Tijon Maro legends portrait)",
+    "P-God (R.I.P. note on The Past Versus the Present Artist cover)"
+   ]
+  },
+  "venue_candidates": {
+   "note": "Venues named in primary artifacts, candidates for entries.",
+   "names": [
+    "Albert's (Jersey City night club, named in Mista Quietman's Club Traxx shout-outs; staff incl. Donald 'Wiz' Davis, DJ Trever-D, Wimpy-B)",
+    "Mahogany's (Friday nights, same source)",
+    "Music Hut (record and tape store, pictured in Quietman's archive; location unconfirmed)"
    ]
   }
  }
