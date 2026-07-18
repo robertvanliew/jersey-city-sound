@@ -480,6 +480,14 @@ window.JCS_ENTRIES = [
   "years": "c. 1970s–present"
  },
  {
+  "no": "243",
+  "name": "DJ Freeze",
+  "href": "entry-dj-freeze.html",
+  "role": "DJ",
+  "type": "person",
+  "years": ""
+ },
+ {
   "no": "231",
   "name": "DJ Handz",
   "href": "entry-dj-handz.html",
@@ -622,6 +630,14 @@ window.JCS_ENTRIES = [
   "role": "DJ · Producer",
   "type": "person",
   "years": "2020–present"
+ },
+ {
+  "no": "242",
+  "name": "DJ T-Fresh",
+  "href": "entry-dj-t-fresh.html",
+  "role": "DJ",
+  "type": "person",
+  "years": ""
  },
  {
   "no": "183",

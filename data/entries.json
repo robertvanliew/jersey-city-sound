@@ -1226,7 +1226,11 @@
     "He is interviewed in the 2006 WizTV documentary, where he gives a shoutout to the Killa K family, documenting the social fabric of the scene.",
     "His daughter performs as DJ She Dog, making him part of a family lineage in the city's DJ tradition.",
     "He was the founder and head of Double Platinum Entertainment. The crew's members included Greenbean, Thunderkatt, Smurfet, DJ Q, DJ DYCE, Deejay Luchionney, DJ Walleykatt, DJ DX (Double X), and Exclusive (R.I.P Jamie).",
-    "He is a nephew of Lord Sun Albee Al, founder of the pioneering crew Sweet Slick and Slide, and a cousin of the rapper Albee Al and DJ Thunderkatt — tying him to one of Chilltown's foundational hip-hop families."
+    "He is a nephew of Lord Sun Albee Al, founder of the pioneering crew Sweet Slick and Slide, and a cousin of the rapper Albee Al and DJ Thunderkatt — tying him to one of Chilltown's foundational hip-hop families.",
+    "His Double Platinum mixtape series ran deep into the catalog, with surviving tapes including volumes 21, 33, 36, and 41; volume 41 paired him with Jersey City's Joe Budden as E-Platinum Double on Desert Storm Records.",
+    "His collaborations on tape include The Red Tape with DJ Q for Dream Team Entertainment and Double Threat with DJ 007, released with a party at the Boys and Girls Club.",
+    "In 2002 he hosted the street album HEAT (Tell Em We Coming) featuring Murda, Big Panic, and Crisis, promoted with a Jersey Journal styled front page announcing it in stores June 1, 2002.",
+    "He stands in the Exit 14 DJs crew photographs preserved in this archive, alongside DJ Walley Katt, So Swift, DJ J-Money, DJ SupermanSpin, DJ Flash, DJ T-Fresh, DJ Yadabee, and DJ Freeze."
    ],
    "sources": [
     {
@@ -1246,12 +1250,17 @@
     },
     {
      "label": "Family history, The Jersey City Sound, 2026"
+    },
+    {
+     "label": "DJ E Double personal archive: tapes, photographs, and promo artifacts, shared with The Jersey City Sound, 2026 (see gallery)"
     }
    ],
    "todo_robert": [
     "Confirm DpEnt. is Double Platinum Entertainment (same brand)",
     "Residency years per venue",
-    "Photo permission"
+    "Photo permission",
+    "One tape reads In Memoriam E-Double B.I.E Platinum Malcolm Xavier Ford. Who is Malcolm Xavier Ford? Clarify with E Double",
+    "Who are Murda, Big Panic, and Crisis of HEAT (2002)? Candidates for entries"
    ],
    "links": {
     "instagram": "https://www.instagram.com/djedubdageneral/"
@@ -1296,6 +1305,100 @@
     {
      "label": "Family",
      "value": "Nephew of Lord Sun Albee Al (Sweet Slick and Slide); cousin of Albee Al and DJ Thunderkatt"
+    }
+   ],
+   "galleries": [
+    {
+     "id": "photographs",
+     "title": "Photographs & The Tape Wall",
+     "intro": "From the personal archive of DJ E Double, shared 2026.",
+     "images": [
+      {
+       "src": "assets/media/dj-e-double/photographs/e-double-tape-wall.png",
+       "alt": "A spread of DJ E Double mixtape cassettes including Double Platinum volumes and memorial tapes",
+       "caption": "The tape wall: Double Platinum volumes 21, 33, 36, and 41, The Red Tape with DJ Q, Double Threat with DJ 007 for the Boys and Girls Club release party, Heavy In Da Hood, and the memorial tapes for Green Bean and 2 Regg.",
+       "tags": [
+        "dj-e-double",
+        "dj-q",
+        "dj-007"
+       ]
+      },
+      {
+       "src": "assets/media/dj-e-double/photographs/joe-budden-e-platinum-double-tape.png",
+       "alt": "Cassette cover reading Joe Budden and E-Platinum Double on Desert Storm Records",
+       "caption": "Joe Budden and E-Platinum Double on Desert Storm Records: Double Platinum volume 41, the mixtape scene meeting the city's biggest rap export.",
+       "tags": [
+        "dj-e-double",
+        "joe-budden"
+       ]
+      },
+      {
+       "src": "assets/media/dj-e-double/photographs/heat-jersey-journal-promo-2002.png",
+       "alt": "Jersey Journal styled promo page for HEAT hosted by DJ E-Double, in stores June 1 2002",
+       "caption": "HEAT (Tell Em We Coming), hosted by DJ E-Double, featuring Murda, Big Panic, and Crisis. Promo styled as a Jersey Journal front page, in stores June 1, 2002.",
+       "tags": [
+        "dj-e-double"
+       ]
+      },
+      {
+       "src": "assets/media/dj-e-double/photographs/e-double-2000.jpg",
+       "alt": "DJ E Double in a Sixers jersey at night, 2000",
+       "caption": "DJ E Double, 2000.",
+       "tags": [
+        "dj-e-double"
+       ]
+      },
+      {
+       "src": "assets/media/dj-e-double/photographs/e-double-home-studio.png",
+       "alt": "Three friends at a home turntable setup with a DMX poster and Numark boxes",
+       "caption": "The home setup: Numark boxes, a trophy on the shelf, DMX on the wall.",
+       "tags": [
+        "dj-e-double"
+       ]
+      },
+      {
+       "src": "assets/media/dj-e-double/photographs/e-double-on-the-tables.png",
+       "alt": "DJ E Double pointing at the camera beside turntables and a mixer",
+       "caption": "On the tables, posters of the era on the wall.",
+       "tags": [
+        "dj-e-double"
+       ]
+      },
+      {
+       "src": "assets/media/dj-e-double/photographs/e-double-crew-90s.png",
+       "alt": "A crew posed around a car at night in the 1990s",
+       "caption": "The crew, 1990s.",
+       "tags": [
+        "dj-e-double"
+       ]
+      },
+      {
+       "src": "assets/media/dj-e-double/photographs/gunz-before-young-gunz-94.png",
+       "alt": "Two young artists in 1994, captioned Gunz Before The Young Gunz 94",
+       "caption": "Gunz Before The Young Gunz, 1994.",
+       "tags": [
+        "dj-e-double"
+       ]
+      },
+      {
+       "src": "assets/media/dj-e-double/photographs/e-double-wallykatt-meech-thunderkatt.png",
+       "alt": "Four young men posed against a brick wall: DJ E Double, DJ Walley Katt, Meech, and DJ Thunderkatt",
+       "caption": "DJ E Double, DJ Walley Katt, Meech (rest in peace), and DJ Thunderkatt.",
+       "tags": [
+        "dj-e-double",
+        "dj-walley-katt",
+        "dj-thunderkatt"
+       ]
+      },
+      {
+       "src": "assets/media/dj-e-double/photographs/rip-green-bean.png",
+       "alt": "Green Bean seated in a customized car interior, memorial photo",
+       "caption": "Green Bean, rest in peace. Remembered on the tapes and in the record.",
+       "tags": [
+        "dj-e-double"
+       ]
+      }
+     ]
     }
    ]
   },
@@ -9814,6 +9917,39 @@
      "label": "Family",
      "value": "Father of Albee Al; uncle of DJ E Double and DJ Thunderkatt"
     }
+   ],
+   "galleries": [
+    {
+     "id": "photographs",
+     "title": "Photographs",
+     "intro": "From the family and community archive, shared 2026.",
+     "images": [
+      {
+       "src": "assets/media/lord-sun-albee-al/photographs/albee-and-jimmy-polaroid.png",
+       "alt": "Polaroid of two young men posed under a 7up sign, hand captioned Albee and Jimmy",
+       "caption": "A Polaroid from the park jam era, hand captioned Albee and Jimmy, under the tagged 7up sign.",
+       "tags": [
+        "lord-sun-albee-al"
+       ]
+      },
+      {
+       "src": "assets/media/lord-sun-albee-al/photographs/albee-al-bboy-stance.png",
+       "alt": "Albee Al posed in a hallway in a white tank top and red track pants",
+       "caption": "The stance, 1980s.",
+       "tags": [
+        "lord-sun-albee-al"
+       ]
+      },
+      {
+       "src": "assets/media/lord-sun-albee-al/photographs/albee-al-young-portrait.png",
+       "alt": "A young Albee Al in a brown bucket hat and color paneled jacket",
+       "caption": "A young Albee Al, bucket hat and colors of the era.",
+       "tags": [
+        "lord-sun-albee-al"
+       ]
+      }
+     ]
+    }
    ]
   },
   {
@@ -11616,9 +11752,42 @@
    "origin": "Jersey City, New Jersey",
    "facts": [
     "Exit 14 DJs are a Jersey City DJ collective — their name taken from Exit 14, the New Jersey Turnpike exit for Jersey City — working under the slogan “We All One.”",
-    "The crew keeps an Instagram presence as @exit_14djs and has built a branded Exit 14 DJs app; DJ SupermanSpin (Joel Grizzly) is among its co-owners."
+    "The crew keeps an Instagram presence as @exit_14djs and has built a branded Exit 14 DJs app; DJ SupermanSpin (Joel Grizzly) is among its co-owners.",
+    "Crew photographs preserved in this archive show the brotherhood in matching E14DJS shirts at a Jersey City park event: DJ E Double, DJ Walley Katt, So Swift, DJ J-Money, DJ SupermanSpin, DJ Flash, DJ T-Fresh, DJ Yadabee, and DJ Freeze among them."
    ],
-   "galleries": [],
+   "galleries": [
+    {
+     "id": "photographs",
+     "title": "The Crew",
+     "intro": "Exit 14 DJs in the matching shirts, from the community archive, 2026.",
+     "images": [
+      {
+       "src": "assets/media/exit-14-djs/photographs/exit-14-djs-crew.jpg",
+       "alt": "Ten members of Exit 14 DJs in matching E14DJS shirts at a park",
+       "caption": "The crew in the E14DJS shirts: DJ E Double, DJ Walley Katt, So Swift, DJ J-Money, DJ SupermanSpin, DJ Flash, DJ T-Fresh, DJ Yadabee, and DJ Freeze among the brotherhood.",
+       "tags": [
+        "exit-14-djs",
+        "dj-e-double",
+        "dj-walley-katt",
+        "dj-j-money",
+        "dj-supermanspin",
+        "dj-flash-jersey-city",
+        "dj-yadabee",
+        "dj-t-fresh",
+        "dj-freeze"
+       ]
+      },
+      {
+       "src": "assets/media/exit-14-djs/photographs/exit-14-djs-crew-2.jpg",
+       "alt": "Seven members of Exit 14 DJs in E14DJS shirts talking at the park",
+       "caption": "We All One: the crew at the park event.",
+       "tags": [
+        "exit-14-djs"
+       ]
+      }
+     ]
+    }
+   ],
    "sources": [
     {
      "label": "Exit 14 DJs (@exit_14djs) — Instagram",
@@ -12225,6 +12394,84 @@
     "Confirm members' Jersey City roots (scene knowledge)",
     "Kay-Gees lineage?",
     "Photos / record scans"
+   ],
+   "links": {}
+  },
+  {
+   "entry_no": "242",
+   "name": "DJ T-Fresh",
+   "slug": "dj-t-fresh",
+   "type": "person",
+   "status": "community-verified",
+   "roles": [
+    "DJ"
+   ],
+   "genres": [],
+   "years_active": "",
+   "origin": "Jersey City, New Jersey",
+   "facts": [
+    "DJ T-Fresh is a Jersey City DJ and a member of the Exit 14 DJs collective.",
+    "He stands with the crew in the E14DJS photographs preserved in this archive, identified by the community, 2026."
+   ],
+   "galleries": [],
+   "sources": [
+    {
+     "label": "Exit 14 DJs crew photographs, community identification, The Jersey City Sound, 2026"
+    }
+   ],
+   "card": [
+    {
+     "label": "Crew",
+     "value": "Exit 14 DJs"
+    },
+    {
+     "label": "Scene",
+     "value": "Jersey City, New Jersey"
+    }
+   ],
+   "todo_robert": [
+    "Handle and bio",
+    "Is the SoundCloud dj-t-fresh his?",
+    "Years active"
+   ],
+   "links": {}
+  },
+  {
+   "entry_no": "243",
+   "name": "DJ Freeze",
+   "slug": "dj-freeze",
+   "type": "person",
+   "status": "community-verified",
+   "roles": [
+    "DJ"
+   ],
+   "genres": [],
+   "years_active": "",
+   "origin": "Jersey City, New Jersey",
+   "facts": [
+    "DJ Freeze is a Jersey City DJ and a member of the Exit 14 DJs collective.",
+    "He stands with the crew in the E14DJS photographs preserved in this archive, identified by the community, 2026."
+   ],
+   "galleries": [],
+   "sources": [
+    {
+     "label": "Exit 14 DJs crew photographs, community identification, The Jersey City Sound, 2026"
+    }
+   ],
+   "card": [
+    {
+     "label": "Crew",
+     "value": "Exit 14 DJs"
+    },
+    {
+     "label": "Scene",
+     "value": "Jersey City, New Jersey"
+    }
+   ],
+   "todo_robert": [
+    "Handle and bio",
+    "Years active",
+    "Distinguish from out of market DJs sharing the name"
    ],
    "links": {}
   }
@@ -12840,14 +13087,6 @@
      "note": "No verifiable footprint found."
     },
     {
-     "name": "DJ T-Fresh",
-     "note": "A SoundCloud exists but no stated location / JC link."
-    },
-    {
-     "name": "DJ Freeze",
-     "note": "Closest match is an Iowa-based DJ Freeze — likely a different person."
-    },
-    {
      "name": "DJ Stylz",
      "note": "Only generic JC DJ-directory listings; no profile/flyer/handle found."
     },
@@ -12888,7 +13127,14 @@
     "DJ Trever-D (Albert's, per Club Traxx shout-outs)",
     "D-Swift from Place Essa (same source; possibly the DJ Swift already on the legends candidate list)",
     "Omar X and Isaac, Supreme Production (Omar X also in the Tijon Maro legends portrait)",
-    "P-God (R.I.P. note on The Past Versus the Present Artist cover)"
+    "P-God (R.I.P. note on The Past Versus the Present Artist cover)",
+    "So Swift (Exit 14 crew photo; relation to D-Swift or DJ Swift unclear)",
+    "Meech (RIP, in E Double group photo)",
+    "Green Bean (RIP, memorial photo + DJ E-Double Volume 33 tribute tape)",
+    "2 Regg (RIP, memorial tape in E Double's collection)",
+    "Murda, Big Panic, Crisis (HEAT street album, 2002, hosted by DJ E-Double)",
+    "Malcolm Xavier Ford (In Memoriam tape in E Double's collection; identity unclear, ASK)",
+    "Jimmy (with Albee Al in the Polaroid; possibly King Jimmy Mack, confirm)"
    ]
   },
   "venue_candidates": {
