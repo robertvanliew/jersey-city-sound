@@ -1457,7 +1457,7 @@ window.JCS_ENTRIES = [
  },
  {
   "no": "042",
-  "name": "Rigga Mortis",
+  "name": "Riggamortis",
   "href": "entry-rigga-mortis.html",
   "role": "Rapper",
   "type": "person",
