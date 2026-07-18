@@ -1337,7 +1337,8 @@
        "alt": "Jersey Journal styled promo page for HEAT hosted by DJ E-Double, in stores June 1 2002",
        "caption": "HEAT (Tell Em We Coming), hosted by DJ E-Double, featuring Murda, Big Panic, and Crisis. Promo styled as a Jersey Journal front page, in stores June 1, 2002.",
        "tags": [
-        "dj-e-double"
+        "dj-e-double",
+        "the-heat"
        ]
       },
       {
@@ -7479,11 +7480,16 @@
     "The Heat is a Jersey City rap group that emerged as part of the city's vibrant and highly competitive hip-hop underground.",
     "Documented in the archive's survey of active artists, they represent the collective energy of the city's street rap scene.",
     "Like many local crews, their influence is often felt most intensely at the neighborhood level, circulating through local performances and digital networks.",
-    "They are part of the ongoing continuum of Jersey City hip-hop, carrying forward the collaborative crew dynamic pioneered in earlier eras."
+    "They are part of the ongoing continuum of Jersey City hip-hop, carrying forward the collaborative crew dynamic pioneered in earlier eras.",
+    "The lineup photographed on their promo: Murda, Big Panic, and Crisis.",
+    "Their street album HEAT (Tell Em We Coming), hosted by DJ E Double, hit stores June 1, 2002, promoted with a Jersey Journal styled front page preserved in DJ E Double's archive and shown on this page."
    ],
    "sources": [
     {
      "label": "Archive research: The Jersey City Sound, 2026"
+    },
+    {
+     "label": "HEAT (Tell Em We Coming) promo artifact, DJ E Double personal archive, 2026 (see image)"
     }
    ],
    "todo_robert": [
@@ -7501,6 +7507,10 @@
     {
      "label": "Style",
      "value": "Hip-hop"
+    },
+    {
+     "label": "Release",
+     "value": "HEAT (Tell Em We Coming), June 1, 2002, hosted by DJ E Double"
     }
    ]
   },
@@ -13132,7 +13142,6 @@
     "Meech (RIP, in E Double group photo)",
     "Green Bean (RIP, memorial photo + DJ E-Double Volume 33 tribute tape)",
     "2 Regg (RIP, memorial tape in E Double's collection)",
-    "Murda, Big Panic, Crisis (HEAT street album, 2002, hosted by DJ E-Double)",
     "Malcolm Xavier Ford (In Memoriam tape in E Double's collection; identity unclear, ASK)",
     "Jimmy (with Albee Al in the Polaroid; possibly King Jimmy Mack, confirm)"
    ]
