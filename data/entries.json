@@ -632,7 +632,7 @@
    ],
    "years_active": "c. 1970s–present",
    "facts": [
-    "DJ Flash is a Jersey City DJ from Park Street who is widely credited in the 2006 WizTV documentary as the originator of the city's mixtape scene and was introduced on camera as a legend.",
+    "DJ Flash, born Ronald Hamilton, is a Jersey City DJ from Park Street who is widely credited in the 2006 WizTV documentary as the originator of the city's mixtape scene and was introduced on camera as a legend.",
     "He began DJing at age seven, learning by convincing older neighborhood DJs including Stranger D to let him spin -- a start that placed him at the founding generation of Jersey City hip-hop.",
     "He practiced all five elements of DJing including beat juggling, scratching, and mixing, and describes pre-sampler production built with two turntables and two tape decks, a workflow typical of the late 1970s and early 1980s park jam era.",
     "He was part of a five-DJ juggle-battle circle from his block, crediting peers including Jamaican Jeff and E Rock as early inspirations, and names Wimpy B as his big brother in the craft.",
@@ -660,6 +660,10 @@
     "instagram": "https://www.instagram.com/djflashhamilton/"
    },
    "card": [
+    {
+     "label": "Real name",
+     "value": "Ronald Hamilton"
+    },
     {
      "label": "Also known as",
      "value": "DJ Flash Hamilton"
