@@ -536,6 +536,14 @@ window.JCS_ENTRIES = [
   "years": "2021–present"
  },
  {
+  "no": "246",
+  "name": "DJ Joe Smith",
+  "href": "entry-dj-joe-smith.html",
+  "role": "DJ",
+  "type": "person",
+  "years": ""
+ },
+ {
   "no": "215",
   "name": "DJ Junebugg",
   "href": "entry-dj-junebugg.html",
@@ -808,6 +816,22 @@ window.JCS_ENTRIES = [
   "years": ""
  },
  {
+  "no": "245",
+  "name": "Grand Wizard Capone",
+  "href": "entry-grand-wizard-capone.html",
+  "role": "DJ",
+  "type": "person",
+  "years": "late 1970s – present"
+ },
+ {
+  "no": "248",
+  "name": "Grandmaster Crash",
+  "href": "entry-grandmaster-crash.html",
+  "role": "DJ",
+  "type": "person",
+  "years": ""
+ },
+ {
   "no": "133",
   "name": "Hao Huang",
   "href": "entry-hao-huang.html",
@@ -998,6 +1022,14 @@ window.JCS_ENTRIES = [
   "role": "Rapper",
   "type": "person",
   "years": ""
+ },
+ {
+  "no": "249",
+  "name": "Killer Force",
+  "href": "entry-killer-force.html",
+  "role": "Hip-hop crew",
+  "type": "group",
+  "years": "c. 1980s"
  },
  {
   "no": "084",
@@ -1292,6 +1324,14 @@ window.JCS_ENTRIES = [
   "name": "Norman Edge",
   "href": "entry-norman-edge.html",
   "role": "Musician",
+  "type": "person",
+  "years": ""
+ },
+ {
+  "no": "247",
+  "name": "Omar X",
+  "href": "entry-omar-x.html",
+  "role": "Scene figure · Producer",
   "type": "person",
   "years": ""
  },

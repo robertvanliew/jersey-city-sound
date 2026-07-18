@@ -262,7 +262,8 @@
        "alt": "The Intimate Thoughts of Mista Quiet Man Club Traxx tape cover in pink and black by Pro Art",
        "caption": "The Intimate Thoughts of Mista Quiet Man (Club Traxx), cover by Pro Art. The shout-outs name the staff of Albert's night club in Jersey City, Donald Wiz Davis, DJ Trever-D, Wimpy-B, Omar X and Isaac of Supreme Production, and the Friday nights at Mahogany's.",
        "tags": [
-        "mista-quietman"
+        "mista-quietman",
+        "omar-x"
        ]
       },
       {
@@ -768,7 +769,8 @@
        "alt": "DJ Flash and Grand Wizard Capone in Duncan Projects Jersey City reunion shirts",
        "caption": "DJ Flash and Grand Wizard Capone at a Duncan Projects reunion, both in Duncan Projects Jersey City shirts.",
        "tags": [
-        "dj-flash-jersey-city"
+        "dj-flash-jersey-city",
+        "grand-wizard-capone"
        ]
       },
       {
@@ -815,7 +817,11 @@
        "tags": [
         "dj-flash-jersey-city",
         "dj-wimpy-bee",
-        "dj-count-basil"
+        "dj-count-basil",
+        "grand-wizard-capone",
+        "dj-joe-smith",
+        "omar-x",
+        "grandmaster-crash"
        ]
       }
      ]
@@ -10053,7 +10059,9 @@
         "lord-sun-albee-al",
         "sweet-slick-and-slide",
         "dj-stranger-dee",
-        "cool-sir-brown"
+        "cool-sir-brown",
+        "grand-wizard-capone",
+        "killer-force"
        ]
       },
       {
@@ -10070,7 +10078,8 @@
        "caption": "A Super Bad Breakin Dance Contest, Friday March 19: the Sweet Slick and Sly Crew pictured doing their hit It's Magic.",
        "tags": [
         "lord-sun-albee-al",
-        "sweet-slick-and-slide"
+        "sweet-slick-and-slide",
+        "killer-force"
        ]
       }
      ]
@@ -12599,6 +12608,216 @@
     "Distinguish from out of market DJs sharing the name"
    ],
    "links": {}
+  },
+  {
+   "entry_no": "245",
+   "name": "Grand Wizard Capone",
+   "slug": "grand-wizard-capone",
+   "type": "person",
+   "status": "community-verified",
+   "roles": [
+    "DJ"
+   ],
+   "genres": [
+    "Hip-hop"
+   ],
+   "years_active": "late 1970s – present",
+   "origin": "Jersey City, New Jersey",
+   "facts": [
+    "Grand Wizard Capone is a Jersey City DJ of the park jam generation, named by DJ Thurmie Thurm as one of the legends he came up playing alongside.",
+    "A period flyer for The Showdown For All DJs at the Benmore Skating Rink bills Capone alongside Strang D, Jimmy M, Al Bee, Sir Brown, and the era's crews.",
+    "He stands in the Jersey City Hip Hop Legends portrait by Tijon Maro, preserved in this archive, and in the Duncan Projects reunion photographs with DJ Flash, both in Duncan Projects Jersey City shirts."
+   ],
+   "galleries": [],
+   "sources": [
+    {
+     "label": "The Showdown For All DJs flyer, Benmore Skating Rink, preserved in this archive (see Lord Sun Albee Al's gallery)"
+    },
+    {
+     "label": "Jersey City Hip Hop Legends portrait, Tijon Maro (see DJ Flash's gallery)"
+    },
+    {
+     "label": "Named in DJ Thurmie Thurm's documented history"
+    }
+   ],
+   "card": [
+    {
+     "label": "Era",
+     "value": "Park jams, late 1970s onward"
+    },
+    {
+     "label": "Ground",
+     "value": "Duncan Projects, Jersey City"
+    }
+   ],
+   "todo_robert": [
+    "Real name",
+    "Years and rooms from memory",
+    "His own account"
+   ],
+   "links": {}
+  },
+  {
+   "entry_no": "246",
+   "name": "DJ Joe Smith",
+   "slug": "dj-joe-smith",
+   "type": "person",
+   "status": "community-verified",
+   "roles": [
+    "DJ"
+   ],
+   "genres": [
+    "Hip-hop"
+   ],
+   "years_active": "",
+   "origin": "Jersey City, New Jersey",
+   "facts": [
+    "DJ Joe Smith is a Jersey City DJ of the founding generation.",
+    "He stands in the Jersey City Hip Hop Legends portrait by Tijon Maro, preserved in this archive, among the seven pioneers on the stoop."
+   ],
+   "galleries": [],
+   "sources": [
+    {
+     "label": "Jersey City Hip Hop Legends portrait, Tijon Maro (see DJ Flash's gallery)"
+    },
+    {
+     "label": "Community identification, The Jersey City Sound, 2026"
+    }
+   ],
+   "card": [
+    {
+     "label": "Scene",
+     "value": "Jersey City, New Jersey"
+    }
+   ],
+   "todo_robert": [
+    "Era, rooms, and crew from memory",
+    "His own account"
+   ],
+   "links": {}
+  },
+  {
+   "entry_no": "247",
+   "name": "Omar X",
+   "slug": "omar-x",
+   "type": "person",
+   "status": "community-verified",
+   "roles": [
+    "Scene figure",
+    "Producer"
+   ],
+   "genres": [
+    "Hip-hop"
+   ],
+   "years_active": "",
+   "origin": "Jersey City, New Jersey",
+   "facts": [
+    "Omar X is a figure of Jersey City's founding hip hop generation, remembered with Supreme Production; Mista Quietman's 1990s Club Traxx shout-outs big him up alongside Isaac of Supreme Production.",
+    "He stands in the Jersey City Hip Hop Legends portrait by Tijon Maro, preserved in this archive."
+   ],
+   "galleries": [],
+   "sources": [
+    {
+     "label": "Mista Quietman, Club Traxx shout-outs (primary artifact, see his gallery)"
+    },
+    {
+     "label": "Jersey City Hip Hop Legends portrait, Tijon Maro (see DJ Flash's gallery)"
+    }
+   ],
+   "card": [
+    {
+     "label": "Affiliation",
+     "value": "Supreme Production"
+    },
+    {
+     "label": "Scene",
+     "value": "Jersey City, New Jersey"
+    }
+   ],
+   "todo_robert": [
+    "Role detail (DJ, producer, promoter?)",
+    "Isaac of Supreme Production, candidate",
+    "His own account"
+   ],
+   "links": {}
+  },
+  {
+   "entry_no": "248",
+   "name": "Grandmaster Crash",
+   "slug": "grandmaster-crash",
+   "type": "person",
+   "status": "community-verified",
+   "roles": [
+    "DJ"
+   ],
+   "genres": [
+    "Hip-hop"
+   ],
+   "years_active": "",
+   "origin": "Jersey City, New Jersey",
+   "facts": [
+    "Grandmaster Crash is a Jersey City DJ of the founding generation.",
+    "He stands in the Jersey City Hip Hop Legends portrait by Tijon Maro, preserved in this archive, among the seven pioneers on the stoop."
+   ],
+   "galleries": [],
+   "sources": [
+    {
+     "label": "Jersey City Hip Hop Legends portrait, Tijon Maro (see DJ Flash's gallery)"
+    },
+    {
+     "label": "Community identification, The Jersey City Sound, 2026"
+    }
+   ],
+   "card": [
+    {
+     "label": "Scene",
+     "value": "Jersey City, New Jersey"
+    }
+   ],
+   "todo_robert": [
+    "Era, rooms, and crew from memory",
+    "His own account"
+   ],
+   "links": {}
+  },
+  {
+   "entry_no": "249",
+   "name": "Killer Force",
+   "slug": "killer-force",
+   "type": "group",
+   "status": "community-verified",
+   "roles": [
+    "Hip-hop crew"
+   ],
+   "genres": [
+    "Hip-hop"
+   ],
+   "years_active": "c. 1980s",
+   "origin": "Jersey City, New Jersey",
+   "facts": [
+    "Killer Force were a Jersey City hip hop crew of the park jam and skating rink era.",
+    "A period flyer for The Showdown For All DJs at the Benmore Skating Rink carries their name across the bill from Sweet S and Sly, and the It's Magic breakin contest flyer lists them among the invited crews."
+   ],
+   "galleries": [],
+   "sources": [
+    {
+     "label": "The Showdown For All DJs and It's Magic contest flyers, preserved in this archive (see Lord Sun Albee Al's gallery)"
+    },
+    {
+     "label": "Community identification, The Jersey City Sound, 2026"
+    }
+   ],
+   "card": [
+    {
+     "label": "Era",
+     "value": "1980s skating rink and park jam circuit"
+    }
+   ],
+   "todo_robert": [
+    "Member names",
+    "Their own account"
+   ],
+   "links": {}
   }
  ],
  "discovered_candidates": {
@@ -13234,6 +13453,50 @@
     {
      "name": "Jersey (act on Mel-O, 1985)",
      "note": "Billed simply as 'Jersey': Things Ain't As Bad As They Seem, 12-inch promo, Mel-O MLO 777, 1985. Label credits: written by K. Nance and D. Sanchez; produced by Amir Bayyan, Adam Bayyan, and Dave Dastard for Mel-O Productions; exec. producer Melvin Odoms. Nance and Sanchez may be the members. Ask Robert / the Odoms circle who the act was."
+    },
+    {
+     "name": "Craiga Ski",
+     "note": "Named by Robert (2026-07-18) for an entry; needs one line of testimony (who, era, role) or an artifact to publish."
+    },
+    {
+     "name": "Demon Tape Rockers (crew)",
+     "note": "Named by Robert (2026-07-18) for an entry; needs one line of testimony (who, era, role) or an artifact to publish."
+    },
+    {
+     "name": "E da Butcher",
+     "note": "Named by Robert (2026-07-18) for an entry; needs one line of testimony (who, era, role) or an artifact to publish."
+    },
+    {
+     "name": "Bunny (female DJ)",
+     "note": "Named by Robert (2026-07-18) for an entry; needs one line of testimony (who, era, role) or an artifact to publish."
+    },
+    {
+     "name": "Chicago",
+     "note": "Named by Robert (2026-07-18) for an entry; needs one line of testimony (who, era, role) or an artifact to publish."
+    },
+    {
+     "name": "Walley B",
+     "note": "Named by Robert (2026-07-18) for an entry; needs one line of testimony (who, era, role) or an artifact to publish."
+    },
+    {
+     "name": "Rick C",
+     "note": "Named by Robert (2026-07-18) for an entry; needs one line of testimony (who, era, role) or an artifact to publish."
+    },
+    {
+     "name": "Big Dave",
+     "note": "Named by Robert (2026-07-18) for an entry; needs one line of testimony (who, era, role) or an artifact to publish."
+    },
+    {
+     "name": "Superman of the Barbarians (crew)",
+     "note": "Named by Robert (2026-07-18) for an entry; needs one line of testimony (who, era, role) or an artifact to publish."
+    },
+    {
+     "name": "Sha",
+     "note": "Named by Robert (2026-07-18) for an entry; needs one line of testimony (who, era, role) or an artifact to publish."
+    },
+    {
+     "name": "Warm Daddy",
+     "note": "Named by Robert (2026-07-18) for an entry; needs one line of testimony (who, era, role) or an artifact to publish."
     }
    ]
   },
