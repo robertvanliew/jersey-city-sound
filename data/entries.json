@@ -11865,7 +11865,8 @@
    "origin": "Jersey City, New Jersey",
    "facts": [
     "Mel-O Records was an independent Jersey City record label founded by producer Mel Odoms; its Discogs label page lists its contact as Jersey City, NJ, and states it was founded to release Tomorrow's Edition records.",
-    "Its catalog ran from 1981 to 1990: Tomorrow's Edition's \"U Turn Me On\" (MLO-437, 1981), \"I'm The Best\" (MLO-438, 1984), and \"Million Dollars\" (MLO 800 and MLO 900, 1987), plus a 1985 promo 12-inch, \"Things Ain't As Bad As They Seem,\" by an act billed simply as Jersey (MLO 777).",
+    "The label pressed its address onto its records: 94 Union Street, Jersey City, NJ 07304, with a 201 phone number, placing its operation in the city's Bergen-Lafayette section.",
+    "Its catalog ran from 1981 to 1990: Tomorrow's Edition's \"U Turn Me On\" (MLO-437, 1981), \"I'm The Best\" (MLO-438, 1984), and \"Million Dollars\" (MLO 800 and MLO 900, 1987), plus \"Things Ain't As Bad As They Seem\" (MLO 777, 1985), a promo 12-inch by an act billed simply as Jersey, written by K. Nance and D. Sanchez and produced by Amir Bayyan, Adam Bayyan, and Dave Dastard for Mel-O Productions, with Melvin Odoms as executive producer.",
     "Its final and best-known release was the debut single of Jersey City rap group Double XX Posse, \"Executive Class\" backed with \"On A Mission\" (MLO-1100, 1990), with production credited to Mel-O Odoms and Ray Howell; Big Beat reissued it in 1991 and signed the group, who reached No. 1 on Billboard's Hot Rap Singles in 1992.",
     "By the firsthand account of DJ Flash, given to this archive in 2026, the \"Executive Class\" session drew on a room of Jersey City DJs, including Flash on drums, DJ Stranger Dee on the sample, DJ Wimpy Bee producing, and brothers Sugar Chris and Magic on the bassline."
    ],
@@ -11874,6 +11875,10 @@
     {
      "label": "Mel-o Records, Discogs label page (Jersey City, NJ)",
      "url": "https://www.discogs.com/label/40108-Mel-o-Records"
+    },
+    {
+     "label": "Jersey, Things Ain't As Bad As They Seem (MLO 777, 1985), label credits and Jersey City address, Discogs",
+     "url": "https://www.discogs.com/master/917684-Jersey-Things-Aint-As-Bad-As-They-Seem"
     },
     {
      "label": "Double XX Posse, Executive Class / On A Mission (Mel-O 1100, 1990), Discogs",
@@ -11889,8 +11894,8 @@
    ],
    "card": [
     {
-     "label": "Base",
-     "value": "Jersey City, New Jersey"
+     "label": "Address",
+     "value": "94 Union Street, Jersey City, NJ 07304"
     },
     {
      "label": "Founder",
@@ -11906,9 +11911,9 @@
     }
    ],
    "todo_robert": [
-    "Street address if findable",
     "Label scan for gallery (blue Mel-O label)",
-    "Who was the act billed as 'Jersey' (MLO 777, 1985)?"
+    "Who was the act billed as 'Jersey' (MLO 777, 1985)?",
+    "Label scan for gallery (blue Mel-O label; Robert can save the MLO 777 photo to Archive Photos)"
    ],
    "links": {}
   },
@@ -12617,7 +12622,7 @@
     },
     {
      "name": "Jersey (act on Mel-O, 1985)",
-     "note": "Billed simply as 'Jersey': Things Ain't As Bad As They Seem, 12-inch promo, Mel-O MLO 777, 1985. Who were they? Ask Robert / the Odoms circle."
+     "note": "Billed simply as 'Jersey': Things Ain't As Bad As They Seem, 12-inch promo, Mel-O MLO 777, 1985. Label credits: written by K. Nance and D. Sanchez; produced by Amir Bayyan, Adam Bayyan, and Dave Dastard for Mel-O Productions; exec. producer Melvin Odoms. Nance and Sanchez may be the members. Ask Robert / the Odoms circle who the act was."
     }
    ]
   }
