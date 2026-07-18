@@ -1332,7 +1332,7 @@ URL: https://jerseycitysound.com/entry-max-yb.html
 ## Mel Odoms
 Producer · Label founder · Songwriter — c. 1981 – 1990s
 
-- Mel Odoms, born Melvin Odoms, was a producer, songwriter, and label founder working in the Jersey City music orbit of the 1980s and early 1990s.
+- Mel Odoms, born Melvin Odoms, was a producer, songwriter, and founder of the Jersey City label Mel-O Records, active in the city's music scene of the 1980s and early 1990s.
 - Per his Discogs artist profile, he was a college track star and a sometime contract employee for Kool & the Gang, and he worked with many Jersey City musicians to get the funk and soul group Tomorrow's Edition their first records released, including the single "U Turn Me On" (CBS, 1981) and the album A Song for Everyone (Atlantic, 1982), produced by Amir Bayyan of the Kool & the Gang family.
 - He founded the independent label Mel-O Records, which in 1990 released the debut single of Jersey City rap group Double XX Posse, "Executive Class" backed with "On A Mission," carrying his production credit as Mel-O Odoms.
 - His Discogs profile, citing newspaper coverage, records that he was shot by a police officer and received a substantial financial award as a result.
@@ -1340,12 +1340,13 @@ Sources: Mel Odoms, Discogs artist profile; Double XX Posse, Executive Class / O
 URL: https://jerseycitysound.com/entry-mel-odoms.html
 
 ## Mel-O Records
-Record label — c. 1990
+Record label — 1981 – 1990
 
-- Mel-O Records was the independent label founded by producer Mel Odoms, operating in the Jersey City music orbit.
-- In 1990 it released the debut single of Jersey City rap group Double XX Posse, "Executive Class" backed with "On A Mission," with production credited to Mel-O Odoms and Ray Howell; Big Beat Records reissued the single in 1991 and signed the group, who went on to a No. 1 Billboard Hot Rap Singles hit in 1992.
+- Mel-O Records was an independent Jersey City record label founded by producer Mel Odoms; its Discogs label page lists its contact as Jersey City, NJ, and states it was founded to release Tomorrow's Edition records.
+- Its catalog ran from 1981 to 1990: Tomorrow's Edition's "U Turn Me On" (MLO-437, 1981), "I'm The Best" (MLO-438, 1984), and "Million Dollars" (MLO 800 and MLO 900, 1987), plus a 1985 promo 12-inch, "Things Ain't As Bad As They Seem," by an act billed simply as Jersey (MLO 777).
+- Its final and best-known release was the debut single of Jersey City rap group Double XX Posse, "Executive Class" backed with "On A Mission" (MLO-1100, 1990), with production credited to Mel-O Odoms and Ray Howell; Big Beat reissued it in 1991 and signed the group, who reached No. 1 on Billboard's Hot Rap Singles in 1992.
 - By the firsthand account of DJ Flash, given to this archive in 2026, the "Executive Class" session drew on a room of Jersey City DJs, including Flash on drums, DJ Stranger Dee on the sample, DJ Wimpy Bee producing, and brothers Sugar Chris and Magic on the bassline.
-Sources: Double XX Posse, Executive Class / On A Mission (Mel-O, 1990), Discogs; Mel Odoms, Discogs artist profile (label founder); Oral history: DJ Flash, as told to The Jersey City Sound, 2026
+Sources: Mel-o Records, Discogs label page (Jersey City, NJ); Double XX Posse, Executive Class / On A Mission (Mel-O 1100, 1990), Discogs; Mel Odoms, Discogs artist profile (label founder); Oral history: DJ Flash, as told to The Jersey City Sound, 2026
 URL: https://jerseycitysound.com/entry-mel-o-records.html
 
 ## Midnite The DJ
@@ -2091,6 +2092,15 @@ Producer
 - He co-ran Terry Cashman and Tommy West Productions, one of the more successful independent production companies of the early 1970s, and continued working in recording and production after Croce's death in 1973.
 Sources: Wikipedia — Tommy West; Archive research: The Jersey City Sound, 2026
 URL: https://jerseycitysound.com/entry-tommy-west.html
+
+## Tomorrow's Edition
+Funk group · Soul group · Vocal group — c. 1981 – 1987
+
+- Tomorrow's Edition were a funk and soul vocal group of the Jersey City scene of the 1980s; the Jersey City label Mel-O Records was founded by producer Mel Odoms specifically to release their records.
+- Their run opened with the single "U Turn Me On" (Mel-O MLO-437, 1981, picked up by CBS) and peaked with the album A Song for Everyone (Atlantic 80009-1, 1982), produced by Amir Bayyan of the Kool & the Gang family and remembered by collectors as one of the strongest lesser-known major-label soul albums of its era.
+- They continued on Mel-O through the 1980s with "I'm The Best" (1984) and "Million Dollars" (1987), and sang background vocals on Kool & the Gang recordings.
+Sources: Mel-o Records, Discogs label page (founded to release Tomorrow's Edition; Jersey City, NJ); Tomorrow's Edition, A Song for Everyone (Atlantic 80009-1, 1982), Soul and Funk Music; Tomorrow's Edition, A Song for Everyone, Discogs master release
+URL: https://jerseycitysound.com/entry-tomorrows-edition.html
 
 ## Tony Velona
 Musician

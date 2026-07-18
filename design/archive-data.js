@@ -1165,7 +1165,7 @@ window.JCS_ENTRIES = [
   "href": "entry-mel-o-records.html",
   "role": "Record label",
   "type": "label",
-  "years": "c. 1990"
+  "years": "1981 – 1990"
  },
  {
   "no": "036",
@@ -1798,6 +1798,14 @@ window.JCS_ENTRIES = [
   "role": "Producer",
   "type": "person",
   "years": ""
+ },
+ {
+  "no": "241",
+  "name": "Tomorrow's Edition",
+  "href": "entry-tomorrows-edition.html",
+  "role": "Funk group · Soul group · Vocal group",
+  "type": "group",
+  "years": "c. 1981 – 1987"
  },
  {
   "no": "106",
