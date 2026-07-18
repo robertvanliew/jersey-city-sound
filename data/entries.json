@@ -12818,6 +12818,109 @@
     "Their own account"
    ],
    "links": {}
+  },
+  {
+   "entry_no": "250",
+   "name": "Craiga Ski",
+   "slug": "craiga-ski",
+   "type": "person",
+   "status": "community-verified",
+   "memorial": true,
+   "roles": [
+    "MC",
+    "Promoter"
+   ],
+   "genres": [
+    "Hip-hop"
+   ],
+   "years_active": "c. early 1990s – 2010s",
+   "origin": "Jersey City, New Jersey",
+   "facts": [
+    "Craiga Ski, also billed Craig Ski, was a lifelong Jersey City native, an emcee and promoter of the city's early 1990s hip hop scene, and a core member of the underground group Maniac Mobb.",
+    "He moved in the circles of the Flavor Unit, the Jersey born collective around Queen Latifah, and is remembered in community tribute as one of Chilltown's finest emcees and a Flavor Unit pioneer.",
+    "In 1992 he appeared with Jersey City artist Double J on the very first broadcast of a Jersey City cable television music program, a moment the program's own tribute recalls.",
+    "In later years he worked in the local film scene as an associate producer and writer on projects made in and around Jersey City, by community account."
+   ],
+   "galleries": [],
+   "sources": [
+    {
+     "label": "Community memorial tribute (Facebook): one of Chilltown's finest emcees and Flavor Unit pioneer; 1992 first cable broadcast with Double J"
+    },
+    {
+     "label": "Community identification, The Jersey City Sound, 2026"
+    }
+   ],
+   "card": [
+    {
+     "label": "Group",
+     "value": "Maniac Mobb"
+    },
+    {
+     "label": "Circle",
+     "value": "Flavor Unit"
+    },
+    {
+     "label": "Scene",
+     "value": "Jersey City, New Jersey"
+    }
+   ],
+   "todo_robert": [
+    "Date of passing; memorial details",
+    "Identify the Jersey City made film he associate produced (the 2015 Brotherly Love attribution is wrong, that film is from Philadelphia)",
+    "URL of the Facebook memorial tribute",
+    "Photo"
+   ],
+   "links": {}
+  },
+  {
+   "entry_no": "251",
+   "name": "Maniac Mobb",
+   "slug": "maniac-mobb",
+   "type": "group",
+   "status": "community-verified",
+   "roles": [
+    "Hip-hop group"
+   ],
+   "genres": [
+    "Hip-hop",
+    "Underground hip-hop"
+   ],
+   "years_active": "c. 1990s",
+   "origin": "Jersey City, New Jersey",
+   "facts": [
+    "Maniac Mobb, also written Maniac Mob, were an underground Jersey City hip hop group of the 1990s, running in the same North Jersey circles as the Flavor Unit.",
+    "The late Craiga Ski, remembered as one of Chilltown's finest emcees, was a core member.",
+    "The group is named among the era's legends in the community record drawn from the 2006 WizTV documentary review."
+   ],
+   "galleries": [],
+   "sources": [
+    {
+     "label": "Community identification, The Jersey City Sound, 2026"
+    },
+    {
+     "label": "Named in the legends record of the WizTV Jersey City DJ Documentary review (2006)"
+    }
+   ],
+   "card": [
+    {
+     "label": "Era",
+     "value": "1990s"
+    },
+    {
+     "label": "Known member",
+     "value": "Craiga Ski"
+    },
+    {
+     "label": "Circle",
+     "value": "Flavor Unit orbit"
+    }
+   ],
+   "todo_robert": [
+    "Full member roster. An AI answer names David Timmons, Jerome Jenkins, Kevin Eleven; UNVERIFIED, confirm with the community before publishing",
+    "Recordings or tapes, if any survive",
+    "Photos or flyers"
+   ],
+   "links": {}
   }
  ],
  "discovered_candidates": {
@@ -13453,10 +13556,6 @@
     {
      "name": "Jersey (act on Mel-O, 1985)",
      "note": "Billed simply as 'Jersey': Things Ain't As Bad As They Seem, 12-inch promo, Mel-O MLO 777, 1985. Label credits: written by K. Nance and D. Sanchez; produced by Amir Bayyan, Adam Bayyan, and Dave Dastard for Mel-O Productions; exec. producer Melvin Odoms. Nance and Sanchez may be the members. Ask Robert / the Odoms circle who the act was."
-    },
-    {
-     "name": "Craiga Ski",
-     "note": "Named by Robert (2026-07-18) for an entry; needs one line of testimony (who, era, role) or an artifact to publish."
     },
     {
      "name": "Demon Tape Rockers (crew)",

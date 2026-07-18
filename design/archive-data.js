@@ -280,6 +280,14 @@ window.JCS_ENTRIES = [
   "years": ""
  },
  {
+  "no": "250",
+  "name": "Craiga Ski",
+  "href": "entry-craiga-ski.html",
+  "role": "MC · Promoter",
+  "type": "person",
+  "years": "c. early 1990s – 2010s"
+ },
+ {
   "no": "053",
   "name": "Cy Coben",
   "href": "entry-cy-coben.html",
@@ -1126,6 +1134,14 @@ window.JCS_ENTRIES = [
   "role": "Rapper",
   "type": "person",
   "years": ""
+ },
+ {
+  "no": "251",
+  "name": "Maniac Mobb",
+  "href": "entry-maniac-mobb.html",
+  "role": "Hip-hop group",
+  "type": "group",
+  "years": "c. 1990s"
  },
  {
   "no": "137",
