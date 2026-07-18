@@ -285,7 +285,7 @@ window.JCS_ENTRIES = [
   "href": "entry-craiga-ski.html",
   "role": "MC · Promoter",
   "type": "person",
-  "years": "c. early 1990s – 2010s"
+  "years": "c. early 1990s – present"
  },
  {
   "no": "053",
