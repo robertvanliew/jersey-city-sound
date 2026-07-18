@@ -568,17 +568,9 @@ window.JCS_ENTRIES = [
   "years": ""
  },
  {
-  "no": "229",
+  "no": "214",
   "name": "DJ Nyce",
   "href": "entry-dj-nyce.html",
-  "role": "DJ",
-  "type": "person",
-  "years": ""
- },
- {
-  "no": "214",
-  "name": "DJ Nyce Riley",
-  "href": "entry-dj-nyce-riley.html",
   "role": "DJ",
   "type": "person",
   "years": ""

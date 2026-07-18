@@ -370,7 +370,7 @@
    ]
   },
   {
-   "entry_no": "229",
+   "entry_no": "214",
    "name": "DJ Nyce",
    "slug": "dj-nyce",
    "type": "person",
@@ -411,7 +411,8 @@
    "todo_robert": [
     "Bio, era, crews from memory",
     "Confirm Jersey City vs wider 201",
-    "Photo"
+    "Photo",
+    "Fuller bio and receipts (carried from the merged Nyce Riley stub)"
    ],
    "links": {
     "instagram": "https://www.instagram.com/djnyceriley/"
@@ -680,9 +681,10 @@
       {
        "src": "assets/media/dj-flash-jersey-city/photographs/dj-flash--djnyce-dj-hazzb.jpg",
        "alt": "DJ Flash behind turntables with DJ Nyce and DJ Hazz B",
-       "caption": "On the tables with DJ Nyce and DJ Hazz B of the New Jersey Mix Kings 201.",
+       "caption": "On the tables with DJ Nyce and DJ Hazz B, brothers of the New Jersey Mix Kings 201.",
        "tags": [
         "dj-flash-jersey-city",
+        "dj-nyce",
         "dj-hazz-b"
        ]
       },
@@ -10584,37 +10586,6 @@
    ],
    "links": {},
    "entry_no": "213"
-  },
-  {
-   "name": "DJ Nyce Riley",
-   "slug": "dj-nyce-riley",
-   "status": "handle-provided",
-   "roles": [
-    "DJ"
-   ],
-   "genres": [
-    "Hip-hop",
-    "Mixtapes"
-   ],
-   "years_active": "",
-   "origin": "New Jersey",
-   "facts": [
-    "DJ Nyce Riley is a New Jersey hip-hop and mixtape DJ and a member of the New Jersey Mix Kings 201 collective, alongside DJ Hazz B and Semaj da DJ.",
-    "This entry has been opened and awaits fuller biographical detail and receipts from the community."
-   ],
-   "sources": [
-    {
-     "label": "Community documentation, The Jersey City Sound, 2026 (surfaced via search; pending verification)"
-    }
-   ],
-   "todo_robert": [
-    "Confirm identity and details",
-    "Bio, era, and hometown",
-    "Instagram / streaming handles",
-    "Photo permission"
-   ],
-   "links": {},
-   "entry_no": "214"
   },
   {
    "name": "DJ Junebugg",
