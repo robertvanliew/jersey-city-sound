@@ -283,7 +283,7 @@ window.JCS_ENTRIES = [
   "no": "250",
   "name": "Craiga Ski",
   "href": "entry-craiga-ski.html",
-  "role": "MC · Promoter",
+  "role": "MC · Producer · Promoter",
   "type": "person",
   "years": "c. early 1990s – present"
  },
