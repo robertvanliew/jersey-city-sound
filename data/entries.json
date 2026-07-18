@@ -602,6 +602,129 @@
      "label": "Collective",
      "value": "New Jersey Mix Kings 201"
     }
+   ],
+   "galleries": [
+    {
+     "id": "photographs",
+     "title": "Photographs & Artifacts",
+     "intro": "From the personal archive of DJ Flash Hamilton, shared with The Jersey City Sound in 2026.",
+     "images": [
+      {
+       "src": "assets/media/dj-flash-jersey-city/photographs/dj-flash-mixtape.jpg",
+       "alt": "Original DJ Flash mixtape cassette, TDK D90, hand labeled number 14",
+       "caption": "An original D.J. Flash mixtape, tape number 14, hand labeled on a TDK D90 cassette. The physical medium of the scene he helped originate.",
+       "tags": [
+        "dj-flash-jersey-city"
+       ]
+      },
+      {
+       "src": "assets/media/dj-flash-jersey-city/photographs/dj-flash-hiphop-junky-award.jpg",
+       "alt": "Hip Hop Junky Radio Show Hall of Fame trophy engraved The Throwback King DJ Flash Class of 2013, with a Park Street 4 Life wristband",
+       "caption": "Hip Hop Junky Radio Show Hall of Fame trophy: inductee The Throwback King, DJ Flash, class of 2013. A Park Street 4 Life wristband hangs from the star.",
+       "tags": [
+        "dj-flash-jersey-city"
+       ]
+      },
+      {
+       "src": "assets/media/dj-flash-jersey-city/photographs/dj-flash-certificate-of-the-city.jpg",
+       "alt": "Certificate of Appreciation awarding DJ Flash the Jersey Legends Wall of Fame Award",
+       "caption": "Certificate of Appreciation: D.J. Flash, awarded the Jersey Legends Wall of Fame Award.",
+       "tags": [
+        "dj-flash-jersey-city"
+       ]
+      },
+      {
+       "src": "assets/media/dj-flash-jersey-city/photographs/dj-flash-mixtape-king-belt-.jpg",
+       "alt": "DJ Flash seated outside a barbershop holding a championship belt",
+       "caption": "The champion at rest: DJ Flash with a championship belt outside the barbershop.",
+       "tags": [
+        "dj-flash-jersey-city"
+       ]
+      },
+      {
+       "src": "assets/media/dj-flash-jersey-city/photographs/dj-flash-dj-wimpybee-club-foxes.jpg",
+       "alt": "DJ Flash in headphones with DJ Wimpy Bee at Club Foxes",
+       "caption": "DJ Flash and DJ Wimpy Bee at Club Foxes, one of the rooms Wimpy Bee held down for years.",
+       "tags": [
+        "dj-flash-jersey-city",
+        "dj-wimpy-bee"
+       ]
+      },
+      {
+       "src": "assets/media/dj-flash-jersey-city/photographs/dj-flash-dj-wimpybee-djdyce.jpg",
+       "alt": "DJ Wimpy Bee, DJ Dyce, and DJ Flash outside Humz's Halal Cafe on Monticello Avenue, Jersey City",
+       "caption": "DJ Wimpy Bee, DJ Dyce, and DJ Flash outside Humz's Halal Cafe on Monticello Avenue, Jersey City.",
+       "tags": [
+        "dj-flash-jersey-city",
+        "dj-wimpy-bee",
+        "dj-dyce"
+       ]
+      },
+      {
+       "src": "assets/media/dj-flash-jersey-city/photographs/dj-flash-chillrobg-lakimshabbaz.jpg",
+       "alt": "DJ Flash with Chill Rob G and Lakim Shabazz",
+       "caption": "Three voices of the golden era: DJ Flash with Chill Rob G and Lakim Shabazz of the Flavor Unit.",
+       "tags": [
+        "dj-flash-jersey-city",
+        "chill-rob-g"
+       ]
+      },
+      {
+       "src": "assets/media/dj-flash-jersey-city/photographs/dj-flash-grandwizard-capaone-duncan-reunion.jpg",
+       "alt": "DJ Flash and Grand Wizard Capone in Duncan Projects Jersey City reunion shirts",
+       "caption": "DJ Flash and Grand Wizard Capone at a Duncan Projects reunion, both in Duncan Projects Jersey City shirts.",
+       "tags": [
+        "dj-flash-jersey-city"
+       ]
+      },
+      {
+       "src": "assets/media/dj-flash-jersey-city/photographs/dj-flash--djnyce-dj-hazzb.jpg",
+       "alt": "DJ Flash behind turntables with DJ Nyce and DJ Hazz B",
+       "caption": "On the tables with DJ Nyce and DJ Hazz B of the New Jersey Mix Kings 201.",
+       "tags": [
+        "dj-flash-jersey-city",
+        "dj-hazz-b"
+       ]
+      },
+      {
+       "src": "assets/media/dj-flash-jersey-city/photographs/dj-flash-joeytimes-dj-wimpy-bee-dj-tysheem.jpg",
+       "alt": "Joey Times, DJ Wimpy Bee, DJ Flash, and DJ Tysheem behind turntables at a brick walled room",
+       "caption": "Behind the Numark: Joey Times, DJ Wimpy Bee, DJ Flash, and DJ Tysheem.",
+       "tags": [
+        "dj-flash-jersey-city",
+        "dj-wimpy-bee"
+       ]
+      },
+      {
+       "src": "assets/media/dj-flash-jersey-city/photographs/dj-wimpy-bee-dj-sinister-dj-hardcore.jpg",
+       "alt": "DJ Wimpy Bee in a lightning bolt shirt with DJ Sinister and DJ Hardcore at a record filled basement",
+       "caption": "DJ Wimpy Bee with DJ Sinister and DJ Hardcore. From the archive of DJ Flash.",
+       "tags": [
+        "dj-flash-jersey-city",
+        "dj-wimpy-bee"
+       ]
+      },
+      {
+       "src": "assets/media/dj-flash-jersey-city/photographs/pressureonline-dj-wimpy-bee-dj-flash.jpg",
+       "alt": "Group photo including DJ Wimpy Bee and DJ Flash, credited to Pressure Online",
+       "caption": "With DJ Wimpy Bee, photo credited to Pressure Online.",
+       "tags": [
+        "dj-flash-jersey-city",
+        "dj-wimpy-bee"
+       ]
+      },
+      {
+       "src": "assets/media/dj-flash-jersey-city/photographs/dj-wimpybee-dj-joe-smith-count-basil-granwizard-capone-omarx-dj-flash-grandmastercrash.jpg",
+       "alt": "Jersey City Hip Hop Legends group portrait of seven pioneers on a stoop, captured by Tijon Maro",
+       "caption": "Jersey City Hip Hop Legends, captured by Tijon Maro: DJ Wimpy Bee, DJ Joe Smith, Count Basil, Grand Wizard Capone, Omar X, DJ Flash, and Grandmaster Crash.",
+       "tags": [
+        "dj-flash-jersey-city",
+        "dj-wimpy-bee",
+        "dj-count-basil"
+       ]
+      }
+     ]
+    }
    ]
   },
   {
@@ -2747,6 +2870,23 @@
     {
      "label": "Known for",
      "value": "Freestyle mastery, punchlines, lyricism"
+    }
+   ],
+   "galleries": [
+    {
+     "id": "photographs",
+     "title": "Photographs",
+     "intro": "From the family archive, shared by his cousin DJ Flash, 2026.",
+     "images": [
+      {
+       "src": "assets/media/rigga-mortis/photographs/rigamortis.jpg",
+       "alt": "Rigga Mortis performing on the microphone in an NYCE jersey",
+       "caption": "Rigga Mortis on the microphone. From the family archive, shared by his cousin DJ Flash.",
+       "tags": [
+        "rigga-mortis"
+       ]
+      }
+     ]
     }
    ]
   },
@@ -11870,7 +12010,54 @@
     "Its final and best-known release was the debut single of Jersey City rap group Double XX Posse, \"Executive Class\" backed with \"On A Mission\" (MLO-1100, 1990), with production credited to Mel-O Odoms and Ray Howell; Big Beat reissued it in 1991 and signed the group, who reached No. 1 on Billboard's Hot Rap Singles in 1992.",
     "By the firsthand account of DJ Flash, given to this archive in 2026, the \"Executive Class\" session drew on a room of Jersey City DJs, including Flash on drums, DJ Stranger Dee on the sample, DJ Wimpy Bee producing, and brothers Sugar Chris and Magic on the bassline."
    ],
-   "galleries": [],
+   "galleries": [
+    {
+     "id": "releases",
+     "title": "The Records",
+     "intro": "Label scans from the Mel-O catalog, 1981 to 1990. The Jersey City address, 94 Union Street, is pressed into the rim of every Mel-O side.",
+     "images": [
+      {
+       "src": "assets/media/mel-o-records/releases/atlantic-rfc-tomorrows-edition-u-turn-me-on.jpg",
+       "alt": "Atlantic RFC label of U Turn Me On by Tomorrow's Edition, 1981",
+       "caption": "Tomorrow's Edition, U Turn Me On (Atlantic and RFC, DM 4825, 1981). Written by Greg Rafford, Wesley Thomas, and Tomorrow's Edition; produced by Amir Bayyan for Mel-O Production; executive producer Mel-Larry Odoms.",
+       "tags": [
+        "mel-o-records",
+        "tomorrows-edition",
+        "mel-odoms"
+       ]
+      },
+      {
+       "src": "assets/media/mel-o-records/releases/mlo-777-jersey-things-aint-as-bad.jpg",
+       "alt": "Blue Mel-O Records label of Things Ain't As Bad As They Seem by Jersey, 1985",
+       "caption": "Jersey, Things Ain't As Bad As They Seem (Mel-O MLO 777, 1985 promo). Written by K. Nance and D. Sanchez; produced by Amir Bayyan, Adam Bayyan, and Dave Dastard; executive producer Melvin Odoms.",
+       "tags": [
+        "mel-o-records",
+        "mel-odoms"
+       ]
+      },
+      {
+       "src": "assets/media/mel-o-records/releases/mlo-900-tomorrows-edition-million-dollars.jpg",
+       "alt": "Blue Mel-O Records label of Million Dollars by Tomorrow's Edition, 1987",
+       "caption": "Tomorrow's Edition, Million Dollars (Mel-O MLO 900, 1987). Written by S. Vincent and J. Burgess; executive producers Melvin Odoms and Charles Murphy. The rim reads 94 Union St., Jersey City, N.J. 07304.",
+       "tags": [
+        "mel-o-records",
+        "tomorrows-edition",
+        "mel-odoms"
+       ]
+      },
+      {
+       "src": "assets/media/mel-o-records/releases/mlo-1100-double-xx-posse-on-a-mission.jpg",
+       "alt": "Blue Mel-O Records label of On A Mission by Double XX Posse, 1990",
+       "caption": "Double XX Posse, On A Mission (Mel-O MLO-1100, 1990, the AA side of Executive Class). Produced by Melo-Odoms, co-produced by Ray Howell; executive producers Peter E. Barnes Jr. and Adonis White.",
+       "tags": [
+        "mel-o-records",
+        "double-xx-posse",
+        "mel-odoms"
+       ]
+      }
+     ]
+    }
+   ],
    "sources": [
     {
      "label": "Mel-o Records, Discogs label page (Jersey City, NJ)",
@@ -12624,6 +12811,20 @@
      "name": "Jersey (act on Mel-O, 1985)",
      "note": "Billed simply as 'Jersey': Things Ain't As Bad As They Seem, 12-inch promo, Mel-O MLO 777, 1985. Label credits: written by K. Nance and D. Sanchez; produced by Amir Bayyan, Adam Bayyan, and Dave Dastard for Mel-O Productions; exec. producer Melvin Odoms. Nance and Sanchez may be the members. Ask Robert / the Odoms circle who the act was."
     }
+   ]
+  },
+  "photo_identified_names": {
+   "note": "Names identified by DJ Flash in his 2026 photo drop (Archive Photos/DJ Flash Hamilton). Candidates for future entries; each needs the usual verification.",
+   "names": [
+    "Joey Times",
+    "DJ Tysheem",
+    "DJ Sinister",
+    "DJ Hardcore",
+    "DJ Joe Smith",
+    "Omar X",
+    "Grandmaster Crash",
+    "Grand Wizard Capone (also named in DJ Thurmie Thurm's entry)",
+    "Which DJ Nyce is in the turntable photo, confirm with Flash"
    ]
   }
  }
