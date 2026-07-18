@@ -1152,6 +1152,22 @@ window.JCS_ENTRIES = [
   "years": ""
  },
  {
+  "no": "239",
+  "name": "Mel Odoms",
+  "href": "entry-mel-odoms.html",
+  "role": "Producer · Label founder · Songwriter",
+  "type": "person",
+  "years": "c. 1981 – 1990s"
+ },
+ {
+  "no": "240",
+  "name": "Mel-O Records",
+  "href": "entry-mel-o-records.html",
+  "role": "Record label",
+  "type": "label",
+  "years": "c. 1990"
+ },
+ {
   "no": "036",
   "name": "Midnite The DJ",
   "href": "entry-midnite-the-dj.html",

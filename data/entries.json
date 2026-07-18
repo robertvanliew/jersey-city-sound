@@ -11783,6 +11783,125 @@
     "Group photo / record scans"
    ],
    "links": {}
+  },
+  {
+   "entry_no": "239",
+   "name": "Mel Odoms",
+   "slug": "mel-odoms",
+   "type": "person",
+   "status": "web-verified",
+   "roles": [
+    "Producer",
+    "Label founder",
+    "Songwriter"
+   ],
+   "genres": [
+    "Soul",
+    "Funk",
+    "Hip-hop"
+   ],
+   "years_active": "c. 1981 – 1990s",
+   "origin": "Jersey City orbit, New Jersey",
+   "facts": [
+    "Mel Odoms, born Melvin Odoms, was a producer, songwriter, and label founder working in the Jersey City music orbit of the 1980s and early 1990s.",
+    "Per his Discogs artist profile, he was a college track star and a sometime contract employee for Kool & the Gang, and he worked with many Jersey City musicians to get the funk and soul group Tomorrow's Edition their first records released, including the single \"U Turn Me On\" (CBS, 1981) and the album A Song for Everyone (Atlantic, 1982), produced by Amir Bayyan of the Kool & the Gang family.",
+    "He founded the independent label Mel-O Records, which in 1990 released the debut single of Jersey City rap group Double XX Posse, \"Executive Class\" backed with \"On A Mission,\" carrying his production credit as Mel-O Odoms.",
+    "His Discogs profile, citing newspaper coverage, records that he was shot by a police officer and received a substantial financial award as a result."
+   ],
+   "galleries": [],
+   "sources": [
+    {
+     "label": "Mel Odoms, Discogs artist profile",
+     "url": "https://www.discogs.com/artist/451111-Mel-Odoms"
+    },
+    {
+     "label": "Double XX Posse, Executive Class / On A Mission (Mel-O, 1990), Discogs",
+     "url": "https://www.discogs.com/release/434999-Double-XX-Posse-Executive-Class-On-A-Mission"
+    },
+    {
+     "label": "Tomorrow's Edition, A Song for Everyone (Atlantic 80009-1, 1982), Soul and Funk Music",
+     "url": "https://www.soulandfunkmusic.com/album/tomorrows_edition/a_song_for_everyone"
+    }
+   ],
+   "card": [
+    {
+     "label": "Real name",
+     "value": "Melvin Odoms"
+    },
+    {
+     "label": "Label",
+     "value": "Mel-O Records (founder)"
+    },
+    {
+     "label": "Key credits",
+     "value": "Tomorrow's Edition (1981 to 1982) · Double XX Posse \"Executive Class\" (1990)"
+    },
+    {
+     "label": "Connection",
+     "value": "Kool & the Gang camp"
+    }
+   ],
+   "todo_robert": [
+    "Newspaper clipping on the shooting and settlement (his Discogs profile cites newspapers.com)",
+    "Confirm whether he was from Jersey City proper",
+    "Is he still living? Contact via Mel-Larry Odoms group thread",
+    "Photo"
+   ],
+   "links": {}
+  },
+  {
+   "entry_no": "240",
+   "name": "Mel-O Records",
+   "slug": "mel-o-records",
+   "type": "label",
+   "status": "web-verified",
+   "roles": [
+    "Record label"
+   ],
+   "genres": [
+    "Hip-hop"
+   ],
+   "years_active": "c. 1990",
+   "origin": "Jersey City orbit, New Jersey",
+   "facts": [
+    "Mel-O Records was the independent label founded by producer Mel Odoms, operating in the Jersey City music orbit.",
+    "In 1990 it released the debut single of Jersey City rap group Double XX Posse, \"Executive Class\" backed with \"On A Mission,\" with production credited to Mel-O Odoms and Ray Howell; Big Beat Records reissued the single in 1991 and signed the group, who went on to a No. 1 Billboard Hot Rap Singles hit in 1992.",
+    "By the firsthand account of DJ Flash, given to this archive in 2026, the \"Executive Class\" session drew on a room of Jersey City DJs, including Flash on drums, DJ Stranger Dee on the sample, DJ Wimpy Bee producing, and brothers Sugar Chris and Magic on the bassline."
+   ],
+   "galleries": [],
+   "sources": [
+    {
+     "label": "Double XX Posse, Executive Class / On A Mission (Mel-O, 1990), Discogs",
+     "url": "https://www.discogs.com/release/434999-Double-XX-Posse-Executive-Class-On-A-Mission"
+    },
+    {
+     "label": "Mel Odoms, Discogs artist profile (label founder)",
+     "url": "https://www.discogs.com/artist/451111-Mel-Odoms"
+    },
+    {
+     "label": "Oral history: DJ Flash, as told to The Jersey City Sound, 2026"
+    }
+   ],
+   "card": [
+    {
+     "label": "Founder",
+     "value": "Mel Odoms"
+    },
+    {
+     "label": "Key release",
+     "value": "Double XX Posse, \"Executive Class\" (1990)"
+    },
+    {
+     "label": "Legacy",
+     "value": "Launched the group behind a 1992 No. 1 rap single"
+    }
+   ],
+   "todo_robert": [
+    "Full label discography (other Mel-O releases?)",
+    "Label address / JC confirmation",
+    "Label scan for gallery"
+   ],
+   "links": {}
   }
  ],
  "discovered_candidates": {
@@ -12418,6 +12537,14 @@
     {
      "name": "Magic (Sugar Chris's brother)",
      "note": "Named by DJ Flash (firsthand, 2026) as co-creator of the Executive Class bassline with his brother Sugar Chris. Same corroboration need."
+    },
+    {
+     "name": "Tomorrow's Edition",
+     "note": "Funk/soul group, A Song for Everyone (Atlantic, 1982, prod. Amir Bayyan), U Turn Me On (CBS 1981); backed Kool & the Gang on record. JC link so far only via Mel Odoms's Discogs bio ('worked with many Jersey City folks'); possible Kay-Gees lineage. Need: origin confirmation (liner notes, member names, or Robert/scene knowledge)."
+    },
+    {
+     "name": "The Kay-Gees",
+     "note": "Jersey City funk group of the Kool & the Gang camp ('Keep On Bumpin''). Likely web-verifiable via Wikipedia/Discogs; build when working the funk-era backlog. May connect to Tomorrow's Edition."
     }
    ]
   }
