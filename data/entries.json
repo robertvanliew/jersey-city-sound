@@ -163,6 +163,7 @@
     "Mista Quietman (Antwan Anderson) is a Jersey City DJ, blend-tape producer, and remixer whose documented work runs from the city's 1990s mixtape era to today, and a key figure in preserving the scene's history online.",
     "His tape catalog, preserved in his personal archive, includes The Intimate Thoughts of Mista Quiet Man (Club Traxx), Mista Quiet Man's Birthday Bash, Now That's What I Call Blenden', and The Past Versus the Present Artist, with covers by the Harlem mixtape shop Pro Art and Jersey City's own Blaze-In-Arts.",
     "The Club Traxx shout-outs are a primary document of the 1990s scene: he thanks the staff of Albert's, which he calls one of the hottest night clubs in Jersey City, naming Donald \"Wiz\" Davis, DJ Trever-D, and Wimpy-B, along with Omar X and Isaac of Supreme Production and the Friday nights at Mahogany's.",
+    "Through the late 2000s and 2010s he ran a prolific Jersey club CD series under the Jersey Club Kingz banner, mixing the club scene's producers, Jayhood, Sliink, Nadus, Taj, Frosty, Tim Dolla, and the rest, for the 201; the covers carry his own remixes, including a Crank Dat Rudeboy remix with DJ J-Money and his Tip Toe extended blend, a co hosted volume with Ms. Porsh, a tribute volume for Baltimore's K-Swift after her passing in 2008, and even a kids' edition of club edits.",
     "He produced 'The 201 High School Anthem', a Jersey City rework of DJ Sliink's 'High School Anthem', calling out Lincoln, Ferris, Dickinson, and Snyder high schools -- a local anthem of the city's school-era DJ culture.",
     "His SoundCloud catalog dating to 2012 includes Jersey club loops, remixes, and gospel club mixes such as 'The Sharpbounce 2ktwelve' and 'C4 Rock'.",
     "He runs The Real Mista Quietman YouTube channel, where he has preserved the full upload of WizTV's Jersey City DJ Documentary Vol. 1 (2006), making one of the most important documents in Jersey City music history accessible to the public.",
@@ -296,6 +297,135 @@
        "src": "assets/media/mista-quietman/covers/blazen-hot-blends-2-death-cover.jpg",
        "alt": "The Unspeakable Presents Blazen' Hot Blends 2 Death tape cover",
        "caption": "The Unspeakable Presents: Blazen' Hot Blends 2 Death. From Quietman's archive of the era's blend tapes.",
+       "tags": [
+        "mista-quietman"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "jersey-club-cds",
+     "title": "The Jersey Club CDs",
+     "intro": "Covers from the Jersey Club Kingz era, from the personal archive of Mista Quietman.",
+     "images": [
+      {
+       "src": "assets/media/mista-quietman/jersey-club-cds/eighty-club-tracks-jersey-club-kingz.jpg",
+       "alt": "Eighty Club Tracks CD cover with the Jersey Club Kingz crown logo",
+       "caption": "Eighty Club Tracks, under the Jersey Club Kingz banner and crown.",
+       "tags": [
+        "mista-quietman"
+       ]
+      },
+      {
+       "src": "assets/media/mista-quietman/jersey-club-cds/the-80-jersey-dance-tracks.jpg",
+       "alt": "The 80 Jersey Dance Tracks CD cover listing eighty tracks over a New Jersey map",
+       "caption": "The 80 Jersey Dance Tracks: eighty dances over the shape of the state, Walley Katt among the credited names.",
+       "tags": [
+        "mista-quietman",
+        "dj-walley-katt"
+       ]
+      },
+      {
+       "src": "assets/media/mista-quietman/jersey-club-cds/nbc-new-bangin-club-pt-2.jpg",
+       "alt": "NBC New Bangin Club Pt 2 cover with the peacock logo, hosted by Ms. Porsh",
+       "caption": "NBC: New Bangin' Club Pt. 2, presented with Ms. Porsh aka Tha Misses. The tracklist carries Crank Dat Rudeboy remix by DJ J-Money and Mr. Quietman, and his own Tip Toe extended blend.",
+       "tags": [
+        "mista-quietman",
+        "dj-j-money"
+       ]
+      },
+      {
+       "src": "assets/media/mista-quietman/jersey-club-cds/new-censored-club-tracks-rip-k-swift.jpg",
+       "alt": "New Censored Club Tracks cover dedicated Rest In Peace K-Swift 1980 to 2008",
+       "caption": "New Censored Club Tracks, dedicated Rest In Peace K-Swift, the Baltimore club queen, 1980 to 2008.",
+       "tags": [
+        "mista-quietman"
+       ]
+      },
+      {
+       "src": "assets/media/mista-quietman/jersey-club-cds/new-censored-club-tracks-pt-2.jpg",
+       "alt": "New Censored Club Tracks Pt Two cover with Boondocks artwork",
+       "caption": "New Censored Club Tracks Pt. Two: Jayhood, Sliink, Zero Jones, RoadRunnah, Nadus, and the club wave, censored for the radio and the ride.",
+       "tags": [
+        "mista-quietman"
+       ]
+      },
+      {
+       "src": "assets/media/mista-quietman/jersey-club-cds/the-new-era-of-club-pt-3.jpg",
+       "alt": "The New Era of Club Pt 3 cover, guaranteed to make you booty bounce",
+       "caption": "The New Era of Club Pt. 3, guaranteed to make you booty bounce.",
+       "tags": [
+        "mista-quietman"
+       ]
+      },
+      {
+       "src": "assets/media/mista-quietman/jersey-club-cds/the-club-ones-mj-tribute.jpg",
+       "alt": "The Club Ones cover with Michael Jackson silhouettes, RIP Michael Jackson",
+       "caption": "The Club Ones: the Michael Jackson club tribute. There will never be another to take your place.",
+       "tags": [
+        "mista-quietman"
+       ]
+      },
+      {
+       "src": "assets/media/mista-quietman/jersey-club-cds/not-another-jersey-club-cd-pt-2.jpg",
+       "alt": "Not Another Jersey Club CD Pt 2 cover",
+       "caption": "Not Another Jersey Club CD Pt. 2: Big O, Taj, Tone Capo, Kiff, 93rd, Jayhood, Poppa Dubb.",
+       "tags": [
+        "mista-quietman"
+       ]
+      },
+      {
+       "src": "assets/media/mista-quietman/jersey-club-cds/new-jack-city-cypher-music.jpg",
+       "alt": "New Jack City The Cypher Music Edition cover with a city skyline",
+       "caption": "New Jack City: The Cypher Music Edition, with Carvell, Telly Tellz, Jiddy Jid, 93rd, Panic, and Neptune.",
+       "tags": [
+        "mista-quietman"
+       ]
+      },
+      {
+       "src": "assets/media/mista-quietman/jersey-club-cds/turnt-up.jpg",
+       "alt": "Turnt Up CD cover in black and white",
+       "caption": "Turnt Up, the 2k14 round.",
+       "tags": [
+        "mista-quietman"
+       ]
+      },
+      {
+       "src": "assets/media/mista-quietman/jersey-club-cds/now-thats-what-i-call-movie-music.jpg",
+       "alt": "Now That's What I Call Movie Music CD cover in gold letters",
+       "caption": "Now! That's What I Call Movie Music: Reli, Flawless, Jayhood, Big O, Sliink, K Slick, R Blaze, Tev and more.",
+       "tags": [
+        "mista-quietman"
+       ]
+      },
+      {
+       "src": "assets/media/mista-quietman/jersey-club-cds/got-new-club-pt-3.jpg",
+       "alt": "Got New Club Pt 3 minimalist cover",
+       "caption": "Got New Club? Pt. 3: Fresh, Jayhood, J-Heat, K Millz, Sliink, 40 Cal, and Tameil.",
+       "tags": [
+        "mista-quietman"
+       ]
+      },
+      {
+       "src": "assets/media/mista-quietman/jersey-club-cds/get-da-patty-cake-goin.jpg",
+       "alt": "Get Da Patty Cake Goin CD cover in graffiti lettering",
+       "caption": "Get Da Patty Cake Goin', Get Da Wipe Down Goin', Get Da Cowboy Goin', Get Da Left Right Goin'.",
+       "tags": [
+        "mista-quietman"
+       ]
+      },
+      {
+       "src": "assets/media/mista-quietman/jersey-club-cds/tip-toe-get-the-sexy-walk-goin.jpg",
+       "alt": "Tip Toe Tippy Toe cover with photo panels of dancers doing the steps",
+       "caption": "Tip Toe, Tippy Toe. Get Fresh, Get Fresh. Slide To Da Left, Slide To Da Right. Get The Sexy Walk Goin'. The dances, demonstrated panel by panel.",
+       "tags": [
+        "mista-quietman"
+       ]
+      },
+      {
+       "src": "assets/media/mista-quietman/jersey-club-cds/bebes-kids-kiddie-klub-joints.jpg",
+       "alt": "Bebe's Kids themed cover, Da Best of Kiddie Klub Joints",
+       "caption": "Da Best of Kiddie Klub Joints: the kids' edition. Sesame Street to Super Mario, club edits for the young ones.",
        "tags": [
         "mista-quietman"
        ]
@@ -13678,7 +13808,9 @@
     "Jimmy (with Albee Al in the Polaroid; possibly King Jimmy Mack, confirm)",
     "Killer Force (crew, Showdown flyer)",
     "Victor Q, Sha Bazz, Danger D, Mello Mell, Tammy C, Special T, Kev I Kev (Showdown flyer names)",
-    "Young Flizo (@youngflizo, Stegman Street emcee, tribute author)"
+    "Young Flizo (@youngflizo, Stegman Street emcee, tribute author)",
+    "Ms. Porsh aka Tha Misses (co host of Quietman's NBC club volume; female figure of the club era)",
+    "The Jersey Club Kingz (Quietman's club CD banner; who else was in it?)"
    ]
   },
   "venue_candidates": {
