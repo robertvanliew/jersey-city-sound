@@ -3032,6 +3032,23 @@
      "label": "Legacy",
      "value": "Platform builder for unsigned Jersey City artists"
     }
+   ],
+   "galleries": [
+    {
+     "id": "photographs",
+     "title": "Photographs",
+     "intro": "From the community archive, shared 2026.",
+     "images": [
+      {
+       "src": "assets/media/kenny-kenn/photographs/kenny-kenn-mural.png",
+       "alt": "DJ Kenny Kenn smiling in front of a graffiti mural bearing his name",
+       "caption": "DJ Kenny Kenn in front of the mural carrying his name, painted in the wildstyle of the era.",
+       "tags": [
+        "kenny-kenn"
+       ]
+      }
+     ]
+    }
    ]
   },
   {
@@ -8748,7 +8765,32 @@
      "value": "Hip-hop, boom bap, East Coast rap"
     }
    ],
-   "memorial": true
+   "memorial": true,
+   "galleries": [
+    {
+     "id": "photographs",
+     "title": "Photographs",
+     "intro": "From the community archive, shared 2026.",
+     "images": [
+      {
+       "src": "assets/media/double-j/photographs/double-j-portrait.png",
+       "alt": "Black and white portrait of a young Double J in a black cap",
+       "caption": "Double J, the Hitman era. A promo portrait from the classic years.",
+       "tags": [
+        "double-j"
+       ]
+      },
+      {
+       "src": "assets/media/double-j/photographs/double-j-with-friends.png",
+       "alt": "Double J in a knit cap and chain standing between two friends",
+       "caption": "Double J with friends. From the community archive.",
+       "tags": [
+        "double-j"
+       ]
+      }
+     ]
+    }
+   ]
   },
   {
    "entry_no": "168",
