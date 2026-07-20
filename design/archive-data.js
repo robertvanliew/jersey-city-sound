@@ -1245,7 +1245,7 @@ window.JCS_ENTRIES = [
   "href": "entry-mista-quietman.html",
   "role": "DJ · Remixer",
   "type": "person",
-  "years": "c. mid-1990s – present"
+  "years": "c. early 1990s – present"
  },
  {
   "no": "226",
