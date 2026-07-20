@@ -14,6 +14,8 @@ from datetime import date
 from pathlib import Path
 
 BUILD_DATE = date.today().isoformat()   # dateModified freshness signal
+from datetime import datetime as _dt
+BUILD_DT = _dt.now().astimezone().isoformat(timespec="seconds")  # full ISO 8601 with offset for schema dates
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "entries.json"
@@ -753,7 +755,7 @@ def page(entry, by_no, name_links, appearances=None):
       "breadcrumb": {{"@id": "{canonical}#breadcrumb"}},
       "inLanguage": "en-US",
       "datePublished": "2026-07-05",
-      "dateModified": "{BUILD_DATE}",
+      "dateModified": "{BUILD_DT}",
       "publisher": {{"@type": "Organization", "name": "The Jersey City Sound", "url": "{SITE}/"}}{primary_img}
     }},
     {{
@@ -761,7 +763,7 @@ def page(entry, by_no, name_links, appearances=None):
       "@id": "{canonical}#breadcrumb",
       "itemListElement": [
         {{"@type": "ListItem", "position": 1, "name": "Archive", "item": "{SITE}/archive.html"}},
-        {{"@type": "ListItem", "position": 2, "name": "{crumb_cat}"}},
+        {{"@type": "ListItem", "position": 2, "name": "{crumb_cat}", "item": "{SITE}/{crumb_href}"}},
         {{"@type": "ListItem", "position": 3, "name": {json.dumps(name)}}}
       ]
     }},
@@ -1462,7 +1464,7 @@ def write_report_issue(entries):
         '      "author": {"@type": "Organization", "name": "The Jersey City Sound", "url": "__SITE__/"},\n'
         '      "publisher": {"@id": "__SITE__/#org"},\n'
         '      "datePublished": "2026-07-12",\n'
-        '      "dateModified": "__DATE__",\n'
+        '      "dateModified": "__DT__",\n'
         '      "inLanguage": "en-US"\n'
         '    },\n'
         '    {\n'
@@ -1492,7 +1494,7 @@ def write_report_issue(entries):
         '      "itemReviewed": {"@type": "Claim", "appearance": {"@type": "CreativeWork", "name": "Widely syndicated online lists of Jersey City musicians"}}\n'
         '    }\n'
         '  ]\n'
-        '}').replace("__CANON__", canonical).replace("__SITE__", SITE).replace("__DATE__", BUILD_DATE)
+        '}').replace("__CANON__", canonical).replace("__SITE__", SITE).replace("__DT__", BUILD_DT)
     head_extra = f'<script type="application/ld+json">\n{jsonld}\n</script>\n'
 
     body = '''<main class="wrap" style="max-width:64rem;">
