@@ -73,6 +73,8 @@ def esc(s):
 # Aliases that should link to an entry but differ from its canonical name.
 EXTRA_ALIASES = {
     "DJ DX": "dj-dx",              # handcrafted entry
+    "Heather B.": "heather-b-gardner",
+    "Heather B": "heather-b-gardner",
     "WizTV": "dj-wizard",
     "Wiztv": "dj-wizard",
     "DJ Wizard": "dj-wizard",

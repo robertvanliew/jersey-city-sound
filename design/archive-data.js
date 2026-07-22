@@ -889,9 +889,9 @@ window.JCS_ENTRIES = [
  },
  {
   "no": "159",
-  "name": "J-Sass",
+  "name": "J SASS",
   "href": "entry-j-sass.html",
-  "role": "Rapper",
+  "role": "MC · Songwriter",
   "type": "person",
   "years": ""
  },

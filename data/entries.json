@@ -8436,40 +8436,63 @@
   },
   {
    "entry_no": "159",
-   "name": "J-Sass",
+   "name": "J SASS",
    "slug": "j-sass",
    "status": "community-verified",
    "roles": [
-    "Rapper"
+    "MC",
+    "Songwriter"
    ],
    "genres": [
-    "Hip-hop"
+    "Hip-hop",
+    "Conscious hip-hop"
    ],
    "years_active": "",
    "facts": [
-    "J-Sass is a Jersey City musical artist who was identified and cataloged as part of the city's active creative community.",
-    "Her work is a component of the broad cultural output that defines contemporary Hudson County.",
-    "She participates in the local arts ecosystem, utilizing modern tools to distribute her music independently.",
-    "She represents the enduring drive of local artists who continue to build the Jersey City Sound from the ground up.",
-    "She is a daughter of the late Lord Sun Albee Al and sister of DJ Thunderkatt and the rapper Albee Al, by family account given to this archive in 2026; DJ E Double is her cousin."
+    "J SASS, born Jennife' Askew, is a Jersey City emcee and songwriter who wrote her first rhyme at twelve.",
+    "She is a daughter of the late Lord Sun Albee Al of Sweet Slick and Sly, who guided her writing, and a sister of DJ Thunderkatt and the rapper Albee Al; DJ E Double is her cousin.",
+    "She names her influences as Lauryn Hill, MC Lyte, Salt-N-Pepa, Queen Latifah, Nicky D, and Heather B., the last of them a fellow Jersey City MC.",
+    "Her work sits in conscious hip hop, drawing on soul and on themes of healing. By her own account she writes from lived experience as a mother of three, and returns to the idea that strength and vulnerability can hold the same verse."
    ],
    "sources": [
     {
-     "label": "Archive research: The Jersey City Sound, 2026"
+     "label": "Artist biography supplied to The Jersey City Sound, 2026"
+    },
+    {
+     "label": "Family account given to this archive, 2026"
     }
    ],
    "todo_robert": [
-    "Instagram handle and receipts (streams, releases, video)",
-    "Era, key songs, and crew detail from memory",
-    "Photo permission"
+    "Instagram and streaming handles, releases, video",
+    "Confirm preferred billing: J SASS or J-Sass",
+    "Confirm the influence listed as Nicky D (Nikki D of Def Jam?)",
+    "Years active and key songs",
+    "Photo"
    ],
    "links": {},
    "card": [
     {
+     "label": "Real name",
+     "value": "Jennife' Askew"
+    },
+    {
      "label": "Scene",
      "value": "Jersey City, New Jersey"
+    },
+    {
+     "label": "Family",
+     "value": "Daughter of Lord Sun Albee Al; sister of DJ Thunderkatt and Albee Al"
+    },
+    {
+     "label": "Style",
+     "value": "Conscious hip hop"
+    },
+    {
+     "label": "Began writing",
+     "value": "Age twelve"
     }
-   ]
+   ],
+   "origin": "Jersey City, New Jersey"
   },
   {
    "entry_no": "160",
