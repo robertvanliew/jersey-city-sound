@@ -928,6 +928,14 @@ window.JCS_ENTRIES = [
   "years": ""
  },
  {
+  "no": "252",
+  "name": "Jarrett Cordes",
+  "href": "entry-jarrett-cordes.html",
+  "role": "DJ · Producer",
+  "type": "person",
+  "years": "1988 – 2005"
+ },
+ {
   "no": "070",
   "name": "Jerry Herman",
   "href": "entry-jerry-herman.html",
@@ -1484,6 +1492,14 @@ window.JCS_ENTRIES = [
   "name": "Producer Mayor",
   "href": "entry-producer-mayor.html",
   "role": "Producer",
+  "type": "person",
+  "years": ""
+ },
+ {
+  "no": "253",
+  "name": "Rah Grizzley",
+  "href": "entry-rah-grizzley.html",
+  "role": "Rapper · MC",
   "type": "person",
   "years": ""
  },

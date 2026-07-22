@@ -13136,6 +13136,120 @@
     "Photos or flyers"
    ],
    "links": {}
+  },
+  {
+   "entry_no": "252",
+   "name": "Jarrett Cordes",
+   "slug": "jarrett-cordes",
+   "type": "person",
+   "status": "web-verified",
+   "roles": [
+    "DJ",
+    "Producer"
+   ],
+   "genres": [
+    "Hip-hop",
+    "Alternative hip-hop"
+   ],
+   "years_active": "1988 – 2005",
+   "origin": "Jersey City, New Jersey",
+   "facts": [
+    "Jarrett Cordes, billed as DJ Minutemix, was the DJ and co-producer of PM Dawn, the Jersey City duo he founded in 1988 with his older brother Attrell Cordes.",
+    "The brothers were raised in Jersey City by their mother and their stepfather George Brown, the founding drummer of Kool & the Gang, after the death of their father.",
+    "PM Dawn's first demo was cut with six hundred dollars his brother earned working security, and was turned down by Tommy Boy Records before the group signed elsewhere.",
+    "Their single “Set Adrift on Memory Bliss” reached No. 1 on the Billboard Hot 100 the week of November 30, 1991, the first chart-topper of the Nielsen SoundScan era, and No. 3 in the United Kingdom.",
+    "He left the group after the brothers appeared on NBC's Hit Me, Baby, One More Time in 2005."
+   ],
+   "galleries": [],
+   "sources": [
+    {
+     "label": "P.M. Dawn, Wikipedia",
+     "url": "https://en.wikipedia.org/wiki/P.M._Dawn"
+    },
+    {
+     "label": "Attrell Cordes, Wikipedia (family background)",
+     "url": "https://en.wikipedia.org/wiki/Attrell_Cordes"
+    }
+   ],
+   "card": [
+    {
+     "label": "Billed as",
+     "value": "DJ Minutemix"
+    },
+    {
+     "label": "Group",
+     "value": "PM Dawn (co-founder, 1988)"
+    },
+    {
+     "label": "Family",
+     "value": "Brother of Attrell Cordes; stepson of George Brown"
+    },
+    {
+     "label": "Chart peak",
+     "value": "No. 1 Hot 100, “Set Adrift on Memory Bliss,” 1991"
+    }
+   ],
+   "todo_robert": [
+    "Confirm birth date (secondary sources give July 17, 1971)",
+    "Current whereabouts",
+    "Photo"
+   ],
+   "links": {}
+  },
+  {
+   "entry_no": "253",
+   "name": "Rah Grizzley",
+   "slug": "rah-grizzley",
+   "type": "person",
+   "status": "web-verified",
+   "jc_from": false,
+   "roles": [
+    "Rapper",
+    "MC"
+   ],
+   "genres": [
+    "Hip-hop",
+    "Underground hip-hop"
+   ],
+   "years_active": "",
+   "origin": "Flatbush, Brooklyn; based in Jersey City, New Jersey",
+   "facts": [
+    "Rah Grizzley, who records as Rah Grizz, is a hardcore underground hip hop lyricist born in Flatbush, Brooklyn, who has spent years living in and representing Jersey City.",
+    "He returned to recording after a break of roughly six years away from the scene.",
+    "His catalog includes “That Talk” and “Aggression,” the latter featuring the late Brooklyn MC Sean Price of Heltah Skeltah and the Boot Camp Clik."
+   ],
+   "galleries": [],
+   "sources": [
+    {
+     "label": "Rah Grizz on Bandcamp (artist biography and catalog)",
+     "url": "https://rahgrizz.bandcamp.com/"
+    }
+   ],
+   "card": [
+    {
+     "label": "Born",
+     "value": "Flatbush, Brooklyn"
+    },
+    {
+     "label": "Base",
+     "value": "Jersey City, New Jersey"
+    },
+    {
+     "label": "Style",
+     "value": "Underground hip hop"
+    },
+    {
+     "label": "Notable",
+     "value": "“Aggression” featuring Sean Price"
+    }
+   ],
+   "todo_robert": [
+    "Years active and the years he has been in Jersey City",
+    "Is he the Instagram account rah3states, who supplied the Kool & the Gang / PM Dawn family lead?",
+    "Full discography and release years",
+    "Photo"
+   ],
+   "links": {}
   }
  ],
  "discovered_candidates": {
@@ -13842,8 +13956,7 @@
     "The Jersey Club Kingz (Quietman's club CD banner; who else was in it?)",
     "Ms. Porsh aka Tha Misses: NOT a candidate for her own entry, she is from Newark per Robert (2026-07-19); appears in the record only as co host of Quietman's NBC club volume",
     "Blackout Production JC (BlackoutProdJc@aol.com; on Quietman's 'The R in R&B Army Vol. 3' cover)",
-    "'The R in R&B Army' (Quietman R&B blend-tape series banner)",
-    "Jarrett Cordes (DJ Minutemix), Jersey City, co-founder of PM Dawn with his brother Attrell, stepson of George Brown. Qualifies for his own entry, confirm with Robert"
+    "'The R in R&B Army' (Quietman R&B blend-tape series banner)"
    ]
   },
   "venue_candidates": {
