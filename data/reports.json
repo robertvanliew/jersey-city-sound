@@ -1,0 +1,87 @@
+{
+ "_readme": "The Sound Report issues. Issue 1 is a hand-built page (write_report_issue in the generator). Issues with published:false are rendered as noindex stubs, left out of the sitemap and the feed, and carry [RESEARCH NEEDED] markers for the editor. Flip published to true once the evidence is sourced. verdict is one of: From Jersey City | Lived in Jersey City | Not from Jersey City. evidence is a list of {text, source: {label, url}}; answer is one paragraph; related is an entry slug.",
+ "issues": [
+  {
+   "n": 1,
+   "slug": "not-from-jersey-city",
+   "file": "report-001-not-from-jersey-city.html",
+   "title": "Is Queen Latifah From Jersey City? No, and the Truth Is Better",
+   "description": "The famous musicians actually from Jersey City, and the two names the internet keeps getting wrong.",
+   "published": true,
+   "date": "2026-07-12",
+   "handbuilt": true
+  },
+  {
+   "n": 2,
+   "slug": "kool-and-the-gang",
+   "title": "Is Kool & the Gang from Jersey City?",
+   "question": "Is Kool & the Gang from Jersey City?",
+   "subject": "Kool & the Gang",
+   "related": "kool-and-the-gang",
+   "verdict": "From Jersey City",
+   "answer": "Yes. Kool & the Gang formed in Jersey City in 1964 around brothers Robert 'Kool' Bell and Ronald Bell and five friends who attended Lincoln High School. Three founding members were born in the city, and in 2016 Jersey City renamed the block of Maple Street where they grew up Kool & the Gang Way. [RESEARCH NEEDED: confirm each founding member's birthplace and the band's first Jersey City gigs from a primary source before publishing.]",
+   "evidence": [],
+   "published": false
+  },
+  {
+   "n": 3,
+   "slug": "akon",
+   "title": "Is Akon from Jersey City?",
+   "question": "Is Akon from Jersey City?",
+   "subject": "Akon",
+   "related": "akon",
+   "verdict": "Lived in Jersey City",
+   "answer": "Not born there, but Jersey City is where he went to high school: Akon attended Snyder High School and Dickinson High School after the rest of his family moved to Atlanta. [RESEARCH NEEDED: the years he attended each school, and where he was born and raised before Jersey City, from an interview or biography.]",
+   "evidence": [],
+   "published": false
+  },
+  {
+   "n": 4,
+   "slug": "nancy-sinatra",
+   "title": "Is Nancy Sinatra from Jersey City?",
+   "question": "Is Nancy Sinatra from Jersey City?",
+   "subject": "Nancy Sinatra",
+   "related": "nancy-sinatra",
+   "verdict": "From Jersey City",
+   "answer": "Born there. Nancy Sinatra was born in Jersey City on June 8, 1940, and her brother Frank Sinatra Jr. was born in the city in 1944; the family moved to Hasbrouck Heights when she was a toddler. Their father, Frank Sinatra, is from Hoboken, not Jersey City. [RESEARCH NEEDED: the Jersey City address or hospital, and the year of the move, from a biography.]",
+   "evidence": [],
+   "published": false
+  },
+  {
+   "n": 5,
+   "slug": "flip-wilson",
+   "title": "Is Flip Wilson from Jersey City?",
+   "question": "Is Flip Wilson from Jersey City?",
+   "subject": "Flip Wilson",
+   "related": "flip-wilson",
+   "verdict": "From Jersey City",
+   "answer": "Yes. Flip Wilson was born Clerow Wilson Jr. in Jersey City on December 8, 1933, and grew up in the city before The Flip Wilson Show ran on NBC from 1970 to 1974. [RESEARCH NEEDED: his Jersey City neighborhood, schooling and childhood years, from a biography or obituary.]",
+   "evidence": [],
+   "published": false
+  },
+  {
+   "n": 6,
+   "slug": "joe-budden",
+   "title": "Is Joe Budden from Jersey City?",
+   "question": "Is Joe Budden from Jersey City?",
+   "subject": "Joe Budden",
+   "related": "joe-budden",
+   "verdict": "Lived in Jersey City",
+   "answer": "Raised there from age 13. Joe Budden was raised in Jersey City from age 13 and came up through the city's mixtape circuit before Pump It Up reached No. 38 on the Billboard Hot 100 in 2003. [RESEARCH NEEDED: his birthplace (widely given as Harlem) and the year of the move, from an interview or biography; the entry currently sources only the Jersey City years.]",
+   "evidence": [],
+   "published": false
+  },
+  {
+   "n": 7,
+   "slug": "hoboken-and-jersey-city",
+   "title": "Hoboken and Jersey City: Two Music Histories",
+   "question": "Are Hoboken and Jersey City the same music scene?",
+   "subject": "",
+   "related": "",
+   "verdict": "",
+   "answer": "[RESEARCH NEEDED: this issue is a stub. Scope: how Hoboken's record (Frank Sinatra, Maxwell's, the 1980s indie scene) and Jersey City's record (Catamount, the park jams, the mixtape era) are different histories that get merged online, with sources for each claim. Not published until sourced.]",
+   "evidence": [],
+   "published": false
+  }
+ ]
+}

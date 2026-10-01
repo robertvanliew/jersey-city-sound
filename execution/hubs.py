@@ -134,6 +134,11 @@ def hub_specs(entries, g):
              title="Jersey City Music Venues, Record Stores and Studios in the Record",
              members=[e for e in entries if is_place(e)]),
     ]
+    specs.append(dict(key="schools", file="jersey-city-high-schools-music.html",
+                      h1="Jersey City High Schools and the Music That Came Through Them", kicker="Schools",
+                      title="Jersey City High Schools in the Music Record: Lincoln, Snyder, Ferris, Dickinson",
+                      members=[e for e in entries if is_place(e) and e.get("place_type") == "school"],
+                      connections_list=True))
     for key, label, test in ERAS:
         members = [e for e in entries if any(test(d) for d in decades_of(e, g))]
         specs.append(dict(key=f"era-{key}", file=f"history-{key}.html",
@@ -258,6 +263,19 @@ def write_hub(spec, copy, specs, g, name_links):
     </div>""" for label, es in groups)
     if not members:
         groups_html = "    <p>No entry qualifies yet. The archive adds entries as evidence arrives.</p>"
+    if spec.get("connections_list"):
+        all_by_slug = {e["slug"]: e for e in g.HANDCRAFTED}
+        for e in g.ALL_ENTRIES:
+            all_by_slug[e["slug"]] = e
+        parts = []
+        for e in members:
+            conns = e.get("music_connections") or []
+            lis = "\n".join(
+                f'      <li><a href="entry-{c["slug"]}.html">{g.esc(all_by_slug.get(c["slug"], {}).get("name", c["slug"]))}</a>'
+                + (f' <span class="conn-note">{g.esc(c["note"])}</span>' if c.get("note") else "") + "</li>" for c in conns)
+            parts.append(f'    <h3><a href="entry-{e["slug"]}.html">{g.esc(e["name"])}</a></h3>\n    <ul class="connections">\n{lis}\n    </ul>')
+        groups_html += ('\n    <h2 id="who">Who came through each school<a class="anchor" href="#who" aria-label="Link to this section">§</a></h2>\n'
+                        + "\n".join(parts))
 
     faq_html = "\n".join(f"    <h3>{g.esc(q['q'])}</h3>\n    <p>{para(q['a'], g, name_links)}</p>" for q in faq)
     siblings = [s for s in specs if s["file"] != spec["file"]]

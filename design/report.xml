@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Sound Report</title>
+    <link>https://jerseycitysound.com/report.html</link>
+    <atom:link href="https://jerseycitysound.com/report.xml" rel="self" type="application/rss+xml"/>
+    <description>Fact checks and editorial from The Jersey City Sound, the cited archive of Jersey City music.</description>
+    <language>en-us</language>
+    <item>
+      <title>Is Queen Latifah From Jersey City? No, and the Truth Is Better</title>
+      <link>https://jerseycitysound.com/report-001-not-from-jersey-city.html</link>
+      <guid isPermaLink="true">https://jerseycitysound.com/report-001-not-from-jersey-city.html</guid>
+      <pubDate>Sun, 12 Jul 2026 12:00:00 -0400</pubDate>
+      <description>The famous musicians actually from Jersey City, and the two names the internet keeps getting wrong.</description>
+    </item>
+  </channel>
+</rss>

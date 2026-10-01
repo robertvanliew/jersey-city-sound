@@ -27,6 +27,8 @@ def audit(design_dir, minimum):
     inbound_body = defaultdict(set)     # page -> set of pages linking from body (not chrome)
     for name in pages:
         html = (design_dir / name).read_text(encoding="utf-8", errors="replace")
+        if 'content="noindex' in html:      # deliberately unindexed (drafts, forms); skip as a target
+            page_set.discard(name)
         body = CHROME.sub("", html)
         for scope, text in (("all", html), ("body", body)):
             for href in HREF.findall(text):

@@ -254,5 +254,30 @@
    }
   ],
   "research": []
+ },
+ "schools": {
+  "description": "Jersey City's high schools in the music record: Kool and the Gang formed at Lincoln, Akon attended Snyder and Dickinson, the 2006 documentary credits Ferris, and P.S. 11 hosted the park-jam era's battles. Every connection sourced.",
+  "intro": [
+   "Jersey City's schools are where several of its music stories start: Kool and the Gang formed in 1964 as students at Lincoln High School; Akon went to Snyder and Dickinson; the 2006 mixtape documentary credits Ferris High School as a producer of the scene's legends; and P.S. 11 was DJ Wimpy Bee's staple room and the site of the MC battle Cool Sir Brown won. This page lists each school with every documented musician who came through it.",
+   "Mista Quietman's The 201 High School Anthem, a Jersey City rework of DJ Sliink's High School Anthem, calls out all four high schools by name, which is why the schools belong in a music archive at all. Each school has its own entry with its address, a map, and the sourced connections; the artists link back from their own pages.",
+   "A school appears here when the archive holds two or more sourced music connections to it. Other schools named in the record with a single connection (the Jersey Academy, St. Patrick's, Sacred Heart) are listed in the research notes until a second source arrives."
+  ],
+  "faq": [
+   {
+    "q": "Which high school did Kool and the Gang go to?",
+    "a": "Lincoln High School in Jersey City. The group formed there in 1964 around brothers Robert \"Kool\" Bell and Ronald Bell and five friends who all attended the school."
+   },
+   {
+    "q": "Which high school did Akon attend?",
+    "a": "Snyder High School and Dickinson High School in Jersey City, after the rest of his family moved to Atlanta."
+   },
+   {
+    "q": "What is The 201 High School Anthem?",
+    "a": "A Jersey City rework by Mista Quietman of DJ Sliink's High School Anthem, with shoutouts to Lincoln, Ferris, Dickinson and Snyder high schools."
+   }
+  ],
+  "research": [
+   "Jersey Academy (Maury Yeston), St. Patrick's and Sacred Heart (DJ Wimpy Bee's rooms) each have one sourced connection; a second would open an entry."
+  ]
  }
 }

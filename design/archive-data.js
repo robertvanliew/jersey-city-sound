@@ -2118,6 +2118,11 @@ window.JCS_PAGES = [
   "role": "Places"
  },
  {
+  "name": "Jersey City High Schools and the Music That Came Through Them",
+  "href": "jersey-city-high-schools-music.html",
+  "role": "Schools"
+ },
+ {
   "name": "Jersey City Music Before 1960",
   "href": "history-pre-1960s.html",
   "role": "Era"

@@ -1099,6 +1099,10 @@
   "date": "2026-10-01",
   "hash": "892a2d84a5942bcf22a5e621be0d6b0cae9882739fc6ab583ff5d2a5ef96cafa"
  },
+ "jersey-city-high-schools-music.html": {
+  "date": "2026-10-01",
+  "hash": "03bc3900e7dd03bea1a6e2708bcfed4d31483e008fd20872b363c55b2dd1ef6d"
+ },
  "jersey-city-music-map.html": {
   "date": "2026-10-01",
   "hash": "62e726ea0bb02e5ad3dc0906ff23ed6a49fb4ea19b56252b1b94d0326de36950"
@@ -1127,9 +1131,33 @@
   "date": "2026-07-22",
   "hash": "cf2f27d0ee7a5e82e2b4fd0a17fd1b5546976ae80d1e39c162bb3800bfea7753"
  },
+ "report-002-kool-and-the-gang.html": {
+  "date": "2026-10-01",
+  "hash": "1e215ba33401a86d04621c6cd6160b793dcb0fdeaa57af3b89767a0366cad5af"
+ },
+ "report-003-akon.html": {
+  "date": "2026-10-01",
+  "hash": "be73767a3467c1e1a0553c520a6441904437d02ad302fda1b18dcb8f1fa4f39f"
+ },
+ "report-004-nancy-sinatra.html": {
+  "date": "2026-10-01",
+  "hash": "f13310e21e415e46ae1d1c40db9ea83896fca2360ef9661c1efa55d8db4dfdfb"
+ },
+ "report-005-flip-wilson.html": {
+  "date": "2026-10-01",
+  "hash": "70d29bf4431a233d7f3e9045b987c2c7d4d7a7a44ae2577f281456bd3f20be2d"
+ },
+ "report-006-joe-budden.html": {
+  "date": "2026-10-01",
+  "hash": "b2eea63d31aab5d9902fe198390eb92ebf8d35a395ef6b9bbeb519b604f5ac21"
+ },
+ "report-007-hoboken-and-jersey-city.html": {
+  "date": "2026-10-01",
+  "hash": "03475384dd69663f8a9bc0c26d725a01535c3268fa08c0921833a7aa679a1f55"
+ },
  "report.html": {
   "date": "2026-10-01",
-  "hash": "8da750684a703ef718cdad457638c7dcfe4102d960fb304bbe76e7192f1fa9aa"
+  "hash": "6d31cc7e7f2444babd7af6cdb867623e4d116c031d0eb86eb8bd19cf3e7e3970"
  },
  "terms.html": {
   "date": "2026-10-01",

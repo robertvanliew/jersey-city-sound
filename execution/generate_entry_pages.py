@@ -255,6 +255,7 @@ def build_related(entries, name_links):
 # Seeded from git history by execution/seed_lastmod.py; maintained here on every build.
 LASTMOD_FILE = ROOT / "data" / "lastmod.json"
 HUB_DATES = {}   # generated hub file -> lastmod, filled by hubs.write_hubs for the sitemap
+ALL_ENTRIES = []  # the live entries list, for hub code that needs to resolve any slug
 HUB_PAGES = [    # (name, href, one-line) for the nav search; main() appends the generated hubs
     ("Chilltown: why Jersey City is called Chilltown", "chilltown.html", "Nickname history"),
     ("Jersey City DJs and the mixtape era", "jersey-city-djs.html", "Role hub"),
@@ -2238,7 +2239,8 @@ def write_sitemap(entries):
     rows.append(u(f"{SITE}/report-001-not-from-jersey-city.html", "0.8",
                   page_date("report-001-not-from-jersey-city.html")))  # Sound Report Issue №1
     rows += [u(f"{SITE}/{h}", "0.6", page_date(h)) for h in static[1:]]  # hand-built pages
-    rows += [u(f"{SITE}/{f}", "0.7", d) for f, d in sorted(HUB_DATES.items())]  # generated hubs
+    rows += [u(f"{SITE}/{f}", "0.7", d) for f, d in sorted(HUB_DATES.items())
+             if f != "report-001-not-from-jersey-city.html"]  # generated hubs, reports, map, data
     rows.append(u(f"{SITE}/entry-dj-dx.html", "0.8", page_date("entry-dj-dx.html")))
     rows += [u(f"{SITE}/entry-{e['slug']}.html", "0.8", entry_dates[e["slug"]]) for e in entries]
     body = "\n".join(rows)
@@ -2548,6 +2550,171 @@ def write_data_page(entries, count):
     return modified
 
 
+REPORTS_FILE = ROOT / "data" / "reports.json"
+
+
+def load_reports():
+    try:
+        return json.loads(REPORTS_FILE.read_text(encoding="utf-8")).get("issues", [])
+    except FileNotFoundError:
+        return []
+
+
+def write_reports(entries, name_links):
+    """The Sound Report fact-check template. One page per issue in data/reports.json
+    (except the hand-built Issue 1): the question as H1, a direct answer in a box, numbered
+    evidence, a verdict line, the related entry card, Article + FAQPage JSON-LD.
+    Unpublished issues are rendered noindex and kept out of the sitemap and feed, so the
+    editor can see the stub in place. Returns {file: date} for published issues."""
+    by_slug = {e["slug"]: e for e in HANDCRAFTED + entries}
+    published = {}
+    for it in load_reports():
+        if it.get("handbuilt"):
+            if it.get("published"):
+                published[it["file"]] = it.get("date", BUILD_DATE)
+            continue
+        n = int(it["n"])
+        fname = f"report-{n:03d}-{it['slug']}.html"
+        canonical = f"{SITE}/{fname}"
+        pub = bool(it.get("published"))
+        rel = by_slug.get(it.get("related") or "")
+        verdict = it.get("verdict") or ""
+        answer = it.get("answer") or ""
+        evidence = it.get("evidence") or []
+        research = re.findall(r"\[RESEARCH NEEDED:[^\]]*\]", answer + " ".join(e.get("text", "") for e in evidence))
+        content_hash = hashlib.sha256(json.dumps(it, sort_keys=True).encode("utf-8")).hexdigest()
+        modified = lastmod_for(fname, content_hash)
+        answer_html = linkify(esc(answer), name_links, "")
+        answer_html = re.sub(r"\[RESEARCH NEEDED:[^\]]*\]", lambda m: f'<mark class="research">{m.group(0)}</mark>', answer_html)
+        ev_html = "\n".join(
+            f'      <li id="src-{i}">{linkify(esc(e.get("text", "")), name_links, "")}'
+            + (f' — {esc(e["source"]["label"])}' + (f' <a href="{esc(e["source"]["url"])}" rel="nofollow">link</a>' if e["source"].get("url") else "") if e.get("source") else "")
+            + "</li>" for i, e in enumerate(evidence, 1)) or '      <li><mark class="research">[RESEARCH NEEDED: numbered sources for every claim in the answer.]</mark></li>'
+        verdict_html = (f'    <p class="verdict"><span class="caps">Verdict</span> {esc(verdict)}</p>' if verdict
+                        else '    <p class="verdict"><span class="caps">Verdict</span> <mark class="research">[RESEARCH NEEDED]</mark></p>')
+        rel_html = ""
+        if rel:
+            rel_html = f"""
+    <section class="related" style="padding-top:1rem;">
+      <div class="section__head"><h2 class="caps caps--wide">The entry</h2></div>
+      <div class="related__grid">
+      <article class="entry-card">
+        <span class="entry-card__no">Entry №. {rel['entry_no']}</span>
+        <h3><a href="entry-{rel['slug']}.html">{esc(rel['name'])}</a></h3>
+        <p class="entry-card__role">{esc(' · '.join(rel.get('roles') or []))}</p>
+      </article>
+      </div>
+    </section>"""
+        plain_answer = re.sub(r"\s*\[RESEARCH NEEDED:[^\]]*\]", "", answer)
+        ld = {
+            "@context": "https://schema.org",
+            "@graph": [
+                {"@type": "Article", "@id": f"{canonical}#article", "headline": it["title"],
+                 "description": plain_answer[:200], "mainEntityOfPage": canonical,
+                 "author": {"@type": "Person", "name": "Robert Van Liew", "url": f"{SITE}/entry-dj-dx.html"},
+                 "publisher": {"@id": f"{SITE}/#org"}, "datePublished": modified, "dateModified": modified,
+                 "inLanguage": "en-US", "isPartOf": {"@id": f"{SITE}/#website"}},
+                {"@type": "FAQPage", "@id": f"{canonical}#faq",
+                 "mainEntity": [{"@type": "Question", "name": it.get("question") or it["title"],
+                                 "acceptedAnswer": {"@type": "Answer", "text": plain_answer}}]},
+                {"@type": "BreadcrumbList", "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE}/"},
+                    {"@type": "ListItem", "position": 2, "name": "The Sound Report", "item": f"{SITE}/report.html"},
+                    {"@type": "ListItem", "position": 3, "name": f"Issue No. {n}"}]},
+            ],
+        }
+        head_extra = f'<script type="application/ld+json">\n{json.dumps(ld, ensure_ascii=False, indent=2)}\n</script>\n'
+        if not pub:
+            head_extra = '<meta name="robots" content="noindex, nofollow">\n' + head_extra
+        body = f"""<main class="wrap" style="max-width:64rem;">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="report.html">The Sound Report</a><span class="sep">&#8594;</span><span aria-current="page">Issue No. {n}</span>
+  </nav>
+  <header class="entry-header">
+    <span class="entry-no reveal reveal--1">The Sound Report &middot; Issue No. {n}{'' if pub else ' &middot; unpublished draft'}</span>
+    <h1 class="reveal reveal--2">{esc(it["title"])}</h1>
+  </header>
+  <article class="entry-body reveal reveal--4" style="margin-inline:auto;">
+    <div class="answer-box">
+      <p class="lead">{answer_html}</p>
+    </div>
+{verdict_html}
+    <h2 id="evidence">The evidence<a class="anchor" href="#evidence" aria-label="Link to this section">§</a></h2>
+    <ol class="sources">
+{ev_html}
+    </ol>{rel_html}
+    <p class="record-card__since" style="margin-top:2rem;">Archive entry by Robert Van Liew · Last updated {modified}</p>
+  </article>
+</main>"""
+        html = _shell(f"{it['title']} | The Sound Report", plain_answer[:155] or it["title"], canonical, body,
+                      current="report", head_extra=head_extra)
+        if not pub:
+            html = html.replace('<meta name="robots" content="index, follow">\n', "", 1)
+        (OUT / fname).write_text(html, encoding="utf-8")
+        if pub:
+            published[fname] = modified
+    refresh_report_index(published)
+    write_report_feed(published)
+    return published
+
+
+def refresh_report_index(published):
+    """report.html (hand-built): regenerate its issues list, newest first, and add the feed link."""
+    path = OUT / "report.html"
+    if not path.exists():
+        return
+    s = path.read_text(encoding="utf-8")
+    issues = [it for it in load_reports() if it.get("published")]
+    issues.sort(key=lambda it: -int(it["n"]))
+    lis = []
+    for it in issues:
+        f = it.get("file") or f"report-{int(it['n']):03d}-{it['slug']}.html"
+        desc = it.get("description") or re.sub(r"\s*\[RESEARCH NEEDED:[^\]]*\]", "", it.get("answer", ""))[:160]
+        lis.append(f'      <li><a href="{f}"><span class="cr-name">No. {it["n"]} &middot; {esc(it["title"])}</span></a><span class="cr-note">{esc(desc)}</span></li>')
+    new = re.sub(r'(<ul class="charts-roster">)\n.*?\n(    </ul>)', lambda m: m.group(1) + "\n" + "\n".join(lis) + "\n" + m.group(2), s, count=1, flags=re.S)
+    if 'type="application/rss+xml"' not in new:
+        new = new.replace('<link rel="canonical" href="https://jerseycitysound.com/report.html">',
+                          '<link rel="canonical" href="https://jerseycitysound.com/report.html">\n<link rel="alternate" type="application/rss+xml" title="The Sound Report" href="https://jerseycitysound.com/report.xml">', 1)
+    if new != s:
+        path.write_text(new, encoding="utf-8")
+
+
+def write_report_feed(published):
+    """design/report.xml: RSS 2.0 of published issues, newest first."""
+    issues = [it for it in load_reports() if it.get("published")]
+    issues.sort(key=lambda it: -int(it["n"]))
+    items = []
+    for it in issues:
+        f = it.get("file") or f"report-{int(it['n']):03d}-{it['slug']}.html"
+        day = published.get(f) or it.get("date") or BUILD_DATE
+        from datetime import datetime as _d
+        try:
+            pub = _d.strptime(day, "%Y-%m-%d").strftime("%a, %d %b %Y 12:00:00 -0400")
+        except ValueError:
+            pub = day
+        desc = it.get("description") or re.sub(r"\s*\[RESEARCH NEEDED:[^\]]*\]", "", it.get("answer", ""))
+        items.append(f"""    <item>
+      <title>{esc(it['title'])}</title>
+      <link>{SITE}/{f}</link>
+      <guid isPermaLink="true">{SITE}/{f}</guid>
+      <pubDate>{pub}</pubDate>
+      <description>{esc(desc)}</description>
+    </item>""")
+    xml = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Sound Report</title>
+    <link>{SITE}/report.html</link>
+    <atom:link href="{SITE}/report.xml" rel="self" type="application/rss+xml"/>
+    <description>Fact checks and editorial from The Jersey City Sound, the cited archive of Jersey City music.</description>
+    <language>en-us</language>
+{chr(10).join(items)}
+  </channel>
+</rss>
+"""
+    (OUT / "report.xml").write_text(xml, encoding="utf-8")
+
+
 def main():
     data = json.loads(DATA.read_text(encoding="utf-8"))
     entries = data["entries"]
@@ -2555,6 +2722,7 @@ def main():
     name_links = build_name_links(entries)
     appearances = build_media_index(entries)
     related = build_related(entries, name_links)
+    ALL_ENTRIES[:] = entries
     specs = hubs.hub_specs(entries, sys.modules[__name__])
     specs_by_key = {sp["key"]: sp for sp in specs}
     written = set()
@@ -2592,6 +2760,7 @@ def main():
     write_report_issue(entries)
     write_sources(entries)
     write_claim_page()
+    HUB_DATES.update(write_reports(entries, name_links))
     _n = export_dataset.export(entries, HANDCRAFTED)
     HUB_DATES["data.html"] = write_data_page(entries, _n)
     write_sitemap(entries)

@@ -1534,3 +1534,11 @@ table.segments { width: 100%; border-collapse: collapse; margin: 0 0 2rem; font-
 table.segments th, table.segments td { text-align: left; padding: 0.5rem 0.4rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
 table.segments th { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-ink); }
 .placeholder-ts { color: #8a8372; font-style: italic; }
+
+/* ---------- Sound Report fact checks ---------- */
+.answer-box { border-left: 3px solid var(--gold); background: #f0ece0; padding: 1.2rem 1.4rem; margin: 0 0 1.6rem; }
+.answer-box .lead { margin: 0; }
+.answer-box .lead::first-letter { font-size: inherit; float: none; padding: 0; color: inherit; font-weight: inherit; }
+.verdict { font-size: var(--t-md); margin: 0 0 2rem; }
+.verdict .caps { color: var(--gold-ink); margin-right: 0.6rem; }
+mark.research { background: #fff3b0; color: #5a4a00; padding: 0 0.2em; }
