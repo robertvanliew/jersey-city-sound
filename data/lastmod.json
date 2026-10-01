@@ -1,7 +1,7 @@
 {
  "about.html": {
   "date": "2026-10-01",
-  "hash": "1fd12de5fbc607ee181b20183750328771ad4281e40d92f9c8f0b2d3250bcfe6"
+  "hash": "1f65efbf23a4cae8a85428a8e77a59ccbc34cff7b9a013350755bf603cfc14f1"
  },
  "charts.html": {
   "date": "2026-07-13",
@@ -9,11 +9,11 @@
  },
  "chilltown.html": {
   "date": "2026-10-01",
-  "hash": "7a6decbe18bcaf1e86378a2bc8d0ae5e8298e08449ab8e745e9eea867e663fbb"
+  "hash": "d9d28042eb25b5a34f2e71976a7e104daf3eb36922e6228372d64cfe73fc1835"
  },
  "corrections.html": {
-  "date": "2026-07-16",
-  "hash": "9ac31580222c6e9b9d6d0e0460362ebb11e50754cacd026b2fcba39f1338d833"
+  "date": "2026-10-01",
+  "hash": "fb1d13f5a175230afbbc0566fa9ff7e6ae7f9e805c4255d59746a3099b67641a"
  },
  "entry-14-karat-soul": {
   "date": "2026-10-01",
@@ -245,7 +245,7 @@
  },
  "entry-dj-dx.html": {
   "date": "2026-10-01",
-  "hash": "4bad70fb30a54eb878924ec252c2161dbf2bfaa1b2e40c5eec8941c4a28ac543"
+  "hash": "bd71d026da5dd8a28e2f81fe2140bf465303adcc39721a174cb116c7de718775"
  },
  "entry-dj-dyce": {
   "date": "2026-07-13",
@@ -261,7 +261,7 @@
  },
  "entry-dj-flash-jersey-city": {
   "date": "2026-10-01",
-  "hash": "35d350e79f08c024affcca82cf808922a9adb2f549ee56dcebe7123866cc137a"
+  "hash": "4fef4b2511ba8259e9e4aba14ffb3a9397fb69dc8c966192ad21b186b2f97756"
  },
  "entry-dj-freeze": {
   "date": "2026-07-18",
@@ -585,7 +585,7 @@
  },
  "entry-lord-sun-albee-al": {
   "date": "2026-10-01",
-  "hash": "4b91ef59b3de8d8e9a2390171f98d11e6d5ca68f86edcec8f3ff643c0bec1d7d"
+  "hash": "0b6ea622f5c75eed487492589c438ea487cc1438432603e393e00ca4c22d05ce"
  },
  "entry-luke-elliot": {
   "date": "2026-10-01",
@@ -825,7 +825,7 @@
  },
  "entry-skip-jackson": {
   "date": "2026-10-01",
-  "hash": "c396ab29b2580b7f626cd2b4eb3d55caac0941d8af4dd71816dd69ff162d66ee"
+  "hash": "ce8033d6381b0936afcd9fec2792924dd50f72b7c9b9e02f62fc615c9146a742"
  },
  "entry-sonny-igoe": {
   "date": "2026-10-01",
@@ -865,7 +865,7 @@
  },
  "entry-sweet-slick-and-slide": {
   "date": "2026-10-01",
-  "hash": "fccc86a80bf0d908d171e1b5acbbda7eaf92b9a05f00301d3aeb222e90aa78d9"
+  "hash": "a40ae738d63c5462f6db0c1d55296f2569747d1ac046b64455b1c8d1bb652ca0"
  },
  "entry-taylor-portt": {
   "date": "2026-07-13",
@@ -1007,36 +1007,92 @@
   "date": "2026-10-01",
   "hash": "47f243cf18fab6c547c89f81ca2c7088abf062028471052794e9ad327bdbd9ea"
  },
+ "famous-musicians-born-in-jersey-city.html": {
+  "date": "2026-10-01",
+  "hash": "8c646930fa5cc9ad839985fb381db30934f0492edfd9bd8588aae9175103edbb"
+ },
+ "famous-people-from-jersey-city.html": {
+  "date": "2026-10-01",
+  "hash": "250a5ece5f941018099281f7ef8b472ac1bf61faa140d2feae84b1afe064955f"
+ },
+ "history-1960s.html": {
+  "date": "2026-10-01",
+  "hash": "bdde8b1f9f3dd84d1abe778fd74034ae30552ba36874171773e4ebf70f7e6893"
+ },
+ "history-1970s.html": {
+  "date": "2026-10-01",
+  "hash": "2fffaa7e1ef0cf3c1d61b5106ade81fb08e4995fda7ea167fbd454f07fac6d22"
+ },
+ "history-1980s.html": {
+  "date": "2026-10-01",
+  "hash": "4b3a527117bf7bf45e317fd15f42583a9251f95f3e89125b3ec6fa67b50e8845"
+ },
+ "history-1990s.html": {
+  "date": "2026-10-01",
+  "hash": "1b421e60bf6e24d4a76f156178626ca98d6ad28b5b06aed997184da243b4b33b"
+ },
+ "history-2000s.html": {
+  "date": "2026-10-01",
+  "hash": "3620ed22526990069197750efed8e2293532dc135a921b11905a2e7eaa37c339"
+ },
+ "history-2010s.html": {
+  "date": "2026-10-01",
+  "hash": "bd10e288157d9d42439fc5e1bf8ea0c868df6fa1d0fb52e6e4978dcce749452f"
+ },
+ "history-2020s.html": {
+  "date": "2026-10-01",
+  "hash": "29820ea9e353a134f1312c809caf1c37d2ed2c3a6cd837e66c18491fd237d5a1"
+ },
+ "history-pre-1960s.html": {
+  "date": "2026-10-01",
+  "hash": "4d48c2fbe5ae6389e125f9499e23a8beb9d9ba15c1d2f1834183e5e8494dcc3b"
+ },
  "history.html": {
-  "date": "2026-07-18",
-  "hash": "1cd195db41a82acaa8f5ea1cd41f6d7ed06efc84fffbd169cd9428bcf31564dd"
+  "date": "2026-10-01",
+  "hash": "1ebc307822613279e0909389684f0e518d19917e3e076a0a9a3f00c09c97ba37"
  },
  "index.html": {
   "date": "2026-10-01",
-  "hash": "709b71acc1afcda21d71c9d54ee7827620009d8b7bc769afbd74614cf58e4efa"
+  "hash": "b9a69dd2c5e9aebe1119ee6bf4139674f4fdaf10fd6a43eef8641a6e5eb97e70"
  },
  "jersey-city-djs.html": {
-  "date": "2026-07-22",
-  "hash": "a7e23dff288c154d5e37644ba223b0761bf147e32f211dc414561179925f7172"
+  "date": "2026-10-01",
+  "hash": "319526a47eb11cac2b65617ff4a6624fb58dec567afb32cf3afa0ea36ca3be9f"
+ },
+ "jersey-city-venues-and-record-stores.html": {
+  "date": "2026-10-01",
+  "hash": "32fcc0f20fcfac8a4e02504385127993b76e7c47ef4581ea05d56b312bd4b90e"
+ },
+ "jersey-club-and-jersey-city.html": {
+  "date": "2026-10-01",
+  "hash": "b0bb3a588b4f78ec0a58bf00857cfdc5608391a966fd5d8825f757741bb8bcca"
+ },
+ "neighborhood-greenville.html": {
+  "date": "2026-10-01",
+  "hash": "e4431b6662e6493507ee768d23392e3e73778b4b01325e8c95620a6624504daf"
  },
  "privacy.html": {
-  "date": "2026-07-16",
-  "hash": "fbe2278521cda05a75d81cbec0129031d2b6e991132a4371722636a15847f2e8"
+  "date": "2026-10-01",
+  "hash": "920cf058ba6b57c443482c8b45103592f1488d0d1543d25465ffdd80f7a30c54"
+ },
+ "rappers-from-jersey-city.html": {
+  "date": "2026-10-01",
+  "hash": "b13c867d6b7918f8defcbdecbbe2e109d7cf7e1d58e677feee1626a5354e85f3"
  },
  "report-001-not-from-jersey-city.html": {
   "date": "2026-07-22",
   "hash": "cf2f27d0ee7a5e82e2b4fd0a17fd1b5546976ae80d1e39c162bb3800bfea7753"
  },
  "report.html": {
-  "date": "2026-07-16",
-  "hash": "dc65b0e6d9a3814181c5a17462493abfe9422a911560b0bc3665d1a91f69648e"
+  "date": "2026-10-01",
+  "hash": "4a7c7adcb84631311773e6f669a7d27c3b20087dcb32cac55a80b13461da335e"
  },
  "terms.html": {
-  "date": "2026-07-16",
-  "hash": "342af9ae62e30b4912a30a69a402faa0afcc45b1b693721b6158711602b2197a"
+  "date": "2026-10-01",
+  "hash": "aad553c8480b29f860ffaace14c9142f9f48d750046bba89f1f533bd1f27fb3f"
  },
  "verify.html": {
-  "date": "2026-07-16",
-  "hash": "f501a9ebb66024540e7a61d023ad5fe2323f212ae7c8c5ac25f4f8b9613c6a53"
+  "date": "2026-10-01",
+  "hash": "b04b93735656bd95a2b70c374bba436d49158e0a2372570d429b60c7008b3b1f"
  }
 }

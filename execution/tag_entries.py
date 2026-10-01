@@ -28,11 +28,15 @@ NEIGHBORHOODS = {
     "Greenville": "Greenville", "Curries Woods": "Greenville",
     "The Heights": "The Heights", "Jersey City Heights": "The Heights",
     "Journal Square": "Journal Square",
-    "Bergen-Lafayette": "Bergen-Lafayette", "Communipaw": "Bergen-Lafayette",
+    "Bergen-Lafayette": "Bergen-Lafayette",
     "Downtown Jersey City": "Downtown", "Hamilton Park": "Downtown", "Paulus Hook": "Downtown",
     "West Side": "West Side",
     "McGinley Square": "McGinley Square",
 }
+# A fact counts only when it places the subject there ("from Greenville", "represents
+# Curries Woods"), never when the name is a venue address or another act's name.
+PLACED = r"(?:\bfrom|\bin|\bof|\brepresent\w*|\braised in|\bgrew up in|\bbased in|\bout of|\bsection of|\broots (?:in|across))\s+(?:the\s+)?(?:city's\s+)?{name}(?!'s)(?!\s+Avenue)(?!\s+Street)"
+CARD_ROWS = {"Origin", "Scene", "Born", "Raised", "Neighborhood", "Base", "Lived", "Address"}
 # place names seen in the data that need an editor's call on neighborhood
 UNRESOLVED_PLACES = ["Duncan", "Park Street", "Audubon Park", "Ocean Avenue", "Bergen Avenue",
                      "Marion", "Armstrong Park", "The Hill", "Lafayette"]
@@ -58,8 +62,12 @@ def main():
         key = f"entry-{e['slug']}"
         if "neighborhoods" not in e:
             found = []
+            rows = " ".join(c.get("value", "") for c in e.get("card", []) if c.get("label") in CARD_ROWS)
+            rows += " " + (e.get("origin") or "")
+            facts = " ".join(e.get("facts") or [])
             for needle, hub in NEIGHBORHOODS.items():
-                if re.search(rf"(?<!\w){re.escape(needle)}(?!\w)", text) and hub not in found:
+                pat = rf"(?<!\w){re.escape(needle)}(?!\w)(?!'s)"
+                if (re.search(pat, rows) or re.search(PLACED.format(name=re.escape(needle)), facts)) and hub not in found:
                     found.append(hub)
             if found:
                 e["neighborhoods"] = found

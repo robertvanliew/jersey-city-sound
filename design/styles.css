@@ -1505,3 +1505,12 @@ body.memorial .nav-search input { color: var(--cream); }
   .report-feature__num { font-size: 2.6rem; }
   .report-feature__date { margin-top: 0; }
 }
+
+/* ---------- hub pages ---------- */
+.era-nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: center; margin: 1.5rem auto 0; max-width: 46rem; }
+.era-nav a { font-family: inherit; font-size: 0.95rem; color: var(--gold-ink); text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 1px; }
+.era-nav a:hover { border-bottom-color: var(--gold-ink); }
+.entry-card__line { font-size: 0.92rem; line-height: 1.5; color: #4a4636; margin: 0.4rem 0 0; }
+.entry-card .chips { margin-top: 0.5rem; }
+.entry-card .chips .chip { font-size: 0.7rem; }
+body.memorial .entry-card__line { color: #b9b4a6; }

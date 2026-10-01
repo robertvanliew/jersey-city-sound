@@ -33,11 +33,15 @@
       var term = input.value.trim().toLowerCase();
       active = -1;
       if (!term) { box.innerHTML = ''; input.setAttribute('aria-expanded', 'false'); return; }
+      // hub pages (window.JCS_PAGES) search alongside entries and show "Page" instead of a number
+      var pages = (window.JCS_PAGES || []).filter(function (p) {
+        return (p.name + ' ' + p.role).toLowerCase().indexOf(term) !== -1;
+      }).slice(0, 2);
       var hits = entries.filter(function (e) {
         return (e.name + ' ' + e.role + ' ' + e.no).toLowerCase().indexOf(term) !== -1;
-      }).slice(0, 8);
-      box.innerHTML = hits.map(function (e) {
-        return '<li role="option"><a href="' + esc(e.href) + '"><span class="no">№. ' + esc(e.no) +
+      }).slice(0, 8 - pages.length);
+      box.innerHTML = pages.concat(hits).map(function (e) {
+        return '<li role="option"><a href="' + esc(e.href) + '"><span class="no">' + (e.no ? '№. ' + esc(e.no) : 'Page') +
           '</span><span class="nm">' + esc(e.name) + '</span><span class="rl">' + esc(e.role) + '</span></a></li>';
       }).join('');
       input.setAttribute('aria-expanded', hits.length ? 'true' : 'false');

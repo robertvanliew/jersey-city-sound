@@ -6,9 +6,11 @@
 #
 # Usage:  py execution/generate_entry_pages.py
 
+import hashlib
 import json
 import html
 import re
+import sys
 import urllib.parse
 from datetime import date
 from pathlib import Path
@@ -18,6 +20,8 @@ from datetime import datetime as _dt
 BUILD_DT = _dt.now().astimezone().isoformat(timespec="seconds")  # full ISO 8601 with offset for schema dates
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import hubs  # noqa: E402  (hub pages; takes this module as `g`)
 DATA = ROOT / "data" / "entries.json"
 CHART_DATA_FILE = ROOT / "data" / "chart-data.json"
 OUT = ROOT / "design"
@@ -65,6 +69,7 @@ ANCHOR_META = {
             "entry-jersey-city-dj-documentary-2006.html"),
 }
 RELATED_COUNT = 3   # .related__grid is three columns
+MIN_INBOUND = 2     # every entry gets at least this many inbound Related links
 
 # Record-card row order (the "real name" and "where from" answers first). Rows not
 # listed keep their relative order after these.
@@ -216,22 +221,21 @@ def build_related(entries, name_links):
     # Pass 2: coverage. Every entry gets at least one inbound link, so nothing is
     # reachable only from the index. Swap it in for the weakest card of whichever
     # entry it fits best, as long as that card's target keeps another inbound.
-    for b in slugs:
-        if inbound[b] > 0:
-            continue
-        def weakest_of(a):
-            return min((c for c in chosen[a] if inbound[c] > 1), key=lambda c: (pts[(a, c)], -inbound[c]))
-        hosts = sorted((a for a in slugs if a != b and a not in handcrafted and b not in chosen[a]
-                        and pts[(a, b)] >= 1 and any(inbound[c] > 1 for c in chosen[a])),
-                       key=lambda a: (-pts[(a, b)], pts[(a, weakest_of(a))], by_slug[a]["entry_no"]))
-        if not hosts:
-            continue
-        a = hosts[0]
-        weakest = weakest_of(a)
-        chosen[a][chosen[a].index(weakest)] = b
-        inbound[weakest] -= 1
-        inbound[b] += 1
+    def weakest_of(a):
+        return min((c for c in chosen[a] if inbound[c] > 1), key=lambda c: (pts[(a, c)], -inbound[c]))
 
+    for b in sorted(slugs, key=lambda x: inbound[x]):
+        while inbound[b] < MIN_INBOUND:
+            hosts = sorted((a for a in slugs if a != b and a not in handcrafted and b not in chosen[a]
+                            and pts[(a, b)] >= 1 and any(inbound[c] > MIN_INBOUND for c in chosen[a])),
+                           key=lambda a: (-pts[(a, b)], pts[(a, weakest_of(a))], by_slug[a]["entry_no"]))
+            if not hosts:
+                break
+            a = hosts[0]
+            weakest = min((c for c in chosen[a] if inbound[c] > MIN_INBOUND), key=lambda c: (pts[(a, c)], -inbound[c]))
+            chosen[a][chosen[a].index(weakest)] = b
+            inbound[weakest] -= 1
+            inbound[b] += 1
     out = {}
     for me in slugs:
         cards = [meta(by_slug[s]) for s in chosen[me]]
@@ -248,6 +252,15 @@ def build_related(entries, name_links):
 # data/lastmod.json: {"entry-<slug>" | "<page>.html": {"hash": sha256, "date": YYYY-MM-DD}}
 # Seeded from git history by execution/seed_lastmod.py; maintained here on every build.
 LASTMOD_FILE = ROOT / "data" / "lastmod.json"
+HUB_DATES = {}   # generated hub file -> lastmod, filled by hubs.write_hubs for the sitemap
+HUB_PAGES = [    # (name, href, one-line) for the nav search; main() appends the generated hubs
+    ("Chilltown: why Jersey City is called Chilltown", "chilltown.html", "Nickname history"),
+    ("Jersey City DJs and the mixtape era", "jersey-city-djs.html", "Role hub"),
+    ("Jersey City music history: a timeline", "history.html", "Timeline"),
+    ("On the Charts: Jersey City's Billboard record", "charts.html", "Chart facts"),
+    ("Legends: the memorial wing", "legends.html", "Memorial"),
+    ("The Sound Report", "report.html", "Fact checks and editorial"),
+]
 try:
     LASTMOD = json.loads(LASTMOD_FILE.read_text(encoding="utf-8"))
 except FileNotFoundError:
@@ -748,8 +761,9 @@ def videos_html(entry, name_links, slug):
             f'{body}'), True
 
 
-def page(entry, by_no, name_links, appearances=None, related=None, modified=None):
+def page(entry, by_no, name_links, appearances=None, related=None, modified=None, hub_links=None):
     appearances = appearances or {}
+    hub_links = hub_links or []
     related = related or {}
     modified = modified or BUILD_DATE   # YYYY-MM-DD; moves only when the entry's data changes
     name = entry["name"]
@@ -968,6 +982,10 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
         rows.append(("Neighborhood", esc(", ".join(entry["neighborhoods"]))))
     # Fixed order (answers "real name" and "where from" first); other rows keep their place after
     rows = sorted(rows, key=lambda kv: CARD_ORDER.get(kv[0], len(CARD_ORDER)))
+    # up-links to the hubs this entry belongs to (role, era, neighborhood): the entry half
+    # of the hub-and-spoke loop
+    if hub_links:
+        rows.append(("In the archive", " · ".join(f'<a href="{esc(h)}">{esc(l)}</a>' for l, h in hub_links)))
     rows_html = "\n".join(
         f'        <div class="row"><dt>{esc(k)}</dt><dd>{v}</dd></div>'
         for k, v in rows
@@ -985,10 +1003,12 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
     schema_type = ("Movie" if film else "MusicStore" if venue
                    else "MusicGroup" if group else "Organization" if label else "Person")
     genre_json = json.dumps(genres) if genres else "[]"
-    crumb_cat = ("Films" if film else "Venues" if venue else "Groups" if group
-                 else "Labels" if label else "DJs" if any(r == "DJ" for r in roles) else "Artists")
-    # DJ entries link up to their hub page (charter: entries <-> hub internal-linking loop)
-    crumb_href = "jersey-city-djs.html" if crumb_cat == "DJs" else "archive.html"
+    crumb_cat = ("Films" if film else "Venues" if venue else "DJs" if any(r == "DJ" for r in roles)
+                 else "Rappers" if hubs.is_rapper(entry) else "Groups" if group
+                 else "Labels" if label else "Artists")
+    # entries link up to their role hub (charter: entries <-> hub internal-linking loop)
+    crumb_href = {"DJs": "jersey-city-djs.html", "Rappers": "rappers-from-jersey-city.html",
+                  "Venues": "jersey-city-venues-and-record-stores.html"}.get(crumb_cat, "archive.html")
 
     memorial = bool(entry.get("memorial"))
     body_class = ' class="memorial"' if memorial else ""
@@ -1263,6 +1283,16 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
       <a href="about.html">About</a>
       <a href="suggest-edit.html">Suggest an edit</a>
     </nav>
+    <nav aria-label="Hubs">
+      <a href="rappers-from-jersey-city.html">Rappers</a>
+      <a href="jersey-city-djs.html">DJs</a>
+      <a href="famous-musicians-born-in-jersey-city.html">Born in Jersey City</a>
+      <a href="famous-people-from-jersey-city.html">Famous people</a>
+      <a href="jersey-club-and-jersey-city.html">Jersey club</a>
+      <a href="jersey-city-venues-and-record-stores.html">Venues and record stores</a>
+      <a href="neighborhood-greenville.html">Greenville</a>
+      <a href="charts.html">On the Charts</a>
+    </nav>
   </div>
   <div class="footer__legal">
     <span>© 2026 The Jersey City Sound · Content licensed CC BY-SA 4.0</span>
@@ -1309,6 +1339,9 @@ def write_archive_data(entries):
             "years": e.get("years_active") or "",
         })
     js = "window.JCS_ENTRIES = " + json.dumps(items, ensure_ascii=False, indent=1) + ";\n"
+    # hub and section pages, searched by the nav box alongside entries
+    pages = [{"name": n, "href": h, "role": r} for n, h, r in HUB_PAGES]
+    js += "window.JCS_PAGES = " + json.dumps(pages, ensure_ascii=False, indent=1) + ";\n"
     (OUT / "archive-data.js").write_text(js, encoding="utf-8")
 
 
@@ -1461,6 +1494,16 @@ ARCHIVE_PAGE = """<!DOCTYPE html>
       <a href="about.html">About</a>
       <a href="suggest-edit.html">Suggest an edit</a>
     </nav>
+    <nav aria-label="Hubs">
+      <a href="rappers-from-jersey-city.html">Rappers</a>
+      <a href="jersey-city-djs.html">DJs</a>
+      <a href="famous-musicians-born-in-jersey-city.html">Born in Jersey City</a>
+      <a href="famous-people-from-jersey-city.html">Famous people</a>
+      <a href="jersey-club-and-jersey-city.html">Jersey club</a>
+      <a href="jersey-city-venues-and-record-stores.html">Venues and record stores</a>
+      <a href="neighborhood-greenville.html">Greenville</a>
+      <a href="charts.html">On the Charts</a>
+    </nav>
   </div>
   <div class="footer__legal">
     <span>© 2026 The Jersey City Sound · Content licensed CC BY-SA 4.0</span>
@@ -1610,6 +1653,16 @@ def _shell(title, desc, canonical, body, memorial=False, current="", head_extra=
       <a href="sources.html">Sources</a>
       <a href="about.html">About</a>
       <a href="suggest-edit.html">Suggest an edit</a>
+    </nav>
+    <nav aria-label="Hubs">
+      <a href="rappers-from-jersey-city.html">Rappers</a>
+      <a href="jersey-city-djs.html">DJs</a>
+      <a href="famous-musicians-born-in-jersey-city.html">Born in Jersey City</a>
+      <a href="famous-people-from-jersey-city.html">Famous people</a>
+      <a href="jersey-club-and-jersey-city.html">Jersey club</a>
+      <a href="jersey-city-venues-and-record-stores.html">Venues and record stores</a>
+      <a href="neighborhood-greenville.html">Greenville</a>
+      <a href="charts.html">On the Charts</a>
     </nav>
   </div>
   <div class="footer__legal">
@@ -2010,9 +2063,9 @@ def write_sources(entries):
 def write_sitemap(entries):
     # Flat .html URLs — matching the actual filenames and canonicals (handoff Task 2).
     # report.html is now indexable (Issue №1 shipped) and included.
-    hubs = ["", "archive.html", "legends.html", "history.html", "chilltown.html", "jersey-city-djs.html",
-            "report.html", "about.html", "sources.html", "verify.html", "privacy.html", "terms.html",
-            "corrections.html"]
+    static = ["", "archive.html", "legends.html", "history.html", "chilltown.html", "jersey-city-djs.html",
+              "report.html", "about.html", "sources.html", "verify.html", "privacy.html", "terms.html",
+              "corrections.html"]
     # <lastmod> is per page and only moves when that page's source changed (see LASTMOD).
     # Stamping every URL with the build date taught Google to ignore the field.
     entry_dates = {e["slug"]: lastmod_for(f"entry-{e['slug']}", entry_hash(e)) for e in entries}
@@ -2037,7 +2090,8 @@ def write_sitemap(entries):
     rows.append(u(f"{SITE}/charts.html", "0.9", page_date("charts.html")))   # the charts hub — elevated (§11.8)
     rows.append(u(f"{SITE}/report-001-not-from-jersey-city.html", "0.8",
                   page_date("report-001-not-from-jersey-city.html")))  # Sound Report Issue №1
-    rows += [u(f"{SITE}/{h}", "0.6", page_date(h)) for h in hubs[1:]]  # hub pages
+    rows += [u(f"{SITE}/{h}", "0.6", page_date(h)) for h in static[1:]]  # hand-built pages
+    rows += [u(f"{SITE}/{f}", "0.7", d) for f, d in sorted(HUB_DATES.items())]  # generated hubs
     rows.append(u(f"{SITE}/entry-dj-dx.html", "0.8", page_date("entry-dj-dx.html")))
     rows += [u(f"{SITE}/entry-{e['slug']}.html", "0.8", entry_dates[e["slug"]]) for e in entries]
     body = "\n".join(rows)
@@ -2102,6 +2156,13 @@ def write_root_files(entries=None):
         f"- [History — the scene by era]({SITE}/history.html)\n"
         f"- [Why is Jersey City called Chilltown? — the documented history of the nickname]({SITE}/chilltown.html)\n"
         f"- [Jersey City DJs — the documented record of the city's DJ culture]({SITE}/jersey-city-djs.html)\n"
+        f"- [Rappers from Jersey City]({SITE}/rappers-from-jersey-city.html)\n"
+        f"- [Famous musicians born in Jersey City]({SITE}/famous-musicians-born-in-jersey-city.html)\n"
+        f"- [Famous people from Jersey City: music and entertainment]({SITE}/famous-people-from-jersey-city.html)\n"
+        f"- [Jersey club and Jersey City]({SITE}/jersey-club-and-jersey-city.html)\n"
+        f"- [Jersey City music venues, record stores and studios]({SITE}/jersey-city-venues-and-record-stores.html)\n"
+        f"- [Jersey City music by era: before 1960 through the 2020s]({SITE}/history-1990s.html)\n"
+        f"- [Music from Greenville, Jersey City]({SITE}/neighborhood-greenville.html)\n"
         f"- [Legends — the memorial wing]({SITE}/legends.html)\n"
         f"- [Sources — master bibliography]({SITE}/sources.html)\n"
         f"- [About & methodology]({SITE}/about.html)\n\n"
@@ -2123,11 +2184,14 @@ def main():
     name_links = build_name_links(entries)
     appearances = build_media_index(entries)
     related = build_related(entries, name_links)
+    specs = hubs.hub_specs(entries, sys.modules[__name__])
+    specs_by_key = {sp["key"]: sp for sp in specs}
     written = set()
     for e in entries:
         out = OUT / f"entry-{e['slug']}.html"
         modified = lastmod_for(f"entry-{e['slug']}", entry_hash(e))
-        out.write_text(page(e, by_no, name_links, appearances, related, modified), encoding="utf-8")
+        links = hubs.entry_hub_links(e, sys.modules[__name__], specs_by_key)
+        out.write_text(page(e, by_no, name_links, appearances, related, modified, links), encoding="utf-8")
         written.add(out.name)
 
     # remove orphan pages for entries deleted/renamed in the data
@@ -2139,6 +2203,7 @@ def main():
             f.unlink()
             removed.append(f.name)
 
+    HUB_PAGES.extend((sp["h1"], sp["file"], sp["kicker"]) for sp in specs)
     write_archive_data(HANDCRAFTED + entries)
     az_html, az_count = build_az_static(HANDCRAFTED + entries)
     archive_page = ARCHIVE_PAGE.replace(
@@ -2146,8 +2211,11 @@ def main():
     archive_page = archive_page.replace(
         '<p class="caps archive-count" id="count"></p>',
         f'<p class="caps archive-count" id="count">{az_count}</p>')
+    archive_page = hubs.upgrade_archive_page(archive_page, sys.modules[__name__], name_links)
     (OUT / "archive.html").write_text(archive_page, encoding="utf-8")
     write_legends(entries, data)
+    HUB_DATES.update(hubs.write_hubs(entries, sys.modules[__name__], name_links)[1])
+    hubs.refresh_dj_roll(HANDCRAFTED + entries, sys.modules[__name__])
     write_charts_hub(entries, data)
     write_report_issue(entries)
     write_sources(entries)

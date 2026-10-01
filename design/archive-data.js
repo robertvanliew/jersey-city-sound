@@ -1984,3 +1984,105 @@ window.JCS_ENTRIES = [
   "years": "2018 – present"
  }
 ];
+window.JCS_PAGES = [
+ {
+  "name": "Chilltown: why Jersey City is called Chilltown",
+  "href": "chilltown.html",
+  "role": "Nickname history"
+ },
+ {
+  "name": "Jersey City DJs and the mixtape era",
+  "href": "jersey-city-djs.html",
+  "role": "Role hub"
+ },
+ {
+  "name": "Jersey City music history: a timeline",
+  "href": "history.html",
+  "role": "Timeline"
+ },
+ {
+  "name": "On the Charts: Jersey City's Billboard record",
+  "href": "charts.html",
+  "role": "Chart facts"
+ },
+ {
+  "name": "Legends: the memorial wing",
+  "href": "legends.html",
+  "role": "Memorial"
+ },
+ {
+  "name": "The Sound Report",
+  "href": "report.html",
+  "role": "Fact checks and editorial"
+ },
+ {
+  "name": "Rappers from Jersey City",
+  "href": "rappers-from-jersey-city.html",
+  "role": "Role"
+ },
+ {
+  "name": "Famous Musicians Born in Jersey City",
+  "href": "famous-musicians-born-in-jersey-city.html",
+  "role": "Birthplace"
+ },
+ {
+  "name": "Famous People from Jersey City: Music and Entertainment",
+  "href": "famous-people-from-jersey-city.html",
+  "role": "Scope: music and entertainment"
+ },
+ {
+  "name": "Jersey Club and Jersey City",
+  "href": "jersey-club-and-jersey-city.html",
+  "role": "Genre"
+ },
+ {
+  "name": "Jersey City Music Venues, Record Stores and Studios",
+  "href": "jersey-city-venues-and-record-stores.html",
+  "role": "Places"
+ },
+ {
+  "name": "Jersey City Music Before 1960",
+  "href": "history-pre-1960s.html",
+  "role": "Era"
+ },
+ {
+  "name": "Jersey City Music in the 1960s",
+  "href": "history-1960s.html",
+  "role": "Era"
+ },
+ {
+  "name": "Jersey City Music in the 1970s",
+  "href": "history-1970s.html",
+  "role": "Era"
+ },
+ {
+  "name": "Jersey City Music in the 1980s",
+  "href": "history-1980s.html",
+  "role": "Era"
+ },
+ {
+  "name": "Jersey City Music in the 1990s",
+  "href": "history-1990s.html",
+  "role": "Era"
+ },
+ {
+  "name": "Jersey City Music in the 2000s",
+  "href": "history-2000s.html",
+  "role": "Era"
+ },
+ {
+  "name": "Jersey City Music in the 2010s",
+  "href": "history-2010s.html",
+  "role": "Era"
+ },
+ {
+  "name": "Jersey City Music in the 2020s",
+  "href": "history-2020s.html",
+  "role": "Era"
+ },
+ {
+  "name": "Music from Greenville, Jersey City",
+  "href": "neighborhood-greenville.html",
+  "role": "Neighborhood"
+ }
+];
