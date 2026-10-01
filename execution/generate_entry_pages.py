@@ -2536,8 +2536,10 @@ def write_data_page(entries, count):
         "sameAs": f"{SITE}/",
         "license": LICENSE_URL,
         "isAccessibleForFree": True,
-        "creator": {"@id": f"{SITE}/#org"},
-        "publisher": {"@id": f"{SITE}/#org"},
+        # spelled out, not an @id reference: Google reads one page at a time and needs the name here
+        "creator": {"@type": "Organization", "@id": f"{SITE}/#org", "name": "The Jersey City Sound", "url": f"{SITE}/",
+                    "contactPoint": {"@type": "ContactPoint", "email": "contact@jerseycitysound.com", "contactType": "editorial"}},
+        "publisher": {"@type": "Organization", "@id": f"{SITE}/#org", "name": "The Jersey City Sound", "url": f"{SITE}/"},
         "keywords": ["Jersey City", "music history", "hip-hop", "DJs", "rappers", "New Jersey", "Chilltown", "encyclopedia"],
         "temporalCoverage": span,
         "spatialCoverage": {"@type": "Place", "name": "Jersey City, New Jersey, United States",
