@@ -184,7 +184,8 @@ const html = `<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Verify a Sealed Record | The Jersey City Sound</title>
-<meta name="description" content="Verify an archive record against The Jersey City Sound's cryptographic seal, entirely in your browser. Proves the page and its cited facts are unchanged since sealing.">
+<meta name="description" content="Verify an archive record against The Jersey City Sound's cryptographic seal, in your browser: proof the page and its facts are unchanged since sealing.">
+<link rel="canonical" href="https://jerseycitysound.com/verify.html">
 <meta name="robots" content="index, follow">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
 <link rel="icon" href="assets/favicon-64.png" sizes="64x64">

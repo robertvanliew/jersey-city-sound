@@ -115,11 +115,11 @@ def hub_specs(entries, g):
     specs = [
         dict(key="rappers", file="rappers-from-jersey-city.html",
              h1="Rappers from Jersey City", kicker="Role",
-             title="Rappers from Jersey City: Every Documented MC, Crew and Group",
+             title="Rappers from Jersey City: Every Documented MC and Crew",
              members=[e for e in entries if is_rapper(e)]),
         dict(key="born", file="famous-musicians-born-in-jersey-city.html",
              h1="Famous Musicians Born in Jersey City", kicker="Birthplace",
-             title="Famous Musicians Born in Jersey City, Documented and Sourced",
+             title="Famous Musicians Born in Jersey City, Sourced",
              members=[e for e in entries if e.get("born_in_jersey_city") and e.get("notability") == "national"]),
         dict(key="famous", file="famous-people-from-jersey-city.html",
              h1="Famous People from Jersey City: Music and Entertainment", kicker="Scope: music and entertainment",
@@ -127,16 +127,16 @@ def hub_specs(entries, g):
              members=[e for e in entries if e.get("notability") == "national" and not is_place(e)]),
         dict(key="jersey-club", file="jersey-club-and-jersey-city.html",
              h1="Jersey Club and Jersey City", kicker="Genre",
-             title="Jersey Club and Jersey City: Where the Sound Started and What the City Added",
+             title="Jersey Club and Jersey City: What the City Added",
              members=[e for e in entries if any("club" in x.lower() for x in (e.get("genres") or []))]),
         dict(key="venues", file="jersey-city-venues-and-record-stores.html",
              h1="Jersey City Music Venues, Record Stores and Studios", kicker="Places",
-             title="Jersey City Music Venues, Record Stores and Studios in the Record",
+             title="Jersey City Music Venues, Record Stores and Studios",
              members=[e for e in entries if is_place(e)]),
     ]
     specs.append(dict(key="schools", file="jersey-city-high-schools-music.html",
                       h1="Jersey City High Schools and the Music That Came Through Them", kicker="Schools",
-                      title="Jersey City High Schools in the Music Record: Lincoln, Snyder, Ferris, Dickinson",
+                      title="Jersey City High Schools in the Music Record",
                       members=[e for e in entries if is_place(e) and e.get("place_type") == "school"],
                       connections_list=True))
     for key, label, test in ERAS:
@@ -149,7 +149,7 @@ def hub_specs(entries, g):
     for n, members in sorted(neighborhood_pages(entries).items()):
         specs.append(dict(key=f"neighborhood-{slugify(n)}", file=f"neighborhood-{slugify(n)}.html",
                           h1=f"Music from {n}, Jersey City", kicker="Neighborhood", neighborhood=n,
-                          title=f"Music from {n}, Jersey City: Rappers, DJs and Musicians from the Neighborhood",
+                          title=f"Music from {n}, Jersey City: the Documented Record",
                           members=members))
     return specs
 
@@ -253,7 +253,10 @@ def write_hub(spec, copy, specs, g, name_links):
     faq = copy.get("faq") or []
     sources = copy.get("sources") or []
     research = copy.get("research") or []
-    desc = copy.get("description") or g.first_sentence(lead)[:155]
+    desc = copy.get("description") or g.first_sentence(lead)
+    if len(desc) > 155:
+        cut = max(desc[:152].rfind(b) for b in ("; ", ", ", ": ", " and ", " with "))
+        desc = (desc[:cut] if cut >= 80 else desc[:152].rsplit(" ", 1)[0]).rstrip(",;: ") + "."
 
     groups = group_members(spec, members, g)
     groups_html = "\n".join(
@@ -564,7 +567,7 @@ def write_map_page(entries, g, name_links):
 </main>
 {script}"""
     html = g._shell("Jersey City Music Map: Every Documented Place, Pinned",
-                    "Every documented place in Jersey City's music history on one map: schools, housing, rinks, streets and stores, each pin linking to a cited entry. Embeddable.",
+                    "Every documented place in Jersey City's music history on one map: schools, housing, rinks, streets and stores, each pin linking to a cited entry.",
                     canonical, body, current="archive", head_extra=head_extra)
     (g.OUT / "jersey-city-music-map.html").write_text(html, encoding="utf-8")
     return modified

@@ -1,19 +1,23 @@
 {
  "about.html": {
   "date": "2026-10-01",
-  "hash": "4de372ad3848b3d3bf728e6ba4d071ce48e033159b72bf494b2a168498650107"
+  "hash": "a6c7f744ff91b8488ea57f8ec8ed766a8f28d0465bf67bad8a2d917529a92ffa"
+ },
+ "archive.html": {
+  "date": "2026-10-01",
+  "hash": "7bb811e0d9808212062c15c35eed6ca301fa5a6dad2075a08e89826b4b3a074b"
  },
  "charts.html": {
-  "date": "2026-07-13",
+  "date": "2026-10-01",
   "hash": "289a7cc18300f98d20419174c322d498195ebdac0f49f7ea072f8eb34661b3d8"
  },
  "chilltown.html": {
   "date": "2026-10-01",
-  "hash": "dea4f61fcf190598a09452848783e47f5b327c0f006c30f2d83f0c9cdfce9842"
+  "hash": "21a86e9e3e4455046f78b52dd9629cab835cb49c9c2cbdec75fca6378d741c54"
  },
  "corrections.html": {
   "date": "2026-10-01",
-  "hash": "137dda8ad024c9ad8e60334353f6004b7a2bcd291fbfcae92d362a3356a92f07"
+  "hash": "6d09e46f35f7b6904c4d85cad0d40a7a938e9f5b506ad642074830f76cc35d80"
  },
  "data.html": {
   "date": "2026-10-01",
@@ -261,7 +265,7 @@
  },
  "entry-dj-dx.html": {
   "date": "2026-10-01",
-  "hash": "a131e2962d802e396f1157d20a3c54013f4e631c32c2b822f807dbba81e54184"
+  "hash": "e45fe62447cd5da4a5c0fdbe0810e8cbe037a34cb89c95647521ab1109be325e"
  },
  "entry-dj-dyce": {
   "date": "2026-07-13",
@@ -1049,11 +1053,11 @@
  },
  "famous-musicians-born-in-jersey-city.html": {
   "date": "2026-10-01",
-  "hash": "8c646930fa5cc9ad839985fb381db30934f0492edfd9bd8588aae9175103edbb"
+  "hash": "1c99aee612ce4d94e66b28db77e9bc370d0c7f1f9f79b281cde0a9257f3953ee"
  },
  "famous-people-from-jersey-city.html": {
   "date": "2026-10-01",
-  "hash": "250a5ece5f941018099281f7ef8b472ac1bf61faa140d2feae84b1afe064955f"
+  "hash": "5ee96ad5e57a6ee72152db52f158b9724f1b8c86f1dbbed45f9d43369f16ebb0"
  },
  "history-1960s.html": {
   "date": "2026-10-01",
@@ -1089,19 +1093,19 @@
  },
  "history.html": {
   "date": "2026-10-01",
-  "hash": "06882e43aeae1d7a2498458f3087b07f33c02a07b90fb452ea9283f20f53fa1b"
+  "hash": "bd47314beb464c555646b8b3047559969542684bfbb949082497ba992d36d79c"
  },
  "index.html": {
   "date": "2026-10-01",
-  "hash": "5521f103254bbb211f883bfee354a463840148eb359d3c81dee865078d59087d"
+  "hash": "5ad3b247000af1136c3e3fbe389031d17d5576a939fec235b86becd9c2294bf8"
  },
  "jersey-city-djs.html": {
   "date": "2026-10-01",
-  "hash": "892a2d84a5942bcf22a5e621be0d6b0cae9882739fc6ab583ff5d2a5ef96cafa"
+  "hash": "27d302a3a027135fc8fb51f12452cbb2fd22b6c1fd9f08c863631af47c7ee93f"
  },
  "jersey-city-high-schools-music.html": {
   "date": "2026-10-01",
-  "hash": "03bc3900e7dd03bea1a6e2708bcfed4d31483e008fd20872b363c55b2dd1ef6d"
+  "hash": "2d44435d9caf058c104ee35b1b60a3b3e03613ac37baea3711b6365a2d468a2a"
  },
  "jersey-city-music-map.html": {
   "date": "2026-10-01",
@@ -1109,11 +1113,15 @@
  },
  "jersey-city-venues-and-record-stores.html": {
   "date": "2026-10-01",
-  "hash": "17f9953f2fdc7d7b4beb458784bb48d4f5e9350a3d7af9b67a9b8fdefd75e35d"
+  "hash": "a89f7c5fd9df471ecf130776816b68dacfda994d25a49412d5b3b8425b11d40c"
  },
  "jersey-club-and-jersey-city.html": {
   "date": "2026-10-01",
-  "hash": "b0bb3a588b4f78ec0a58bf00857cfdc5608391a966fd5d8825f757741bb8bcca"
+  "hash": "8a2444a6a03f36c2b589abe84132572a0577be4cb2d01d2542c29833215c2c23"
+ },
+ "legends.html": {
+  "date": "2026-10-01",
+  "hash": "3984b7d0e992a4b4bfedf602a067b5c9b5ae068875606213fda765482548e619"
  },
  "neighborhood-greenville.html": {
   "date": "2026-10-01",
@@ -1121,15 +1129,15 @@
  },
  "privacy.html": {
   "date": "2026-10-01",
-  "hash": "20bfc3a5583d3ced4583ced409979768d32784ce55ef6993dda3ee569540c892"
+  "hash": "d3ec41b449e237f3e990228fe3d6725a05f214be6b4da7c2667cbcc561593d5f"
  },
  "rappers-from-jersey-city.html": {
   "date": "2026-10-01",
-  "hash": "924ed9e86f1ec4da62dbc9aa19a473a19e83cbb95d8576bbf039d3efcd0f8d82"
+  "hash": "6a778c5cba93080bde3786cb6a9ee5c7451374af4246550d57f064471b9a481c"
  },
  "report-001-not-from-jersey-city.html": {
-  "date": "2026-07-22",
-  "hash": "cf2f27d0ee7a5e82e2b4fd0a17fd1b5546976ae80d1e39c162bb3800bfea7753"
+  "date": "2026-10-01",
+  "hash": "f7a58021f05c4a07d96466a532fc1d98bf18ac184442b68156f594bc9b925f81"
  },
  "report-002-kool-and-the-gang.html": {
   "date": "2026-10-01",
@@ -1157,14 +1165,18 @@
  },
  "report.html": {
   "date": "2026-10-01",
-  "hash": "6d31cc7e7f2444babd7af6cdb867623e4d116c031d0eb86eb8bd19cf3e7e3970"
+  "hash": "b50d08c909bce2404e034283281b6c69626ef289a9da71782782fcda6ddfaeb6"
+ },
+ "sources.html": {
+  "date": "2026-10-01",
+  "hash": "4d563b9a2e5c626dee4c8213edce848261ae8527a64a6e810dc1b0c013a24e51"
  },
  "terms.html": {
   "date": "2026-10-01",
-  "hash": "1e236a7cf7de980bac333314f54472bf86f3a6afe14a250adbd19d4fa2720b00"
+  "hash": "a917d1b7148676ebb676281c621cf096ea613607e360de33ecfd524263498bb7"
  },
  "verify.html": {
   "date": "2026-10-01",
-  "hash": "86172bf8a8adfa7a4f10875a1fe571d9c7737f25cd1e9284a026f1a5e2ca65f0"
+  "hash": "8da1a5684887d3e1e39e299475a6ba63cc837dbd425078486ef617b988ddd60e"
  }
 }

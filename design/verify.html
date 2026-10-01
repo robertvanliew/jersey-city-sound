@@ -4,13 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Verify a Sealed Record | The Jersey City Sound</title>
-<meta name="description" content="Verify an archive record against The Jersey City Sound's cryptographic seal, entirely in your browser. Proves the page and its cited facts are unchanged since sealing.">
+<meta name="description" content="Verify an archive record against The Jersey City Sound's cryptographic seal, in your browser: proof the page and its facts are unchanged since sealing.">
+<link rel="canonical" href="https://jerseycitysound.com/verify.html">
 <meta name="robots" content="index, follow">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
 <link rel="icon" href="assets/favicon-64.png" sizes="64x64">
 <link rel="apple-touch-icon" href="assets/favicon-180.png">
-<link rel="preload" as="font" type="font/woff2" href="assets/fonts/sourceserif-latin-37bedc60.woff2" crossorigin>
-<link rel="stylesheet" href="assets/fonts/fonts.css">
 <link rel="stylesheet" href="styles.css">
 <style>
 .vrow{display:grid;grid-template-columns:1.6rem 9rem 1fr;gap:0.9rem;align-items:baseline;padding:0.8rem 0;border-top:1px solid var(--rule);line-height:1.5;}
@@ -43,6 +42,13 @@
     <a href="history.html">History</a>
     <a href="report.html">The Sound Report</a>
     <a href="about.html">About</a>
+    <div class="nav-search-wrap">
+    <form class="nav-search" role="search" action="archive.html">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>
+      <input type="search" id="nav-search" name="q" placeholder="Search the archive…" autocomplete="off" aria-label="Search the archive" role="combobox" aria-controls="nav-suggest" aria-expanded="false">
+      <ul class="search-suggest" id="nav-suggest" role="listbox" aria-label="Search suggestions"></ul>
+    </form>
+    </div>
   </nav>
 </header>
 
@@ -57,6 +63,7 @@
     <div class="section__head"><h2 class="caps caps--wide">How this works</h2></div>
     <p style="max-width:64ch;color:#4a4636;">The archive holds one <code>did:web</code> identity and an Ed25519 signing key. Each sealed entry gets a W3C Verifiable Credential binding a hash of the page text to its chart-facts record. Every seal is written to an append-only, hash-chained ledger whose head is periodically anchored on the public web (Internet Archive and X). To verify, this page fetches the credential, re-hashes the live page, checks the signature against the published key, and replays the chain. A hostile copy of the site could alter this verifier itself, which is why the external anchors are the ultimate backstop. See the <a href="/ledger/seals.jsonl">seal ledger</a> and <a href="/.well-known/did.json">DID document</a>.</p>
   </section>
+  <div class="wrap" style="text-align:center;padding-bottom:1.5rem;"><p class="record-card__since page-stamp">Last updated 2026-10-01</p></div>
 </main>
 
 <footer class="footer wrap">
@@ -823,6 +830,5 @@ const entry = params.get('entry');
 (entry ? verifyEntry(entry) : verifyChain()).catch(e=>{ out.innerHTML=''; row(false,'Error', esc(e.message)); });
 
 </script>
-<script src="assets/protect.js" defer></script>
 </body>
 </html>

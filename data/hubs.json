@@ -1,7 +1,7 @@
 {
  "_readme": "Copy for the generated hub pages (execution/hubs.py). intro[0] is the lead: a 40 to 60 word direct answer. Link an entry with [[slug|Label]] or a page with [[file.html|Label]]; first mentions of entry names are linked automatically. No dashes in copy. Every claim must be carried by a linked entry or a listed source. 'research' lines become HTML comments for the editor and are listed in the build report.",
  "rappers": {
-  "description": "Every rapper, MC, crew and rap group from Jersey City documented in the archive, from the park-jam crews of 1980 through the Flavor Unit, the mixtape era and today. Sources cited.",
+  "description": "Every rapper, MC, crew and rap group from Jersey City in the archive, from the park-jam crews of 1980 through the Flavor Unit and the mixtape era to today.",
   "intro": [
    "Jersey City has produced rappers since the park jams of about 1980: the crews that battled New York, the Flavor Unit members who put the city on the Golden Era map, the mixtape MCs of the 2000s, and the street rap of today. This page lists every rapper, MC, crew and rap group documented in The Jersey City Sound, each with its own cited sources.",
    "The earliest rap acts in the record are crews. [[sweet-slick-and-slide|Sweet Slick and Slide]], founded by [[lord-sun-albee-al|Lord Sun Albee Al]], and the [[tranquilizing-three|Tranquilizing Three]] out of the Duncan Projects were, by the account of their peers, the two Chilltown crews strong enough to hold their own against the celebrated crews of New York; the Tranquilizing Three secured one of the scene's earliest record deals. Lord Sun Albee Al is remembered as a party rocker who could take over any room from Jersey City to the Bronx. [[champagne|Champagne]], by the scene's account one of the city's first female MCs and artist managers, was for a time a member of the [[chiba-crew|Chiba Crew]] and managed [[positively-black|Positively Black]], the conscious rap group [[prince-kyrie|Prince Kyrie]] formed in 1988 that went from the family-run Trumpet Records to Select Records. [[killer-force|Killer Force]] appear on period flyers from the Benmore Skating Rink.",
@@ -44,7 +44,7 @@
   ]
  },
  "born": {
-  "description": "The nationally known musicians, singers, composers and performers born in Jersey City, New Jersey, each documented with sources: Nancy Sinatra, Al Di Meola, Flip Wilson, Jerry Herman, Kool and the Gang's founders and more.",
+  "description": "Nationally known musicians born in Jersey City, each with a source: Nancy Sinatra, Al Di Meola, Flip Wilson, Jerry Herman, Kool and the Gang's founders and more.",
   "intro": [
    "Jersey City is the birthplace of a long line of nationally known musicians: Nancy Sinatra and Frank Sinatra Jr., the jazz guitarist Al Di Meola, Broadway's Jerry Herman and Phyllis Newman, the Rascals' drummer Dino Danelli, three founding members of Kool and the Gang, and the entertainer Flip Wilson. This page lists every one the archive has documented, with the source for each birthplace.",
    "The record runs from the nineteenth century forward. The classic banjoist [[george-washington-gregory|George Washington Gregory]] was born in the city in 1867; the composer [[william-w-gilchrist|William W. Gilchrist]], the arts administrator and singer [[maude-roberts-george|Maude Roberts George]] (1888) and the opera bass and actor [[basil-ruysdael|Basil Ruysdael]] belong to the same early period. The violinist [[bob-lido|Bob Lido]], born in 1914, became a regular cast member of The Lawrence Welk Show; the drummer [[ed-shaughnessy|Ed Shaughnessy]] held the house drum chair on The Tonight Show with Johnny Carson from 1962 to 1992; the guitarist [[al-caiola|Al Caiola]], the choral conductor [[leonard-de-paur|Leonard De Paur]] and the composer [[gil-melle|Gil Melle]] of The Andromeda Strain soundtrack were all Jersey City born.",
@@ -81,7 +81,7 @@
   ]
  },
  "famous": {
-  "description": "Famous people from Jersey City in music and entertainment, documented with sources: singers, rappers, composers, bandleaders, actors who sing, and the groups that formed in the city.",
+  "description": "Famous people from Jersey City in music and entertainment, each with a cited entry: singers, rappers, composers, bandleaders and the groups formed in the city.",
   "intro": [
    "This page is scoped to music and entertainment. It lists every person and group in The Jersey City Sound with a national record (a Billboard chart entry, a published encyclopedia article, or a confirmed Wikidata identity) and a documented Jersey City connection: born here, raised here, formed here, or lived and worked here. Each card links to a cited entry.",
    "Chart records anchor the list. [[kool-and-the-gang|Kool and the Gang]] formed in the city in 1964; [[pm-dawn|PM Dawn]] took Set Adrift on Memory Bliss to No. 1 on the Hot 100 in 1991; [[the-manhattans|The Manhattans]], [[nancy-sinatra|Nancy Sinatra]], [[marilyn-mccoo|Marilyn McCoo]] and [[akon|Akon]] all hold Billboard No. 1 singles; [[double-xx-posse|Double XX Posse]] topped the Hot Rap Singles chart in 1992; [[joe-budden|Joe Budden]] charted with Pump It Up in 2003. The [[charts.html|On the Charts]] page sets out every chart fact in the record with its source.",
@@ -105,7 +105,7 @@
   "research": []
  },
  "jersey-club": {
-  "description": "Jersey club started in Newark; this page documents what Jersey City added, with the DJs and producers in the archive who carry the sound, and credits the Brick City origin plainly.",
+  "description": "Jersey club started in Newark. This page documents what Jersey City added, with the DJs and producers in the archive who carry the sound.",
   "intro": [
    "Jersey club is a Newark sound. The style grew out of Baltimore club in Newark's DJ scene in the early 2000s, and its originators and leading names are Brick City artists. Jersey City's part is smaller and later: the city's DJs carried the sound into Hudson County, blended it into the mixtape tradition, and produced its own club records and documentaries. This page documents only what the archive can source.",
    "The clearest Jersey City thread is [[mista-quietman|Mista Quietman]], Antwan Anderson, whose SoundCloud catalog of club loops and remixes dates to 2012 and whose The 201 High School Anthem is a Jersey City spin-off of DJ Sliink's High School Anthem, shouting out Lincoln, Ferris, Dickinson and Snyder high schools. [[dj-wizard|Wiztv]], DJ Wizard, produced the Jersey Club Blends mixtape series (Vol. 3, 2017), blends with DJ Sliink, and as of 2026 is producing a new WizTV Jersey Club Documentary. [[dj-swill-b|DJ Swill B]] was the featured artist on Bandmanrill's Jiggy in Jersey with Sha EK (2022), from the album Club Godfather.",
@@ -141,7 +141,7 @@
   ]
  },
  "venues": {
-  "description": "The record stores, venues, clubs, parks and studios where Jersey City's music happened, documented with sources: Stan's Square Records, the Benmore Skating Rink, Audubon Park, Rendezvous and more.",
+  "description": "The record stores, venues, rinks, schools, housing and streets where Jersey City's music happened, each with sourced connections and a pin on the map.",
   "intro": [
    "Jersey City's music history happened in specific rooms and on specific blocks: a record store in Journal Square that ran for five decades, a skating rink where New Jersey battled the Bronx, a park where the winner of a turntable battle took the loser's equipment, and the clubs where the mixtape DJs held residencies. This page lists every place entry in the archive, grouped by kind.",
    "[[stans-square-records|Stan's Square Records]], founded by [[stan-krause|Stan Krause]] in 1965 first in Journal Square and later at 349 Bergen Avenue, anchored the city's music life until it closed in 2018, and spun off the labels [[catamount-records|Catamount Records]] and [[square-records|Square Records]]. The 2006 [[jersey-city-dj-documentary-2006|Jersey City DJ Documentary]] documents the scene's venues and institutions: Rendezvous (formerly Ruthie's), the Boys Club, Lollipop, Taste, and Ferris High School as a producer of scene legends, and preserves the oral history of turntable battles at Audubon Park in the late 1970s and early 1980s.",
@@ -221,7 +221,7 @@
   ]
  },
  "archive": {
-  "description": "Musicians from Jersey City: the complete, cited archive of the city's DJs, rappers, singers, groups, producers, venues and record labels across six decades, A to Z.",
+  "description": "Musicians from Jersey City: the complete, cited archive of the city's DJs, rappers, singers, groups, producers, venues and labels across six decades.",
   "intro": [
    "The Jersey City Sound is the cited encyclopedia-archive of musicians from Jersey City, New Jersey: every DJ, rapper, singer, group, producer, label and venue the record can support, from the Catamount Records acappella era of the 1960s through the park jams, the mixtape scene and the Jersey club years to today. Every entry carries numbered sources. This page is the complete index.",
    "The archive is organised three ways. By role: [[rappers-from-jersey-city.html|rappers, MCs and crews]], [[jersey-city-djs.html|DJs and the mixtape era]], and the [[jersey-city-venues-and-record-stores.html|venues, record stores and studios]]. By era: eight pages from [[history-pre-1960s.html|before 1960]] through the [[history-1960s.html|1960s]], [[history-1970s.html|1970s]], [[history-1980s.html|1980s]], [[history-1990s.html|1990s]], [[history-2000s.html|2000s]], [[history-2010s.html|2010s]] and [[history-2020s.html|2020s]], with the [[history.html|full timeline]] tying them together. By place and standing: [[famous-musicians-born-in-jersey-city.html|famous musicians born in Jersey City]], [[famous-people-from-jersey-city.html|famous people from Jersey City in music and entertainment]], [[neighborhood-greenville.html|Greenville]], [[charts.html|the Billboard record]], and the [[legends.html|memorial wing]]. The city's nickname has its own page: [[chilltown.html|Chilltown]].",
@@ -256,7 +256,7 @@
   "research": []
  },
  "schools": {
-  "description": "Jersey City's high schools in the music record: Kool and the Gang formed at Lincoln, Akon attended Snyder and Dickinson, the 2006 documentary credits Ferris, and P.S. 11 hosted the park-jam era's battles. Every connection sourced.",
+  "description": "Jersey City's high schools in the music record: Kool and the Gang at Lincoln, Akon at Snyder and Dickinson, Ferris in the 2006 documentary, P.S. 11's battles.",
   "intro": [
    "Jersey City's schools are where several of its music stories start: Kool and the Gang formed in 1964 as students at Lincoln High School; Akon went to Snyder and Dickinson; the 2006 mixtape documentary credits Ferris High School as a producer of the scene's legends; and P.S. 11 was DJ Wimpy Bee's staple room and the site of the MC battle Cool Sir Brown won. This page lists each school with every documented musician who came through it.",
    "Mista Quietman's The 201 High School Anthem, a Jersey City rework of DJ Sliink's High School Anthem, calls out all four high schools by name, which is why the schools belong in a music archive at all. Each school has its own entry with its address, a map, and the sourced connections; the artists link back from their own pages.",

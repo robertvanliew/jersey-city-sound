@@ -517,7 +517,7 @@ def meta_desc(entry):
     facts = entry.get("facts") or []
     base = facts[0] if facts else f"{entry['name']} is documented in the Jersey City music archive."
     base = first_sentence(re.sub(r"\s+", " ", base).strip())
-    room = META_MAX - len(META_TAIL)
+    room = META_MAX - len(META_TAIL) - 1   # one char spare for the closing period
     if len(base) > room:
         window = base[:room]
         # cut at the latest clause or conjunction boundary past 70 chars, else a word boundary
@@ -884,13 +884,15 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
     _ty = re.sub(r"\s*(?:[–—]|\s-\s)\s*", " to ", years).replace("c. ", "")
     _years_tail = f", {_ty}" if _ty and _ty not in name else ""
     _jc_prefix = "" if "jersey city" in name.lower() else "Jersey City "
-    _head = (f"{name}: Jersey City {place_type.title()} in the Music Record" if is_place
+    _head = (f"{name}, Jersey City: in the music record" if is_place
              else f"{name}: {_jc_prefix}{title_role}" if _jc
              else f"{name}: {title_role} with Jersey City ties")
     # the hook: a short "known for" beats years when the whole title stays under 60 chars
     _kf = known_for(entry)
     _kf_short = re.split(r"\s*[;(]|\s--\s", _kf)[0].strip().rstrip(",.") if _kf else ""
-    if _kf_short and len(f"{_head}, {_kf_short}") <= 60:
+    if is_place:
+        title = _head
+    elif _kf_short and len(f"{_head}, {_kf_short}") <= 60:
         title = f"{_head}, {_kf_short}"
     else:
         title = f"{_head}{_years_tail}"
@@ -1988,8 +1990,8 @@ def write_charts_hub(entries, data):
   </section>
 </main>'''
 
-    html = _shell("On the Charts — Jersey City's Charted Artists | The Jersey City Sound",
-                  "Jersey City artists with verified Billboard chart history: the Hot 100 number ones, the top 40 and gold, the genre-chart and broadcast names, plus corrections of who is not from Jersey City.",
+    html = _shell("On the Charts: Jersey City's Billboard Record",
+                  "Jersey City artists with verified Billboard chart history: the Hot 100 number ones, the top 40 and gold records, and who is not from Jersey City.",
                   canonical, body, current="charts", head_extra=head_extra)
     (OUT / "charts.html").write_text(html, encoding="utf-8")
     print(f"Wrote charts.html ({pos} charted acts across {sum(1 for k,_ in order if groups[k])} tiers)")
@@ -2105,7 +2107,7 @@ def write_report_issue(entries):
     jsonld = jsonld.replace("__DT__", modified)
     head_extra = f'<script type="application/ld+json">\n{jsonld}\n</script>\n'
     html = _shell("Is Queen Latifah From Jersey City? No, and the Truth Is Better | The Jersey City Sound",
-                  "The famous musicians actually from Jersey City, and the two names the internet keeps getting wrong. Queen Latifah is from Newark and East Orange; Lauryn Hill is from South Orange. Here is who actually charted.",
+                  "The famous musicians actually from Jersey City, and the two names the internet keeps getting wrong: Queen Latifah and Lauryn Hill are not from the city.",
                   canonical, body, current="report", head_extra=head_extra)
     (OUT / "report-001-not-from-jersey-city.html").write_text(html, encoding="utf-8")
     print("Wrote report-001-not-from-jersey-city.html")
@@ -2391,6 +2393,34 @@ CLAIM_COMBO = """<script>
 </script>"""
 
 
+HAND_PAGES = ["index.html", "about.html", "chilltown.html", "jersey-city-djs.html", "history.html",
+              "report.html", "sources.html", "corrections.html", "privacy.html", "terms.html",
+              "entry-dj-dx.html", "legends.html", "charts.html", "report-001-not-from-jersey-city.html",
+              "archive.html", "verify.html"]
+
+
+def stamp_hand_pages():
+    """Give hand-built pages a visible 'Last updated' line (the page's own lastmod date),
+    inserted once before </main>. Re-runs replace the date rather than adding a second line."""
+    for name in HAND_PAGES:
+        path = OUT / name
+        if not path.exists():
+            continue
+        s = path.read_text(encoding="utf-8")
+        date = lastmod_for(name, file_hash(path)) if name not in HUB_DATES else HUB_DATES[name]
+        if name in ("legends.html", "charts.html", "sources.html", "archive.html"):
+            date = max(LASTMOD.get(f"entry-{e['slug']}", {}).get("date", BUILD_DATE) for e in ALL_ENTRIES)
+        line = f'<p class="record-card__since page-stamp">Last updated {date}</p>'
+        if 'class="record-card__since page-stamp"' in s:
+            new = re.sub(r'<p class="record-card__since page-stamp">Last updated [^<]*</p>', line, s, count=1)
+        elif "</main>" in s:
+            new = s.replace("</main>", f"  <div class=\"wrap\" style=\"text-align:center;padding-bottom:1.5rem;\">{line}</div>\n</main>", 1)
+        else:
+            continue
+        if new != s:
+            path.write_text(new, encoding="utf-8")
+
+
 def write_claim_page():
     """claim.html: the claim-your-entry flow. Reuses the Formspree endpoint the suggest-an-edit
     form posts to; the entry name is prefilled from ?entry=<slug> via the search index."""
@@ -2543,8 +2573,8 @@ def write_data_page(entries, count):
     <p class="record-card__since" style="margin-top:2rem;">Archive page by Robert Van Liew · Last updated {modified}</p>
   </article>
 </main>"""
-    html = _shell("The Jersey City Sound as Open Data: Every Entry, JSON and CSV",
-                  f"Download every entry in The Jersey City Sound as JSON or CSV, CC BY-SA 4.0: {count} cited records of Jersey City musicians, DJs, rappers, groups, labels and places.",
+    html = _shell("The Jersey City Sound as Open Data: JSON and CSV",
+                  f"Download every entry in The Jersey City Sound as JSON or CSV, CC BY-SA 4.0: {count} cited records of Jersey City musicians, DJs, groups and places.",
                   canonical, body, current="about", head_extra=head_extra)
     (OUT / "data.html").write_text(html, encoding="utf-8")
     return modified
@@ -2760,6 +2790,7 @@ def main():
     write_report_issue(entries)
     write_sources(entries)
     write_claim_page()
+    stamp_hand_pages()
     HUB_DATES.update(write_reports(entries, name_links))
     _n = export_dataset.export(entries, HANDCRAFTED)
     HUB_DATES["data.html"] = write_data_page(entries, _n)
