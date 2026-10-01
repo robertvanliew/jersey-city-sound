@@ -1068,6 +1068,112 @@
      "label": "Watch",
      "value": "YouTube (WizTV upload and The Real Mista Quietman upload)"
     }
+   ],
+   "videos": [
+    {
+     "id": "uyX2waMUOJQ",
+     "title": "Wiztv Presents The Jersey City DJ Documentary Vol. 1 (2006)",
+     "caption": "The full documentary, from the director's WizTV channel. A second preserved upload is on The Real Mista Quietman channel.",
+     "upload_date": "2006",
+     "duration": "PT2H57M58S"
+    }
+   ],
+   "segments": [
+    {
+     "name": "DJ Flash",
+     "slug": "dj-flash-jersey-city",
+     "timestamp": "[TIMESTAMP]"
+    },
+    {
+     "name": "Mista Quietman",
+     "slug": "mista-quietman",
+     "timestamp": "[TIMESTAMP]"
+    },
+    {
+     "name": "Mark Cee (Mark C)",
+     "slug": "mark-cee",
+     "timestamp": "[TIMESTAMP]"
+    },
+    {
+     "name": "Styles 007 (DJ 007)",
+     "slug": "dj-007",
+     "timestamp": "[TIMESTAMP]"
+    },
+    {
+     "name": "DJ Mad Money (Man Money)",
+     "slug": "dj-mad-money",
+     "timestamp": "[TIMESTAMP]"
+    },
+    {
+     "name": "DJ E Double (Double Platinum Entertainment)",
+     "slug": "dj-e-double",
+     "timestamp": "[TIMESTAMP]"
+    },
+    {
+     "name": "DJ BigTime (Big Time)",
+     "slug": "dj-bigtime",
+     "timestamp": "[TIMESTAMP]"
+    },
+    {
+     "name": "DJ Dolo",
+     "slug": "dj-dolo",
+     "timestamp": "[TIMESTAMP]"
+    },
+    {
+     "name": "DJ DX",
+     "slug": "dj-dx",
+     "timestamp": "[TIMESTAMP]"
+    },
+    {
+     "name": "X5",
+     "slug": "x5",
+     "timestamp": "[TIMESTAMP]"
+    },
+    {
+     "name": "Chameleon (Ka-Million)",
+     "slug": "chameleon-ka-million",
+     "timestamp": "[TIMESTAMP]"
+    },
+    {
+     "name": "DJ Semaj (transcribed as DJ Simmons)",
+     "slug": "dj-semaj",
+     "timestamp": "[TIMESTAMP]"
+    },
+    {
+     "name": "DJ Madden",
+     "slug": "dj-madden",
+     "timestamp": "[TIMESTAMP]"
+    },
+    {
+     "name": "Benito",
+     "slug": "benito",
+     "timestamp": "[TIMESTAMP]"
+    },
+    {
+     "name": "Joe Bananas",
+     "slug": "joe-bananas",
+     "timestamp": "[TIMESTAMP]"
+    },
+    {
+     "name": "Blaze (Blaze-In-Arts), cover designer",
+     "slug": "blaze-in-arts",
+     "timestamp": "[TIMESTAMP]"
+    },
+    {
+     "name": "Sean, organizer of the 2000 Winterblaze battle",
+     "slug": "",
+     "timestamp": "[TIMESTAMP]"
+    },
+    {
+     "name": "House B aka Bob Charlie (outro)",
+     "slug": "",
+     "timestamp": "[TIMESTAMP]"
+    },
+    {
+     "name": "DJ Savage (battle footage)",
+     "slug": "",
+     "timestamp": "[TIMESTAMP]"
+    }
    ]
   },
   {

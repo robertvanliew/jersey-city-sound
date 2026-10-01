@@ -746,6 +746,62 @@ def awards_html(entry):
     return '\n      <div class="certs" aria-label="Achievements">' + "".join(cells) + note_html + '</div>'
 
 
+def _ts_seconds(ts):
+    """'1:02:03' or '12:34' -> seconds, else None (placeholders stay unlinked)."""
+    m = re.fullmatch(r"(?:(\d+):)?(\d{1,2}):(\d{2})", (ts or "").strip())
+    if not m:
+        return None
+    h, mi, se = m.groups()
+    return int(h or 0) * 3600 + int(mi) * 60 + int(se)
+
+
+def segments_html(entry, by_slug_name):
+    """A table of on-camera segments with a timestamp column. Filled timestamps link to the
+    upload at that second and to the person's entry; '[TIMESTAMP]' stays a visible placeholder."""
+    segs = entry.get("segments") or []
+    if not segs:
+        return ""
+    vid = _yt_id((entry.get("videos") or [{}])[0].get("id", "")) if entry.get("videos") else ""
+    rows = []
+    for sg in segs:
+        name = esc(sg.get("name", ""))
+        if sg.get("slug"):
+            name = f'<a href="entry-{esc(sg["slug"])}.html">{name}</a>'
+        secs = _ts_seconds(sg.get("timestamp"))
+        if secs is not None and vid:
+            ts = f'<a href="https://www.youtube.com/watch?v={vid}&amp;t={secs}s" rel="noopener">{esc(sg["timestamp"])}</a>'
+        else:
+            ts = f'<span class="placeholder-ts">{esc(sg.get("timestamp") or "[TIMESTAMP]")}</span>'
+        rows.append(f"        <tr><td>{name}</td><td>{ts}</td></tr>")
+    return ("\n\n      <h2 id=\"segments\">Segments<a class=\"anchor\" href=\"#segments\" aria-label=\"Link to Segments section\">§</a></h2>\n"
+            "      <p>Who appears on camera, in the order the archive roster lists them. Timestamps are being added so each account can be cited to the minute.</p>\n"
+            "      <table class=\"segments\"><thead><tr><th>On camera</th><th>Timestamp</th></tr></thead><tbody>\n"
+            + "\n".join(rows) + "\n      </tbody></table>")
+
+
+DOC_SLUG = "jersey-city-dj-documentary-2006"
+DOC_MARKS = ("Documentary Vol. 1", "uyX2waMUOJQ", "ZDfRsT0CKeU")
+
+
+def cites_documentary(e):
+    return any(any(m in (s.get("label", "") + " " + (s.get("url") or "")) for m in DOC_MARKS)
+               for s in e.get("sources", []))
+
+
+def appears_html(entry, by_no):
+    """On the documentary's own page: every entry that cites the film, linked (data-noseal)."""
+    if entry.get("slug") != DOC_SLUG:
+        return ""
+    names = sorted((e for e in by_no.values() if e["slug"] != DOC_SLUG and cites_documentary(e)),
+                   key=lambda e: e["name"].lower())
+    if not names:
+        return ""
+    lis = "\n".join(f'        <li><a href="entry-{e["slug"]}.html">{esc(e["name"])}</a> <span class="conn-note">{esc(" · ".join(e.get("roles") or []))}</span></li>' for e in names)
+    return ("\n\n      <h2 id=\"appears\">Appears in this film<a class=\"anchor\" href=\"#appears\" aria-label=\"Link to this section\">§</a></h2>\n"
+            f"      <p>{len(names)} entries in the archive cite the documentary as a source; each links back here from its Sources.</p>\n"
+            "      <ul class=\"connections\" data-noseal>\n" + lis + "\n      </ul>")
+
+
 def videos_html(entry, name_links, slug):
     """Render entry['videos'] as responsive, privacy-mode YouTube embeds."""
     vids = entry.get("videos") or []
@@ -901,6 +957,8 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
       <p>Every place in the record with a sourced address is pinned on the <a href="jersey-city-music-map.html">Jersey City Music Map</a>.</p>"""
     video_body, _has_video = videos_html(entry, name_links, slug)
     video_section = ("\n\n" + video_body) if video_body else ""
+    video_section += segments_html(entry, by_slug_name)
+    video_section += appears_html(entry, by_no)
     gallery_body, has_gallery = galleries_html(entry, name_links, slug, appearances)
     gallery_section = ("\n\n" + gallery_body) if gallery_body else ""
     awards_block = awards_html(entry)
@@ -944,6 +1002,8 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
     def src_li(i, s):
         label = esc(s["label"])
         url = s.get("url")
+        if slug != DOC_SLUG and any(m in (s.get("label", "") + " " + (url or "")) for m in DOC_MARKS):
+            label = f'<a href="entry-{DOC_SLUG}.html">{label}</a>'
         if url:
             return f'        <li id="src-{i}">{label} — <a href="{esc(url)}">link</a></li>'
         return f'        <li id="src-{i}">{label}</li>'
@@ -1170,10 +1230,16 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
         if vid_id:
             vt = vids[0].get("title") or name
             vc = vids[0].get("caption") or f"{name} on video."
+            _vextra = ""
+            if vids[0].get("upload_date"):
+                _vextra += f', "uploadDate": {json.dumps(vids[0]["upload_date"])}'
+            if vids[0].get("duration"):
+                _vextra += f', "duration": {json.dumps(vids[0]["duration"])}'
             vid_node = (f',\n    {{"@type": "VideoObject", "@id": "{canonical}#video", '
                         f'"name": {json.dumps(vt)}, "description": {json.dumps(vc)}, '
                         f'"thumbnailUrl": "https://i.ytimg.com/vi/{vid_id}/hqdefault.jpg", '
-                        f'"embedUrl": "https://www.youtube-nocookie.com/embed/{vid_id}"}}')
+                        f'"contentUrl": "https://www.youtube.com/watch?v={vid_id}", '
+                        f'"embedUrl": "https://www.youtube-nocookie.com/embed/{vid_id}"{_vextra}}}')
 
     ld = f"""{{
   "@context": "https://schema.org",
@@ -1301,7 +1367,8 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
 
 {share_block}
       <aside class="claim-bar" data-noseal>
-        <p>See something to correct, or a receipt, photo, or memory to add?</p>
+        <p><strong>Is this you?</strong> Claim and complete this entry: correct it, add releases and credits, supply a photograph, link your pages.</p>
+        <a href="claim.html?entry={slug}">Claim this entry →</a>
         <a href="suggest-edit.html">Suggest an edit →</a>
       </aside>
     </article>
@@ -2252,6 +2319,146 @@ def write_root_files(entries=None):
     (OUT / "llms.txt").write_text(llms, encoding="utf-8")
 
 
+# the entry-name combobox script, shared with suggest-edit.html
+CLAIM_COMBO = """<script>
+(function () {
+  var entries = (window.JCS_ENTRIES || []).slice().sort(function (a, b) {
+    return a.name.localeCompare(b.name);
+  });
+  var input = document.getElementById('entry');
+  var box = document.getElementById('entry-suggest');
+  if (!input || !box || !entries.length) return;
+  var active = -1;
+  function opts() { return box.querySelectorAll('a'); }
+  function esc(s) {
+    return String(s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+  function highlight(i) {
+    var o = opts();
+    o.forEach(function (a, n) { a.classList.toggle('active', n === i); });
+    if (i >= 0 && o[i]) o[i].scrollIntoView({ block: 'nearest' });
+    active = i;
+  }
+  function render() {
+    var term = input.value.trim().toLowerCase();
+    active = -1;
+    if (!term) { box.innerHTML = ''; input.setAttribute('aria-expanded', 'false'); return; }
+    var hits = entries.filter(function (e) {
+      return (e.name + ' ' + e.role + ' ' + e.no).toLowerCase().indexOf(term) !== -1;
+    }).slice(0, 8);
+    box.innerHTML = hits.map(function (e) {
+      return '<li role="option"><a href="#" data-name="' + esc(e.name) + '"><span class="no">№. ' +
+        esc(e.no) + '</span><span class="nm">' + esc(e.name) + '</span><span class="rl">' +
+        esc(e.role) + '</span></a></li>';
+    }).join('');
+    input.setAttribute('aria-expanded', hits.length ? 'true' : 'false');
+  }
+  function choose(a) {
+    if (!a) return;
+    input.value = a.getAttribute('data-name');
+    box.innerHTML = '';
+    input.setAttribute('aria-expanded', 'false');
+    input.focus();
+  }
+  input.addEventListener('input', render);
+  input.addEventListener('focus', render);
+  box.addEventListener('click', function (ev) {
+    var a = ev.target.closest('a');
+    if (a) { ev.preventDefault(); choose(a); }
+  });
+  document.addEventListener('click', function (ev) {
+    if (!ev.target.closest('.combo')) box.innerHTML = '';
+  });
+  input.addEventListener('keydown', function (ev) {
+    var o = opts();
+    if (ev.key === 'ArrowDown') { ev.preventDefault(); highlight(Math.min(active + 1, o.length - 1)); }
+    else if (ev.key === 'ArrowUp') { ev.preventDefault(); highlight(Math.max(active - 1, 0)); }
+    else if (ev.key === 'Enter' && active >= 0 && o[active]) { ev.preventDefault(); choose(o[active]); }
+    else if (ev.key === 'Escape') { box.innerHTML = ''; }
+  });
+})();
+</script>"""
+
+
+def write_claim_page():
+    """claim.html: the claim-your-entry flow. Reuses the Formspree endpoint the suggest-an-edit
+    form posts to; the entry name is prefilled from ?entry=<slug> via the search index."""
+    canonical = f"{SITE}/claim.html"
+    body = """<main class="wrap">
+  <header class="entry-header" style="text-align:center;">
+    <span class="entry-no reveal reveal--1">Is this you?</span>
+    <h1 class="reveal reveal--2" style="font-size:clamp(2.1rem,4.5vw,3.3rem);">Claim and complete your entry</h1>
+    <p class="descriptor reveal reveal--3" style="margin-inline:auto;">If you are the subject of an entry, or you speak for an act, a label or a venue in the record, you can correct it, add to it, supply a photograph, and link your current pages. Claims are verified against a public profile you control; the entry stays held to the same cite-or-cut standard as every other.</p>
+  </header>
+
+  <article class="entry-body reveal reveal--4" style="margin-inline:auto;">
+    <h2 id="how">How it works</h2>
+    <p>Send the form below. The archive checks that the profile you link belongs to you (a message from that account, or a line on it pointing here, settles it), then publishes the corrections and additions it can source, credits you on the entry, and adds your links to the record card. Photographs are published with the credit you give and only with your permission. Nothing is published for calling yourself a legend; everything is published for what you verifiably did.</p>
+    <p>Every entry already has a shareable record card: the <strong>Share to Story</strong> button on your page makes an image sized for Instagram stories, with your entry number and name. Once your entry is complete, that is the one to post.</p>
+  </article>
+
+  <form class="edit-form reveal reveal--4" action="https://formspree.io/f/mlgyqylz" method="POST" data-ajax data-done="Thank you. Your claim reached the archive; expect a reply from contact@jerseycitysound.com once the profile check is done.">
+    <div class="field">
+      <label for="entry">Entry you are claiming</label>
+      <div class="combo">
+        <input type="text" id="entry" name="entry" placeholder="Start typing a name" required autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="entry-suggest">
+        <ul class="search-suggest" id="entry-suggest" role="listbox" aria-label="Matching entries"></ul>
+      </div>
+    </div>
+    <div class="field">
+      <label for="name">Your name</label>
+      <input type="text" id="name" name="name" required autocomplete="name">
+    </div>
+    <div class="field">
+      <label for="email">Your email</label>
+      <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com">
+    </div>
+    <div class="field">
+      <label for="profile">A public profile that proves it is you (Instagram, Spotify for Artists, official site, Bandcamp)</label>
+      <input type="url" id="profile" name="profile" required placeholder="https://">
+    </div>
+    <div class="field">
+      <label for="changes">What to add or correct</label>
+      <textarea id="changes" name="changes" required placeholder="Real name if you want it listed, years active, releases with dates, crews and labels, rooms you held down, and what is wrong on the page now. Links and dates help it get published faster."></textarea>
+    </div>
+    <div class="field">
+      <label for="photo">Photograph (a link to the image, with the photographer's name)</label>
+      <input type="url" id="photo" name="photo" placeholder="https:// (Google Drive, Dropbox, Instagram post)">
+    </div>
+    <div class="field">
+      <label><input type="checkbox" name="photo_permission" value="yes"> I own or have permission to share this photograph and allow The Jersey City Sound to publish it with credit, under the archive's CC BY-SA 4.0 license.</label>
+    </div>
+    <div class="field">
+      <label for="links">Links for the record card (Spotify, Apple Music, Bandcamp, YouTube, official site), one per line</label>
+      <textarea id="links" name="links" placeholder="https://"></textarea>
+    </div>
+    <input type="hidden" name="_subject" value="Entry claim">
+    <input type="hidden" name="entry_slug" id="entry_slug" value="">
+    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button type="submit">Send claim</button>
+    <p class="hint" style="margin-top:1rem;">Claims go to contact@jerseycitysound.com. Corrections that need no identity check can also go through <a href="suggest-edit.html">suggest an edit</a>. See the <a href="corrections.html">corrections and removal policy</a>.</p>
+  </form>
+</main>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search).get('entry');
+  if (!q) return;
+  var hit = (window.JCS_ENTRIES || []).filter(function (e) { return e.href === 'entry-' + q + '.html'; })[0];
+  var input = document.getElementById('entry');
+  if (hit) { input.value = hit.name; document.getElementById('entry_slug').value = q; }
+})();
+</script>"""
+    head_extra = '<meta name="robots" content="noindex, follow">\n'
+    body += "\n" + CLAIM_COMBO + '\n<script src="assets/forms.js" defer></script>'
+    html = _shell("Claim your entry | The Jersey City Sound",
+                  "Claim and complete your entry in The Jersey City Sound: correct facts, add releases and credits, supply a photograph and link your pages.",
+                  canonical, body, current="archive", head_extra=head_extra)
+    html = html.replace('<meta name="robots" content="index, follow">\n', "", 1)
+    (OUT / "claim.html").write_text(html, encoding="utf-8")
+
+
 def main():
     data = json.loads(DATA.read_text(encoding="utf-8"))
     entries = data["entries"]
@@ -2295,6 +2502,7 @@ def main():
     write_charts_hub(entries, data)
     write_report_issue(entries)
     write_sources(entries)
+    write_claim_page()
     write_sitemap(entries)
     save_lastmod()
     write_root_files(entries)

@@ -1528,3 +1528,9 @@ body.embed .masthead, body.embed .footer, body.embed .entry-header, body.embed .
 body.embed main.wrap { padding: 0; max-width: none; }
 body.embed .music-map { height: 100vh; border: 0; }
 .embed-snippet { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.82rem; background: #f0ece0; padding: 0.8rem 1rem; overflow-x: auto; }
+
+/* ---------- documentary segments ---------- */
+table.segments { width: 100%; border-collapse: collapse; margin: 0 0 2rem; font-size: 0.95rem; }
+table.segments th, table.segments td { text-align: left; padding: 0.5rem 0.4rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table.segments th { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-ink); }
+.placeholder-ts { color: #8a8372; font-style: italic; }
