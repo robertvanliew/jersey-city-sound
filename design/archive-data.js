@@ -96,6 +96,14 @@ window.JCS_ENTRIES = [
   "years": "c. 1995–2006+"
  },
  {
+  "no": "254",
+  "name": "Benmore Skating Rink",
+  "href": "entry-benmore-skating-rink.html",
+  "role": "Skating rink · Battle venue",
+  "type": "place",
+  "years": "c. 1982"
+ },
+ {
   "no": "157",
   "name": "Benny Blanca",
   "href": "entry-benny-blanca.html",
@@ -288,6 +296,14 @@ window.JCS_ENTRIES = [
   "years": "c. early 1990s – present"
  },
  {
+  "no": "261",
+  "name": "Curries Woods",
+  "href": "entry-curries-woods.html",
+  "role": "Public housing",
+  "type": "place",
+  "years": "2010s to present"
+ },
+ {
   "no": "053",
   "name": "Cy Coben",
   "href": "entry-cy-coben.html",
@@ -373,6 +389,14 @@ window.JCS_ENTRIES = [
   "href": "entry-dickie-thompson.html",
   "role": "Musician",
   "type": "person",
+  "years": ""
+ },
+ {
+  "no": "258",
+  "name": "Dickinson High School",
+  "href": "entry-dickinson-high-school.html",
+  "role": "Public high school",
+  "type": "place",
   "years": ""
  },
  {
@@ -720,6 +744,14 @@ window.JCS_ENTRIES = [
   "years": "c. 1990 – 1995"
  },
  {
+  "no": "259",
+  "name": "Duncan Projects",
+  "href": "entry-duncan-projects.html",
+  "role": "Public housing",
+  "type": "place",
+  "years": "c. 1980s"
+ },
+ {
   "no": "181",
   "name": "E-Square",
   "href": "entry-e-square.html",
@@ -741,6 +773,14 @@ window.JCS_ENTRIES = [
   "href": "entry-exit-14-djs.html",
   "role": "DJ collective",
   "type": "group",
+  "years": ""
+ },
+ {
+  "no": "257",
+  "name": "Ferris High School",
+  "href": "entry-ferris-high-school.html",
+  "role": "Public high school",
+  "type": "place",
   "years": ""
  },
  {
@@ -861,6 +901,14 @@ window.JCS_ENTRIES = [
   "href": "entry-heather-b-gardner.html",
   "role": "Musician",
   "type": "person",
+  "years": ""
+ },
+ {
+  "no": "256",
+  "name": "Henry Snyder High School",
+  "href": "entry-snyder-high-school.html",
+  "role": "Public high school",
+  "type": "place",
   "years": ""
  },
  {
@@ -1072,6 +1120,14 @@ window.JCS_ENTRIES = [
   "years": ""
  },
  {
+  "no": "262",
+  "name": "Kool & the Gang Way",
+  "href": "entry-kool-and-the-gang-way.html",
+  "role": "Street · Honorary street name",
+  "type": "place",
+  "years": "2016 to present"
+ },
+ {
   "no": "142",
   "name": "KS (Mr Xtortion)",
   "href": "entry-ks-mr-xtortion.html",
@@ -1110,6 +1166,14 @@ window.JCS_ENTRIES = [
   "role": "Artist",
   "type": "person",
   "years": ""
+ },
+ {
+  "no": "255",
+  "name": "Lincoln High School",
+  "href": "entry-lincoln-high-school.html",
+  "role": "Public high school",
+  "type": "place",
+  "years": "1964 to present"
  },
  {
   "no": "187",
@@ -1398,6 +1462,14 @@ window.JCS_ENTRIES = [
   "role": "Musical group",
   "type": "group",
   "years": ""
+ },
+ {
+  "no": "260",
+  "name": "P.S. 11",
+  "href": "entry-ps-11.html",
+  "role": "Public school · Party venue",
+  "type": "place",
+  "years": "c. 1980s"
  },
  {
   "no": "131",
@@ -2014,6 +2086,11 @@ window.JCS_PAGES = [
   "name": "The Sound Report",
   "href": "report.html",
   "role": "Fact checks and editorial"
+ },
+ {
+  "name": "Jersey City Music Map",
+  "href": "jersey-city-music-map.html",
+  "role": "Every documented place, pinned"
  },
  {
   "name": "Rappers from Jersey City",

@@ -212,6 +212,15 @@ def para(text, g, name_links, self_slug=""):
 
 def group_members(spec, members, g):
     """Group cards: eras and neighborhoods by role family; role hubs by era."""
+    if spec["key"] == "venues":
+        buckets = {}
+        labels = {"venue": "Venues and record stores", "record store": "Venues and record stores",
+                  "club": "Venues and record stores", "school": "Schools", "housing": "Public housing",
+                  "skating rink": "Skating rinks", "park": "Parks", "street": "Streets", "studio": "Studios"}
+        for e in members:
+            k = e.get("place_type") or "venue"
+            buckets.setdefault(labels.get(k, k.capitalize() + "s"), []).append(e)
+        return sorted(buckets.items())
     if spec["key"].startswith(("era-", "neighborhood-")) or spec["key"] in ("born", "famous"):
         buckets = {}
         for e in members:
@@ -452,3 +461,92 @@ def refresh_dj_roll(entries, g):
     new = re.sub(r"<strong>\d+ DJs</strong>", f"<strong>{len(djs)} DJs</strong>", new, count=1)
     if new != s:
         path.write_text(new, encoding="utf-8")
+
+
+def write_map_page(entries, g, name_links):
+    """jersey-city-music-map.html: every place entry with coordinates as a pin, a card per
+    pin linking to the entry, a list fallback, and an embed snippet. ?embed=1 hides the
+    site chrome so the map can be embedded with a link back."""
+    places = [e for e in entries if is_place(e) and e.get("lat") is not None and e.get("lng") is not None]
+    places.sort(key=lambda e: e["name"].lower())
+    pins = [{"name": e["name"], "href": f"entry-{e['slug']}.html", "lat": e["lat"], "lng": e["lng"],
+             "kind": (e.get("place_type") or "place").capitalize(), "line": one_line(e, g, 120),
+             "note": e.get("geo_note", "")} for e in places]
+    unplaced = [e for e in entries if is_place(e) and (e.get("lat") is None or e.get("lng") is None)]
+    canonical = f"{g.SITE}/jersey-city-music-map.html"
+    lis = "\n".join(
+        f'      <li><a href="entry-{e["slug"]}.html">{g.esc(e["name"])}</a> <span class="conn-note">{g.esc((e.get("place_type") or "place").capitalize())}'
+        + (f" · {g.esc(e['address'])}" if e.get("address") else "") + "</span></li>" for e in places)
+    un_lis = "\n".join(f'      <li><a href="entry-{e["slug"]}.html">{g.esc(e["name"])}</a> <span class="conn-note">address not yet sourced</span></li>' for e in unplaced)
+    embed = (f'&lt;iframe src="{canonical}?embed=1" width="100%" height="480" loading="lazy" '
+             f'title="Jersey City music map"&gt;&lt;/iframe&gt;\n&lt;p&gt;Map by &lt;a href="{canonical}"&gt;The Jersey City Sound&lt;/a&gt;&lt;/p&gt;')
+    modified = g.lastmod_for("jersey-city-music-map.html", g.hashlib.sha256(json.dumps(pins, sort_keys=True).encode("utf-8")).hexdigest())
+    has_part = json.dumps([{"@id": f"{g.SITE}/entry-{e['slug']}.html#main"} for e in places])
+    ld = (
+        '{\n  "@context": "https://schema.org",\n  "@graph": [\n'
+        '    {\n      "@type": "CollectionPage",\n'
+        f'      "@id": "{canonical}#webpage",\n      "url": "{canonical}",\n'
+        '      "name": "Jersey City Music Map",\n'
+        '      "description": "Every documented place in Jersey City\'s music history on one map: schools, housing, rinks, streets and stores, each pin linking to a cited entry.",\n'
+        f'      "isPartOf": {{"@id": "{g.SITE}/#website"}},\n      "inLanguage": "en-US",\n'
+        f'      "dateModified": "{modified}",\n      "publisher": {{"@id": "{g.SITE}/#org"}},\n'
+        f'      "hasPart": {has_part}\n    }},\n'
+        '    {\n      "@type": "BreadcrumbList",\n      "itemListElement": [\n'
+        f'        {{"@type": "ListItem", "position": 1, "name": "Home", "item": "{g.SITE}/"}},\n'
+        f'        {{"@type": "ListItem", "position": 2, "name": "Venues and record stores", "item": "{g.SITE}/jersey-city-venues-and-record-stores.html"}},\n'
+        '        {"@type": "ListItem", "position": 3, "name": "Jersey City Music Map"}\n'
+        '      ]\n    }\n  ]\n}')
+    head_extra = (f'<script type="application/ld+json">\n{ld}\n</script>\n'
+                  '<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">\n'
+                  '<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>\n'
+                  f'<script>window.JCS_PINS = {json.dumps(pins, ensure_ascii=False)};</script>\n')
+    unplaced_html = ""
+    if unplaced:
+        unplaced_html = ('    <h2 id="unplaced">Documented, not yet placed<a class="anchor" href="#unplaced" aria-label="Link to this section">§</a></h2>\n'
+                         '    <ul class="connections">\n' + un_lis + '\n    </ul>\n')
+    script = """<script>
+(function () {
+  if (location.search.indexOf('embed=1') !== -1) document.body.classList.add('embed');
+  function start() {
+    if (!window.L) return setTimeout(start, 50);
+    var pins = window.JCS_PINS || [];
+    var map = L.map('music-map', { scrollWheelZoom: false });
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
+    var group = L.featureGroup();
+    pins.forEach(function (p) {
+      var m = L.marker([p.lat, p.lng]).bindPopup('<strong><a href="' + p.href + '" target="_top">' + p.name + '</a></strong><br><small>' + p.kind + (p.note ? ' · ' + p.note : '') + '</small><br>' + p.line);
+      group.addLayer(m);
+    });
+    group.addTo(map);
+    if (pins.length) map.fitBounds(group.getBounds().pad(0.2)); else map.setView([40.7178, -74.0431], 13);
+  }
+  start();
+})();
+</script>"""
+    body = f"""<main class="wrap">
+  <header class="entry-header" style="text-align:center;">
+    <span class="entry-no reveal reveal--1">The Archive · Map</span>
+    <h1 class="reveal reveal--2" style="font-size:clamp(2.1rem,4.5vw,3.3rem);">Jersey City Music Map</h1>
+    <p class="descriptor reveal reveal--3" style="margin-inline:auto;">Every documented place in the city's music history, each pin linking to a cited entry. {len(places)} places mapped; {len(unplaced)} documented but not yet placed.</p>
+  </header>
+  <div id="music-map" class="music-map reveal reveal--4" role="region" aria-label="Map of Jersey City music places"></div>
+  <section class="map-list">
+    <article class="entry-body" style="margin-inline:auto;">
+    <h2 id="places">Places on the map<a class="anchor" href="#places" aria-label="Link to this section">§</a></h2>
+    <ul class="connections">
+{lis}
+    </ul>
+{unplaced_html}    <h2 id="embed">Embed this map<a class="anchor" href="#embed" aria-label="Link to this section">§</a></h2>
+    <p>Local sites, schools and the library are welcome to embed the map. Keep the link back to the archive; the content is CC BY-SA 4.0.</p>
+    <pre class="embed-snippet">{embed}</pre>
+    <p>Map tiles by <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a> contributors. Pins marked approximate sit on the named street rather than an exact address. See the <a href="jersey-city-venues-and-record-stores.html">venues, record stores and studios</a> page for the full list of place entries.</p>
+    <p class="record-card__since" style="margin-top:2rem;">Archive page by Robert Van Liew · Last updated {modified}</p>
+    </article>
+  </section>
+</main>
+{script}"""
+    html = g._shell("Jersey City Music Map: Every Documented Place, Pinned",
+                    "Every documented place in Jersey City's music history on one map: schools, housing, rinks, streets and stores, each pin linking to a cited entry. Embeddable.",
+                    canonical, body, current="archive", head_extra=head_extra)
+    (g.OUT / "jersey-city-music-map.html").write_text(html, encoding="utf-8")
+    return modified

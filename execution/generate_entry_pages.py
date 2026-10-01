@@ -74,7 +74,7 @@ MIN_INBOUND = 2     # every entry gets at least this many inbound Related links
 # Record-card row order (the "real name" and "where from" answers first). Rows not
 # listed keep their relative order after these.
 CARD_ORDER = {k: i for i, k in enumerate([
-    "Real name", "Also known as", "Born", "Raised", "Lived", "Died", "Origin", "Neighborhood",
+    "Real name", "Also known as", "Born", "Raised", "Lived", "Died", "Origin", "Address", "Neighborhood", "Today", "Map",
     "Years active", "Active", "Years open", "Released", "Active since",
     "Roles", "Format", "What it was", "Type", "Instrument", "Known for", "Crew", "Label",
     "Group", "Band", "Duo", "Affiliation", "Family", "Members", "Scene", "Era"])}
@@ -260,6 +260,7 @@ HUB_PAGES = [    # (name, href, one-line) for the nav search; main() appends the
     ("On the Charts: Jersey City's Billboard record", "charts.html", "Chart facts"),
     ("Legends: the memorial wing", "legends.html", "Memorial"),
     ("The Sound Report", "report.html", "Fact checks and editorial"),
+    ("Jersey City Music Map", "jersey-city-music-map.html", "Every documented place, pinned"),
 ]
 try:
     LASTMOD = json.loads(LASTMOD_FILE.read_text(encoding="utf-8"))
@@ -298,6 +299,17 @@ def esc(s):
 # Aliases that should link to an entry but differ from its canonical name.
 EXTRA_ALIASES = {
     "DJ DX": "dj-dx",              # handcrafted entry
+    # places (entries of type "place"); distinctive names only, so no false links
+    "Lincoln High School": "lincoln-high-school",
+    "Henry Snyder High School": "snyder-high-school",
+    "Snyder High School": "snyder-high-school",
+    "Ferris High School": "ferris-high-school",
+    "Dickinson High School": "dickinson-high-school",
+    "Duncan Projects": "duncan-projects",
+    "Curries Woods": "curries-woods",
+    "P.S. 11": "ps-11",
+    "Kool & the Gang Way": "kool-and-the-gang-way",
+    "Benmore Skating Rink": "benmore-skating-rink",
     "Heather B.": "heather-b-gardner",
     "Heather B": "heather-b-gardner",
     "WizTV": "dj-wizard",
@@ -763,6 +775,8 @@ def videos_html(entry, name_links, slug):
 
 def page(entry, by_no, name_links, appearances=None, related=None, modified=None, hub_links=None):
     appearances = appearances or {}
+    by_slug_name = {e["slug"]: e["name"] for e in by_no.values()}
+    by_slug_name.setdefault("dj-dx", "DJ DX")
     hub_links = hub_links or []
     related = related or {}
     modified = modified or BUILD_DATE   # YYYY-MM-DD; moves only when the entry's data changes
@@ -780,11 +794,14 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
     etype = entry_type(entry)
     film = etype == "film"
     venue = etype == "venue"
+    is_place = etype == "place"
+    place_type = (entry.get("place_type") or "place") if is_place else ""
     group = etype == "group"
     label = etype == "label"
 
     role_line = " · ".join(roles)
     seo_role = ("Documentary" if film
+                else place_type.title() if is_place
                 else "Venue" if venue
                 else "Record Label" if label
                 else (roles[0] if roles else "Artist"))
@@ -808,7 +825,8 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
     _ty = re.sub(r"\s*(?:[–—]|\s-\s)\s*", " to ", years).replace("c. ", "")
     _years_tail = f", {_ty}" if _ty and _ty not in name else ""
     _jc_prefix = "" if "jersey city" in name.lower() else "Jersey City "
-    _head = (f"{name}: {_jc_prefix}{title_role}" if _jc
+    _head = (f"{name}: Jersey City {place_type.title()} in the Music Record" if is_place
+             else f"{name}: {_jc_prefix}{title_role}" if _jc
              else f"{name}: {title_role} with Jersey City ties")
     # the hook: a short "known for" beats years when the whole title stays under 60 chars
     _kf = known_for(entry)
@@ -853,6 +871,29 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
     facts_html = "\n".join(fact_p(f) for f in body_facts) \
         or "      <p>Further documentation is being gathered for this entry.</p>"
 
+    # places: who played here / who came from here, from music_connections; map when geo is known
+    connections_html = ""
+    if is_place:
+        _conns = entry.get("music_connections") or []
+        _lis = "\n".join(
+            f'        <li><a href="entry-{c["slug"]}.html">{esc(by_slug_name.get(c["slug"], c["slug"]))}</a>'
+            + (f' <span class="conn-note">{linkify(esc(c["note"]), name_links, slug)}</span>' if c.get("note") else "") + "</li>"
+            for c in _conns)
+        if _lis:
+            connections_html = f"""
+
+      <h2 id="connections">Who played here, who came from here<a class="anchor" href="#connections" aria-label="Link to connections section">§</a></h2>
+      <ul class="connections">
+{_lis}
+      </ul>"""
+        if entry.get("lat") is not None and entry.get("lng") is not None:
+            connections_html += f"""
+
+      <h2 id="map">On the map<a class="anchor" href="#map" aria-label="Link to map section">§</a></h2>
+      <div class="place-map" data-noseal data-lat="{entry['lat']}" data-lng="{entry['lng']}" data-name="{esc(name)}">
+        <button type="button" class="share__btn" data-act="show-map">Show map</button>
+        <a class="share__btn" href="https://www.openstreetmap.org/?mlat={entry['lat']}&amp;mlon={entry['lng']}#map=17/{entry['lat']}/{entry['lng']}" rel="noopener">Open in OpenStreetMap</a>
+      </div>"""
     video_body, _has_video = videos_html(entry, name_links, slug)
     video_section = ("\n\n" + video_body) if video_body else ""
     gallery_body, has_gallery = galleries_html(entry, name_links, slug, appearances)
@@ -876,6 +917,8 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
         emblem_block = ""
     gallery_script = ('\n<script src="assets/gallery.js" defer></script>'
                       if has_gallery else "")
+    if is_place and entry.get("lat") is not None:
+        gallery_script += '\n<script src="assets/place-map.js" defer></script>'
 
     # Share block — native share, branded story card, X/Facebook, copy link
     _stitle = f"{name} — The Jersey City Sound"
@@ -914,14 +957,22 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
     rows = []
     ig = (entry.get("links") or {}).get("instagram")
     origin = entry.get("origin", "Jersey City, New Jersey")
-    if origin:
+    if origin and not is_place:          # a place's address says where it is
         rows.append(("Origin", esc(origin)))
     if role_line:
-        rows.append(("Format" if film else "What it was" if venue else "Type" if label else "Roles", esc(role_line)))
+        rows.append(("Format" if film else "What it is" if is_place else "What it was" if venue else "Type" if label else "Roles", esc(role_line)))
     if genres:
-        rows.append(("Subject" if film else "Known for" if venue else "Catalog" if label else "Style", esc(", ".join(genres))))
+        rows.append(("Subject" if film else "Known for" if venue or is_place else "Catalog" if label else "Style", esc(", ".join(genres))))
     if years:
-        rows.append(("Released" if film else "Years open" if venue else "Active" if label else "Years active", esc(years)))
+        rows.append(("Released" if film else "Years open" if venue else "In the record" if is_place else "Active" if label else "Years active", esc(years)))
+    if is_place:
+        if entry.get("address"):
+            rows.append(("Address", esc(entry["address"])))
+        if entry.get("place_status"):
+            rows.append(("Today", esc(entry["place_status"].capitalize())))
+        if entry.get("lat") is not None and entry.get("lng") is not None:
+            _gn = f" ({esc(entry['geo_note'])})" if entry.get("geo_note") else ""
+            rows.append(("Map", f'<a href="https://www.openstreetmap.org/?mlat={entry["lat"]}&amp;mlon={entry["lng"]}#map=17/{entry["lat"]}/{entry["lng"]}" rel="noopener">OpenStreetMap</a>{_gn}'))
     cert = entry.get("certifications")
     if cert:
         bits = []
@@ -1000,10 +1051,15 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
         <p class="entry-card__role">{esc(a_role)}</p>
       </article>""" for a_no, a_name, a_role, a_href in rel)
 
+    PLACE_SCHEMA = {"school": '["Place", "School"]', "skating rink": '["Place", "SportsActivityLocation"]',
+                    "park": '"Park"', "venue": '"MusicVenue"', "club": '"NightClub"', "record store": '"MusicStore"',
+                    "studio": '["Place", "LocalBusiness"]', "housing": '["Place", "ApartmentComplex"]',
+                    "street": '"Place"', "radio station": '["Place", "RadioStation"]'}
     schema_type = ("Movie" if film else "MusicStore" if venue
                    else "MusicGroup" if group else "Organization" if label else "Person")
+    schema_type_json = PLACE_SCHEMA.get(place_type, '"Place"') if is_place else f'"{schema_type}"'
     genre_json = json.dumps(genres) if genres else "[]"
-    crumb_cat = ("Films" if film else "Venues" if venue else "DJs" if any(r == "DJ" for r in roles)
+    crumb_cat = ("Films" if film else "Venues" if venue or is_place else "DJs" if any(r == "DJ" for r in roles)
                  else "Rappers" if hubs.is_rapper(entry) else "Groups" if group
                  else "Labels" if label else "Artists")
     # entries link up to their role hub (charter: entries <-> hub internal-linking loop)
@@ -1055,6 +1111,20 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
     else:
         place = f'{{"@type": "Place", "name": {json.dumps(origin_val)}}}'
     loc_json = (f',\n      "{loc_prop}": {place}' if loc_prop and origin_val else "")
+    if is_place:
+        _addr = {"@type": "PostalAddress", "addressLocality": "Jersey City", "addressRegion": "NJ",
+                 "addressCountry": "US"}
+        if entry.get("address"):
+            _addr["streetAddress"] = entry["address"]
+        loc_json = f',\n      "address": {json.dumps(_addr)}'
+        if entry.get("lat") is not None and entry.get("lng") is not None:
+            loc_json += (f',\n      "geo": {{"@type": "GeoCoordinates", "latitude": {entry["lat"]}, '
+                         f'"longitude": {entry["lng"]}}}')
+        _subj = [{"@id": f"{SITE}/entry-{c['slug']}.html#webpage"} for c in entry.get("music_connections", [])]
+        if _subj:
+            loc_json += f',\n      "subjectOf": {json.dumps(_subj)}'
+        if entry.get("place_status") == "closed":
+            loc_json += ',\n      "additionalProperty": {"@type": "PropertyValue", "name": "status", "value": "closed"}'
     date_json = ',\n      "datePublished": "2026-07-05"'
 
     # --- FAQ structured data (AEO/GEO) — answers grounded in on-page facts ---
@@ -1104,7 +1174,7 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
   "@context": "https://schema.org",
   "@graph": [
     {{
-      "@type": "{schema_type}",
+      "@type": {schema_type_json},
       "@id": "{canonical}#main",
       "name": {json.dumps(name)},
       "genre": {genre_json},
@@ -1157,7 +1227,7 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
 <link rel="icon" href="assets/favicon-64.png" sizes="64x64">
 <link rel="apple-touch-icon" href="assets/favicon-180.png">
-<meta property="og:type" content="{'video.movie' if film else 'website' if venue or label else 'profile'}">
+<meta property="og:type" content="{'video.movie' if film else 'website' if venue or label or is_place else 'profile'}">
 <meta property="og:site_name" content="The Jersey City Sound">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
@@ -1216,7 +1286,7 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
       <p class="lead">{linkify(esc(lead), name_links, slug)}{"" if lead.rstrip().endswith((".", ")", "”", '"', "!", "?")) else "."}</p>{cert_block(entry)}{awards_block}{seal_mark}{emblem_block}
 
       <h2 id="record">In the Record<a class="anchor" href="#record" aria-label="Link to In the Record section">§</a></h2>
-{facts_html}{video_section}{gallery_section}
+{facts_html}{connections_html}{video_section}{gallery_section}
 
       <h2 id="sources">Sources<a class="anchor" href="#sources" aria-label="Link to Sources section">§</a></h2>
       <ol class="sources">
@@ -1247,7 +1317,7 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
           </svg>
         </div>
       </div>
-      <p class="record-card__caption">{"Stills pending — duotone treatment on receipt." if film else "Storefront photograph pending — duotone treatment on receipt." if venue else "Label scan pending — duotone treatment on receipt." if label else "Portrait pending — duotone treatment on receipt."}</p>
+      <p class="record-card__caption">{"Stills pending — duotone treatment on receipt." if film else "Storefront photograph pending — duotone treatment on receipt." if venue else "Photograph pending." if is_place else "Label scan pending — duotone treatment on receipt." if label else "Portrait pending — duotone treatment on receipt."}</p>
       <dl>
 {rows_html}
         <div class="row"><dt>Status</dt><dd>{esc(status)}</dd></div>
@@ -2216,6 +2286,7 @@ def main():
     write_legends(entries, data)
     HUB_DATES.update(hubs.write_hubs(entries, sys.modules[__name__], name_links)[1])
     hubs.refresh_dj_roll(HANDCRAFTED + entries, sys.modules[__name__])
+    HUB_DATES["jersey-city-music-map.html"] = hubs.write_map_page(entries, sys.modules[__name__], name_links)
     write_charts_hub(entries, data)
     write_report_issue(entries)
     write_sources(entries)

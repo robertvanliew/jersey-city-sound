@@ -13623,6 +13623,607 @@
     "Photo"
    ],
    "links": {}
+  },
+  {
+   "entry_no": "254",
+   "name": "Benmore Skating Rink",
+   "slug": "benmore-skating-rink",
+   "type": "place",
+   "place_type": "skating rink",
+   "status": "doc-verified",
+   "roles": [
+    "Skating rink",
+    "Battle venue"
+   ],
+   "genres": [
+    "Hip-hop",
+    "Old school"
+   ],
+   "years_active": "c. 1982",
+   "origin": "Jersey City, New Jersey",
+   "address": "",
+   "lat": null,
+   "lng": null,
+   "place_status": "",
+   "facts": [
+    "The Benmore Skating Rink was a roller rink on Communipaw Avenue in Jersey City that hosted the New Jersey versus Bronx DJ showdowns of the early 1980s, the events that put the city's park-jam generation on the same bills as New York's crews.",
+    "DJ Stranger Dee and his crew performed at the rink's New Jersey vs. Bronx showdowns, including a January 15, 1982 showdown with the Cold Crush Brothers and the Turnout Battle of 82 on July 2, 1982, both preserved in flyers archived at the Museum of Pop Culture (MoPOP).",
+    "A period flyer for The Showdown For All DJs at the Benmore, headlined by Grandmaster Flash imagery, bills Lord Sun Albee Al, Sweet Slick and Slide, Grand Wizard Capone and Killer Force alongside Strang D, Jimmy M, Sir Brown and the era's crews."
+   ],
+   "sources": [
+    {
+     "label": "MoPOP Museum, Benmore presents The Turnout: Battle of '82 (flyer)",
+     "url": "https://mopop.emuseum.com/objects/83457/rosieb--benmore-presents-the-turnout-battle-of-82-demon-c"
+    },
+    {
+     "label": "MoPOP Museum, Sweet, Slick and Sly Crew, Jersey City (flyer)",
+     "url": "https://mopop.emuseum.com/objects/79166/sweet-slick-and-sly-crew-jersey-city"
+    },
+    {
+     "label": "Chill Town J.C. Hip-Hop Documentary Film, dir. Champagne, YouTube",
+     "url": "https://www.youtube.com/watch?v=ppgLMMQHDu8"
+    },
+    {
+     "label": "The connected entries linked on this page, each with its own numbered sources"
+    }
+   ],
+   "music_connections": [
+    {
+     "slug": "dj-stranger-dee",
+     "note": "Performed at the rink's New Jersey vs. Bronx showdowns, including the January 15, 1982 showdown with the Cold Crush Brothers and the Turnout Battle of 82."
+    },
+    {
+     "slug": "sweet-slick-and-slide",
+     "note": "Billed at The Showdown For All DJs at the Benmore on a period flyer."
+    },
+    {
+     "slug": "lord-sun-albee-al",
+     "note": "Billed as Al Bee at The Showdown For All DJs at the Benmore."
+    },
+    {
+     "slug": "grand-wizard-capone",
+     "note": "Billed at The Showdown For All DJs at the Benmore."
+    },
+    {
+     "slug": "killer-force",
+     "note": "Named across the bill from Sweet S and Sly on The Showdown For All DJs flyer."
+    }
+   ],
+   "todo_robert": [
+    "Street address and the rink's years of operation",
+    "Who ran the Benmore and when it closed"
+   ],
+   "links": {}
+  },
+  {
+   "entry_no": "255",
+   "name": "Lincoln High School",
+   "slug": "lincoln-high-school",
+   "type": "place",
+   "place_type": "school",
+   "status": "web-verified",
+   "roles": [
+    "Public high school"
+   ],
+   "genres": [
+    "Funk",
+    "Soul",
+    "Hip-hop"
+   ],
+   "years_active": "1964 to present",
+   "origin": "Jersey City, New Jersey",
+   "address": "60 Crescent Avenue, Jersey City, NJ 07304",
+   "lat": 40.717363,
+   "lng": -74.070515,
+   "place_status": "open",
+   "facts": [
+    "Lincoln High School is the Jersey City public high school where Kool & the Gang formed in 1964: brothers Robert 'Kool' Bell and Ronald Bell and five neighborhood friends who all attended the school.",
+    "Founding members George Brown, Dennis 'Dee Tee' Thomas and Claydes Charles Smith attended Lincoln alongside the Bells; the group that grew from the school's scene went on to Billboard Hot 100 No. 1 singles.",
+    "The school also sits in the city's DJ lineage: in the Chill Town J.C. Hip-Hop Documentary, DJ Count Basil is remembered as the DJ who first put DJ Wimpy Bee on at a Lincoln High School party.",
+    "Mista Quietman's The 201 High School Anthem, a Jersey City rework of DJ Sliink's High School Anthem, calls out Lincoln along with Ferris, Dickinson and Snyder high schools."
+   ],
+   "sources": [
+    {
+     "label": "Wikipedia, Kool & the Gang",
+     "url": "https://en.wikipedia.org/wiki/Kool_%26_the_Gang"
+    },
+    {
+     "label": "Chill Town J.C. Hip-Hop Documentary Film, dir. Champagne, YouTube",
+     "url": "https://www.youtube.com/watch?v=ppgLMMQHDu8"
+    },
+    {
+     "label": "Wikipedia, Lincoln High School (New Jersey)",
+     "url": "https://en.wikipedia.org/wiki/Lincoln_High_School_(New_Jersey)"
+    },
+    {
+     "label": "The connected entries linked on this page, each with its own numbered sources"
+    }
+   ],
+   "music_connections": [
+    {
+     "slug": "kool-and-the-gang",
+     "note": "Formed in 1964 by Lincoln High School students."
+    },
+    {
+     "slug": "robert-kool-bell",
+     "note": "Co-founded Kool & the Gang with his brother Ronald Bell and five friends who all attended Lincoln."
+    },
+    {
+     "slug": "george-brown",
+     "note": "Founding drummer; attended Lincoln High School."
+    },
+    {
+     "slug": "dennis-dee-tee-thomas",
+     "note": "Founding saxophonist; attended Lincoln High School alongside the other founding members."
+    },
+    {
+     "slug": "claydes-charles-smith",
+     "note": "Founding guitarist of the group that grew from Lincoln's scene in 1964."
+    },
+    {
+     "slug": "dj-count-basil",
+     "note": "Put DJ Wimpy Bee on at a Lincoln High School party, per the Chill Town documentary."
+    },
+    {
+     "slug": "dj-wimpy-bee",
+     "note": "Got an early start at a Lincoln High School party, per the Chill Town documentary."
+    },
+    {
+     "slug": "mista-quietman",
+     "note": "Calls out Lincoln in The 201 High School Anthem."
+    }
+   ],
+   "todo_robert": [],
+   "links": {}
+  },
+  {
+   "entry_no": "256",
+   "name": "Henry Snyder High School",
+   "slug": "snyder-high-school",
+   "type": "place",
+   "place_type": "school",
+   "status": "web-verified",
+   "roles": [
+    "Public high school"
+   ],
+   "genres": [
+    "Hip-hop",
+    "R&B"
+   ],
+   "years_active": "",
+   "origin": "Jersey City, New Jersey",
+   "address": "239 Bergen Avenue, Jersey City, NJ 07305",
+   "lat": 40.710444,
+   "lng": -74.083847,
+   "place_status": "open",
+   "facts": [
+    "Henry Snyder High School is a Jersey City public high school with a documented line of musicians: Akon spent his high school years in the city at Snyder and Dickinson after the rest of his family moved to Atlanta.",
+    "The operatic bass-baritone Peter Sliker, born in Jersey City, graduated from Henry Snyder High School before enlisting in the United States Navy in 1942.",
+    "Zigimo is a graduate of the Jersey City Arts Program at Henry Snyder High School, where he trained on tuba and piano.",
+    "Mista Quietman's The 201 High School Anthem calls out Snyder along with Lincoln, Ferris and Dickinson high schools."
+   ],
+   "sources": [
+    {
+     "label": "Wikipedia, Akon",
+     "url": "https://en.wikipedia.org/wiki/Akon"
+    },
+    {
+     "label": "Wikipedia, Henry Snyder High School",
+     "url": "https://en.wikipedia.org/wiki/Henry_Snyder_High_School"
+    },
+    {
+     "label": "The connected entries linked on this page, each with its own numbered sources"
+    }
+   ],
+   "music_connections": [
+    {
+     "slug": "akon",
+     "note": "Attended Snyder High School (and Dickinson) during his high school years in Jersey City."
+    },
+    {
+     "slug": "peter-sliker",
+     "note": "Graduated from Henry Snyder High School."
+    },
+    {
+     "slug": "zigimo",
+     "note": "Graduate of the Jersey City Arts Program at Henry Snyder High School."
+    },
+    {
+     "slug": "mista-quietman",
+     "note": "Calls out Snyder in The 201 High School Anthem."
+    }
+   ],
+   "todo_robert": [],
+   "links": {}
+  },
+  {
+   "entry_no": "257",
+   "name": "Ferris High School",
+   "slug": "ferris-high-school",
+   "type": "place",
+   "place_type": "school",
+   "status": "doc-verified",
+   "roles": [
+    "Public high school"
+   ],
+   "genres": [
+    "Hip-hop",
+    "Mixtapes"
+   ],
+   "years_active": "",
+   "origin": "Jersey City, New Jersey",
+   "address": "35 Colgate Street, Jersey City, NJ 07302",
+   "lat": 40.720845,
+   "lng": -74.053948,
+   "place_status": "open",
+   "facts": [
+    "James J. Ferris High School is the Jersey City public high school that the 2006 WizTV documentary names as a producer of the mixtape scene's legends.",
+    "In The Jersey City DJ Documentary Vol. 1 (2006), DJ DX credits Ferris High School as a producer of the scene's legends, and the film lists the school among the institutions of the scene alongside Rendezvous, the Boys Club, Lollipop and Taste.",
+    "Mista Quietman's The 201 High School Anthem calls out Ferris along with Lincoln, Dickinson and Snyder high schools."
+   ],
+   "sources": [
+    {
+     "label": "WizTV Presents: The Jersey City DJ Documentary Vol. 1 (2006), WizTV upload",
+     "url": "https://www.youtube.com/watch?v=uyX2waMUOJQ"
+    },
+    {
+     "label": "Wikipedia, James J. Ferris High School",
+     "url": "https://en.wikipedia.org/wiki/James_J._Ferris_High_School"
+    },
+    {
+     "label": "James J. Ferris High School, contact page (Jersey City Public Schools)",
+     "url": "https://jfhs.jcboe.org/apps/contact/"
+    },
+    {
+     "label": "The connected entries linked on this page, each with its own numbered sources"
+    }
+   ],
+   "music_connections": [
+    {
+     "slug": "jersey-city-dj-documentary-2006",
+     "note": "Names Ferris High School as a producer of scene legends."
+    },
+    {
+     "slug": "dj-dx",
+     "note": "Credited Ferris High School as a producer of the scene's legends in the 2006 documentary."
+    },
+    {
+     "slug": "mista-quietman",
+     "note": "Calls out Ferris in The 201 High School Anthem."
+    }
+   ],
+   "todo_robert": [
+    "Which Ferris alumni the documentary has in mind, by name, with timestamps",
+    "DJ Wizard's Ferris connection (open item on his entry)"
+   ],
+   "links": {}
+  },
+  {
+   "entry_no": "258",
+   "name": "Dickinson High School",
+   "slug": "dickinson-high-school",
+   "type": "place",
+   "place_type": "school",
+   "status": "web-verified",
+   "roles": [
+    "Public high school"
+   ],
+   "genres": [
+    "Hip-hop",
+    "R&B"
+   ],
+   "years_active": "",
+   "origin": "Jersey City, New Jersey",
+   "address": "2 Palisade Avenue, Jersey City, NJ 07306",
+   "lat": 40.73,
+   "lng": -74.05389,
+   "place_status": "open",
+   "facts": [
+    "William L. Dickinson High School is a Jersey City public high school in the record through Akon, who spent his high school years in the city at Snyder and Dickinson after the rest of his family moved to Atlanta.",
+    "Mista Quietman's The 201 High School Anthem calls out Dickinson along with Lincoln, Ferris and Snyder high schools.",
+    "The school opened in 1906."
+   ],
+   "sources": [
+    {
+     "label": "Wikipedia, Akon",
+     "url": "https://en.wikipedia.org/wiki/Akon"
+    },
+    {
+     "label": "Wikipedia, William L. Dickinson High School",
+     "url": "https://en.wikipedia.org/wiki/William_L._Dickinson_High_School"
+    },
+    {
+     "label": "The connected entries linked on this page, each with its own numbered sources"
+    }
+   ],
+   "music_connections": [
+    {
+     "slug": "akon",
+     "note": "Attended Dickinson High School (and Snyder) during his high school years in Jersey City."
+    },
+    {
+     "slug": "mista-quietman",
+     "note": "Calls out Dickinson in The 201 High School Anthem."
+    }
+   ],
+   "todo_robert": [
+    "Further documented musicians who attended Dickinson"
+   ],
+   "links": {}
+  },
+  {
+   "entry_no": "259",
+   "name": "Duncan Projects",
+   "slug": "duncan-projects",
+   "type": "place",
+   "place_type": "housing",
+   "status": "doc-verified",
+   "roles": [
+    "Public housing"
+   ],
+   "genres": [
+    "Hip-hop",
+    "Old school"
+   ],
+   "years_active": "c. 1980s",
+   "origin": "Jersey City, New Jersey",
+   "address": "330 Duncan Avenue, Jersey City, NJ 07306 (site of the former towers)",
+   "lat": 40.7295791,
+   "lng": -74.0829099,
+   "place_status": "demolished",
+   "facts": [
+    "The Duncan Projects, the public housing on Duncan Avenue in Jersey City, were home ground for one of the city's founding hip-hop crews.",
+    "The Tranquilizing Three (also Tranquilizer 3) were an early Jersey City hip-hop crew out of the Duncan Projects, formed around 1980 from the earlier group Phase Three; by the account of peers they were one of only two Chilltown crews able to hold their own against New York's.",
+    "Grand Wizard Capone names the Duncan Projects as his ground and appears in Duncan Projects reunion photographs with DJ Flash, both in Duncan Projects Jersey City shirts, preserved in this archive.",
+    "Officially the A. Harry Moore Houses, the development was a seven-tower, 664-unit public housing project built in 1954 and known locally as Duncan Towers. The Jersey City Housing Authority adopted a HOPE VI plan in 2005; the towers were demolished and replaced by the Gloria Robinson Court Homes, whose four phases were complete by 2016."
+   ],
+   "sources": [
+    {
+     "label": "Chill Town J.C. Hip-Hop Documentary Film, dir. Champagne, YouTube",
+     "url": "https://www.youtube.com/watch?v=ppgLMMQHDu8"
+    },
+    {
+     "label": "Pennrose, Gloria Robinson Court Homes III and IV (project history)",
+     "url": "https://www.pennrose.com/portfolio/gloria-robinson-court-homes-iii-iv-1/"
+    },
+    {
+     "label": "HUD, HOPE VI demolition grant for A. Harry Moore Houses (June 4, 2004)",
+     "url": "https://archives.hud.gov/local/nj/news/pr2004-06-04.cfm"
+    },
+    {
+     "label": "Urban Omnibus, Hard Units: a drive through Jersey City with Brian Loughlin (2014)",
+     "url": "https://urbanomnibus.net/2014/06/hard-units-a-drive-through-jersey-city-with-brian-loughlin/"
+    },
+    {
+     "label": "The connected entries linked on this page, each with its own numbered sources"
+    }
+   ],
+   "music_connections": [
+    {
+     "slug": "tranquilizing-three",
+     "note": "Early Jersey City hip-hop crew out of the Duncan Projects, formed around 1980."
+    },
+    {
+     "slug": "grand-wizard-capone",
+     "note": "Names the Duncan Projects as his ground; pictured in Duncan Projects reunion photographs."
+    },
+    {
+     "slug": "dj-flash-jersey-city",
+     "note": "Pictured with Grand Wizard Capone in the Duncan Projects reunion photographs."
+    }
+   ],
+   "todo_robert": [
+    "Official name of the development and whether it still stands",
+    "Neighborhood assignment for the hub pages"
+   ],
+   "links": {},
+   "card": [
+    {
+     "label": "Also known as",
+     "value": "A. Harry Moore Houses; Duncan Towers"
+    }
+   ]
+  },
+  {
+   "entry_no": "260",
+   "name": "P.S. 11",
+   "slug": "ps-11",
+   "type": "place",
+   "place_type": "school",
+   "status": "doc-verified",
+   "roles": [
+    "Public school",
+    "Party venue"
+   ],
+   "genres": [
+    "Hip-hop",
+    "Old school"
+   ],
+   "years_active": "c. 1980s",
+   "origin": "Jersey City, New Jersey",
+   "address": "886 Bergen Avenue, Jersey City, NJ 07306",
+   "lat": 40.7291875,
+   "lng": -74.0649984,
+   "place_status": "open",
+   "facts": [
+    "Public School 11 in Jersey City was one of the rooms where the city's early hip-hop happened: DJ Wimpy Bee's staple venue, and the site of an MC battle preserved in the Chill Town J.C. Hip-Hop Documentary.",
+    "In the Chill Town documentary DJ Wimpy Bee recounts spinning nearly every venue in the city, with P.S. 11 School as his staple, alongside St. Patrick's, Sacred Heart, Foxes and the city's churches.",
+    "Cool Sir Brown is documented in the same film competing in a landmark MC battle at P.S. 11, backed by a doo-wop harmony section arranged by his sister, the songwriter Mary Brown, who as a teenager wrote and arranged the backing harmonies that helped him win.",
+    "Today the school is Martin Luther King, Jr. School, PS #11, a pre-kindergarten to grade 8 school of the Jersey City Public Schools at 886 Bergen Avenue."
+   ],
+   "sources": [
+    {
+     "label": "Chill Town J.C. Hip-Hop Documentary Film, dir. Champagne, YouTube",
+     "url": "https://www.youtube.com/watch?v=ppgLMMQHDu8"
+    },
+    {
+     "label": "Martin Luther King, Jr. School, PS #11 (Jersey City Public Schools)",
+     "url": "https://ps11.jcboe.org/apps/pages/index.jsp?uREC_ID=1535306&type=d&pREC_ID=1666252"
+    },
+    {
+     "label": "The connected entries linked on this page, each with its own numbered sources"
+    }
+   ],
+   "music_connections": [
+    {
+     "slug": "dj-wimpy-bee",
+     "note": "His staple venue, by his own account in the Chill Town documentary."
+    },
+    {
+     "slug": "cool-sir-brown",
+     "note": "Won a landmark MC battle at P.S. 11, documented in the Chill Town film."
+    },
+    {
+     "slug": "mary-brown",
+     "note": "Wrote and arranged the backing harmonies for her brother's P.S. 11 battle."
+    }
+   ],
+   "todo_robert": [
+    "Current name and address of P.S. 11",
+    "Date of the MC battle"
+   ],
+   "links": {},
+   "card": [
+    {
+     "label": "Also known as",
+     "value": "Martin Luther King, Jr. School, PS #11"
+    }
+   ]
+  },
+  {
+   "entry_no": "261",
+   "name": "Curries Woods",
+   "slug": "curries-woods",
+   "type": "place",
+   "place_type": "housing",
+   "status": "community-verified",
+   "roles": [
+    "Public housing"
+   ],
+   "genres": [
+    "Hip-hop"
+   ],
+   "years_active": "2010s to present",
+   "origin": "Jersey City, New Jersey",
+   "address": "3 New Heckman Drive, Jersey City, NJ 07305",
+   "lat": 40.68903,
+   "lng": -74.09557,
+   "place_status": "open",
+   "facts": [
+    "Curries Woods, the public housing complex in the Greenville section of Jersey City, is the home ground named by several of the city's current rappers.",
+    "Max YB represents the Curries Woods projects and the Uptop section; De$igner Boyz have roots across Curries Woods, Sal-Laf Courts, Bidwell and Ocean, and Lexington Avenue; PressureOnline, an artist and media figure, also represents Curries Woods.",
+    "Built by the Jersey City Housing Authority in 1959 in the southern end of Greenville, bordering Bayonne, the complex was rebuilt under the federal HOPE VI program: six of the original towers were demolished and the development completed in 2005 consists of 204 two-story townhouses and one rehabilitated original 13-story building."
+   ],
+   "sources": [
+    {
+     "label": "Wikipedia, Curries Woods",
+     "url": "https://en.wikipedia.org/wiki/Curries_Woods"
+    },
+    {
+     "label": "Urban Omnibus, Hard Units: a drive through Jersey City with Brian Loughlin (2014)",
+     "url": "https://urbanomnibus.net/2014/06/hard-units-a-drive-through-jersey-city-with-brian-loughlin/"
+    },
+    {
+     "label": "ProPublica HUD property record, Curries Woods (Housing Authority City of Jersey City)",
+     "url": "https://projects.propublica.org/hud/properties/NJ009000008"
+    },
+    {
+     "label": "The connected entries linked on this page, each with its own numbered sources"
+    }
+   ],
+   "music_connections": [
+    {
+     "slug": "max-yb",
+     "note": "Represents the Curries Woods projects and the Uptop section."
+    },
+    {
+     "slug": "designer-boyz",
+     "note": "Roots across Curries Woods, Sal-Laf Courts, Bidwell and Ocean, and Lexington Avenue."
+    },
+    {
+     "slug": "pressureonline",
+     "note": "Represents the Curries Woods projects."
+    }
+   ],
+   "todo_robert": [
+    "A dated release, flyer or performance for each connected artist",
+    "History of the complex (built, redeveloped) from a city or JCHA source"
+   ],
+   "links": {},
+   "neighborhoods": [
+    "Greenville"
+   ]
+  },
+  {
+   "entry_no": "262",
+   "name": "Kool & the Gang Way",
+   "slug": "kool-and-the-gang-way",
+   "type": "place",
+   "place_type": "street",
+   "status": "web-verified",
+   "roles": [
+    "Street",
+    "Honorary street name"
+   ],
+   "genres": [
+    "Funk",
+    "Soul"
+   ],
+   "years_active": "2016 to present",
+   "origin": "Jersey City, New Jersey",
+   "address": "Maple Street between Pacific Avenue and Whiton Street, Jersey City, NJ 07304",
+   "lat": 40.7129,
+   "lng": -74.0599,
+   "place_status": "open",
+   "facts": [
+    "Kool & the Gang Way is the honorary name given in 2016 to the section of Maple Street in Jersey City where Robert 'Kool' Bell and his bandmates grew up.",
+    "The city renamed the block in the group's honor in 2016; the founding members had formed Kool & the Gang in Jersey City in 1964 as Lincoln High School students, and the group's catalog is among the most sampled in music history.",
+    "The renamed block is Maple Street between Pacific Avenue and Whiton Street, near the apartment above a dry cleaner where the band members once lived. The sign went up at a ceremony on April 29, 2016 at the corner of Pacific Avenue and Maple Street, with Robert 'Kool' Bell, Ronald Bell, Dennis Thomas and George Brown present alongside Mayor Steven Fulop and members of the city council."
+   ],
+   "sources": [
+    {
+     "label": "Wikipedia, Kool & the Gang",
+     "url": "https://en.wikipedia.org/wiki/Kool_%26_the_Gang"
+    },
+    {
+     "label": "Wikipedia, Robert \"Kool\" Bell",
+     "url": "https://en.wikipedia.org/wiki/Robert_%22Kool%22_Bell"
+    },
+    {
+     "label": "NJArts, Jersey City street to be renamed Kool & the Gang Way (April 28, 2016)",
+     "url": "https://www.njarts.net/jersey-city-street-to-be-renamed-kool-the-gang-way/"
+    },
+    {
+     "label": "Hudson County View, Jersey City street gets named after Kool & the Gang (April 29, 2016)",
+     "url": "https://hudsoncountyview.com/not-too-kool-for-jersey-city-street-gets-named-after-kool-the-gang/"
+    },
+    {
+     "label": "Hoboken Girl, Kool & the Gang: the Jersey City band's history",
+     "url": "https://www.hobokengirl.com/kool-and-the-gang-jersey-city-band-history/"
+    },
+    {
+     "label": "The connected entries linked on this page, each with its own numbered sources"
+    }
+   ],
+   "music_connections": [
+    {
+     "slug": "kool-and-the-gang",
+     "note": "The block was renamed in the group's honor in 2016."
+    },
+    {
+     "slug": "robert-kool-bell",
+     "note": "Grew up on this section of Maple Street with his bandmates."
+    },
+    {
+     "slug": "lincoln-high-school",
+     "note": "The school the founding members attended, a short walk from the block."
+    }
+   ],
+   "todo_robert": [
+    "Cross streets of the renamed block and the date of the ceremony, from city coverage"
+   ],
+   "links": {},
+   "geo_note": "approximate (street centerline)"
   }
  ],
  "discovered_candidates": {

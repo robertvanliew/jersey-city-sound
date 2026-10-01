@@ -1514,3 +1514,17 @@ body.memorial .nav-search input { color: var(--cream); }
 .entry-card .chips { margin-top: 0.5rem; }
 .entry-card .chips .chip { font-size: 0.7rem; }
 body.memorial .entry-card__line { color: #b9b4a6; }
+
+/* ---------- place entries ---------- */
+.connections { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+.connections li { padding: 0.55rem 0; border-bottom: 1px solid var(--rule); }
+.connections li a { font-weight: 600; }
+.connections .conn-note { display: block; font-size: 0.95rem; color: #4a4636; margin-top: 0.15rem; }
+body.memorial .connections .conn-note { color: #b9b4a6; }
+.place-map { display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center; margin: 0 0 2rem; }
+.place-map__canvas { width: 100%; height: 320px; border: 1px solid var(--rule); margin-bottom: 0.6rem; }
+.music-map { width: 100%; height: 70vh; min-height: 420px; border: 1px solid var(--rule); }
+body.embed .masthead, body.embed .footer, body.embed .entry-header, body.embed .map-list { display: none; }
+body.embed main.wrap { padding: 0; max-width: none; }
+body.embed .music-map { height: 100vh; border: 0; }
+.embed-snippet { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.82rem; background: #f0ece0; padding: 0.8rem 1rem; overflow-x: auto; }

@@ -63,6 +63,10 @@
   "date": "2026-07-13",
   "hash": "a193fded9c99250d1295e559b876c2c280a6b6b3a901fe4af2ef541beec2872f"
  },
+ "entry-benmore-skating-rink": {
+  "date": "2026-10-01",
+  "hash": "bd3f3ff3b164d2d0953a827bdfa107c41ca87798695e324fd7f41e02d255bc18"
+ },
  "entry-benny-blanca": {
   "date": "2026-07-13",
   "hash": "446d81cf84974df7f1c03584d362b5cf6f298897bb76b0c506fdb0c3ba5d928d"
@@ -163,6 +167,10 @@
   "date": "2026-10-01",
   "hash": "1939d230447628ec58af2714bead94702c3c52298d41559c098aa10fc770d8a0"
  },
+ "entry-curries-woods": {
+  "date": "2026-10-01",
+  "hash": "6617bf1900a80f0354423c54a4d0df106f0d91f50de0d7edd9d5d352c8a60241"
+ },
  "entry-cy-coben": {
   "date": "2026-10-01",
   "hash": "849a435e141d9b454f607ca211f7a07b8c892d94242d1b752a735863e41ca6f9"
@@ -206,6 +214,10 @@
  "entry-dickie-thompson": {
   "date": "2026-10-01",
   "hash": "a64e9e2f3df35806e381798a07c2fe00aed420691d6e54448c3936f66f3ce7d3"
+ },
+ "entry-dickinson-high-school": {
+  "date": "2026-10-01",
+  "hash": "2943392dd2d693013e6c78457b80dc44d986cb271e03c6c7ad7bc0ea82c974be"
  },
  "entry-didthatt": {
   "date": "2026-10-01",
@@ -387,6 +399,10 @@
   "date": "2026-10-01",
   "hash": "29a0ab6a417bd06ecf67a6de05262754a6865999c25a4ce949ee3ecccc5b3682"
  },
+ "entry-duncan-projects": {
+  "date": "2026-10-01",
+  "hash": "8623679eebabc9f8074ad54182fdca00f8742767c5c046324b04443cb745854e"
+ },
  "entry-e-square": {
   "date": "2026-07-13",
   "hash": "025c63bdd69ca836a655841809878f38c35a6dde55a9757b750d9c3895c80480"
@@ -398,6 +414,10 @@
  "entry-exit-14-djs": {
   "date": "2026-07-18",
   "hash": "a443fed412b3a58f77b8a4f32fa676567730d4858b5fd0b275a8513407139a96"
+ },
+ "entry-ferris-high-school": {
+  "date": "2026-10-01",
+  "hash": "a789f93ebb87945541bce61a15e541baf9198857f00c83f085939e591fb8c748"
  },
  "entry-fit-for-an-autopsy": {
   "date": "2026-10-01",
@@ -563,6 +583,10 @@
   "date": "2026-10-01",
   "hash": "81b99463813cfb078560b5c10500a82ca8abfda56a240834df65333f651b5910"
  },
+ "entry-kool-and-the-gang-way": {
+  "date": "2026-10-01",
+  "hash": "5d7199710e39fc3e69b8e63b81ed8efab9dfcc9e24d392365afb60014ca0333b"
+ },
  "entry-ks-mr-xtortion": {
   "date": "2026-07-13",
   "hash": "55de174c34405d66d2de78f2a7a96d28b67b0aaf5f4fb8453d87d129163cf68d"
@@ -582,6 +606,10 @@
  "entry-lilzhp": {
   "date": "2026-07-13",
   "hash": "2e7b9dbef73c4bb6c638189f0a7ddd9c7170ce3f08ce42861babd1f8c9c0e989"
+ },
+ "entry-lincoln-high-school": {
+  "date": "2026-10-01",
+  "hash": "b3b6040fc78dd4e350771adfbd7ce34a7e462cbb6d97c53ecf226ccfd3c727bd"
  },
  "entry-lord-sun-albee-al": {
   "date": "2026-10-01",
@@ -775,6 +803,10 @@
   "date": "2026-07-13",
   "hash": "ca6309cd2de7000f26395d585ec8072b01962c5d99b7d2c13b40090c10e18e8e"
  },
+ "entry-ps-11": {
+  "date": "2026-10-01",
+  "hash": "ba4d153ad24aa2388fffe39e3447c3f95c01a0c02553c3bb443cc2506b3827d1"
+ },
  "entry-rah-grizzley": {
   "date": "2026-07-22",
   "hash": "46746df5674224fd7d9da1d5484984098a5d0d18eba39bb66d2911e2a21f5e7e"
@@ -826,6 +858,10 @@
  "entry-skip-jackson": {
   "date": "2026-10-01",
   "hash": "ce8033d6381b0936afcd9fec2792924dd50f72b7c9b9e02f62fc615c9146a742"
+ },
+ "entry-snyder-high-school": {
+  "date": "2026-10-01",
+  "hash": "854845901ad5d6a7282e5b33c7da28bb2360d463c298eb34db9ad0d015475b66"
  },
  "entry-sonny-igoe": {
   "date": "2026-10-01",
@@ -1017,35 +1053,35 @@
  },
  "history-1960s.html": {
   "date": "2026-10-01",
-  "hash": "bdde8b1f9f3dd84d1abe778fd74034ae30552ba36874171773e4ebf70f7e6893"
+  "hash": "666f76163b9beb76356f7ac43893671614da86a450f6bcfe82954abc65f6849a"
  },
  "history-1970s.html": {
   "date": "2026-10-01",
-  "hash": "2fffaa7e1ef0cf3c1d61b5106ade81fb08e4995fda7ea167fbd454f07fac6d22"
+  "hash": "4aecaf464e0e4227c95284c67e97ce5dddd44f514de46052c837b985c5bb99f8"
  },
  "history-1980s.html": {
   "date": "2026-10-01",
-  "hash": "4b3a527117bf7bf45e317fd15f42583a9251f95f3e89125b3ec6fa67b50e8845"
+  "hash": "fca2b002df9fdb8b805f5f528569369c4a95270122c5a83aa1ac9a5cf51dd2a2"
  },
  "history-1990s.html": {
   "date": "2026-10-01",
-  "hash": "1b421e60bf6e24d4a76f156178626ca98d6ad28b5b06aed997184da243b4b33b"
+  "hash": "3e9c43579a39bcbe60e85169fa9eee65563c57fe197b03855e940ddd866bd047"
  },
  "history-2000s.html": {
   "date": "2026-10-01",
-  "hash": "3620ed22526990069197750efed8e2293532dc135a921b11905a2e7eaa37c339"
+  "hash": "d54e86d276cce0bd33d00de17479031e473dc307ebc62d9d941d3d9f72c8ab22"
  },
  "history-2010s.html": {
   "date": "2026-10-01",
-  "hash": "bd10e288157d9d42439fc5e1bf8ea0c868df6fa1d0fb52e6e4978dcce749452f"
+  "hash": "e59346a3f2a42757f19e0a46f3eae77e3d0b71ab49cfb52f8aaf5d7e4e7566de"
  },
  "history-2020s.html": {
   "date": "2026-10-01",
-  "hash": "29820ea9e353a134f1312c809caf1c37d2ed2c3a6cd837e66c18491fd237d5a1"
+  "hash": "a778536122acb930e6b796a61d72891374a852a49562b81567dec2cef7963984"
  },
  "history-pre-1960s.html": {
   "date": "2026-10-01",
-  "hash": "4d48c2fbe5ae6389e125f9499e23a8beb9d9ba15c1d2f1834183e5e8494dcc3b"
+  "hash": "9b858dd22fd27366a29849130054c94b95646c5459acd2ae11a1597f9346c383"
  },
  "history.html": {
   "date": "2026-10-01",
@@ -1059,9 +1095,13 @@
   "date": "2026-10-01",
   "hash": "319526a47eb11cac2b65617ff4a6624fb58dec567afb32cf3afa0ea36ca3be9f"
  },
+ "jersey-city-music-map.html": {
+  "date": "2026-10-01",
+  "hash": "62e726ea0bb02e5ad3dc0906ff23ed6a49fb4ea19b56252b1b94d0326de36950"
+ },
  "jersey-city-venues-and-record-stores.html": {
   "date": "2026-10-01",
-  "hash": "32fcc0f20fcfac8a4e02504385127993b76e7c47ef4581ea05d56b312bd4b90e"
+  "hash": "17f9953f2fdc7d7b4beb458784bb48d4f5e9350a3d7af9b67a9b8fdefd75e35d"
  },
  "jersey-club-and-jersey-city.html": {
   "date": "2026-10-01",
@@ -1069,7 +1109,7 @@
  },
  "neighborhood-greenville.html": {
   "date": "2026-10-01",
-  "hash": "e4431b6662e6493507ee768d23392e3e73778b4b01325e8c95620a6624504daf"
+  "hash": "632810878069ef054890be889fcd8e418d036a4168cf09d66a2c2be579571cd2"
  },
  "privacy.html": {
   "date": "2026-10-01",
@@ -1077,7 +1117,7 @@
  },
  "rappers-from-jersey-city.html": {
   "date": "2026-10-01",
-  "hash": "b13c867d6b7918f8defcbdecbbe2e109d7cf7e1d58e677feee1626a5354e85f3"
+  "hash": "924ed9e86f1ec4da62dbc9aa19a473a19e83cbb95d8576bbf039d3efcd0f8d82"
  },
  "report-001-not-from-jersey-city.html": {
   "date": "2026-07-22",
