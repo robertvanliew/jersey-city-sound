@@ -1,7 +1,7 @@
 {
  "about.html": {
   "date": "2026-10-01",
-  "hash": "1f65efbf23a4cae8a85428a8e77a59ccbc34cff7b9a013350755bf603cfc14f1"
+  "hash": "4de372ad3848b3d3bf728e6ba4d071ce48e033159b72bf494b2a168498650107"
  },
  "charts.html": {
   "date": "2026-07-13",
@@ -9,11 +9,15 @@
  },
  "chilltown.html": {
   "date": "2026-10-01",
-  "hash": "d9d28042eb25b5a34f2e71976a7e104daf3eb36922e6228372d64cfe73fc1835"
+  "hash": "dea4f61fcf190598a09452848783e47f5b327c0f006c30f2d83f0c9cdfce9842"
  },
  "corrections.html": {
   "date": "2026-10-01",
-  "hash": "fb1d13f5a175230afbbc0566fa9ff7e6ae7f9e805c4255d59746a3099b67641a"
+  "hash": "137dda8ad024c9ad8e60334353f6004b7a2bcd291fbfcae92d362a3356a92f07"
+ },
+ "data.html": {
+  "date": "2026-10-01",
+  "hash": "391024701c294e5976d090da2f8e5dea0828a37a971d957b07dba0c286e4f085"
  },
  "entry-14-karat-soul": {
   "date": "2026-10-01",
@@ -257,7 +261,7 @@
  },
  "entry-dj-dx.html": {
   "date": "2026-10-01",
-  "hash": "bd71d026da5dd8a28e2f81fe2140bf465303adcc39721a174cb116c7de718775"
+  "hash": "a131e2962d802e396f1157d20a3c54013f4e631c32c2b822f807dbba81e54184"
  },
  "entry-dj-dyce": {
   "date": "2026-07-13",
@@ -1085,15 +1089,15 @@
  },
  "history.html": {
   "date": "2026-10-01",
-  "hash": "1ebc307822613279e0909389684f0e518d19917e3e076a0a9a3f00c09c97ba37"
+  "hash": "06882e43aeae1d7a2498458f3087b07f33c02a07b90fb452ea9283f20f53fa1b"
  },
  "index.html": {
   "date": "2026-10-01",
-  "hash": "b9a69dd2c5e9aebe1119ee6bf4139674f4fdaf10fd6a43eef8641a6e5eb97e70"
+  "hash": "5521f103254bbb211f883bfee354a463840148eb359d3c81dee865078d59087d"
  },
  "jersey-city-djs.html": {
   "date": "2026-10-01",
-  "hash": "319526a47eb11cac2b65617ff4a6624fb58dec567afb32cf3afa0ea36ca3be9f"
+  "hash": "892a2d84a5942bcf22a5e621be0d6b0cae9882739fc6ab583ff5d2a5ef96cafa"
  },
  "jersey-city-music-map.html": {
   "date": "2026-10-01",
@@ -1113,7 +1117,7 @@
  },
  "privacy.html": {
   "date": "2026-10-01",
-  "hash": "920cf058ba6b57c443482c8b45103592f1488d0d1543d25465ffdd80f7a30c54"
+  "hash": "20bfc3a5583d3ced4583ced409979768d32784ce55ef6993dda3ee569540c892"
  },
  "rappers-from-jersey-city.html": {
   "date": "2026-10-01",
@@ -1125,14 +1129,14 @@
  },
  "report.html": {
   "date": "2026-10-01",
-  "hash": "4a7c7adcb84631311773e6f669a7d27c3b20087dcb32cac55a80b13461da335e"
+  "hash": "8da750684a703ef718cdad457638c7dcfe4102d960fb304bbe76e7192f1fa9aa"
  },
  "terms.html": {
   "date": "2026-10-01",
-  "hash": "aad553c8480b29f860ffaace14c9142f9f48d750046bba89f1f533bd1f27fb3f"
+  "hash": "1e236a7cf7de980bac333314f54472bf86f3a6afe14a250adbd19d4fa2720b00"
  },
  "verify.html": {
   "date": "2026-10-01",
-  "hash": "b04b93735656bd95a2b70c374bba436d49158e0a2372570d429b60c7008b3b1f"
+  "hash": "86172bf8a8adfa7a4f10875a1fe571d9c7737f25cd1e9284a026f1a5e2ca65f0"
  }
 }

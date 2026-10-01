@@ -27,6 +27,8 @@ The archive covers Jersey City hip-hop, mixtape and blends DJs, rap, soul, and R
 - [Legends — the memorial wing](https://jerseycitysound.com/legends.html)
 - [Sources — master bibliography](https://jerseycitysound.com/sources.html)
 - [About & methodology](https://jerseycitysound.com/about.html)
+- [Open data: every entry as JSON and CSV, CC BY-SA 4.0](https://jerseycitysound.com/data.html)
+- [Jersey City Music Map](https://jerseycitysound.com/jersey-city-music-map.html)
 
 ## Follow
 - X/Twitter: https://x.com/jerseycitysound

@@ -22,6 +22,8 @@ BUILD_DT = _dt.now().astimezone().isoformat(timespec="seconds")  # full ISO 8601
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import hubs  # noqa: E402  (hub pages; takes this module as `g`)
+import export_dataset  # noqa: E402  (public JSON/CSV under design/data/)
+LICENSE_URL = "https://creativecommons.org/licenses/by-sa/4.0/"
 DATA = ROOT / "data" / "entries.json"
 CHART_DATA_FILE = ROOT / "data" / "chart-data.json"
 OUT = ROOT / "design"
@@ -1424,6 +1426,7 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
       <a href="sources.html">Sources</a>
       <a href="about.html">About</a>
       <a href="suggest-edit.html">Suggest an edit</a>
+      <a href="data.html">Open data</a>
     </nav>
     <nav aria-label="Hubs">
       <a href="rappers-from-jersey-city.html">Rappers</a>
@@ -1635,6 +1638,7 @@ ARCHIVE_PAGE = """<!DOCTYPE html>
       <a href="sources.html">Sources</a>
       <a href="about.html">About</a>
       <a href="suggest-edit.html">Suggest an edit</a>
+      <a href="data.html">Open data</a>
     </nav>
     <nav aria-label="Hubs">
       <a href="rappers-from-jersey-city.html">Rappers</a>
@@ -1795,6 +1799,7 @@ def _shell(title, desc, canonical, body, memorial=False, current="", head_extra=
       <a href="sources.html">Sources</a>
       <a href="about.html">About</a>
       <a href="suggest-edit.html">Suggest an edit</a>
+      <a href="data.html">Open data</a>
     </nav>
     <nav aria-label="Hubs">
       <a href="rappers-from-jersey-city.html">Rappers</a>
@@ -2307,7 +2312,9 @@ def write_root_files(entries=None):
         f"- [Music from Greenville, Jersey City]({SITE}/neighborhood-greenville.html)\n"
         f"- [Legends — the memorial wing]({SITE}/legends.html)\n"
         f"- [Sources — master bibliography]({SITE}/sources.html)\n"
-        f"- [About & methodology]({SITE}/about.html)\n\n"
+        f"- [About & methodology]({SITE}/about.html)\n"
+        f"- [Open data: every entry as JSON and CSV, CC BY-SA 4.0]({SITE}/data.html)\n"
+        f"- [Jersey City Music Map]({SITE}/jersey-city-music-map.html)\n\n"
         "## Follow\n"
         "- X/Twitter: https://x.com/jerseycitysound\n"
         "- Instagram: https://www.instagram.com/jerseycitysound\n"
@@ -2459,6 +2466,88 @@ def write_claim_page():
     (OUT / "claim.html").write_text(html, encoding="utf-8")
 
 
+def write_data_page(entries, count):
+    """data.html: the open dataset. Dataset JSON-LD with JSON and CSV distributions."""
+    canonical = f"{SITE}/data.html"
+    years = sorted(y for e in entries for y in hubs.activity_years(e))
+    span = f"{years[0]}/{years[-1]}" if years else "1960/2026"
+    modified = lastmod_for("data.html", hashlib.sha256(json.dumps([e["slug"] for e in entries]).encode("utf-8")).hexdigest())
+    ld = json.dumps({
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "@id": f"{canonical}#dataset",
+        "name": "The Jersey City Sound: every entry in the archive",
+        "description": ("Structured records for every entry in The Jersey City Sound, the cited encyclopedia-archive of "
+                        "Jersey City, New Jersey music culture: DJs, rappers, singers, groups, producers, labels, venues and "
+                        "places, with roles, genres, years active, birthplace, neighborhood, chart facts and numbered sources."),
+        "url": canonical,
+        "sameAs": f"{SITE}/",
+        "license": LICENSE_URL,
+        "isAccessibleForFree": True,
+        "creator": {"@id": f"{SITE}/#org"},
+        "publisher": {"@id": f"{SITE}/#org"},
+        "keywords": ["Jersey City", "music history", "hip-hop", "DJs", "rappers", "New Jersey", "Chilltown", "encyclopedia"],
+        "temporalCoverage": span,
+        "spatialCoverage": {"@type": "Place", "name": "Jersey City, New Jersey, United States",
+                            "geo": {"@type": "GeoCoordinates", "latitude": 40.7178, "longitude": -74.0431}},
+        "dateModified": modified,
+        "version": modified,
+        "variableMeasured": ["entry_no", "name", "roles", "genres", "years_active", "real_name", "born", "origin",
+                             "neighborhoods", "known_for", "status", "sources"],
+        "distribution": [
+            {"@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": f"{SITE}/data/entries.json",
+             "name": "entries.json"},
+            {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": f"{SITE}/data/entries.csv",
+             "name": "entries.csv"},
+        ],
+        "citation": "The Jersey City Sound (2026). Jersey City music archive dataset. https://jerseycitysound.com/data.html",
+    }, ensure_ascii=False, indent=2)
+    head_extra = f'<script type="application/ld+json">\n{ld}\n</script>\n'
+    body = f"""<main class="wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span class="sep">&#8594;</span><a href="about.html">About</a><span class="sep">&#8594;</span><span aria-current="page">Open data</span>
+  </nav>
+  <header class="entry-header" style="text-align:center;">
+    <span class="entry-no reveal reveal--1">Open data</span>
+    <h1 class="reveal reveal--2" style="font-size:clamp(2.1rem,4.5vw,3.3rem);">The archive as a dataset</h1>
+    <p class="descriptor reveal reveal--3" style="margin-inline:auto;">Every entry in The Jersey City Sound as structured data, free to download and reuse under CC BY-SA 4.0. {count} records, rebuilt with every update to the archive.</p>
+  </header>
+
+  <article class="entry-body reveal reveal--4" style="margin-inline:auto;">
+    <p class="lead">The Jersey City Sound publishes its whole record as open data: one JSON file with every field of every entry, and one CSV with the record-card fields and sources, so researchers, journalists, students and editors can work with the archive without scraping it. Both files are generated from the same source as the pages, so they never fall out of step.</p>
+
+    <h2 id="download">Download<a class="anchor" href="#download" aria-label="Link to this section">§</a></h2>
+    <ul class="connections">
+      <li><a href="data/entries.json" download>entries.json</a> <span class="conn-note">Every entry with all public fields: facts, sources, record card, galleries, tags. Spreadsheet users want the CSV.</span></li>
+      <li><a href="data/entries.csv" download>entries.csv</a> <span class="conn-note">One row per entry: number, name, roles, genres, years active, real name, born, raised, died, origin, neighborhoods, known for, crew or label, status, address and coordinates for places, URL, sources.</span></li>
+    </ul>
+
+    <h2 id="fields">What the fields mean<a class="anchor" href="#fields" aria-label="Link to this section">§</a></h2>
+    <p><strong>entry_no</strong> is a catalog number, the order a name entered the record, not a rank. <strong>status</strong> is the evidence tier: doc-verified (on film or in a primary document), web-verified (cited to published sources), community-verified (corroborated firsthand testimony, receipts pending), handle-provided (an entry opened and awaiting its subject). <strong>facts</strong> are the sentences on the page; <strong>sources</strong> are their numbered citations. <strong>born_in_jersey_city</strong> is set only when the entry's own sourced text states it. <strong>notability</strong> is national when the subject has a chart record, a published encyclopedia article or a confirmed Wikidata identity; otherwise it is left for the editor. Places carry <strong>place_type</strong>, <strong>address</strong>, <strong>lat</strong>, <strong>lng</strong> and <strong>music_connections</strong>.</p>
+    <p>Not included: the private research queue of names the record cannot yet support, and the editor's open to-dos. Those stay off the site until evidence arrives.</p>
+
+    <h2 id="license">License and attribution<a class="anchor" href="#license" aria-label="Link to this section">§</a></h2>
+    <p>The data is licensed <a href="{LICENSE_URL}" rel="license">Creative Commons Attribution-ShareAlike 4.0</a>. Use it, build on it, and publish what you make, with attribution and the same license. Attribution text: <em>The Jersey City Sound, jerseycitysound.com, CC BY-SA 4.0</em>. Facts are not copyrightable; the wording, the selection and the sourcing are what the license covers. Photographs on the site are credited individually and are not part of the dataset.</p>
+
+    <h2 id="cite">How to cite the archive<a class="anchor" href="#cite" aria-label="Link to this section">§</a></h2>
+    <p>Cite the entry you used, with its number and the date you read it:</p>
+    <pre class="embed-snippet">The Jersey City Sound. "Ransom." Entry No. 027, jerseycitysound.com/entry-ransom.html. Accessed {modified}.</pre>
+    <p>For the dataset as a whole:</p>
+    <pre class="embed-snippet">The Jersey City Sound (2026). Jersey City music archive dataset [JSON, CSV]. https://jerseycitysound.com/data.html</pre>
+    <p>Each entry's own sources are listed on its page and in the <code>sources</code> field; where you can, cite the primary source the entry compiled and add the archive as further reading.</p>
+
+    <h2 id="corrections">Corrections<a class="anchor" href="#corrections" aria-label="Link to this section">§</a></h2>
+    <p>Found an error in the data? It is an error on the page too. Use <a href="suggest-edit.html">suggest an edit</a> or email contact@jerseycitysound.com; the <a href="corrections.html">corrections policy</a> explains how changes are handled. Every page shows its last-updated date, and the dataset's <code>generated</code> field says when it was built.</p>
+    <p class="record-card__since" style="margin-top:2rem;">Archive page by Robert Van Liew · Last updated {modified}</p>
+  </article>
+</main>"""
+    html = _shell("The Jersey City Sound as Open Data: Every Entry, JSON and CSV",
+                  f"Download every entry in The Jersey City Sound as JSON or CSV, CC BY-SA 4.0: {count} cited records of Jersey City musicians, DJs, rappers, groups, labels and places.",
+                  canonical, body, current="about", head_extra=head_extra)
+    (OUT / "data.html").write_text(html, encoding="utf-8")
+    return modified
+
+
 def main():
     data = json.loads(DATA.read_text(encoding="utf-8"))
     entries = data["entries"]
@@ -2503,6 +2592,8 @@ def main():
     write_report_issue(entries)
     write_sources(entries)
     write_claim_page()
+    _n = export_dataset.export(entries, HANDCRAFTED)
+    HUB_DATES["data.html"] = write_data_page(entries, _n)
     write_sitemap(entries)
     save_lastmod()
     write_root_files(entries)
