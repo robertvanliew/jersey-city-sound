@@ -39,7 +39,7 @@ def audit(design_dir, minimum):
                 if target in page_set and target != name:
                     (inbound if scope == "all" else inbound_body)[target].add(name)
     report = []
-    for name in pages:
+    for name in sorted(page_set):
         n_all, n_body = len(inbound[name]), len(inbound_body[name])
         if n_all < minimum or n_body < minimum:
             report.append({"page": name, "inbound": n_all, "inbound_from_body": n_body})
