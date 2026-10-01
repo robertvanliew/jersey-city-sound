@@ -34,9 +34,19 @@ left untouched.
 
 ## Deployment
 
-The site deploys from the **`design/`** folder. On every push to `main`, the
-GitHub Actions workflow in `.github/workflows/deploy-pages.yml` publishes
-`design/` to GitHub Pages, served at the custom domain in `design/CNAME`.
+The site deploys from the **`design/`** folder on every push to `main` (the
+Vercel project configured by `design/vercel.json`; the GitHub Pages workflow in
+`.github/workflows/deploy-pages.yml` publishes the same folder).
+
+After each push, `.github/workflows/indexnow.yml` runs
+`execution/indexnow_submit.py`, which tells IndexNow (Bing, Yandex, Naver,
+Seznam, Yep) exactly which pages changed. The key is the public key file at the
+site root. Google does not use IndexNow: resubmit `sitemap.xml` in Search
+Console after a build that touches many pages, and request indexing by hand for
+pages that matter.
+
+Before pushing, `py execution/audit_links.py` lists any page with fewer than
+three inbound internal links; the target is none.
 
 ## Contributing
 

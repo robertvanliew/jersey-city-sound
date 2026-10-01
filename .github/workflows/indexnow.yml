@@ -1,0 +1,32 @@
+name: IndexNow
+
+# After every push to main, tell IndexNow (Bing, Yandex, Naver, Seznam, Yep) which
+# pages changed. Vercel deploys design/ on the same push; the short wait lets that
+# finish so the engines fetch the new versions. Google ignores IndexNow; the sitemap
+# and Search Console cover it. The key is the public key file served from the root.
+
+on:
+  push:
+    branches: [main]
+    paths: ["design/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0        # the script diffs against the pre-push commit
+      - name: Wait for the Vercel deploy
+        run: sleep 120
+      - name: Submit changed URLs
+        run: |
+          if [ "${{ github.event_name }}" = "push" ] && [ "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ]; then
+            python3 execution/indexnow_submit.py --since "${{ github.event.before }}"
+          else
+            python3 execution/indexnow_submit.py --all
+          fi

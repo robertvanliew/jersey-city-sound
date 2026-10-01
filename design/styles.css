@@ -608,6 +608,17 @@ a.chip:hover { border-color: var(--gold-mid); color: var(--gold-ink); }
 
 /* ---------- article body ---------- */
 .entry-body { max-width: var(--measure); }
+/* answer-first line: one plain sentence above the lead for entries whose lead opens elsewhere */
+.entry-body .answer {
+  font-size: var(--t-md);
+  line-height: 1.55;
+  font-weight: 400;
+  color: var(--ink);
+  margin: 0 0 1.2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--rule);
+}
+body.memorial .entry-body .answer { color: var(--cream); }
 .entry-body .lead {
   font-size: var(--t-md);
   line-height: 1.55;

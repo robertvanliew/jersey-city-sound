@@ -66,6 +66,21 @@ ANCHOR_META = {
 }
 RELATED_COUNT = 3   # .related__grid is three columns
 
+# Record-card row order (the "real name" and "where from" answers first). Rows not
+# listed keep their relative order after these.
+CARD_ORDER = {k: i for i, k in enumerate([
+    "Real name", "Also known as", "Born", "Died", "Origin", "Raised", "Neighborhood",
+    "Years active", "Active", "Years open", "Released", "Active since",
+    "Roles", "Format", "What it was", "Type", "Instrument", "Known for", "Crew", "Label",
+    "Group", "Band", "Duo", "Affiliation", "Family", "Members", "Scene", "Era"])}
+
+# Role labels that read badly in a title, and the plain word to use instead.
+TITLE_ROLE_WORDS = {"Musical group": "Band", "Hip-hop group": "Hip-hop Group", "Vocal group": "Vocal Group",
+                    "A cappella group": "A Cappella Group", "Soul group": "Soul Group",
+                    "Documentary film": "Documentary", "Record label": "Record Label",
+                    "Record store": "Record Store", "Recording artist": "Recording Artist",
+                    "Hip-hop crew": "Hip-hop Crew", "DJ collective": "DJ Collective"}
+
 # "Musician" is too generic for a title; the Instrument card gives the real role.
 # Ordered so the more specific match wins ("double bass" before "bass").
 INSTRUMENT_ROLES = [("double bass", "Bassist"), ("bass", "Bassist"), ("violin", "Violinist"),
@@ -395,22 +410,87 @@ def _img_dims(src):
         return ""
 
 
-def meta_desc(entry):
+def card_value(entry, label):
+    """Value of a record-card row by label, or ''."""
+    return next((c.get("value", "") for c in entry.get("card", []) if c.get("label") == label), "")
+
+
+def known_for(entry):
+    """`known_for` field, else the Known for card row."""
+    return (entry.get("known_for") or card_value(entry, "Known for") or "").strip()
+
+
+_ABBR = re.compile(r"\b(?:Jr|Sr|St|Mr|Mrs|Ms|Dr|No|Vol|c|ca|vs|Inc|Ltd|[A-Z])\.$")
+
+
+def first_sentence(text):
+    """Text up to the first real sentence end (skips 'Jr.', 'N.J.', 'c.' and the like)."""
+    for m in re.finditer(r"[.!?](?=\s+[A-Z\"'(]|$)", text):
+        head = text[:m.end()]
+        if _ABBR.search(head):
+            continue
+        return head.strip()
+    return text.strip()
+
+
+META_MAX = 155
+META_TAIL = " Sources cited."
+_DANGLING = {"along", "and", "or", "but", "with", "of", "the", "a", "an", "in", "on", "to", "for",
+             "by", "as", "at", "from", "who", "which", "that", "whose", "where", "his", "her", "its", "their"}
+
+_LEAD_IDENTITY = re.compile(
+    r"^(?P<full>[A-Z][^()]{2,60}?)\s\((?:born\s(?P<rn>[^,)]+?),\s)?(?:born\s)?"
+    r"(?P<born>[A-Z][a-z]+\s\d{1,2},\s\d{4})(?:\s?(?:--|–|—|-)\s?(?P<died>[A-Z][a-z]+\s\d{1,2},\s\d{4}))?\)")
+_LEAD_KNOWN_AS = re.compile(r"^(?P<full>[A-Z][^,()]{2,60}?),\sknown\sprofessionally\sas\s")
+
+
+def derive_identity(entry):
+    """(real_name, born, died) read from a lead written as 'Full Name (born X, DATE -- DATE)'.
+
+    Only the lead's own sourced wording is used; nothing is inferred beyond it.
+    """
     facts = entry.get("facts") or []
-    base = facts[0] if facts else f"{entry['name']} — Jersey City music archive entry."
-    base = re.sub(r"\s+", " ", base).strip()
-    if len(base) <= 158:
-        return base
-    window = base[:158]
-    # prefer a clean sentence end, then a clause boundary, then a word boundary
-    cut = window.rfind(". ")
-    if cut >= 110:
-        return window[:cut + 1]
-    for sep in ("; ", " — ", ", "):
-        c = window.rfind(sep)
-        if c >= 110:
-            return window[:c] + "…"
-    return window.rsplit(" ", 1)[0] + "…"
+    if not facts:
+        return "", "", ""
+    lead = re.sub(r"\s+", " ", facts[0]).strip()
+    name = entry["name"]
+    real = born = died = ""
+    m = _LEAD_IDENTITY.match(lead)
+    if m:
+        full, rn = m.group("full").strip(), (m.group("rn") or "").strip()
+        born, died = m.group("born"), m.group("died") or ""
+        if rn:
+            real = rn
+        elif full.lower() != name.lower() and name.lower() not in ("", full.lower()):
+            real = full
+    else:
+        m = _LEAD_KNOWN_AS.match(lead)
+        if m and m.group("full").strip().lower() != name.lower():
+            real = m.group("full").strip()
+    return real, born, died
+
+
+def meta_desc(entry):
+    """The lead sentence, trimmed to fit, ending "Sources cited."; `meta_description` overrides."""
+    override = (entry.get("meta_description") or "").strip()
+    if override:
+        return override[:META_MAX]
+    facts = entry.get("facts") or []
+    base = facts[0] if facts else f"{entry['name']} is documented in the Jersey City music archive."
+    base = first_sentence(re.sub(r"\s+", " ", base).strip())
+    room = META_MAX - len(META_TAIL)
+    if len(base) > room:
+        window = base[:room]
+        # cut at the latest clause or conjunction boundary past 70 chars, else a word boundary
+        cut = max(window.rfind(b) for b in ("; ", ", ", " and ", " who ", " which ", " that ",
+                                            " with ", " where ", " whose "))
+        base = (window[:cut] if cut >= 70 else window.rsplit(" ", 1)[0]).rstrip(",;: ")
+        while base.rsplit(" ", 1)[-1].lower() in _DANGLING:   # never end on "along" or "the"
+            base = base.rsplit(" ", 1)[0].rstrip(",;: ")
+        base += "."
+    if not base.endswith((".", "!", "?", '"', "'", ")")):
+        base += "."
+    return base + META_TAIL
 
 
 def cert_badge(kind, mult):
@@ -691,6 +771,7 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
     # was eating the mobile pixels). Generic roles borrow the lead genre so "Musician"
     # reads as "Jazz Musician". `seo_title` in the data overrides the whole thing.
     title_role = roles[0] if (venue or label or film) and roles else seo_role
+    title_role = TITLE_ROLE_WORDS.get(title_role, title_role)
     if seo_role in ("Musician", "Artist", "Recording artist"):
         _inst = next((c["value"] for c in entry.get("card", []) if c.get("label") == "Instrument"), "")
         _player = next((p for k, p in INSTRUMENT_ROLES if k in _inst.lower()), "")
@@ -698,18 +779,40 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
             title_role = f"{genres[0]} {_player}" if genres else _player
         elif genres:
             title_role = f"{genres[0]} {seo_role}"
-    # tidy the range separator ("1990s - present" -> "1990s–present"); leave "mid-1970s" alone
-    _ty = re.sub(r"\s*(?:[–—]|\s-\s)\s*", "–", years).replace("c. ", "")
+    # range separator reads "1990s to present" (no dashes in new copy); "mid-1970s" is left alone
+    _ty = re.sub(r"\s*(?:[–—]|\s-\s)\s*", " to ", years).replace("c. ", "")
     _years_tail = f", {_ty}" if _ty and _ty not in name else ""
     _jc_prefix = "" if "jersey city" in name.lower() else "Jersey City "
-    title = entry.get("seo_title") or (
-        f"{name}: {_jc_prefix}{title_role}{_years_tail}" if _jc
-        else f"{name}: {title_role} with Jersey City ties{_years_tail}")
+    _head = (f"{name}: {_jc_prefix}{title_role}" if _jc
+             else f"{name}: {title_role} with Jersey City ties")
+    # the hook: a short "known for" beats years when the whole title stays under 60 chars
+    _kf = known_for(entry)
+    _kf_short = re.split(r"\s*[;(]|\s--\s", _kf)[0].strip().rstrip(",.") if _kf else ""
+    if _kf_short and len(f"{_head}, {_kf_short}") <= 60:
+        title = f"{_head}, {_kf_short}"
+    else:
+        title = f"{_head}{_years_tail}"
+    title = entry.get("seo_title") or title
     canonical = f"{SITE}/entry-{slug}.html"
     desc = meta_desc(entry)
 
     lead = facts[0] if facts else f"{name} is documented in the Jersey City music archive."
     body_facts = facts[1:] if len(facts) > 1 else []
+    # Answer-first line: when the lead's own first sentence doesn't place the subject in
+    # Jersey City, open with one generated sentence that does. It is data-noseal, so the
+    # sealed article text is unchanged.
+    answer_html = ""
+    if _jc and "jersey city" not in first_sentence(lead).lower():
+        verb = "was" if entry.get("memorial") else "is"
+        r0 = " ".join(w if (w.isupper() or w.startswith("DJ")) else w.lower()
+                      for w in title_role.split())
+        art = "an" if (r0[:1].upper() in "AEIOU" or r0.upper().startswith("MC")) else "a"
+        sent = f"{name} {verb} {art} {r0} from Jersey City, New Jersey"
+        if _ty:
+            sent += f", active {_ty}"
+        if _kf_short:
+            sent += f", known for {_kf_short}"
+        answer_html = f'\n      <p class="answer" data-noseal>{esc(sent)}.</p>'
 
     chips = "".join(
         f'      <a class="chip" href="#">{esc(c)}</a>\n'
@@ -803,8 +906,19 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
             bits.append(f'{esc(cert["gold"])} Gold')
         if bits:
             rows.append(("Certified", " · ".join(bits)))
-    # entry-authored extra rows (values may reference other entries -> auto-linked)
+    # identity rows read from the lead when the card doesn't carry them
+    _real, _born, _died = derive_identity(entry)
+    _labels = {c.get("label") for c in entry.get("card", [])}
+    if _real and "Real name" not in _labels and not venue and not label and not film:
+        rows.append(("Real name", esc(_real)))
+    if _born and "Born" not in _labels:
+        rows.append(("Born", esc(_born)))
+    if _died and "Died" not in _labels:
+        rows.append(("Died", esc(_died)))
+    # entry-authored extra rows (values may reference other entries -> auto-linked);
+    # a card row with the same label as a generated row replaces it (it is the more specific one)
     for extra in entry.get("card", []):
+        rows = [r for r in rows if r[0] != extra["label"]]
         rows.append((extra["label"], linkify(esc(extra["value"]), name_links, slug)))
     # Links row — every platform on file, not just Instagram
     PLATFORM_LABELS = [("instagram.com", "Instagram"), ("open.spotify.com", "Spotify"),
@@ -838,6 +952,11 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
                 break
     if link_bits:
         rows.append(("Links", " · ".join(link_bits)))
+    # Neighborhood comes from the neighborhoods tag when no card row already says it
+    if entry.get("neighborhoods") and not any(k in ("Raised", "Neighborhood") for k, _ in rows):
+        rows.append(("Neighborhood", esc(", ".join(entry["neighborhoods"]))))
+    # Fixed order (answers "real name" and "where from" first); other rows keep their place after
+    rows = sorted(rows, key=lambda kv: CARD_ORDER.get(kv[0], len(CARD_ORDER)))
     rows_html = "\n".join(
         f'        <div class="row"><dt>{esc(k)}</dt><dd>{v}</dd></div>'
         for k, v in rows
@@ -1062,7 +1181,7 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
   </header>
 
   <div class="entry-layout">
-    <article class="entry-body reveal reveal--4">
+    <article class="entry-body reveal reveal--4">{answer_html}
       <p class="lead">{linkify(esc(lead), name_links, slug)}{"" if lead.rstrip().endswith((".", ")", "”", '"', "!", "?")) else "."}</p>{cert_block(entry)}{awards_block}{seal_mark}{emblem_block}
 
       <h2 id="record">In the Record<a class="anchor" href="#record" aria-label="Link to In the Record section">§</a></h2>
@@ -1102,7 +1221,7 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
 {rows_html}
         <div class="row"><dt>Status</dt><dd>{esc(status)}</dd></div>
       </dl>
-      <div class="record-card__since">In the archive since July 2026 · Last updated {modified}</div>
+      <div class="record-card__since">Archive entry by Robert Van Liew · In the archive since July 2026 · Last updated {modified}</div>
     </aside>
   </div>
 
