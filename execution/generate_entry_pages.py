@@ -256,6 +256,21 @@ def build_related(entries, name_links):
 LASTMOD_FILE = ROOT / "data" / "lastmod.json"
 HUB_DATES = {}   # generated hub file -> lastmod, filled by hubs.write_hubs for the sitemap
 ALL_ENTRIES = []  # the live entries list, for hub code that needs to resolve any slug
+
+# The 25 flagship entries listed in llms.txt (playbook sec. 3.8): the founding entry, the
+# scene's primary source and its key DJs, the chart names, and one place. Editorial choice;
+# change freely.
+FLAGSHIP = [
+    ("dj-dx", "DJ DX (Entry 001)"), ("jersey-city-dj-documentary-2006", "The Jersey City DJ Documentary Vol. 1 (2006)"),
+    ("dj-wizard", "Wiztv (DJ Wizard)"), ("dj-flash-jersey-city", "DJ Flash"), ("dj-wimpy-bee", "DJ Wimpy Bee"),
+    ("mark-cee", "Mark Cee"), ("dj-e-double", "DJ E Double"), ("mista-quietman", "Mista Quietman"),
+    ("stans-square-records", "Stan's Square Records"), ("catamount-records", "Catamount Records"),
+    ("sweet-slick-and-slide", "Sweet Slick and Slide"), ("chill-rob-g", "Chill Rob G"),
+    ("double-xx-posse", "Double XX Posse"), ("pm-dawn", "PM Dawn"), ("ransom", "Ransom"), ("albee-al", "Albee Al"),
+    ("joe-budden", "Joe Budden"), ("akon", "Akon"), ("kool-and-the-gang", "Kool & the Gang"),
+    ("the-manhattans", "The Manhattans"), ("nancy-sinatra", "Nancy Sinatra"), ("al-di-meola", "Al Di Meola"),
+    ("flip-wilson", "Flip Wilson"), ("jerry-herman", "Jerry Herman"), ("lincoln-high-school", "Lincoln High School"),
+]
 HUB_PAGES = [    # (name, href, one-line) for the nav search; main() appends the generated hubs
     ("Chilltown: why Jersey City is called Chilltown", "chilltown.html", "Nickname history"),
     ("Jersey City DJs and the mixtape era", "jersey-city-djs.html", "Role hub"),
@@ -895,7 +910,7 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
     elif _kf_short and len(f"{_head}, {_kf_short}") <= 60:
         title = f"{_head}, {_kf_short}"
     else:
-        title = f"{_head}{_years_tail}"
+        title = f"{_head}{_years_tail}" if len(f"{_head}{_years_tail}") <= 60 else _head
     title = entry.get("seo_title") or title
     canonical = f"{SITE}/entry-{slug}.html"
     desc = meta_desc(entry)
@@ -2107,7 +2122,7 @@ def write_report_issue(entries):
                            hashlib.sha256((jsonld + body).encode("utf-8")).hexdigest())
     jsonld = jsonld.replace("__DT__", modified)
     head_extra = f'<script type="application/ld+json">\n{jsonld}\n</script>\n'
-    html = _shell("Is Queen Latifah From Jersey City? No, and the Truth Is Better | The Jersey City Sound",
+    html = _shell("Is Queen Latifah From Jersey City? No, and the Truth Is Better",
                   "The famous musicians actually from Jersey City, and the two names the internet keeps getting wrong: Queen Latifah and Lauryn Hill are not from the city.",
                   canonical, body, current="report", head_extra=head_extra)
     (OUT / "report-001-not-from-jersey-city.html").write_text(html, encoding="utf-8")
@@ -2320,6 +2335,8 @@ def write_root_files(entries=None):
         f"- [About & methodology]({SITE}/about.html)\n"
         f"- [Open data: every entry as JSON and CSV, CC BY-SA 4.0]({SITE}/data.html)\n"
         f"- [Jersey City Music Map]({SITE}/jersey-city-music-map.html)\n\n"
+        + "## Flagship entries\n" + "".join(
+            f"- [{n}]({SITE}/entry-{sl}.html)\n" for sl, n in FLAGSHIP) + "\n"
         "## Follow\n"
         "- X/Twitter: https://x.com/jerseycitysound\n"
         "- Instagram: https://www.instagram.com/jerseycitysound\n"

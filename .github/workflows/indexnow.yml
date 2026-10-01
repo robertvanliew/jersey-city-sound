@@ -1,4 +1,4 @@
-name: IndexNow
+name: IndexNow and Wayback
 
 # After every push to main, tell IndexNow (Bing, Yandex, Naver, Seznam, Yep) which
 # pages changed. Vercel deploys design/ on the same push; the short wait lets that
@@ -30,3 +30,14 @@ jobs:
           else
             python3 execution/indexnow_submit.py --all
           fi
+      # Permanence checklist (design spec sec. 5): snapshot the homepage, the sitemap and the
+      # seal ledger in the Wayback Machine on every deploy. Save Page Now is rate limited,
+      # so this stays to a few URLs; a failure never fails the job.
+      - name: Wayback Machine snapshot
+        continue-on-error: true
+        run: |
+          for u in https://jerseycitysound.com/ https://jerseycitysound.com/sitemap.xml https://jerseycitysound.com/ledger/seals.jsonl; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 90 "https://web.archive.org/save/$u")
+            echo "Wayback $code $u"
+            sleep 10
+          done

@@ -101,6 +101,15 @@ def slugify(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
 
+SLANG = [("201", re.compile(r"\b201\b")), ("Chilltown", re.compile(r"\bChill ?[Tt]own\b"))]
+
+
+def slang_terms(e):
+    """Which of the documented local terms the entry's own facts use."""
+    text = " ".join(e.get("facts") or [])
+    return [t for t, pat in SLANG if pat.search(text)]
+
+
 def neighborhood_pages(entries):
     """{neighborhood: [entries]} for neighborhoods with enough entries."""
     groups = {}
@@ -139,6 +148,10 @@ def hub_specs(entries, g):
                       title="Jersey City High Schools in the Music Record",
                       members=[e for e in entries if is_place(e) and e.get("place_type") == "school"],
                       connections_list=True))
+    specs.append(dict(key="slang", file="jersey-city-slang-in-music.html",
+                      h1="Jersey City Slang in Music: 201 and Chilltown", kicker="Language",
+                      title="Jersey City Slang in Music: 201 and Chilltown",
+                      members=[e for e in entries if slang_terms(e)]))
     for key, label, test in ERAS:
         members = [e for e in entries if any(test(d) for d in decades_of(e, g))]
         specs.append(dict(key=f"era-{key}", file=f"history-{key}.html",
@@ -228,6 +241,12 @@ def para(text, g, name_links, self_slug=""):
 
 def group_members(spec, members, g):
     """Group cards: eras and neighborhoods by role family; role hubs by era."""
+    if spec["key"] == "slang":
+        buckets = {}
+        for e in members:
+            for t in slang_terms(e):
+                buckets.setdefault(f"Uses of {t}", []).append(e)
+        return sorted(buckets.items())
     if spec["key"] == "venues":
         buckets = {}
         labels = {"venue": "Venues and record stores", "record store": "Venues and record stores",

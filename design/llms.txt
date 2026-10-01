@@ -30,6 +30,33 @@ The archive covers Jersey City hip-hop, mixtape and blends DJs, rap, soul, and R
 - [Open data: every entry as JSON and CSV, CC BY-SA 4.0](https://jerseycitysound.com/data.html)
 - [Jersey City Music Map](https://jerseycitysound.com/jersey-city-music-map.html)
 
+## Flagship entries
+- [DJ DX (Entry 001)](https://jerseycitysound.com/entry-dj-dx.html)
+- [The Jersey City DJ Documentary Vol. 1 (2006)](https://jerseycitysound.com/entry-jersey-city-dj-documentary-2006.html)
+- [Wiztv (DJ Wizard)](https://jerseycitysound.com/entry-dj-wizard.html)
+- [DJ Flash](https://jerseycitysound.com/entry-dj-flash-jersey-city.html)
+- [DJ Wimpy Bee](https://jerseycitysound.com/entry-dj-wimpy-bee.html)
+- [Mark Cee](https://jerseycitysound.com/entry-mark-cee.html)
+- [DJ E Double](https://jerseycitysound.com/entry-dj-e-double.html)
+- [Mista Quietman](https://jerseycitysound.com/entry-mista-quietman.html)
+- [Stan's Square Records](https://jerseycitysound.com/entry-stans-square-records.html)
+- [Catamount Records](https://jerseycitysound.com/entry-catamount-records.html)
+- [Sweet Slick and Slide](https://jerseycitysound.com/entry-sweet-slick-and-slide.html)
+- [Chill Rob G](https://jerseycitysound.com/entry-chill-rob-g.html)
+- [Double XX Posse](https://jerseycitysound.com/entry-double-xx-posse.html)
+- [PM Dawn](https://jerseycitysound.com/entry-pm-dawn.html)
+- [Ransom](https://jerseycitysound.com/entry-ransom.html)
+- [Albee Al](https://jerseycitysound.com/entry-albee-al.html)
+- [Joe Budden](https://jerseycitysound.com/entry-joe-budden.html)
+- [Akon](https://jerseycitysound.com/entry-akon.html)
+- [Kool & the Gang](https://jerseycitysound.com/entry-kool-and-the-gang.html)
+- [The Manhattans](https://jerseycitysound.com/entry-the-manhattans.html)
+- [Nancy Sinatra](https://jerseycitysound.com/entry-nancy-sinatra.html)
+- [Al Di Meola](https://jerseycitysound.com/entry-al-di-meola.html)
+- [Flip Wilson](https://jerseycitysound.com/entry-flip-wilson.html)
+- [Jerry Herman](https://jerseycitysound.com/entry-jerry-herman.html)
+- [Lincoln High School](https://jerseycitysound.com/entry-lincoln-high-school.html)
+
 ## Follow
 - X/Twitter: https://x.com/jerseycitysound
 - Instagram: https://www.instagram.com/jerseycitysound

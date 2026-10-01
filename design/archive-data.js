@@ -2123,6 +2123,11 @@ window.JCS_PAGES = [
   "role": "Schools"
  },
  {
+  "name": "Jersey City Slang in Music: 201 and Chilltown",
+  "href": "jersey-city-slang-in-music.html",
+  "role": "Language"
+ },
+ {
   "name": "Jersey City Music Before 1960",
   "href": "history-pre-1960s.html",
   "role": "Era"
