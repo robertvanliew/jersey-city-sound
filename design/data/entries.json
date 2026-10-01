@@ -5584,6 +5584,7 @@
    ],
    "born_in_jersey_city": true,
    "notability": "national",
+   "seo_title": "Basil Ruysdael: Jersey City-Born Opera Bass and Film Actor",
    "url": "https://jerseycitysound.com/entry-basil-ruysdael.html"
   },
   {
@@ -6114,6 +6115,13 @@
    "links": {},
    "born_in_jersey_city": true,
    "notability": "national",
+   "seo_title": "Tony Velona: Jersey City Songwriter, Lollipops and Roses",
+   "card": [
+    {
+     "label": "Known for",
+     "value": "Domani (1955); Lollipops and Roses (1962); Music to Watch Girls By (1966)"
+    }
+   ],
    "url": "https://jerseycitysound.com/entry-tony-velona.html"
   },
   {
@@ -6196,10 +6204,15 @@
     {
      "label": "Born",
      "value": "April 22, 1944, Jersey City, New Jersey"
+    },
+    {
+     "label": "Also known as",
+     "value": "Howie Wyeth"
     }
    ],
    "born_in_jersey_city": true,
    "origin": "Jersey City, New Jersey",
+   "seo_title": "Howard Wyeth: Jersey City-Born Drummer for Bob Dylan",
    "url": "https://jerseycitysound.com/entry-howard-wyeth.html"
   },
   {

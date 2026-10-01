@@ -5993,7 +5993,8 @@
     }
    ],
    "born_in_jersey_city": true,
-   "notability": "national"
+   "notability": "national",
+   "seo_title": "Basil Ruysdael: Jersey City-Born Opera Bass and Film Actor"
   },
   {
    "entry_no": "094",
@@ -6575,7 +6576,14 @@
    ],
    "links": {},
    "born_in_jersey_city": true,
-   "notability": "national"
+   "notability": "national",
+   "seo_title": "Tony Velona: Jersey City Songwriter, Lollipops and Roses",
+   "card": [
+    {
+     "label": "Known for",
+     "value": "Domani (1955); Lollipops and Roses (1962); Music to Watch Girls By (1966)"
+    }
+   ]
   },
   {
    "entry_no": "107",
@@ -6666,10 +6674,15 @@
     {
      "label": "Born",
      "value": "April 22, 1944, Jersey City, New Jersey"
+    },
+    {
+     "label": "Also known as",
+     "value": "Howie Wyeth"
     }
    ],
    "born_in_jersey_city": true,
-   "origin": "Jersey City, New Jersey"
+   "origin": "Jersey City, New Jersey",
+   "seo_title": "Howard Wyeth: Jersey City-Born Drummer for Bob Dylan"
   },
   {
    "entry_no": "109",
@@ -15009,6 +15022,14 @@
     {
      "name": "The Wade family (Kent Wade, @kentwaderocksofficial)",
      "note": "Kent Wade reached out via Instagram DM (2026): the Wade family should be in the archive; says they were touring musicians for The Manhattans (JC soul group, entry 118) and points to Kool & the Gang or Mary Brown (entry 171) for corroboration. NOT web-verifiable; no footprint under Kent Wade or the Wade family found (note: a 'Wade Taylor' briefly sang lead for the Manhattans in 1991 — different person, watch the collision). TO PUBLISH: get from Kent, as firsthand oral history, the specific Wade members by name, their instruments/roles, years, who they toured/recorded with, and any artifact (playbill, tour photo, album credit). Then it clears as attributed family testimony. Mary Brown or the Kool & the Gang camp corroborating would strengthen it."
+    },
+    {
+     "name": "ZG / Za G",
+     "note": "Searched on Bing as 'zg jersey city rapper', 'za g', 'za zg' (Oct 2026, 4 queries). Not in the archive; identity, spelling and a JC-linked release or flyer needed."
+    },
+    {
+     "name": "Darnell Cauley",
+     "note": "Searched on Bing as 'darnell cauley jersey city rapper' (Oct 2026). Not in the archive; may be a real name behind a stage name; needs a source."
     }
    ]
   },
