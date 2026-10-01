@@ -1264,6 +1264,20 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
                         f'"contentUrl": "https://www.youtube.com/watch?v={vid_id}", '
                         f'"embedUrl": "https://www.youtube-nocookie.com/embed/{vid_id}"{_vextra}}}')
 
+    page_type = "ProfilePage" if schema_type in ("Person", "MusicGroup", "Organization") and not is_place and not venue else "WebPage"
+    # Movie needs an image for Google: the video thumbnail, else the entry's OG card
+    movie_json = ""
+    if film:
+        _vid = _yt_id((vids[0].get("id") or vids[0].get("url", ""))) if vids else ""
+        _img = f"https://i.ytimg.com/vi/{_vid}/hqdefault.jpg" if _vid else f"{SITE}/assets/og/{slug}.png"
+        movie_json = f',\n      "image": "{_img}"'
+        if years:
+            movie_json += f',\n      "dateCreated": "{years[:4]}"'
+        _dir = card_value(entry, "Director")
+        if _dir:
+            movie_json += f',\n      "director": {{"@type": "Person", "name": {json.dumps(_dir)}}}'
+        if vid_node:
+            movie_json += f',\n      "video": {{"@id": "{canonical}#video"}}'
     ld = f"""{{
   "@context": "https://schema.org",
   "@graph": [
@@ -1272,10 +1286,10 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
       "@id": "{canonical}#main",
       "name": {json.dumps(name)},
 {('      "genre": ' + genre_json + ',' + chr(10)) if schema_type in ("MusicGroup", "Movie") and not is_place else ""}      "url": "{canonical}",
-      "mainEntityOfPage": {{"@id": "{canonical}#webpage"}}{job_json}{same_json}{desc_json}{knows_json}{alt_json}{loc_json}{img_ref}{date_json}
+      "mainEntityOfPage": {{"@id": "{canonical}#webpage"}}{job_json}{same_json}{desc_json}{knows_json}{alt_json}{loc_json}{img_ref}{date_json}{movie_json}
     }},
     {{
-      "@type": "ProfilePage",
+      "@type": "{page_type}",
       "@id": "{canonical}#webpage",
       "url": "{canonical}",
       "name": {json.dumps(title)},
