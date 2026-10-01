@@ -42,6 +42,13 @@ node scripts/seal.mjs verify-all         # 5. gate: must pass before deploy
 
 The seal mark and `rel="alternate"` credential link are added by the generator for any entry with a credential. The mark is `data-noseal`, so it does not affect `pageHash` — step 3 does not invalidate step 2.
 
+## Page dates (`data/lastmod.json`)
+
+The generator keeps a content hash and date per page. A page's `<lastmod>` in the sitemap, its
+`dateModified` in schema, and the record card's "Last updated" move only when that page's source
+changes (the entry's JSON, or the file itself for hand-edited pages). Commit `data/lastmod.json`
+with every build. `py execution/seed_lastmod.py` rebuilds it from git history if it is ever lost.
+
 ## Monthly anchor (human step)
 
 ```

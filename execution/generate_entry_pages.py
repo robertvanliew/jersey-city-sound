@@ -56,7 +56,7 @@ STATUS_LABELS = {
     "community-verified": "Community-verified — receipts pending",
 }
 
-# Default related entries when none specified: the archive's anchor entries.
+# Fallback related entries when scoring finds nothing: the archive's anchor entries.
 ANCHORS = ["001", "004", "013"]
 ANCHOR_META = {
     "001": ("DJ DX", "DJ · Producer · Turntablist", "entry-dj-dx.html"),
@@ -64,6 +64,203 @@ ANCHOR_META = {
     "013": ("The Jersey City DJ Documentary Vol. 1", "Documentary Film · 2006",
             "entry-jersey-city-dj-documentary-2006.html"),
 }
+RELATED_COUNT = 3   # .related__grid is three columns
+
+# "Musician" is too generic for a title; the Instrument card gives the real role.
+# Ordered so the more specific match wins ("double bass" before "bass").
+INSTRUMENT_ROLES = [("double bass", "Bassist"), ("bass", "Bassist"), ("violin", "Violinist"),
+                    ("guitar", "Guitarist"), ("banjo", "Banjoist"), ("piano", "Pianist"),
+                    ("keyboard", "Keyboardist"), ("organ", "Organist"), ("drum", "Drummer"),
+                    ("percussion", "Percussionist"), ("saxophone", "Saxophonist"),
+                    ("trumpet", "Trumpeter"), ("cornet", "Cornetist"), ("trombone", "Trombonist"),
+                    ("clarinet", "Clarinetist"), ("flute", "Flutist"), ("voice", "Singer"),
+                    ("vocal", "Singer")]
+
+# Card labels whose values name an affiliation; two entries sharing one are related.
+AFFILIATION_LABELS = {"Crew", "Label", "Group", "Band", "Family", "Scene", "School",
+                      "Affiliation", "Duo", "Members", "Documented in", "Founder",
+                      "Distribution", "Collective"}
+
+
+def _decades(years):
+    """'c. early 1990s – present' -> {1990, 2000, 2010, 2020}; '' -> set()."""
+    if not years:
+        return set()
+    y = years.replace("–", "-").replace("—", "-")
+    nums = [int(n) for n in re.findall(r"(?<!\d)(1[89]\d\d|20\d\d)(?!\d)", y)]
+    if not nums:
+        return set()
+    lo = min(nums)
+    hi = date.today().year if "present" in y.lower() else max(nums)
+    return {d for d in range(lo // 10 * 10, hi // 10 * 10 + 1, 10)}
+
+
+def _entry_text(e):
+    """Everything an entry says, for mention matching: facts plus card values."""
+    bits = list(e.get("facts") or [])
+    bits += [c.get("value", "") for c in e.get("card", [])]
+    return " ".join(bits)
+
+
+def build_related(entries, name_links):
+    """slug -> ordered list of (entry_no, name, role_line, href) for the Related grid.
+
+    Scoring, strongest first: an explicit `related` list in the data; one entry
+    naming the other in its facts or card (reciprocal counts twice); a shared
+    affiliation card value (crew, label, scene...); shared genres; shared
+    roles; overlapping decades. Ties break on entry number so output is stable.
+    """
+    all_e = HANDCRAFTED + entries
+    by_slug = {e["slug"]: e for e in all_e}
+    # alias patterns per slug (word-bounded, longest first), built once
+    pats = {}
+    for name, slug in name_links:
+        pats.setdefault(slug, []).append(re.compile(rf"(?<!\w){re.escape(name)}(?!\w)"))
+    mentions = {}   # slug -> set of slugs it names
+    for e in all_e:
+        text = _entry_text(e)
+        mentions[e["slug"]] = {s for s, ps in pats.items()
+                               if s != e["slug"] and any(p.search(text) for p in ps)}
+    affil = {}
+    for e in all_e:
+        affil[e["slug"]] = {(c["label"], c["value"].strip().lower())
+                            for c in e.get("card", [])
+                            if c.get("label") in AFFILIATION_LABELS and c.get("value")}
+    genres = {e["slug"]: set(e.get("genres") or []) for e in all_e}
+
+    def role_family(e):
+        """Roles plus the family they belong to, so a Saxophonist scores against a Musician."""
+        rs = set(e.get("roles") or [])
+        for r in list(rs):
+            rl = r.lower()
+            if rl.endswith("ist") or rl in ("singer", "vocalist", "songwriter", "composer",
+                                            "bandleader", "arranger", "drummer", "trumpeter"):
+                rs.add("Musician")
+            if "group" in rl or rl in ("duo", "band", "crew", "collective", "ensemble"):
+                rs.add("Group")
+        rs.add(f"type:{entry_type(e)}")
+        return rs
+    roles = {e["slug"]: role_family(e) for e in all_e}
+
+    def decades_of(e):
+        d = _decades(e.get("years_active") or "")
+        if not d and e.get("facts"):            # fall back to the lead's dates ("1931 – 1986")
+            d = _decades(e["facts"][0])
+        return d
+    decs = {e["slug"]: decades_of(e) for e in all_e}
+    handcrafted = {h["slug"] for h in HANDCRAFTED}   # no generated Related block to host links
+
+    def meta(e):
+        role_line = " · ".join(e.get("roles") or [])
+        years = e.get("years_active") or ""
+        if role_line and years:
+            role_line += f" · {years}"
+        return (e["entry_no"], e["name"], role_line or years, f"entry-{e['slug']}.html")
+
+    def score(a, b):
+        pts = 0
+        if b in mentions[a]:
+            pts += 5
+        if a in mentions[b]:
+            pts += 5
+        if affil[a] & affil[b]:
+            pts += 4
+        pts += min(2 * len(genres[a] & genres[b]), 4)
+        pts += min(len(roles[a] & roles[b]), 2)
+        pts += min(len(decs[a] & decs[b]), 2)
+        if by_slug[a].get("memorial") and by_slug[b].get("memorial"):
+            pts += 1
+        return pts
+
+    slugs = [e["slug"] for e in sorted(all_e, key=lambda e: e["entry_no"])]
+    pts = {(a, b): score(a, b) for a in slugs for b in slugs if a != b}
+
+    # Pass 1: pick per entry. A soft penalty on already-popular targets keeps a
+    # handful of hubs from hogging every slot, and ties go to the least-linked.
+    inbound = {s: 0 for s in slugs}
+    chosen = {}
+    for me in slugs:
+        picks = []
+        if me in handcrafted:
+            chosen[me] = picks
+            continue
+        for s in (by_slug[me].get("related") or []):     # editor's explicit picks lead
+            if s in by_slug and s != me and s not in picks:
+                picks.append(s)
+        ranked = sorted((s for s in slugs if s != me and pts[(me, s)] >= 1),
+                        key=lambda s: (-(pts[(me, s)] - 0.5 * inbound[s]), inbound[s], by_slug[s]["entry_no"]))
+        for s in ranked:
+            if len(picks) >= RELATED_COUNT:
+                break
+            if s not in picks:
+                picks.append(s)
+        for s in picks:
+            inbound[s] += 1
+        chosen[me] = picks
+
+    # Pass 2: coverage. Every entry gets at least one inbound link, so nothing is
+    # reachable only from the index. Swap it in for the weakest card of whichever
+    # entry it fits best, as long as that card's target keeps another inbound.
+    for b in slugs:
+        if inbound[b] > 0:
+            continue
+        def weakest_of(a):
+            return min((c for c in chosen[a] if inbound[c] > 1), key=lambda c: (pts[(a, c)], -inbound[c]))
+        hosts = sorted((a for a in slugs if a != b and a not in handcrafted and b not in chosen[a]
+                        and pts[(a, b)] >= 1 and any(inbound[c] > 1 for c in chosen[a])),
+                       key=lambda a: (-pts[(a, b)], pts[(a, weakest_of(a))], by_slug[a]["entry_no"]))
+        if not hosts:
+            continue
+        a = hosts[0]
+        weakest = weakest_of(a)
+        chosen[a][chosen[a].index(weakest)] = b
+        inbound[weakest] -= 1
+        inbound[b] += 1
+
+    out = {}
+    for me in slugs:
+        cards = [meta(by_slug[s]) for s in chosen[me]]
+        for a in ANCHORS:                            # pad from the anchors only if still thin
+            if len(cards) >= RELATED_COUNT:
+                break
+            if a != by_slug[me]["entry_no"] and all(c[0] != a for c in cards):
+                cards.append((a,) + ANCHOR_META[a])
+        out[me] = cards[:RELATED_COUNT]
+    return out
+
+
+# --- per-page lastmod: a date moves only when the page's source content changes ---
+# data/lastmod.json: {"entry-<slug>" | "<page>.html": {"hash": sha256, "date": YYYY-MM-DD}}
+# Seeded from git history by execution/seed_lastmod.py; maintained here on every build.
+LASTMOD_FILE = ROOT / "data" / "lastmod.json"
+try:
+    LASTMOD = json.loads(LASTMOD_FILE.read_text(encoding="utf-8"))
+except FileNotFoundError:
+    LASTMOD = {}
+
+
+def entry_hash(e):
+    import hashlib
+    return hashlib.sha256(json.dumps(e, sort_keys=True, ensure_ascii=False).encode("utf-8")).hexdigest()
+
+
+def file_hash(path):
+    import hashlib
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def lastmod_for(key, h):
+    """Return the page's lastmod date, bumping it to today if its content hash changed."""
+    rec = LASTMOD.get(key)
+    if rec and rec.get("hash") is None:          # seeded date, hash unknown: adopt, don't bump
+        rec["hash"] = h
+    elif not rec or rec.get("hash") != h:
+        LASTMOD[key] = {"hash": h, "date": BUILD_DATE}
+    return LASTMOD[key]["date"]
+
+
+def save_lastmod():
+    LASTMOD_FILE.write_text(json.dumps(LASTMOD, indent=1, sort_keys=True) + "\n", encoding="utf-8")
 
 
 def esc(s):
@@ -460,8 +657,10 @@ def videos_html(entry, name_links, slug):
             f'{body}'), True
 
 
-def page(entry, by_no, name_links, appearances=None):
+def page(entry, by_no, name_links, appearances=None, related=None, modified=None):
     appearances = appearances or {}
+    related = related or {}
+    modified = modified or BUILD_DATE   # YYYY-MM-DD; moves only when the entry's data changes
     name = entry["name"]
     no = entry["entry_no"]
     slug = entry["slug"]
@@ -488,8 +687,24 @@ def page(entry, by_no, name_links, appearances=None):
     # documented for a Jersey City *connection* but were not born/raised here — so
     # the title/FAQ don't overclaim "Jersey City <role>".
     _jc = entry.get("jc_from", True)
-    title = (f"{name} — Jersey City {seo_role} | The Jersey City Sound" if _jc
-             else f"{name} — {seo_role} | The Jersey City Sound")
+    # <title>: the hook up front, no site name (Google shows that separately, and it
+    # was eating the mobile pixels). Generic roles borrow the lead genre so "Musician"
+    # reads as "Jazz Musician". `seo_title` in the data overrides the whole thing.
+    title_role = roles[0] if (venue or label or film) and roles else seo_role
+    if seo_role in ("Musician", "Artist", "Recording artist"):
+        _inst = next((c["value"] for c in entry.get("card", []) if c.get("label") == "Instrument"), "")
+        _player = next((p for k, p in INSTRUMENT_ROLES if k in _inst.lower()), "")
+        if _player:
+            title_role = f"{genres[0]} {_player}" if genres else _player
+        elif genres:
+            title_role = f"{genres[0]} {seo_role}"
+    # tidy the range separator ("1990s - present" -> "1990s–present"); leave "mid-1970s" alone
+    _ty = re.sub(r"\s*(?:[–—]|\s-\s)\s*", "–", years).replace("c. ", "")
+    _years_tail = f", {_ty}" if _ty and _ty not in name else ""
+    _jc_prefix = "" if "jersey city" in name.lower() else "Jersey City "
+    title = entry.get("seo_title") or (
+        f"{name}: {_jc_prefix}{title_role}{_years_tail}" if _jc
+        else f"{name}: {title_role} with Jersey City ties{_years_tail}")
     canonical = f"{SITE}/entry-{slug}.html"
     desc = meta_desc(entry)
 
@@ -628,14 +843,14 @@ def page(entry, by_no, name_links, appearances=None):
         for k, v in rows
     )
 
-    # related: anchors minus self
-    rel = [ANCHOR_META[a] for a in ANCHORS if a != no][:3]
+    # related: scored by mentions, affiliation, genre, role and era (build_related);
+    # anchors only pad when scoring comes up short
+    rel = related.get(slug) or [(a,) + ANCHOR_META[a] for a in ANCHORS if a != no][:RELATED_COUNT]
     related_html = "\n".join(f"""      <article class="entry-card">
         <span class="entry-card__no">Entry №. {a_no}</span>
         <h3><a href="{a_href}">{esc(a_name)}</a></h3>
         <p class="entry-card__role">{esc(a_role)}</p>
-      </article>""" for a_no, (a_name, a_role, a_href) in
-        [(a, ANCHOR_META[a]) for a in ANCHORS if a != no][:3])
+      </article>""" for a_no, a_name, a_role, a_href in rel)
 
     schema_type = ("Movie" if film else "MusicStore" if venue
                    else "MusicGroup" if group else "Organization" if label else "Person")
@@ -757,8 +972,9 @@ def page(entry, by_no, name_links, appearances=None):
       "breadcrumb": {{"@id": "{canonical}#breadcrumb"}},
       "inLanguage": "en-US",
       "datePublished": "2026-07-05",
-      "dateModified": "{BUILD_DT}",
-      "publisher": {{"@type": "Organization", "name": "The Jersey City Sound", "url": "{SITE}/"}}{primary_img}
+      "dateModified": "{modified}",
+      "publisher": {{"@type": "Organization", "@id": "{SITE}/#org", "name": "The Jersey City Sound", "url": "{SITE}/",
+        "publishingPrinciples": "{SITE}/verify.html", "correctionsPolicy": "{SITE}/corrections.html"}}{primary_img}
     }},
     {{
       "@type": "BreadcrumbList",
@@ -886,7 +1102,7 @@ def page(entry, by_no, name_links, appearances=None):
 {rows_html}
         <div class="row"><dt>Status</dt><dd>{esc(status)}</dd></div>
       </dl>
-      <div class="record-card__since">In the archive since July 2026 · Last updated {BUILD_DATE}</div>
+      <div class="record-card__since">In the archive since July 2026 · Last updated {modified}</div>
     </aside>
   </div>
 
@@ -1496,8 +1712,7 @@ def write_report_issue(entries):
         '      "itemReviewed": {"@type": "Claim", "appearance": {"@type": "CreativeWork", "name": "Widely syndicated online lists of Jersey City musicians"}}\n'
         '    }\n'
         '  ]\n'
-        '}').replace("__CANON__", canonical).replace("__SITE__", SITE).replace("__DT__", BUILD_DT)
-    head_extra = f'<script type="application/ld+json">\n{jsonld}\n</script>\n'
+        '}').replace("__CANON__", canonical).replace("__SITE__", SITE)
 
     body = '''<main class="wrap" style="max-width:64rem;">
   <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -1552,6 +1767,12 @@ def write_report_issue(entries):
                 .replace("__CANONE__", urllib.parse.quote(canonical))
                 .replace("__XT__", urllib.parse.quote("Is Queen Latifah From Jersey City? No, and the Truth Is Better")))
 
+    # dateModified tracks the piece's own text, not the build clock
+    import hashlib
+    modified = lastmod_for("report-001-not-from-jersey-city.html",
+                           hashlib.sha256((jsonld + body).encode("utf-8")).hexdigest())
+    jsonld = jsonld.replace("__DT__", modified)
+    head_extra = f'<script type="application/ld+json">\n{jsonld}\n</script>\n'
     html = _shell("Is Queen Latifah From Jersey City? No, and the Truth Is Better | The Jersey City Sound",
                   "The famous musicians actually from Jersey City, and the two names the internet keeps getting wrong. Queen Latifah is from Newark and East Orange; Lauryn Hill is from South Orange. Here is who actually charted.",
                   canonical, body, current="report", head_extra=head_extra)
@@ -1662,19 +1883,33 @@ def write_sitemap(entries):
     hubs = ["", "archive.html", "legends.html", "history.html", "chilltown.html", "jersey-city-djs.html",
             "report.html", "about.html", "sources.html", "verify.html", "privacy.html", "terms.html",
             "corrections.html"]
-    from datetime import date
-    today = date.today().isoformat()
+    # <lastmod> is per page and only moves when that page's source changed (see LASTMOD).
+    # Stamping every URL with the build date taught Google to ignore the field.
+    entry_dates = {e["slug"]: lastmod_for(f"entry-{e['slug']}", entry_hash(e)) for e in entries}
+    newest_entry = max(entry_dates.values()) if entry_dates else BUILD_DATE
 
-    def u(loc, prio):
-        return (f"  <url><loc>{loc}</loc><lastmod>{today}</lastmod>"
+    def page_date(name):
+        """Hand-edited pages hash their file; roll-up pages move with their newest entry."""
+        if name in ("archive.html", "legends.html", "sources.html"):
+            return newest_entry
+        if name == "charts.html":
+            return max(newest_entry, lastmod_for("charts.html", file_hash(CHART_DATA_FILE)))
+        if name == "report-001-not-from-jersey-city.html":
+            return LASTMOD.get(name, {}).get("date", BUILD_DATE)   # set by write_report_issue
+        path = OUT / (name or "index.html")
+        return lastmod_for(name or "index.html", file_hash(path)) if path.exists() else BUILD_DATE
+
+    def u(loc, prio, when):
+        return (f"  <url><loc>{loc}</loc><lastmod>{when}</lastmod>"
                 f"<changefreq>monthly</changefreq><priority>{prio}</priority></url>")
 
-    rows = [u(f"{SITE}/", "1.0")]                       # homepage
-    rows.append(u(f"{SITE}/charts.html", "0.9"))        # the charts hub — elevated (§11.8)
-    rows.append(u(f"{SITE}/report-001-not-from-jersey-city.html", "0.8"))  # Sound Report Issue №1
-    rows += [u(f"{SITE}/{h}", "0.6") for h in hubs[1:]]  # hub pages
-    rows.append(u(f"{SITE}/entry-dj-dx.html", "0.8"))
-    rows += [u(f"{SITE}/entry-{e['slug']}.html", "0.8") for e in entries]
+    rows = [u(f"{SITE}/", "1.0", page_date(""))]                       # homepage
+    rows.append(u(f"{SITE}/charts.html", "0.9", page_date("charts.html")))   # the charts hub — elevated (§11.8)
+    rows.append(u(f"{SITE}/report-001-not-from-jersey-city.html", "0.8",
+                  page_date("report-001-not-from-jersey-city.html")))  # Sound Report Issue №1
+    rows += [u(f"{SITE}/{h}", "0.6", page_date(h)) for h in hubs[1:]]  # hub pages
+    rows.append(u(f"{SITE}/entry-dj-dx.html", "0.8", page_date("entry-dj-dx.html")))
+    rows += [u(f"{SITE}/entry-{e['slug']}.html", "0.8", entry_dates[e["slug"]]) for e in entries]
     body = "\n".join(rows)
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
@@ -1757,10 +1992,12 @@ def main():
     by_no = {e["entry_no"]: e for e in entries}
     name_links = build_name_links(entries)
     appearances = build_media_index(entries)
+    related = build_related(entries, name_links)
     written = set()
     for e in entries:
         out = OUT / f"entry-{e['slug']}.html"
-        out.write_text(page(e, by_no, name_links, appearances), encoding="utf-8")
+        modified = lastmod_for(f"entry-{e['slug']}", entry_hash(e))
+        out.write_text(page(e, by_no, name_links, appearances, related, modified), encoding="utf-8")
         written.add(out.name)
 
     # remove orphan pages for entries deleted/renamed in the data
@@ -1785,6 +2022,7 @@ def main():
     write_report_issue(entries)
     write_sources(entries)
     write_sitemap(entries)
+    save_lastmod()
     write_root_files(entries)
     # chart-data.json served copy for the client-side verifier (/data/chart-data.json)
     (OUT / "data").mkdir(exist_ok=True)

@@ -1,0 +1,1042 @@
+{
+ "about.html": {
+  "date": "2026-10-01",
+  "hash": "1fd12de5fbc607ee181b20183750328771ad4281e40d92f9c8f0b2d3250bcfe6"
+ },
+ "charts.html": {
+  "date": "2026-07-13",
+  "hash": "289a7cc18300f98d20419174c322d498195ebdac0f49f7ea072f8eb34661b3d8"
+ },
+ "chilltown.html": {
+  "date": "2026-07-17",
+  "hash": "fd89e8fcd96d16b14ca795a198fae04c54ea4505082c970cbc2d2c0d1d3404bd"
+ },
+ "corrections.html": {
+  "date": "2026-07-16",
+  "hash": "9ac31580222c6e9b9d6d0e0460362ebb11e50754cacd026b2fcba39f1338d833"
+ },
+ "entry-14-karat-soul": {
+  "date": "2026-07-13",
+  "hash": "62bc4ddbe75f3a82b24715552896d7fd3d4e502ad916a429ff309ebb08c32cbb"
+ },
+ "entry-1stlady-el": {
+  "date": "2026-07-13",
+  "hash": "9b4a5664ee1f70a3eea23c1e0e9ccbf84ba43b99eb1af7c1eef93ccc2fce0b94"
+ },
+ "entry-akon": {
+  "date": "2026-07-13",
+  "hash": "4a4e55f91e667c6e0e359d0c22617a6a24ba064a3766b5fd0581c473e1b0717e"
+ },
+ "entry-al-caiola": {
+  "date": "2026-07-13",
+  "hash": "f4d306bc7664115876963ca96aefedd9afa987ef31601ddd42943bb8a9be1656"
+ },
+ "entry-al-di-meola": {
+  "date": "2026-07-13",
+  "hash": "b4424820e96f91831de67f27582435c255248867d8f7daff09f160b391d8eb5c"
+ },
+ "entry-albee-al": {
+  "date": "2026-07-18",
+  "hash": "8371617477f92a1ddc746386fdbd975c4656b49896c9c186e7107e86539f83ee"
+ },
+ "entry-andrew-hill": {
+  "date": "2026-07-13",
+  "hash": "1caffcf1f55cebefb5564f828f57781653ef222da1ba6f02180e91bee67119df"
+ },
+ "entry-anthony-j-cirone": {
+  "date": "2026-07-13",
+  "hash": "0bb7a438b035107169b9741710d383ec573839ecce95a08e8999bd60502c533f"
+ },
+ "entry-apache": {
+  "date": "2026-07-13",
+  "hash": "cadecba2333fc144be18bbfcb2939a8ca57b5b39cb0d02b5b55cbcfae573535a"
+ },
+ "entry-attrell-cordes": {
+  "date": "2026-07-22",
+  "hash": "e47fd504f36fd928343d0fc58faebc95d7ef5f5e55b5ffda6477786fe0df3b2a"
+ },
+ "entry-basil-ruysdael": {
+  "date": "2026-07-13",
+  "hash": "1cb6a4fa19d75170c7e5310a4f1e5f669687da643787ab05e221f238138f33ab"
+ },
+ "entry-benito": {
+  "date": "2026-07-13",
+  "hash": "a193fded9c99250d1295e559b876c2c280a6b6b3a901fe4af2ef541beec2872f"
+ },
+ "entry-benny-blanca": {
+  "date": "2026-07-13",
+  "hash": "446d81cf84974df7f1c03584d362b5cf6f298897bb76b0c506fdb0c3ba5d928d"
+ },
+ "entry-beth-fowler": {
+  "date": "2026-07-13",
+  "hash": "66785110889f1ef61b4c93ae7c2f40746619ceaa9b710da6ce1b1984f5ccc263"
+ },
+ "entry-big-spanish": {
+  "date": "2026-07-13",
+  "hash": "1dbd822dd999f045998db3c4c6af3d001a56a1f659587aeb36545963f3a3c492"
+ },
+ "entry-blaze-in-arts": {
+  "date": "2026-07-13",
+  "hash": "e7a3ea18bd857f0afb9683146cff3b818aa703fe1ea060a47658b5a3e391ded6"
+ },
+ "entry-block-royal": {
+  "date": "2026-07-13",
+  "hash": "4d36266a49ad54b4e1306fcc965d174a7951c6db32ffcbc6db21175a62578e19"
+ },
+ "entry-bob-lido": {
+  "date": "2026-07-13",
+  "hash": "77ed61358a321077f0f004d810eac966ad9dac64349fc4f2a9492a6e07a28c60"
+ },
+ "entry-bralikk-animalz": {
+  "date": "2026-07-13",
+  "hash": "8bf197cebf641de80d357a1b383d26e644b74de1af1c2f72b6458235a6f97dba"
+ },
+ "entry-brute-force": {
+  "date": "2026-07-13",
+  "hash": "8c2e7bdc66105a91e59d8ea3958b0cde228088ecce239743a592c90234244107"
+ },
+ "entry-catamount-records": {
+  "date": "2026-07-13",
+  "hash": "54bf0ee9cb937be704c6e58f2d5ba235747f19419d8e8fd3c89ea4f104b02353"
+ },
+ "entry-cf201": {
+  "date": "2026-07-16",
+  "hash": "d876e9c30a94b2e18f52f6dbb1b51b909ea73b4f7a4809a3080d10bf558dcc96"
+ },
+ "entry-chameleon-ka-million": {
+  "date": "2026-07-13",
+  "hash": "453af72d2c38e729ae577681f5dda628054b0245a1547795b970ed6c700c5398"
+ },
+ "entry-champagne": {
+  "date": "2026-07-13",
+  "hash": "965a9d7265c1d8b4772fb1f2a2e0cb41bd40538f9c193d361f9ba41910c3433c"
+ },
+ "entry-charlie-dixon": {
+  "date": "2026-07-13",
+  "hash": "02adf4ac89d0d7c99193623822b9aa3f458872d2bc8a280047ba4861e9f0ba89"
+ },
+ "entry-charlotte-maconda": {
+  "date": "2026-07-13",
+  "hash": "8a9f1425321c0560cc4e28a8ff124b0025ae908c7d434453dd7e43c39fbb5ff1"
+ },
+ "entry-chiba-crew": {
+  "date": "2026-07-13",
+  "hash": "b33d9ca5d176ce2e424028a7a6a2b7c89f18a745a4a6052bc2ef48781c88df53"
+ },
+ "entry-chill-divine": {
+  "date": "2026-07-13",
+  "hash": "01dc0c386047946560fed455017cdf286df9275e826a9f06c0fa896275c69c31"
+ },
+ "entry-chill-rob-g": {
+  "date": "2026-07-13",
+  "hash": "e30eed45129061236151ebee47fbe3a643e33ba993e39089d62dde4d5d813393"
+ },
+ "entry-chill-town-jc-hip-hop-documentary": {
+  "date": "2026-07-13",
+  "hash": "c56bcd0dc3a1ae1dd04598ae2a3b5a1a37a2336b5fc638153ff54f7a81ecef5e"
+ },
+ "entry-chop-diesel": {
+  "date": "2026-07-13",
+  "hash": "ceadfbb25c884effe81baf3d20a9b4dad079fa7d283f5837c48dd2d0c7855adc"
+ },
+ "entry-chris-phoenix": {
+  "date": "2026-07-13",
+  "hash": "0bed67ba9c6fbc9b49fcd301cfb818edbe1641aaaba902193e154d85428dd707"
+ },
+ "entry-christina-milian": {
+  "date": "2026-07-13",
+  "hash": "bf7f537e22419ba5fe2ef39951551ebc0c10a7d06d85efe7b90445178e3d1261"
+ },
+ "entry-cito-on-the-beat": {
+  "date": "2026-07-13",
+  "hash": "79c4397aa862b55ca63ca6d81da627d1596d42f2a650455ddd127251475e6016"
+ },
+ "entry-claydes-charles-smith": {
+  "date": "2026-07-13",
+  "hash": "0acac04d10264e60781ff31269f92ab0180542091943b529b2fa848b1ba4742a"
+ },
+ "entry-cool-sir-brown": {
+  "date": "2026-07-13",
+  "hash": "d42bed4a2db1bf93f0c28012a7e55724791ebb7a295044d057509b21e9b27476"
+ },
+ "entry-craiga-ski": {
+  "date": "2026-07-18",
+  "hash": "a8b233f34fb6c2824065a83f38b4860092380f233082f1f0e15a551cfb9fab39"
+ },
+ "entry-cy-coben": {
+  "date": "2026-07-13",
+  "hash": "f4336371f4462404c1b6772c1e972387740bf95850c39f0aa71c626259dc9da8"
+ },
+ "entry-cyclone-static": {
+  "date": "2026-07-13",
+  "hash": "d5cdd1c5450478315317ec700d00ea3edbea4a0260eb8de3e6a1884088d1d6e0"
+ },
+ "entry-d-eastwood": {
+  "date": "2026-07-13",
+  "hash": "7921ec70fd23dc40efcc9b98052bf7e2e435e721fdc48049135c29db74d189cc"
+ },
+ "entry-damngirll": {
+  "date": "2026-07-13",
+  "hash": "58154f37570eb5893521de4693850c46453788d6cc9194f86fb2430c2a41defb"
+ },
+ "entry-david-kikoski": {
+  "date": "2026-07-13",
+  "hash": "ad8302f79fe87efeb4c269dfd2f6729d9fd4949f31d72ad87d49455d68686bf3"
+ },
+ "entry-deejay-luchionney": {
+  "date": "2026-07-13",
+  "hash": "ec52607ce5cd3270a129c48a2334d9cbcf30728c878d0e07e0b92196995236ed"
+ },
+ "entry-dennis-dee-tee-thomas": {
+  "date": "2026-07-13",
+  "hash": "721dc13cb6d09bdd53671106849f2ca70241c254e02426d8c6f1e865a60bd27c"
+ },
+ "entry-designer-boyz": {
+  "date": "2026-07-13",
+  "hash": "324e977c7af400ca438c97b5804fb1dfc91aea361905c9ce3be75b5ba78fed66"
+ },
+ "entry-diana-soviero": {
+  "date": "2026-07-13",
+  "hash": "4c5884e2ec2730d8f192167968e6e9ea71a1ef3033bdada6a54a91e1f887485f"
+ },
+ "entry-dibiasi": {
+  "date": "2026-07-13",
+  "hash": "5074d84cbd3cf6692e51e249bacf456dff4a657c9fbf23cb5995c8725d03fcb4"
+ },
+ "entry-dickie-thompson": {
+  "date": "2026-07-13",
+  "hash": "c55accdb45a2aae741cb39884eda752f2ae3c56e15d4bcff33620b32fac9e9a9"
+ },
+ "entry-didthatt": {
+  "date": "2026-07-13",
+  "hash": "bb11013b89d1411dd4656a15bea83a244301f4c7e09ef6c0e2b329e5360cf370"
+ },
+ "entry-dino-danelli": {
+  "date": "2026-07-13",
+  "hash": "411c64107c457a6e7b6f1028f9c81f3582e30567d66490c4162508d2be23dc7d"
+ },
+ "entry-dirt-bike-annie": {
+  "date": "2026-07-13",
+  "hash": "0c106879e935768db903d89edd356d2073f5574dde957ee5595ad413514e58ec"
+ },
+ "entry-dj-007": {
+  "date": "2026-07-13",
+  "hash": "ed2037a49aec4ff9ad9111f2a8df5dd8034d6bf5b93b23757c5876de2d6b9166"
+ },
+ "entry-dj-all-out": {
+  "date": "2026-07-13",
+  "hash": "c21a286af18314f4621add9fbf5a51b828491f5a36a4441ef8db90aa54ab8143"
+ },
+ "entry-dj-bam": {
+  "date": "2026-07-13",
+  "hash": "6d7e18a5bb20ba1a002a506a12f7d8c73db361861b32ea843906f0e266316db7"
+ },
+ "entry-dj-bigtime": {
+  "date": "2026-07-13",
+  "hash": "708454311edb88dee45d975131d01d6c4dad367e4268fbd346420101f823cefa"
+ },
+ "entry-dj-count-basil": {
+  "date": "2026-07-13",
+  "hash": "931ebe3c4f1a035042f8ed9d1a4be106c6adf5935d811de0a6949560a196182e"
+ },
+ "entry-dj-dolo": {
+  "date": "2026-07-13",
+  "hash": "d7266a459e5afa4db6d1ccd959e285d44a43eebf72b4f512d612854332e21a79"
+ },
+ "entry-dj-dx.html": {
+  "date": "2026-07-16",
+  "hash": "3298e47e0eab534563d2148c264359492bf19de75a6b6f74d66e79076071825f"
+ },
+ "entry-dj-dyce": {
+  "date": "2026-07-13",
+  "hash": "6d6bd221ccdc66b065c497d1a9505f7a566e00cc7d5d599540dadd3c6e987af8"
+ },
+ "entry-dj-e-double": {
+  "date": "2026-07-18",
+  "hash": "faf50e2f30e55c265b5a9be5c78f48106fe04a349c8b6a423aaaae9503282650"
+ },
+ "entry-dj-flamez": {
+  "date": "2026-07-16",
+  "hash": "afdb3ec42c157669e1f142b54ba08546d7a0f2fec70bcf48a2f9fc192e501270"
+ },
+ "entry-dj-flash-jersey-city": {
+  "date": "2026-07-18",
+  "hash": "4fef4b2511ba8259e9e4aba14ffb3a9397fb69dc8c966192ad21b186b2f97756"
+ },
+ "entry-dj-freeze": {
+  "date": "2026-07-18",
+  "hash": "e18138603ac75dafa643b7b2a915e5c1e884e23716b1f510214c4081d37fb2d8"
+ },
+ "entry-dj-handz": {
+  "date": "2026-07-16",
+  "hash": "ff0428181fe7a9e4ae21a5d19d776ca4bf5bd86b05be6a7ed28975c724534671"
+ },
+ "entry-dj-hazz-b": {
+  "date": "2026-07-13",
+  "hash": "9dfaed2e6d3735bf33eaf7296a12390600cf77c29c1f48b84d613720637fc3b4"
+ },
+ "entry-dj-infamous-jersey-city": {
+  "date": "2026-07-13",
+  "hash": "c63346048b649a459b63d7c446042cb2491ea0ff50513ea4dbb2f5ecc7ab313e"
+ },
+ "entry-dj-j-dub": {
+  "date": "2026-07-13",
+  "hash": "60f1be84cd60e35e10360ae2a40af53f6dd5fe6756bce1f8dad4b59c4a14ba04"
+ },
+ "entry-dj-j-money": {
+  "date": "2026-07-17",
+  "hash": "90591d323aae34112a3f952cba6b6ad8122c8a09a025e0d8835068dd600db80b"
+ },
+ "entry-dj-j-nice": {
+  "date": "2026-07-15",
+  "hash": "cae7a20639e7abcf43cf3a6303802eefd9e5d4fc92569fad654943f2d69c7c17"
+ },
+ "entry-dj-joe-smith": {
+  "date": "2026-07-18",
+  "hash": "1eabc4e116c131d70a2f922070a189e7f9eefd6ddcde1cfe43bba21e4dae45b6"
+ },
+ "entry-dj-junebugg": {
+  "date": "2026-07-13",
+  "hash": "b600d146e3ae2e7f31bf1117313721e16f8e799335c1083b79fdc68562bb9ccc"
+ },
+ "entry-dj-k": {
+  "date": "2026-07-13",
+  "hash": "6ce9500129275d5500e0886c7188535a2db256c82aae9da3e55a26f809574728"
+ },
+ "entry-dj-mad-money": {
+  "date": "2026-07-16",
+  "hash": "3d1c3524450e9b09a25b56a5d86327beb4ac24141be039610415fbdc12c865d0"
+ },
+ "entry-dj-madden": {
+  "date": "2026-07-13",
+  "hash": "cb4f48d94070015478c29b3bcb02f6044472912fcbcdfdd2290c1ed7a3ec01f3"
+ },
+ "entry-dj-nel-e-nel": {
+  "date": "2026-07-13",
+  "hash": "c2cfb02c7e04283b9e1491b1772637777afc1c9a827d10af9799b58bef1df520"
+ },
+ "entry-dj-nyce": {
+  "date": "2026-07-18",
+  "hash": "8a4a2421f7af0a5639dc98945e99f865f8c8b5d9e2be9829e27cc5d3edcead5c"
+ },
+ "entry-dj-p-dub": {
+  "date": "2026-07-13",
+  "hash": "5d518ac258644ea4e86f11c26b8b5061883d61004362ec319b68dccbbaee87ce"
+ },
+ "entry-dj-q": {
+  "date": "2026-07-13",
+  "hash": "a7d43703a39b4db146149b3c09997cab28bd42baf6eb988d319aec226f282e06"
+ },
+ "entry-dj-rydeout": {
+  "date": "2026-07-16",
+  "hash": "d3ef8ea131fba55c6faed23362d63e84653d7e9110cd563fae66f6bef2a9ec5d"
+ },
+ "entry-dj-semaj": {
+  "date": "2026-07-13",
+  "hash": "add838792916e3c804bda2ab91b67811afda21272e0097144856de944138a5c5"
+ },
+ "entry-dj-stranger-dee": {
+  "date": "2026-07-17",
+  "hash": "bfac260458366da22bc75e46f45fd02d8d6de909eb9606daba8d89f24be52b23"
+ },
+ "entry-dj-supermanspin": {
+  "date": "2026-07-16",
+  "hash": "af0ab8b1b227d6ef94a4949a8f67db6a1765d0d0a7ae336f8768552913efcb01"
+ },
+ "entry-dj-swill-b": {
+  "date": "2026-07-13",
+  "hash": "778546b54f749cb1e26961bfc0e2d535cbcbbb4fa02d311736901e080e7af0a3"
+ },
+ "entry-dj-t-fresh": {
+  "date": "2026-07-18",
+  "hash": "7c851a4269e5e0497fed791720ad7c2f5c97af9eaad1663d566a0cc951975a55"
+ },
+ "entry-dj-thunderkatt": {
+  "date": "2026-07-18",
+  "hash": "3e7a4827977c8a5c6aeff0585d4e63cae9b8c7e18f94bc1c432489cb1eacef4b"
+ },
+ "entry-dj-thurmie-thurm": {
+  "date": "2026-07-13",
+  "hash": "784f8fe547faa866737e857dbdd1aa1876a66c713d53a4fbeed4d6c14c1c0200"
+ },
+ "entry-dj-walley-katt": {
+  "date": "2026-07-13",
+  "hash": "ce5af32bbf4ad9143cf1e521b52c79cf955961184fce544f2ba948aca4d5cc76"
+ },
+ "entry-dj-wimpy-bee": {
+  "date": "2026-07-17",
+  "hash": "bc665f61623f7b07f68a329615fb2f1f58d883faf76871327dbb65f3f8acc669"
+ },
+ "entry-dj-wizard": {
+  "date": "2026-07-13",
+  "hash": "7d56c491dfac7535f4ca1469d53599c9b953e2aa8ab52886fa7ffe0d0e8afb01"
+ },
+ "entry-dj-yadabee": {
+  "date": "2026-07-13",
+  "hash": "d1b395289a3fa1c8b98a3855f43414df0cac41a1b8e24de50e39b7f7dc7bd680"
+ },
+ "entry-don-ciccone": {
+  "date": "2026-07-13",
+  "hash": "2c3f0e02d2b97b5ee70e7d02431f730d9e28996a6f6ed47e088bb923ab911e04"
+ },
+ "entry-double-j": {
+  "date": "2026-07-19",
+  "hash": "c2ea6997e58ffcf0bf409d5d47b90090682ab310e8faba7ca44239fa35337e21"
+ },
+ "entry-double-xx-posse": {
+  "date": "2026-07-17",
+  "hash": "88e50c316169f2853ed93193a36f585a4c913cf13fae3065ca8fdb2da45deef7"
+ },
+ "entry-e-square": {
+  "date": "2026-07-13",
+  "hash": "025c63bdd69ca836a655841809878f38c35a6dde55a9757b750d9c3895c80480"
+ },
+ "entry-ed-shaughnessy": {
+  "date": "2026-07-13",
+  "hash": "79ea176f189470b6b93865eb27d6b2ba9628b9ef68897c77317070f6fc8c7ed6"
+ },
+ "entry-exit-14-djs": {
+  "date": "2026-07-18",
+  "hash": "a443fed412b3a58f77b8a4f32fa676567730d4858b5fd0b275a8513407139a96"
+ },
+ "entry-fit-for-an-autopsy": {
+  "date": "2026-07-13",
+  "hash": "5ec8635f86d4ee3596351317bd2db1b533b907f27f1e640104d71e70d86d38d9"
+ },
+ "entry-flip-wilson": {
+  "date": "2026-07-13",
+  "hash": "03266aa37741253e7fac5a759d7c1c0c816139b0beff4c8e916b4892c5116017"
+ },
+ "entry-florence-turner-maley": {
+  "date": "2026-07-13",
+  "hash": "4371eb0756f05ce6c228e10242e04e25cc31f5433e1295c0e5afb11f33e27f08"
+ },
+ "entry-frank-infante": {
+  "date": "2026-07-13",
+  "hash": "258bbf9e9a0b3d26755905027a888de17030c151d3b28356b753431f73f9f5cf"
+ },
+ "entry-frank-sinatra-jr": {
+  "date": "2026-07-13",
+  "hash": "cf55886d3ce726407855d7cbc90d416596aaf4ae15ba395dba883c386ed9a50e"
+ },
+ "entry-george-brown": {
+  "date": "2026-07-22",
+  "hash": "d18a1294c33254849fdc66edf6f1c25c0b196a4c1d449c32d13fc44cb066e1a7"
+ },
+ "entry-george-washington-gregory": {
+  "date": "2026-07-13",
+  "hash": "6bd76e1a23b61ceb308d95c86014fb854fba6998b1a80a06b920375ce02290b5"
+ },
+ "entry-gerry-rosenthal": {
+  "date": "2026-07-13",
+  "hash": "c9cfd75df44cb9e729c06ed7df141a56681138ad7fa934a491db05849cc760e9"
+ },
+ "entry-get-focused-entertainment": {
+  "date": "2026-07-16",
+  "hash": "a9f65df598da13c2b4d197877812b4ba785e4f8b23ab3a19a1cbd5e0951b682e"
+ },
+ "entry-gil-melle": {
+  "date": "2026-07-13",
+  "hash": "b01b1fa6e9389ef17f2515974341aea596ccb2ac6da015d4052b3ecc8adbc5c1"
+ },
+ "entry-grand-wizard-capone": {
+  "date": "2026-07-18",
+  "hash": "150daddccbfc88a79f645c5a9e0c2f381635aed550c699d8ca9ee7a3ccb8378a"
+ },
+ "entry-grandmaster-crash": {
+  "date": "2026-07-18",
+  "hash": "7295d81ccb07784aa2835eab32c159fdbb0d2314a566b139bfaebc35b2fd4b56"
+ },
+ "entry-hao-huang": {
+  "date": "2026-07-13",
+  "hash": "a7719162f4e5c25706c5d33d878983b7dcae49e3b74775dc2d316b17ebec27b4"
+ },
+ "entry-harold-adamson": {
+  "date": "2026-07-13",
+  "hash": "09ce110d1d3f4e00b0f1b66f08f592898062097805cb01d21acb6a2b8d8890dc"
+ },
+ "entry-heather-b-gardner": {
+  "date": "2026-07-13",
+  "hash": "9d93753084cee2be38246d702fe2a06fb8a5a5b8215c47fbb996789d5f840086"
+ },
+ "entry-hitchcock": {
+  "date": "2026-07-13",
+  "hash": "f0359a4ade1b9967093a974f8f2a89bba1b9b9a7799817255a1fbc50fb175acb"
+ },
+ "entry-howard-wyeth": {
+  "date": "2026-07-13",
+  "hash": "4b99e560e6fd9503ae816340098a575a42ac80f5f6268750061c6bb6d1215fdb"
+ },
+ "entry-illanoise": {
+  "date": "2026-07-13",
+  "hash": "12e0e6c36c26cb234f7b176d77a4ec9fb2d8617e740fa6beb06b784af26b0c04"
+ },
+ "entry-j-fresh": {
+  "date": "2026-07-13",
+  "hash": "8f83fcf6793fb8de0161e83538f2f2fe8b4564076926be9625a91ec9ce79323b"
+ },
+ "entry-j-sass": {
+  "date": "2026-07-22",
+  "hash": "a8725b706078f3861d8c63180fc0cdb36415926ea553bb2c0fed4ae799d98121"
+ },
+ "entry-jack-frost": {
+  "date": "2026-07-13",
+  "hash": "876f5c13b34ebf01810da55bd223924e8c1080f8843973723593bc7d1b8e6c70"
+ },
+ "entry-jade": {
+  "date": "2026-07-13",
+  "hash": "7475c99692312eddb8abb764b557b99127597cc93a2641d8e6343d44ef2208b6"
+ },
+ "entry-jane-harvey": {
+  "date": "2026-07-13",
+  "hash": "c2b4b92f6d8972fbffd5e075620dff9f55824a8c3e1c4db33977e1c27cb0f848"
+ },
+ "entry-jarrett-cordes": {
+  "date": "2026-07-22",
+  "hash": "42153b6bf2a4c7dcfc625d984925cfa7568e59ccb621fd529c6e5f50fc7f0d46"
+ },
+ "entry-jerry-herman": {
+  "date": "2026-07-13",
+  "hash": "43f6f968a4ca3b0d9d606e9b307abdf7757b3415b28fd6004a253393d8211ea5"
+ },
+ "entry-jersey-city-dj-documentary-2006": {
+  "date": "2026-07-13",
+  "hash": "8ad4f8629ca7b2c4892b5d63b418aaa4e91f2cfc3c2f0b375098ff6f9ce7e700"
+ },
+ "entry-jim-lord": {
+  "date": "2026-07-13",
+  "hash": "549f9da17b816f6501b3cdff4ab74c65bb9fb11a5e3242f883ce84584996f0ba"
+ },
+ "entry-jimmy-lyons": {
+  "date": "2026-07-13",
+  "hash": "873b0ff042df6a63d2f6d0795f5cdaa9888faeb9a14ca26615be551b0074e933"
+ },
+ "entry-joe-bananas": {
+  "date": "2026-07-13",
+  "hash": "b9dbfbdce426908ea5d41dc6cfe3ee81e0d8a182d22a0937e721e50afedad948"
+ },
+ "entry-joe-budden": {
+  "date": "2026-07-13",
+  "hash": "eda8528e3213b171c0608dc9af0726d65c636d386572189538f78bc3ab3971ad"
+ },
+ "entry-john-p-hammond": {
+  "date": "2026-07-13",
+  "hash": "68be2bc6b46c1418d8428dfa3e044fd5f6feff0e8e2c8f267ecb108cd7b7ab2b"
+ },
+ "entry-johnny-rotella": {
+  "date": "2026-07-13",
+  "hash": "eeb67e3400630cc39bc145b6e6e2ab10348e3cb48a894e89906e80f1932aecb2"
+ },
+ "entry-joseph-trapanese": {
+  "date": "2026-07-13",
+  "hash": "e94b6e5061f98fce30120f9e21ff8f74e26fc224ef82c1dc55ea98cb290957b5"
+ },
+ "entry-juggs": {
+  "date": "2026-07-13",
+  "hash": "1ad288fb8cd88bf57c09b47cf0eda680dd6a598f6002096278a3227a0eda1b39"
+ },
+ "entry-kate-micucci": {
+  "date": "2026-07-13",
+  "hash": "782cf0faef6869a64bd6a170d54aa42fcfea6f377924d45fb684d9fe0ccb6eee"
+ },
+ "entry-kenny-kenn": {
+  "date": "2026-07-19",
+  "hash": "ae55e0fb06b102a87e61c6d0408e078802ad260a68c2c140105ca94f960117bf"
+ },
+ "entry-kid-buu": {
+  "date": "2026-07-13",
+  "hash": "e3ca36e962c4a529d5acbede9f060d87cac15c2d7f40fee07327c802797d8dec"
+ },
+ "entry-killer-force": {
+  "date": "2026-07-18",
+  "hash": "82fb67f6569f1d858ba351a0317d61f219109ec5c2488cf074e416f8728ce6ad"
+ },
+ "entry-kit-mcclure": {
+  "date": "2026-07-13",
+  "hash": "53ea816234b7ba9e30d9aa1ece3e8484533046f727740ed9bfe1269c3280c2c2"
+ },
+ "entry-knoxx": {
+  "date": "2026-07-13",
+  "hash": "a8859fca668588884b4a473e4c84fb35a209ca7c4a67a8eab71fb1fc9e809f0d"
+ },
+ "entry-kool-and-the-gang": {
+  "date": "2026-07-22",
+  "hash": "1f46e2461bc2d118328adb393264d61ad6bbb6cc0194988efcf3145211170303"
+ },
+ "entry-ks-mr-xtortion": {
+  "date": "2026-07-13",
+  "hash": "55de174c34405d66d2de78f2a7a96d28b67b0aaf5f4fb8453d87d129163cf68d"
+ },
+ "entry-latee": {
+  "date": "2026-07-13",
+  "hash": "c4a76ca0876d3c08b62a8ac9b0cc816cfec1120c58cf110fe1e43f57c6fdafa6"
+ },
+ "entry-leonard-de-paur": {
+  "date": "2026-07-13",
+  "hash": "88813cdb751d1ecf66d8a8fb769d8a025c1d3d3afd7e91887af80093bfcc167f"
+ },
+ "entry-lil-dev": {
+  "date": "2026-07-13",
+  "hash": "7b97a046ffab490b32ffa0ea54a49fa5e9583ca5ffe96fc3bc628fd85fe919ff"
+ },
+ "entry-lilzhp": {
+  "date": "2026-07-13",
+  "hash": "2e7b9dbef73c4bb6c638189f0a7ddd9c7170ce3f08ce42861babd1f8c9c0e989"
+ },
+ "entry-lord-sun-albee-al": {
+  "date": "2026-07-18",
+  "hash": "0b6ea622f5c75eed487492589c438ea487cc1438432603e393e00ca4c22d05ce"
+ },
+ "entry-luke-elliot": {
+  "date": "2026-07-13",
+  "hash": "84d03b4a1d5ed3e962f4c37d876a8d339bd174b35cc0014d9461eff645bd8925"
+ },
+ "entry-macarthur-munford": {
+  "date": "2026-07-13",
+  "hash": "ed460783bfcef551e7a0ed910b9f1006dcf73a75f42700576dc7870deeee8241"
+ },
+ "entry-mali-g": {
+  "date": "2026-07-13",
+  "hash": "32636854f066d31f2526d80e0ec36227b89b5ceeb2134e111315e579ed1222b0"
+ },
+ "entry-maniac-mobb": {
+  "date": "2026-07-18",
+  "hash": "c7d91be5007a7ce0bd03a6084f431fd201b431ce5b7d4be1d6a37acadcd314e3"
+ },
+ "entry-manymen-records": {
+  "date": "2026-07-13",
+  "hash": "9c56e9c067ce44cc6445611671dd2cad74a94ed8bbfa07934cb8a65d1cbe4ffc"
+ },
+ "entry-mariah-lynn": {
+  "date": "2026-07-13",
+  "hash": "b57c7edb0fe956903620100ab797bc55db6aea13987b5524c21d2ac8c2b99736"
+ },
+ "entry-marilyn-mccoo": {
+  "date": "2026-07-13",
+  "hash": "2574f2a831747304c4d7a486ab23e546d8ba3129bf7ba7362b9b9ab1539778b2"
+ },
+ "entry-mark-cee": {
+  "date": "2026-07-13",
+  "hash": "43d2e5a85a79f5b64434cb11c4708504f9669e2bc6bd2ce3546ddef4547dc55b"
+ },
+ "entry-mary-brown": {
+  "date": "2026-07-13",
+  "hash": "0cff5ce8305bf1f0048ad965160e056f03a3347f44c6c999014d762b1e507647"
+ },
+ "entry-maude-roberts-george": {
+  "date": "2026-07-13",
+  "hash": "b45d8411640ac6836c80048fb59530f6bbb61cb2f83484ee97e3b14f70617df1"
+ },
+ "entry-maury-yeston": {
+  "date": "2026-07-13",
+  "hash": "af4ab6d1d2ed5359ca023fb166e27e500a3d671756f638020d3e87c128184aa6"
+ },
+ "entry-max-yb": {
+  "date": "2026-07-13",
+  "hash": "7d4777df1e545de6d15944d5fb6685093074bb944d8634227257fc31e63eb2cc"
+ },
+ "entry-mel-o-records": {
+  "date": "2026-07-18",
+  "hash": "99e71e4437a479a3c2ebafead1b7c362d8120ec437855effbcfdfc1944de89f5"
+ },
+ "entry-mel-odoms": {
+  "date": "2026-07-18",
+  "hash": "10cbb5079ee19e8cb0db3f0ebace60e587f88f346f62935f3c116e9f18419b0e"
+ },
+ "entry-midnite-the-dj": {
+  "date": "2026-07-13",
+  "hash": "4c43987c0a6a4d02a15d3ef860fa486d6594311ca29b1b7bd2dc6ae958c13f12"
+ },
+ "entry-mimi-jones": {
+  "date": "2026-07-13",
+  "hash": "fd95b3375f795b35c32408be40cbcaa10441493d16b2fca6cc5845dc8074910d"
+ },
+ "entry-mista-quietman": {
+  "date": "2026-07-20",
+  "hash": "f7ec43c544edb602714fd945991116b68e4705759d80c6005fd8449852287c16"
+ },
+ "entry-mixed-company": {
+  "date": "2026-07-13",
+  "hash": "61911038c06c1e6b281f0fd0c3071f55a798ec9c4d9ae1e47dd265f93b70e34c"
+ },
+ "entry-money-train-entertainment": {
+  "date": "2026-07-13",
+  "hash": "83871b45193100a480d56b50930db50c6480f195cb67b24a2b4b282bdb1c1027"
+ },
+ "entry-montana-dess": {
+  "date": "2026-07-13",
+  "hash": "a77020e63bc7bb73e98725e056510133bc1faee7ac18f326aa21ce4243eda2c2"
+ },
+ "entry-mr-chicken": {
+  "date": "2026-07-13",
+  "hash": "ae8c6b35c871d4927d36df53b71330f0243da5bf4240a0ca2c0d8f7ac621899a"
+ },
+ "entry-mr-low-kash": {
+  "date": "2026-07-16",
+  "hash": "27c6ab3500bbea414cb86c021aa55ef7bdab14913baa20a08e300aabc53d4f4e"
+ },
+ "entry-mrcashedout": {
+  "date": "2026-07-13",
+  "hash": "6f38eec33e0f3a163b1322405ce8af563cba3d9488e201210eff587ff59e5a97"
+ },
+ "entry-mvp": {
+  "date": "2026-07-13",
+  "hash": "5491867bc3911873d721021043a150b568c362aa8b64248225ec4a2d1f5b6895"
+ },
+ "entry-nancy-sinatra": {
+  "date": "2026-07-13",
+  "hash": "7c1c784316523604ef46a8f20599701fa501325bfd7b447a86f0984ca7af4b2c"
+ },
+ "entry-nero-ckp": {
+  "date": "2026-07-13",
+  "hash": "5bd57301516b42b5281b588cbe66dd8dfb6bf5c7276d94d485c598067c91aec0"
+ },
+ "entry-new-jersey-mix-kings-201": {
+  "date": "2026-07-13",
+  "hash": "94e1e7301fa1928358f254a126f089ed12b0a8e6b86ad7aba5e52dc38c716493"
+ },
+ "entry-nina-foxx": {
+  "date": "2026-07-13",
+  "hash": "193e8a5170fa759744d3774c8fc12280b720bb648a59882e5bc4c509519e3842"
+ },
+ "entry-norman-edge": {
+  "date": "2026-07-13",
+  "hash": "b6b56d05ee7a143338db17733b953f635f55ba9a317f11eeeed071682012afaa"
+ },
+ "entry-omar-x": {
+  "date": "2026-07-18",
+  "hash": "649d587aed3f928c388d600154d8e73775e40865dee3758348f48e805ac6f883"
+ },
+ "entry-orlando-wharton": {
+  "date": "2026-07-13",
+  "hash": "495c56d11512a3c5f7498bb110bd9f3f5f5bf157df0e7428792bd0c4d6d39ecd"
+ },
+ "entry-overlake": {
+  "date": "2026-07-13",
+  "hash": "a183229845015b10e2afe7e37ca1836da1c05a23de0a3e321c083388e92b9022"
+ },
+ "entry-ozzie-nelson": {
+  "date": "2026-07-13",
+  "hash": "751c4b33bb110299fa37190be77baac59e9d954b5799ebeadaa3fbd94c118425"
+ },
+ "entry-p-dot": {
+  "date": "2026-07-13",
+  "hash": "71ea954c73bb3e3944c847a6526b308230d454438094edccba12eeb458d9f5a1"
+ },
+ "entry-paul-banks": {
+  "date": "2026-07-13",
+  "hash": "074c8aabe1017b1cf750d32d2df8ba8303a0c860764abcaab8e1248f1917ddee"
+ },
+ "entry-peter-lemongello": {
+  "date": "2026-07-13",
+  "hash": "de194f1a2958f59fd18fe7c10d5a1e13ed97796075145c75c04f93e2030eae37"
+ },
+ "entry-peter-sliker": {
+  "date": "2026-07-13",
+  "hash": "a9f790ecb5c088cbc101dec6fef33036121cf72a9e64f6ecfb47db5c388c54c3"
+ },
+ "entry-phil-urso": {
+  "date": "2026-07-13",
+  "hash": "3441aeb0b9a5a8375ca25690c5f98e3cf3ce0cd82f2e5189991b0aa854a8cbd9"
+ },
+ "entry-philip-james": {
+  "date": "2026-07-13",
+  "hash": "9419b710b82920f57099371e7d1936f2fe79a9c449dfc9c9642f404e32f4054d"
+ },
+ "entry-phyllis-newman": {
+  "date": "2026-07-13",
+  "hash": "8dd65d3640b56c94151c265a94f383caf89819f2a3ec3f7051d1a4031a137ac6"
+ },
+ "entry-pm-dawn": {
+  "date": "2026-07-22",
+  "hash": "5234b8fd4c5ff610166c254a25b42120c1de6c0eef0b7ba6e2cd74decb021895"
+ },
+ "entry-positively-black": {
+  "date": "2026-07-13",
+  "hash": "c57bbf618840038d6576595bb323323ea9402a5a0a6e2402e07fd458204190c6"
+ },
+ "entry-presidential-beats": {
+  "date": "2026-07-13",
+  "hash": "95888d5dd2d864d753410c07956aa1612fb35db654c2e173721e5a190a5579b0"
+ },
+ "entry-presidential-crew": {
+  "date": "2026-07-13",
+  "hash": "dfad8beae40d5d2d622be9d00b6fff1094e056f48eaf46371d9bfd0670254012"
+ },
+ "entry-pressureonline": {
+  "date": "2026-07-13",
+  "hash": "f18d1f56d95d9e65805faacb89a8abe72f9cf9119ec8345f3ba818f210d9ea48"
+ },
+ "entry-prince-kyrie": {
+  "date": "2026-07-13",
+  "hash": "30266ff99fd75594e28e38623ab5772bffff872667837a1ef99d2fb4cdfcf6a3"
+ },
+ "entry-producer-mayor": {
+  "date": "2026-07-13",
+  "hash": "ca6309cd2de7000f26395d585ec8072b01962c5d99b7d2c13b40090c10e18e8e"
+ },
+ "entry-rah-grizzley": {
+  "date": "2026-07-22",
+  "hash": "46746df5674224fd7d9da1d5484984098a5d0d18eba39bb66d2911e2a21f5e7e"
+ },
+ "entry-ransom": {
+  "date": "2026-07-13",
+  "hash": "a2950f82dd4a4df5bd437a83880d277f68bd59ece542a8dc85cedc1be97ecacc"
+ },
+ "entry-revenue-wrong": {
+  "date": "2026-07-13",
+  "hash": "d1bc7af175f77553d98375ca9685a42e363a6798a628b7f1677f415f05942cce"
+ },
+ "entry-richie-havens": {
+  "date": "2026-07-13",
+  "hash": "cf946421859619be956c72518f9356d6490f02ad15b08f88a571795358c1b896"
+ },
+ "entry-rigga-mortis": {
+  "date": "2026-07-18",
+  "hash": "44a47743eb7d856a35cb76f7d5c2bfea4929d4f1e9d60f9aa7c704111b7cd661"
+ },
+ "entry-rob-mazurek": {
+  "date": "2026-07-13",
+  "hash": "b65922f0adb9819408094215041025e0cd0c68ec7c006609549b480d00808d9e"
+ },
+ "entry-robert-kool-bell": {
+  "date": "2026-07-13",
+  "hash": "7396617dc6a1ed1ef935a1703186a1036b3d2d23c7a99f45989293935ba8def9"
+ },
+ "entry-ronnie-and-the-hi-lites": {
+  "date": "2026-07-13",
+  "hash": "f3a17d2db356284252aff14f2dc03835da9bc55a59ed5e8ed26aa043a69c2956"
+ },
+ "entry-roy-hamilton": {
+  "date": "2026-07-18",
+  "hash": "779045ab8f891a8fef15c9bfec915461c04d148f2d9bb4eb1047d4234a6a3025"
+ },
+ "entry-ruga": {
+  "date": "2026-07-13",
+  "hash": "b6a36eab4f2483fcff9713250fc8cec89c87721586bb94729d126c304ea1cd62"
+ },
+ "entry-rye-coalition": {
+  "date": "2026-07-13",
+  "hash": "a850ac0cf12b506a8324e642cdd06d62eb0afc893af5429e71a4d2f61fe96a54"
+ },
+ "entry-shakim-thompson": {
+  "date": "2026-07-13",
+  "hash": "f6fe1782b4284f3cffba82c6c5964d4271341205bf4088c54362467362f251b6"
+ },
+ "entry-skip-jackson": {
+  "date": "2026-07-13",
+  "hash": "be911d3d0ca859e2616ee5b54b40fb4380ae3eedf388731bfb2682b3d0bbd614"
+ },
+ "entry-sonny-igoe": {
+  "date": "2026-07-13",
+  "hash": "648089f49dcd473b1380084cc8e4859d41b414c04ec4111986ad08aa051b15ab"
+ },
+ "entry-soul-shades": {
+  "date": "2026-07-13",
+  "hash": "e3da8c3d34c6b7fd6b085e2ab73544a736e4ad3e34f49b0c5a60319b0fce10f7"
+ },
+ "entry-speedy-baby": {
+  "date": "2026-07-13",
+  "hash": "6c78400f8eba1494628ba05660ab3d8d9a71978e2eb51099bb03eceb8f99a82d"
+ },
+ "entry-spent": {
+  "date": "2026-07-13",
+  "hash": "387e890c6f9ad8432b2deaaa5682a268ddf6a97ba28e98c70846a031c4b7d987"
+ },
+ "entry-square-records": {
+  "date": "2026-07-13",
+  "hash": "62daaad9a14a544f1021edea761d7317e10d8afb60522e009b7100caacd51717"
+ },
+ "entry-stan-krause": {
+  "date": "2026-07-13",
+  "hash": "e4826ac82f438f53c99dfb55bc4641cdaaa2833778f741e8f194129beae7bb2f"
+ },
+ "entry-stans-square-records": {
+  "date": "2026-07-13",
+  "hash": "71db93c90f7190b6e5d74442afd5c3fed2bf21758281840d1567ee94d3bff0bb"
+ },
+ "entry-strong-vic": {
+  "date": "2026-07-13",
+  "hash": "c7b9a716c6c9d1abd4a53d2212ebf7c748fda472a67a8e783490cd00e911863a"
+ },
+ "entry-suzy-q": {
+  "date": "2026-07-13",
+  "hash": "3f2985c876183fd1a4319372cc92d2265be6c388a981482a3e16923a996f7703"
+ },
+ "entry-sweet-slick-and-slide": {
+  "date": "2026-07-18",
+  "hash": "a40ae738d63c5462f6db0c1d55296f2569747d1ac046b64455b1c8d1bb652ca0"
+ },
+ "entry-taylor-portt": {
+  "date": "2026-07-13",
+  "hash": "04ee8b8e1a2c30dff8df0001c459713ba3f8d33a5e0e4d7f8718d539af47bd81"
+ },
+ "entry-tgk": {
+  "date": "2026-07-13",
+  "hash": "c5a4c839e67769be21f131bfd1baf5229c1e379f75a484c587b45f18a4c2f63e"
+ },
+ "entry-the-a-team": {
+  "date": "2026-07-13",
+  "hash": "236bcca2768fcce72a0cc291666bad6eb7ae69b4f0adce044eb4f11750da8111"
+ },
+ "entry-the-black-hollies": {
+  "date": "2026-07-13",
+  "hash": "22d013b2d4b8a6f828e939feec9b066bd4f6329a81692fe78dc9c7938f378114"
+ },
+ "entry-the-catamounts": {
+  "date": "2026-07-13",
+  "hash": "3c83d6b37f1d87894a1dafc7719d17376d8e6e86b413ca9ef716387f41c745f2"
+ },
+ "entry-the-cobras": {
+  "date": "2026-07-13",
+  "hash": "13222df361b02667ff223d748dd3946605fda4260c8cac73419e010c7f99ad73"
+ },
+ "entry-the-components": {
+  "date": "2026-07-13",
+  "hash": "9d2b687b7351ed19ea2c0f932a76aaac5d4f1de31af2d10e24f038b93c30b822"
+ },
+ "entry-the-duprees": {
+  "date": "2026-07-13",
+  "hash": "6b7f66ca48bbb0983d47c558e1f40e93508ecd622995a1ef9f145714af7fd47f"
+ },
+ "entry-the-heartaches": {
+  "date": "2026-07-13",
+  "hash": "bdcfefb8b3f97eb4e4faacd67ff01f97a4a2e41aafba8373954441542f515ba1"
+ },
+ "entry-the-heat": {
+  "date": "2026-07-18",
+  "hash": "ac27437fc7674c42fcb2b3ccc433a30b628f16c19ed868f5bc98a2e1cdccdd6b"
+ },
+ "entry-the-jelly-beans": {
+  "date": "2026-07-13",
+  "hash": "ebfb1405d055e8d4d1796552986bca1d7630091fde525dcb57b6c0259d7a80f7"
+ },
+ "entry-the-manhattans": {
+  "date": "2026-07-13",
+  "hash": "bf04b4de2a1dca7bd6523efb419bbd7eb845cf649c0be2a784f5f71a483a4f35"
+ },
+ "entry-the-multi-purpose-solution": {
+  "date": "2026-07-13",
+  "hash": "5ca9263cc954edf7fd8ed3bab9c34045fa775804645f55d96e870392b816e5fe"
+ },
+ "entry-the-one-and-nines": {
+  "date": "2026-07-13",
+  "hash": "ab163f6b1f96ba70bffe68976b77df1aa20f1c32a44b63546130e1e55fe4ec5c"
+ },
+ "entry-the-persuasions": {
+  "date": "2026-07-13",
+  "hash": "a10a93da3bcc300cb2bd5c7c29bb8242550265de7e1d1d4d944c291097b5e6c2"
+ },
+ "entry-the-royal-counts": {
+  "date": "2026-07-13",
+  "hash": "cf27fa04ad7d7aab50f2a20ea320dd60c43546ccfd4ef5d7a79d4b33246aab61"
+ },
+ "entry-the-spellbinders": {
+  "date": "2026-07-13",
+  "hash": "b650a1c334b20f0e5dc0d3dc2da41fccc559d70790e5cc0e7992d5a79aab5375"
+ },
+ "entry-the-vice-rags": {
+  "date": "2026-07-13",
+  "hash": "371d72316f44ea79b5c1afaf9179ad56393d716afc96ac94bec3ee5a679fa790"
+ },
+ "entry-the-vocal-teens": {
+  "date": "2026-07-16",
+  "hash": "5988b657abfca69e5d87e99992e5aac328c756a27a4b631698e18768b8b4ad75"
+ },
+ "entry-thomas-vincent-cator": {
+  "date": "2026-07-13",
+  "hash": "006e72bfa16a9c895115c3d8cfc4bdcd6f830a7881408375870a372ad748b6b4"
+ },
+ "entry-tia-fuller": {
+  "date": "2026-07-13",
+  "hash": "eb359f5e1c3e5223b6dfc4c2268df971195768d6e03d0646655b3a65b43ab937"
+ },
+ "entry-tom-tallitsch": {
+  "date": "2026-07-13",
+  "hash": "c297dff0c78b6811fb5dab1e4b94a2555058f56843c9440352c8b7cb15151b88"
+ },
+ "entry-tommy-west": {
+  "date": "2026-07-13",
+  "hash": "277363263723090570aeb0638f3154218889451aca3445b395649a0d3b14ee64"
+ },
+ "entry-tomorrows-edition": {
+  "date": "2026-07-18",
+  "hash": "cd91367ea581d17e0f25ed5ff0a090a62fd1962960995bb52cbe9bbb424e963d"
+ },
+ "entry-tony-velona": {
+  "date": "2026-07-13",
+  "hash": "7b950c5b8a2b90f81bbabb9f859f92dc0b040f23bbf0cb5e2bb295fc586f9977"
+ },
+ "entry-tranquilizing-three": {
+  "date": "2026-07-13",
+  "hash": "17781cc4bb901bd8d3524b13d3438266fa159c0c201395dd4e2fd3839e7b68c7"
+ },
+ "entry-tris-mccall": {
+  "date": "2026-07-13",
+  "hash": "576a46ef709c0f09f849c62a89f86d25de1788c0cb44d08bca556f9b64e246ec"
+ },
+ "entry-vic-juris": {
+  "date": "2026-07-13",
+  "hash": "53528ecff318b23e78daffc1f6e86481093016fc45d1e5dc947a31ec82aa5ab8"
+ },
+ "entry-vintage-jersey-city": {
+  "date": "2026-07-13",
+  "hash": "b22fd3ed4737bbe74d9ec5427f4971ff447867d0a1508e507b58b2b4aa32feec"
+ },
+ "entry-wally-brandt": {
+  "date": "2026-07-13",
+  "hash": "a8533a4ed1b80074532e15439fc7295ab97b1d7a8ca4f3705811f3f9aa22fe0c"
+ },
+ "entry-will-oakland": {
+  "date": "2026-07-13",
+  "hash": "a87e3d1c199acae1239df16dc0261bced918e8b0685620c89731563740cfec3b"
+ },
+ "entry-william-w-gilchrist": {
+  "date": "2026-07-13",
+  "hash": "16b66a273bdb7562b054d9e54c54be9369d4bb2c4dddbf07f6c61c18885266f5"
+ },
+ "entry-wilson-el-divino": {
+  "date": "2026-07-13",
+  "hash": "4116343c00c0fb9728c84335aab13c82772bc47f109ededd97af6ba513909cd9"
+ },
+ "entry-x5": {
+  "date": "2026-07-13",
+  "hash": "0bf475041c508c592729b8002daa0f3f0f9eda79601528f974ced246efeee770"
+ },
+ "entry-zigimo": {
+  "date": "2026-07-13",
+  "hash": "c5542cf7a03f9b0d27b3d62e8e4a67368e56b3ef7d48f8b406415a5c13db4472"
+ },
+ "history.html": {
+  "date": "2026-07-18",
+  "hash": "1cd195db41a82acaa8f5ea1cd41f6d7ed06efc84fffbd169cd9428bcf31564dd"
+ },
+ "index.html": {
+  "date": "2026-10-01",
+  "hash": "be14bf02de6aa5a32f712268c04419b16b1fa3b04fff1b0d954f084329a1c1da"
+ },
+ "jersey-city-djs.html": {
+  "date": "2026-07-22",
+  "hash": "a7e23dff288c154d5e37644ba223b0761bf147e32f211dc414561179925f7172"
+ },
+ "privacy.html": {
+  "date": "2026-07-16",
+  "hash": "fbe2278521cda05a75d81cbec0129031d2b6e991132a4371722636a15847f2e8"
+ },
+ "report-001-not-from-jersey-city.html": {
+  "date": "2026-07-22",
+  "hash": "cf2f27d0ee7a5e82e2b4fd0a17fd1b5546976ae80d1e39c162bb3800bfea7753"
+ },
+ "report.html": {
+  "date": "2026-07-16",
+  "hash": "dc65b0e6d9a3814181c5a17462493abfe9422a911560b0bc3665d1a91f69648e"
+ },
+ "terms.html": {
+  "date": "2026-07-16",
+  "hash": "342af9ae62e30b4912a30a69a402faa0afcc45b1b693721b6158711602b2197a"
+ },
+ "verify.html": {
+  "date": "2026-07-16",
+  "hash": "f501a9ebb66024540e7a61d023ad5fe2323f212ae7c8c5ac25f4f8b9613c6a53"
+ }
+}
