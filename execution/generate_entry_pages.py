@@ -893,7 +893,12 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
       <div class="place-map" data-noseal data-lat="{entry['lat']}" data-lng="{entry['lng']}" data-name="{esc(name)}">
         <button type="button" class="share__btn" data-act="show-map">Show map</button>
         <a class="share__btn" href="https://www.openstreetmap.org/?mlat={entry['lat']}&amp;mlon={entry['lng']}#map=17/{entry['lat']}/{entry['lng']}" rel="noopener">Open in OpenStreetMap</a>
+        <a class="share__btn" href="jersey-city-music-map.html">Every place on the music map</a>
       </div>"""
+        else:
+            connections_html += """
+
+      <p>Every place in the record with a sourced address is pinned on the <a href="jersey-city-music-map.html">Jersey City Music Map</a>.</p>"""
     video_body, _has_video = videos_html(entry, name_links, slug)
     video_section = ("\n\n" + video_body) if video_body else ""
     gallery_body, has_gallery = galleries_html(entry, name_links, slug, appearances)
