@@ -58,5 +58,5 @@ Then: Wayback-snapshot `/ledger/seals.jsonl`, post the head hash from @jerseycit
 
 ## Deploy notes
 
-- `design/.nojekyll` is present so GitHub Pages serves `/.well-known/` and dotfiles.
+- Hosted on Vercel from `design/`. The apex domain must serve `/.well-known/did.json` with no redirect, since the seals are bound to `did:web:jerseycitysound.com`. (`design/.nojekyll` is a harmless leftover from GitHub Pages.)
 - The private key lives only in `keys/` (gitignored) + a password manager + one offline copy. Never in CI.

@@ -34,9 +34,9 @@ left untouched.
 
 ## Deployment
 
-The site deploys from the **`design/`** folder on every push to `main` (the
-Vercel project configured by `design/vercel.json`; the GitHub Pages workflow in
-`.github/workflows/deploy-pages.yml` publishes the same folder).
+The site is hosted on Vercel, which deploys the **`design/`** folder on every
+push to `main` (settings in `design/vercel.json`). The apex domain serves the
+site directly; `www` 308-redirects to it.
 
 After each push, `.github/workflows/indexnow.yml` runs
 `execution/indexnow_submit.py`, which tells IndexNow (Bing, Yandex, Naver,
