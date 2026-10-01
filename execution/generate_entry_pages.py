@@ -1176,12 +1176,15 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
                 same.append(_u)
     same_json = f',\n      "sameAs": {json.dumps(same)}' if same else ""
     job_json = (f',\n      "jobTitle": {json.dumps(", ".join(roles))}'
-                if roles and schema_type == "Person" else "")
+                if roles and schema_type == "Person" and not is_place else "")
 
     # --- entity enrichment: description, knowsAbout, alternateName, location, date ---
     desc_json = f',\n      "description": {json.dumps(lead)}'
     knows = [x for x in (roles + genres) if x]
-    knows_json = f',\n      "knowsAbout": {json.dumps(knows)}' if knows else ""
+    # each property only where schema.org defines it (Schema Markup Validator warnings otherwise):
+    # knowsAbout on Person/Organization, genre on MusicGroup/Movie, datePublished on the page node
+    knows_json = (f',\n      "knowsAbout": {json.dumps(knows)}'
+                  if knows and schema_type in ("Person", "Organization") and not is_place else "")
     aka = next((c["value"] for c in entry.get("card", []) if c.get("label") == "Also known as"), "")
     alt_json = f',\n      "alternateName": {json.dumps(aka)}' if aka else ""
     origin_val = entry.get("origin", "Jersey City, New Jersey")
@@ -1210,7 +1213,7 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
             loc_json += f',\n      "subjectOf": {json.dumps(_subj)}'
         if entry.get("place_status") == "closed":
             loc_json += ',\n      "additionalProperty": {"@type": "PropertyValue", "name": "status", "value": "closed"}'
-    date_json = ',\n      "datePublished": "2026-07-05"'
+    date_json = ""
 
     # --- FAQ structured data (AEO/GEO) — answers grounded in on-page facts ---
     who = "Who was" if memorial else "Who is"
@@ -1268,8 +1271,7 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
       "@type": {schema_type_json},
       "@id": "{canonical}#main",
       "name": {json.dumps(name)},
-      "genre": {genre_json},
-      "url": "{canonical}",
+{('      "genre": ' + genre_json + ',' + chr(10)) if schema_type in ("MusicGroup", "Movie") and not is_place else ""}      "url": "{canonical}",
       "mainEntityOfPage": {{"@id": "{canonical}#webpage"}}{job_json}{same_json}{desc_json}{knows_json}{alt_json}{loc_json}{img_ref}{date_json}
     }},
     {{
