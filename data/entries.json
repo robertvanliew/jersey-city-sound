@@ -965,6 +965,9 @@
       }
      ]
     }
+   ],
+   "neighborhoods": [
+    "Downtown"
    ]
   },
   {
@@ -1160,7 +1163,10 @@
     "src": "assets/media/catamount-records/catamount-logo.png",
     "alt": "Catamount Records logo — a prowling cougar beneath an arced CATAMOUNT wordmark",
     "caption": "The mark of Catamount Records, the label Stan Krause ran alongside the store."
-   }
+   },
+   "neighborhoods": [
+    "Journal Square"
+   ]
   },
   {
    "entry_no": "015",
@@ -1728,7 +1734,8 @@
      "label": "Instagram",
      "value": "@mixedbykamillion"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "022",
@@ -1804,7 +1811,8 @@
      "label": "Instagram",
      "value": "@semajdadj"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "023",
@@ -2935,7 +2943,8 @@
      "label": "Media",
      "value": "The Joe Budden Podcast (2015 to present; 900+ episodes)"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "038",
@@ -3000,7 +3009,8 @@
      "label": "Family",
      "value": "Son of Lord Sun Albee Al (Sweet Slick and Slide); cousin of DJ E Double and DJ Thunderkatt"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "039",
@@ -3064,7 +3074,8 @@
      "label": "Era",
      "value": "Late 1990s to present"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "040",
@@ -3371,8 +3382,18 @@
     {
      "label": "Era",
      "value": "1930s to 1960s"
+    },
+    {
+     "label": "Raised",
+     "value": "Brooklyn, New York"
     }
-   ]
+   ],
+   "neighborhoods": [
+    "Greenville"
+   ],
+   "notability": "national",
+   "born_in_jersey_city": true,
+   "origin": "Jersey City, New Jersey"
   },
   {
    "entry_no": "045",
@@ -3435,7 +3456,8 @@
      "label": "Street named",
      "value": "Kool & the Gang Way, Maple Street, Jersey City (2016)"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "046",
@@ -3492,7 +3514,8 @@
      "label": "Style",
      "value": "Pop rock, country, production music"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "047",
@@ -3559,7 +3582,9 @@
      "label": "Instrument",
      "value": "Drums"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "048",
@@ -3612,7 +3637,9 @@
      "label": "Label",
      "value": "Apple Records"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "049",
@@ -3677,7 +3704,9 @@
      "label": "Albums",
      "value": "50+"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "050",
@@ -3727,7 +3756,9 @@
      "label": "Known for",
      "value": "Aura-modal scale system"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "051",
@@ -3761,7 +3792,20 @@
     "Confirm Jersey City ties and era"
    ],
    "links": {},
-   "jc_from": false
+   "jc_from": false,
+   "notability": "national",
+   "card": [
+    {
+     "label": "Born",
+     "value": "February 28, 1946, Jersey City, New Jersey"
+    },
+    {
+     "label": "Raised",
+     "value": "Plainfield, New Jersey, from age five"
+    }
+   ],
+   "born_in_jersey_city": true,
+   "origin": "Jersey City, New Jersey"
   },
   {
    "entry_no": "052",
@@ -3813,7 +3857,9 @@
      "label": "Style",
      "value": "Classical, orchestral"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "053",
@@ -3868,7 +3914,9 @@
      "label": "Era",
      "value": "1940s to 1970s"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "054",
@@ -3923,7 +3971,10 @@
      "value": "Rock, blue-eyed soul"
     }
    ],
-   "jc_from": false
+   "jc_from": false,
+   "notability": "national",
+   "born_in_jersey_city": true,
+   "origin": "Jersey City, New Jersey"
   },
   {
    "entry_no": "055",
@@ -3972,7 +4023,9 @@
      "label": "Specialty",
      "value": "Choral direction, composition, arts administration"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "056",
@@ -4008,7 +4061,20 @@
     "Photo permission",
     "Confirm Jersey City ties and era"
    ],
-   "links": {}
+   "links": {},
+   "notability": "national",
+   "card": [
+    {
+     "label": "Born",
+     "value": "July 22, 1954, Jersey City, New Jersey"
+    },
+    {
+     "label": "Raised",
+     "value": "Bergenfield, New Jersey"
+    }
+   ],
+   "born_in_jersey_city": true,
+   "origin": "Jersey City, New Jersey"
   },
   {
    "entry_no": "057",
@@ -4067,7 +4133,9 @@
      "label": "Era",
      "value": "1920s to 1930s"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "058",
@@ -4118,7 +4186,8 @@
      "label": "Era",
      "value": "Early 1960s"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "059",
@@ -4170,7 +4239,9 @@
      "label": "Style",
      "value": "Jazz"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "060",
@@ -4209,8 +4280,15 @@
     {
      "label": "Style",
      "value": "Dark folk, American roots, rock"
+    },
+    {
+     "label": "Lived",
+     "value": "Jersey City, New Jersey (current)"
     }
-   ]
+   ],
+   "notability": "national",
+   "jc_from": false,
+   "origin": ""
   },
   {
    "entry_no": "061",
@@ -4259,7 +4337,9 @@
      "label": "Style",
      "value": "Musical theater, dramatic television"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "062",
@@ -4292,7 +4372,16 @@
     "Photo permission",
     "Confirm Jersey City ties and era"
    ],
-   "links": {}
+   "links": {},
+   "notability": "national",
+   "card": [
+    {
+     "label": "Born",
+     "value": "Jersey City, New Jersey"
+    }
+   ],
+   "born_in_jersey_city": true,
+   "origin": "Jersey City, New Jersey"
   },
   {
    "entry_no": "063",
@@ -4348,7 +4437,8 @@
      "label": "Style",
      "value": "Jazz, contemporary"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "064",
@@ -4399,7 +4489,8 @@
      "label": "Style",
      "value": "Hip-hop, conscious rap"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "065",
@@ -4430,7 +4521,16 @@
     "Photo permission",
     "Confirm Jersey City ties and era"
    ],
-   "links": {}
+   "links": {},
+   "notability": "national",
+   "card": [
+    {
+     "label": "Born",
+     "value": "September 27, 1888, Jersey City, New Jersey"
+    }
+   ],
+   "born_in_jersey_city": true,
+   "origin": "Jersey City, New Jersey"
   },
   {
    "entry_no": "066",
@@ -4479,7 +4579,9 @@
      "label": "Specialty",
      "value": "Choral and orchestral composition"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "067",
@@ -4512,7 +4614,16 @@
     "Photo permission",
     "Confirm Jersey City ties and era"
    ],
-   "links": {}
+   "links": {},
+   "notability": "national",
+   "card": [
+    {
+     "label": "Born",
+     "value": "February 15, 1867, Jersey City, New Jersey"
+    }
+   ],
+   "born_in_jersey_city": true,
+   "origin": "Jersey City, New Jersey"
   },
   {
    "entry_no": "068",
@@ -4545,7 +4656,9 @@
     "Photo permission",
     "Confirm Jersey City ties and era"
    ],
-   "links": {}
+   "links": {},
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "069",
@@ -4604,7 +4717,9 @@
      "value": "Opening Woodstock 1969; Freedom"
     }
    ],
-   "jc_from": false
+   "jc_from": false,
+   "notability": "national",
+   "origin": ""
   },
   {
    "entry_no": "070",
@@ -4657,7 +4772,9 @@
      "label": "Chart hit",
      "value": "Hello, Dolly! by Louis Armstrong -- No. 1 Billboard Hot 100 (1964)"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "071",
@@ -4689,7 +4806,16 @@
     "Photo permission",
     "Confirm Jersey City ties and era"
    ],
-   "links": {}
+   "links": {},
+   "notability": "national",
+   "card": [
+    {
+     "label": "Lived",
+     "value": "Jersey City, New Jersey, from 2000 until his death in 2007"
+    }
+   ],
+   "jc_from": false,
+   "origin": ""
   },
   {
    "entry_no": "072",
@@ -4721,7 +4847,20 @@
     "Photo permission",
     "Confirm Jersey City ties and era"
    ],
-   "links": {}
+   "links": {},
+   "notability": "national",
+   "card": [
+    {
+     "label": "Born",
+     "value": "October 8, 1923, Jersey City, New Jersey"
+    },
+    {
+     "label": "Raised",
+     "value": "Ridgewood, New Jersey"
+    }
+   ],
+   "born_in_jersey_city": true,
+   "origin": "Jersey City, New Jersey"
   },
   {
    "entry_no": "073",
@@ -4769,7 +4908,9 @@
      "label": "Teaching",
      "value": "New York University (department chair)"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "074",
@@ -4818,7 +4959,8 @@
      "label": "Style",
      "value": "Jazz, soul, creative music"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "075",
@@ -4872,7 +5014,9 @@
      "label": "Collaborators",
      "value": "Richie Cole, Barry Miles"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "076",
@@ -4921,8 +5065,15 @@
     {
      "label": "Collaborators",
      "value": "Roy Haynes, Woody Shaw, Eddie Henderson"
+    },
+    {
+     "label": "Lived",
+     "value": "Jersey City, New Jersey"
     }
-   ]
+   ],
+   "notability": "national",
+   "jc_from": false,
+   "origin": ""
   },
   {
    "entry_no": "077",
@@ -4970,7 +5121,9 @@
      "label": "Era",
      "value": "1970s"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "078",
@@ -5022,7 +5175,9 @@
      "label": "Style",
      "value": "Popular, light orchestral"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "079",
@@ -5065,7 +5220,8 @@
      "label": "Style",
      "value": "Folk, rock, singer-songwriter"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "080",
@@ -5096,7 +5252,16 @@
     "Photo permission",
     "Confirm Jersey City ties and era"
    ],
-   "links": {}
+   "links": {},
+   "notability": "national",
+   "card": [
+    {
+     "label": "Born",
+     "value": "December 1, 1931, Jersey City, New Jersey (raised there until age nine)"
+    }
+   ],
+   "born_in_jersey_city": true,
+   "origin": "Jersey City, New Jersey"
   },
   {
    "entry_no": "081",
@@ -5144,7 +5309,9 @@
      "label": "Era",
      "value": "Late 19th to early 20th century"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "082",
@@ -5196,7 +5363,8 @@
      "label": "Style",
      "value": "Jazz, avant-garde, experimental"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "083",
@@ -5251,7 +5419,8 @@
      "label": "Style",
      "value": "Rock, singer-songwriter"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "084",
@@ -5284,7 +5453,8 @@
     "Photo permission",
     "Confirm Jersey City ties and era"
    ],
-   "links": {}
+   "links": {},
+   "notability": "national"
   },
   {
    "entry_no": "085",
@@ -5340,7 +5510,8 @@
      "label": "Television",
      "value": "Solid Gold host (1980 to 1983)"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "086",
@@ -5351,7 +5522,7 @@
     "Musician"
    ],
    "genres": [
-    "Funk"
+    "Musical comedy"
    ],
    "years_active": "",
    "facts": [
@@ -5372,7 +5543,16 @@
     "Photo permission",
     "Confirm Jersey City ties and era"
    ],
-   "links": {}
+   "links": {},
+   "notability": "national",
+   "card": [
+    {
+     "label": "Born",
+     "value": "Jersey City, New Jersey"
+    }
+   ],
+   "born_in_jersey_city": true,
+   "origin": "Jersey City, New Jersey"
   },
   {
    "entry_no": "087",
@@ -5430,7 +5610,9 @@
      "label": "Hit single",
      "value": "AM to PM (2001)"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "088",
@@ -5483,7 +5665,9 @@
      "label": "Style",
      "value": "Musical theater, Broadway"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "089",
@@ -5514,7 +5698,9 @@
     "Photo permission",
     "Confirm Jersey City ties and era"
    ],
-   "links": {}
+   "links": {},
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "090",
@@ -5547,7 +5733,16 @@
     "Photo permission",
     "Confirm Jersey City ties and era"
    ],
-   "links": {}
+   "links": {},
+   "notability": "national",
+   "card": [
+    {
+     "label": "Born",
+     "value": "Jersey City, New Jersey"
+    }
+   ],
+   "born_in_jersey_city": true,
+   "origin": "Jersey City, New Jersey"
   },
   {
    "entry_no": "091",
@@ -5578,7 +5773,16 @@
     "Photo permission",
     "Confirm Jersey City ties and era"
    ],
-   "links": {}
+   "links": {},
+   "notability": "national",
+   "card": [
+    {
+     "label": "Lived",
+     "value": "Jersey City, New Jersey (current)"
+    }
+   ],
+   "jc_from": false,
+   "origin": ""
   },
   {
    "entry_no": "092",
@@ -5630,7 +5834,9 @@
      "label": "Songs written",
      "value": "200+"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "093",
@@ -5682,7 +5888,9 @@
      "label": "Films",
      "value": "Come to the Stable (1949); Broken Arrow (1950)"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "094",
@@ -5736,7 +5944,9 @@
      "label": "Collaborators",
      "value": "Dizzy Gillespie, Coleman Hawkins, Benny Goodman"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "095",
@@ -5787,7 +5997,10 @@
      "label": "Style",
      "value": "Traditional pop, Great American Songbook"
     }
-   ]
+   ],
+   "notability": "national",
+   "born_in_jersey_city": true,
+   "origin": "Jersey City, New Jersey"
   },
   {
    "entry_no": "096",
@@ -5821,7 +6034,20 @@
     "Photo permission",
     "Confirm Jersey City ties and era"
    ],
-   "links": {}
+   "links": {},
+   "notability": "national",
+   "card": [
+    {
+     "label": "Born",
+     "value": "June 8, 1940, Jersey City, New Jersey"
+    },
+    {
+     "label": "Raised",
+     "value": "Hasbrouck Heights, New Jersey, from early childhood"
+    }
+   ],
+   "born_in_jersey_city": true,
+   "origin": "Jersey City, New Jersey"
   },
   {
    "entry_no": "097",
@@ -5852,7 +6078,20 @@
     "Photo permission",
     "Confirm Jersey City ties and era"
    ],
-   "links": {}
+   "links": {},
+   "notability": "national",
+   "card": [
+    {
+     "label": "Born",
+     "value": "June 7, 1925, Jersey City, New Jersey"
+    },
+    {
+     "label": "School",
+     "value": "Henry Snyder High School, Jersey City"
+    }
+   ],
+   "born_in_jersey_city": true,
+   "origin": "Jersey City, New Jersey"
   },
   {
    "entry_no": "098",
@@ -5904,7 +6143,9 @@
      "label": "School",
      "value": "Lincoln High School, Jersey City"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "099",
@@ -5935,7 +6176,9 @@
     "Photo permission",
     "Confirm Jersey City ties and era"
    ],
-   "links": {}
+   "links": {},
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "100",
@@ -5977,7 +6220,8 @@
      "label": "Style",
      "value": "Jazz, contemporary"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "101",
@@ -6033,7 +6277,9 @@
      "label": "School",
      "value": "Lincoln High School, Jersey City"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "102",
@@ -6078,7 +6324,8 @@
      "label": "Style",
      "value": "Jazz, popular music"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "103",
@@ -6122,7 +6369,8 @@
      "label": "Credits",
      "value": "Oblivion (2013); The Greatest Showman (2017); Straight Outta Compton (2015); Tron: Uprising"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "104",
@@ -6153,7 +6401,9 @@
     "Photo permission",
     "Confirm Jersey City ties and era"
    ],
-   "links": {}
+   "links": {},
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "105",
@@ -6186,7 +6436,8 @@
     "Photo permission",
     "Confirm Jersey City ties and era"
    ],
-   "links": {}
+   "links": {},
+   "notability": "national"
   },
   {
    "entry_no": "106",
@@ -6219,7 +6470,9 @@
     "Photo permission",
     "Confirm Jersey City ties and era"
    ],
-   "links": {}
+   "links": {},
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "107",
@@ -6267,7 +6520,8 @@
      "label": "Era",
      "value": "1970s"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "108",
@@ -6303,7 +6557,16 @@
     "Photo permission",
     "Confirm Jersey City ties and era"
    ],
-   "links": {}
+   "links": {},
+   "notability": "national",
+   "card": [
+    {
+     "label": "Born",
+     "value": "April 22, 1944, Jersey City, New Jersey"
+    }
+   ],
+   "born_in_jersey_city": true,
+   "origin": "Jersey City, New Jersey"
   },
   {
    "entry_no": "109",
@@ -6336,7 +6599,20 @@
     "Photo permission",
     "Confirm Jersey City ties and era"
    ],
-   "links": {}
+   "links": {},
+   "notability": "national",
+   "card": [
+    {
+     "label": "Born",
+     "value": "October 23, 1945, Jersey City, New Jersey"
+    },
+    {
+     "label": "School",
+     "value": "Jersey Academy, Jersey City"
+    }
+   ],
+   "born_in_jersey_city": true,
+   "origin": "Jersey City, New Jersey"
   },
   {
    "entry_no": "110",
@@ -6383,7 +6659,8 @@
      "label": "Label",
      "value": "Ernest Jenning Record Co."
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "111",
@@ -6428,7 +6705,8 @@
      "label": "Style",
      "value": "Alternative rock"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "112",
@@ -6474,7 +6752,8 @@
      "label": "Style",
      "value": "Punk rock"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "113",
@@ -6525,7 +6804,8 @@
      "label": "Era",
      "value": "Late 1990s to mid-2000s"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "114",
@@ -6557,7 +6837,8 @@
     "Confirm Jersey City ties and era"
    ],
    "links": {},
-   "type": "group"
+   "type": "group",
+   "notability": "national"
   },
   {
    "entry_no": "115",
@@ -6602,7 +6883,8 @@
      "label": "Style",
      "value": "Doo-wop"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "116",
@@ -6640,7 +6922,8 @@
     "Confirm Jersey City ties and era"
    ],
    "links": {},
-   "type": "group"
+   "type": "group",
+   "notability": "national"
   },
   {
    "entry_no": "117",
@@ -6713,7 +6996,8 @@
      "value": "Funk, soul, R&B, pop, jazz"
     }
    ],
-   "seo_title": "Kool & the Gang: Formed in Jersey City in 1964, the Origin Story"
+   "seo_title": "Kool & the Gang: Formed in Jersey City in 1964, the Origin Story",
+   "notability": "national"
   },
   {
    "entry_no": "118",
@@ -6775,7 +7059,8 @@
      "label": "Chart run",
      "value": "45 R&B hits; 12 R&B top-10"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "119",
@@ -6820,7 +7105,8 @@
      "label": "Style",
      "value": "Rock"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "120",
@@ -6866,7 +7152,8 @@
      "label": "Style",
      "value": "R&B"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "121",
@@ -6911,7 +7198,8 @@
      "label": "Style",
      "value": "Shoegaze, indie rock"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "122",
@@ -6975,7 +7263,8 @@
      "label": "Debut album",
      "value": "Of the Heart, of the Soul and of the Cross (1991, Gee Street/Island)"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "123",
@@ -7011,7 +7300,8 @@
     "Confirm Jersey City ties and era"
    ],
    "links": {},
-   "type": "group"
+   "type": "group",
+   "notability": "national"
   },
   {
    "entry_no": "124",
@@ -7046,7 +7336,8 @@
     "Confirm Jersey City ties and era"
    ],
    "links": {},
-   "type": "group"
+   "type": "group",
+   "notability": "national"
   },
   {
    "entry_no": "125",
@@ -7101,7 +7392,8 @@
      "label": "Era",
      "value": "1990s"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "126",
@@ -7146,7 +7438,8 @@
      "label": "Style",
      "value": "Rock"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "127",
@@ -7186,7 +7479,8 @@
     "Confirm Jersey City ties and era"
    ],
    "links": {},
-   "jc_from": false
+   "jc_from": false,
+   "notability": "national"
   },
   {
    "entry_no": "128",
@@ -7223,7 +7517,16 @@
     "Confirm Jersey City ties and era"
    ],
    "links": {},
-   "memorial": true
+   "memorial": true,
+   "notability": "national",
+   "card": [
+    {
+     "label": "Born",
+     "value": "December 26, 1964, Jersey City, New Jersey"
+    }
+   ],
+   "born_in_jersey_city": true,
+   "origin": "Jersey City, New Jersey"
   },
   {
    "entry_no": "129",
@@ -7293,7 +7596,8 @@
      "label": "Style",
      "value": "Hip-hop, boom bap, Golden Era"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "130",
@@ -7359,7 +7663,8 @@
      "value": "Set Adrift on Memory Bliss (1991) -- No. 1 Billboard Hot 100"
     }
    ],
-   "memorial": true
+   "memorial": true,
+   "notability": "national"
   },
   {
    "entry_no": "131",
@@ -7407,7 +7712,8 @@
      "label": "Style",
      "value": "Jazz"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "132",
@@ -7460,8 +7766,15 @@
     {
      "label": "Collaborators",
      "value": "Mike Bloomfield, Dr. John, Duane Allman"
+    },
+    {
+     "label": "Died",
+     "value": "February 28, 2026, Jersey City, New Jersey"
     }
-   ]
+   ],
+   "notability": "national",
+   "jc_from": false,
+   "origin": ""
   },
   {
    "entry_no": "133",
@@ -7503,7 +7816,8 @@
      "label": "Style",
      "value": "Classical, contemporary"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "134",
@@ -7545,7 +7859,8 @@
      "label": "Style",
      "value": "Street rap, underground hip-hop"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "135",
@@ -7603,7 +7918,9 @@
      "label": "Style",
      "value": "Jazz, electronic, film scoring"
     }
-   ]
+   ],
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "136",
@@ -7632,7 +7949,10 @@
     "Photo permission"
    ],
    "links": {},
-   "type": "group"
+   "type": "group",
+   "neighborhoods": [
+    "Greenville"
+   ]
   },
   {
    "entry_no": "137",
@@ -7970,7 +8290,10 @@
     "Era, key songs, and crew detail from memory",
     "Photo permission"
    ],
-   "links": {}
+   "links": {},
+   "neighborhoods": [
+    "Greenville"
+   ]
   },
   {
    "entry_no": "146",
@@ -8111,7 +8434,10 @@
     "Era, key songs, and crew detail from memory",
     "Photo permission"
    ],
-   "links": {}
+   "links": {},
+   "neighborhoods": [
+    "Greenville"
+   ]
   },
   {
    "entry_no": "150",
@@ -8571,7 +8897,8 @@
      "label": "Scene",
      "value": "Jersey City, New Jersey"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "162",
@@ -9079,7 +9406,8 @@
     "Confirm additional receipts"
    ],
    "links": {},
-   "type": "group"
+   "type": "group",
+   "notability": "national"
   },
   {
    "entry_no": "170",
@@ -9149,7 +9477,8 @@
       }
      ]
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "entry_no": "171",
@@ -9222,7 +9551,8 @@
      "label": "Awards",
      "value": "Soul Train Lady of Soul · 4× BMI Songwriter/Publisher · 2× Grammy nominee"
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "name": "Catamount Records",
@@ -9752,7 +10082,8 @@
     "Photo permission"
    ],
    "links": {},
-   "origin": "Jersey City, New Jersey"
+   "origin": "Jersey City, New Jersey",
+   "notability": "national"
   },
   {
    "name": "14 Karat Soul",
@@ -9808,7 +10139,8 @@
       }
      ]
     }
-   ]
+   ],
+   "notability": "national"
   },
   {
    "name": "The Royal Counts",
@@ -10160,7 +10492,10 @@
     "Photo permission"
    ],
    "links": {},
-   "entry_no": "186"
+   "entry_no": "186",
+   "neighborhoods": [
+    "Bergen-Lafayette"
+   ]
   },
   {
    "name": "Lord Sun Albee Al",
@@ -10316,6 +10651,9 @@
       }
      ]
     }
+   ],
+   "neighborhoods": [
+    "Bergen-Lafayette"
    ]
   },
   {
@@ -11357,7 +11695,8 @@
     "Add Bandcamp/Spotify links",
     "Confirm release dates"
    ],
-   "links": {}
+   "links": {},
+   "notability": "national"
   },
   {
    "entry_no": "219",
@@ -11412,7 +11751,8 @@
     "Confirm chart citations with Wayback snapshot",
     "Corroborate the Hamilton family line (Roy Hamilton Jr. or another family member) and whose side it runs through"
    ],
-   "links": {}
+   "links": {},
+   "notability": "national"
   },
   {
    "entry_no": "220",
@@ -11464,7 +11804,9 @@
     "Photo permission",
     "Confirm chart citations with Wayback snapshot"
    ],
-   "links": {}
+   "links": {},
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "221",
@@ -11515,7 +11857,9 @@
     "Photo permission",
     "Confirm chart citations with Wayback snapshot"
    ],
-   "links": {}
+   "links": {},
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "222",
@@ -11565,7 +11909,9 @@
     "Photo permission",
     "Confirm chart citations with Wayback snapshot"
    ],
-   "links": {}
+   "links": {},
+   "born_in_jersey_city": true,
+   "notability": "national"
   },
   {
    "entry_no": "223",
@@ -11657,7 +12003,8 @@
     "src": "assets/media/catamount-records/catamount-logo.png",
     "alt": "Catamount Records logo — a prowling cougar beneath an arced CATAMOUNT wordmark",
     "caption": "The mark of Catamount Records, the Jersey City label Stan Krause founded."
-   }
+   },
+   "notability": "national"
   },
   {
    "entry_no": "227",
@@ -11720,7 +12067,11 @@
     "Full production credit list",
     "Memorial-wing decision"
    ],
-   "links": {}
+   "links": {},
+   "neighborhoods": [
+    "Greenville"
+   ],
+   "born_in_jersey_city": true
   },
   {
    "entry_no": "228",
@@ -11870,7 +12221,8 @@
     "Fuller discography and receipts from memory",
     "Photo permission"
    ],
-   "links": {}
+   "links": {},
+   "notability": "national"
   },
   {
    "entry_no": "226",
@@ -12246,7 +12598,10 @@
     "Confirm current Viper Records status",
     "Full discography (Ascension, Young Lord, etc.)"
    ],
-   "links": {}
+   "links": {},
+   "neighborhoods": [
+    "Downtown"
+   ]
   },
   {
    "entry_no": "235",
@@ -12517,7 +12872,8 @@
     "Ask DJ Flash for more Executive Class session detail and any photos",
     "Group photo / record scans"
    ],
-   "links": {}
+   "links": {},
+   "notability": "national"
   },
   {
    "entry_no": "239",
@@ -12697,7 +13053,10 @@
     "Who was the act billed as 'Jersey' (MLO 777, 1985)?",
     "Label scan for gallery (blue Mel-O label; Robert can save the MLO 777 photo to Archive Photos)"
    ],
-   "links": {}
+   "links": {},
+   "neighborhoods": [
+    "Bergen-Lafayette"
+   ]
   },
   {
    "entry_no": "241",
@@ -13108,7 +13467,8 @@
     "URL of the Facebook tribute post (the Double J memorial recalling the 1992 broadcast)",
     "Photo"
    ],
-   "links": {}
+   "links": {},
+   "born_in_jersey_city": true
   },
   {
    "entry_no": "251",
@@ -13218,7 +13578,8 @@
     "Current whereabouts",
     "Photo"
    ],
-   "links": {}
+   "links": {},
+   "notability": "national"
   },
   {
    "entry_no": "253",

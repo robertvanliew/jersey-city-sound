@@ -69,7 +69,7 @@ RELATED_COUNT = 3   # .related__grid is three columns
 # Record-card row order (the "real name" and "where from" answers first). Rows not
 # listed keep their relative order after these.
 CARD_ORDER = {k: i for i, k in enumerate([
-    "Real name", "Also known as", "Born", "Died", "Origin", "Raised", "Neighborhood",
+    "Real name", "Also known as", "Born", "Raised", "Lived", "Died", "Origin", "Neighborhood",
     "Years active", "Active", "Years open", "Released", "Active since",
     "Roles", "Format", "What it was", "Type", "Instrument", "Known for", "Crew", "Label",
     "Group", "Band", "Duo", "Affiliation", "Family", "Members", "Scene", "Era"])}
@@ -444,6 +444,17 @@ _LEAD_IDENTITY = re.compile(
 _LEAD_KNOWN_AS = re.compile(r"^(?P<full>[A-Z][^,()]{2,60}?),\sknown\sprofessionally\sas\s")
 
 
+def jc_stated(entry):
+    """True when the entry's own facts, card or origin field state a Jersey City connection.
+
+    Generated copy (answer line, FAQ origin) may only assert Jersey City when the
+    sourced text on the page does; a title alone is not a source.
+    """
+    text = " ".join((entry.get("facts") or []) + [c.get("value", "") for c in entry.get("card", [])]
+                    + [entry.get("origin") or ""])
+    return "jersey city" in text.lower()
+
+
 def derive_identity(entry):
     """(real_name, born, died) read from a lead written as 'Full Name (born X, DATE -- DATE)'.
 
@@ -777,7 +788,7 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
         _player = next((p for k, p in INSTRUMENT_ROLES if k in _inst.lower()), "")
         if _player:
             title_role = f"{genres[0]} {_player}" if genres else _player
-        elif genres:
+        elif genres and " " not in genres[0]:      # "Jazz Musician", never "Musical comedy Musician"
             title_role = f"{genres[0]} {seo_role}"
     # range separator reads "1990s to present" (no dashes in new copy); "mid-1970s" is left alone
     _ty = re.sub(r"\s*(?:[–—]|\s-\s)\s*", " to ", years).replace("c. ", "")
@@ -802,16 +813,16 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
     # Jersey City, open with one generated sentence that does. It is data-noseal, so the
     # sealed article text is unchanged.
     answer_html = ""
-    if _jc and "jersey city" not in first_sentence(lead).lower():
-        verb = "was" if entry.get("memorial") else "is"
+    if _jc and jc_stated(entry) and "jersey city" not in first_sentence(lead).lower():
+        verb = "was" if (entry.get("memorial") or derive_identity(entry)[2]
+                        or card_value(entry, "Died")) else "is"
         r0 = " ".join(w if (w.isupper() or w.startswith("DJ")) else w.lower()
                       for w in title_role.split())
-        art = "an" if (r0[:1].upper() in "AEIOU" or r0.upper().startswith("MC")) else "a"
-        sent = f"{name} {verb} {art} {r0} from Jersey City, New Jersey"
+        art = "an" if (r0[:1].upper() in "AEIOU" or r0.upper().startswith(("MC", "R&B", "LP", "EP"))) else "a"
+        rel = "born in" if entry.get("born_in_jersey_city") else "from"
+        sent = f"{name} {verb} {art} {r0} {rel} Jersey City, New Jersey"
         if _ty:
             sent += f", active {_ty}"
-        if _kf_short:
-            sent += f", known for {_kf_short}"
         answer_html = f'\n      <p class="answer" data-noseal>{esc(sent)}.</p>'
 
     chips = "".join(
@@ -1038,7 +1049,7 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
     known_ans += ", documented in The Jersey City Sound — the cited archive of the city's music culture."
     jc_ans = (f"Yes. {name} is documented in The Jersey City Sound, the cited encyclopedia-archive of "
               f"Jersey City music culture"
-              + (f"; origin: {origin_val}." if origin_val else "."))
+              + (f"; origin: {origin_val}." if origin_val and jc_stated(entry) else "."))
     faqs = [(f"{who} {name}?", lead),
             (f"What is {name} known for?", known_ans),
             (f"Is {name} part of the Jersey City music scene?", jc_ans)]
