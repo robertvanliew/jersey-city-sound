@@ -341,8 +341,8 @@ def write_hub(spec, copy, specs, g, name_links):
       "description": {json.dumps(desc)},
       "isPartOf": {{"@id": "{g.SITE}/#website"}},
       "inLanguage": "en-US",
-      "datePublished": "{modified}",
-      "dateModified": "{modified}",
+      "datePublished": "{g.iso_dt(modified)}",
+      "dateModified": "{g.iso_dt(modified)}",
       "publisher": {{"@id": "{g.SITE}/#org"}},
       "mainEntity": {{"@id": "{canonical}#list"}},
       "breadcrumb": {{"@id": "{canonical}#breadcrumb"}}
@@ -540,7 +540,7 @@ def write_map_page(entries, g, name_links):
         '      "name": "Jersey City Music Map",\n'
         '      "description": "Every documented place in Jersey City\'s music history on one map: schools, housing, rinks, streets and stores, each pin linking to a cited entry.",\n'
         f'      "isPartOf": {{"@id": "{g.SITE}/#website"}},\n      "inLanguage": "en-US",\n'
-        f'      "dateModified": "{modified}",\n      "publisher": {{"@id": "{g.SITE}/#org"}},\n'
+        f'      "dateModified": "{g.iso_dt(modified)}",\n      "publisher": {{"@id": "{g.SITE}/#org"}},\n'
         f'      "hasPart": {has_part}\n    }},\n'
         '    {\n      "@type": "BreadcrumbList",\n      "itemListElement": [\n'
         f'        {{"@type": "ListItem", "position": 1, "name": "Home", "item": "{g.SITE}/"}},\n'

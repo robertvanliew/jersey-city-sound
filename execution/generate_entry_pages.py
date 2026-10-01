@@ -306,6 +306,21 @@ def lastmod_for(key, h):
     return LASTMOD[key]["date"]
 
 
+def iso_dt(day):
+    """'2026-07-12' -> '2026-07-12T12:00:00-04:00': schema dates as full ISO 8601 datetimes
+    with the New York offset for that day (Google flags bare dates on Articles)."""
+    if not day or "T" in day:
+        return day
+    from datetime import date as _date, timedelta
+    d = _date.fromisoformat(day)
+    # US daylight time: second Sunday of March to first Sunday of November (no tz database
+    # on Windows Python, so computed here)
+    mar1, nov1 = _date(d.year, 3, 1), _date(d.year, 11, 1)
+    dst_start = mar1 + timedelta(days=(6 - mar1.weekday()) % 7 + 7)
+    dst_end = nov1 + timedelta(days=(6 - nov1.weekday()) % 7)
+    return f"{day}T12:00:00{'-04:00' if dst_start <= d < dst_end else '-05:00'}"
+
+
 def save_lastmod():
     LASTMOD_FILE.write_text(json.dumps(LASTMOD, indent=1, sort_keys=True) + "\n", encoding="utf-8")
 
@@ -1298,8 +1313,8 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
       "mainEntity": {{"@id": "{canonical}#main"}},
       "breadcrumb": {{"@id": "{canonical}#breadcrumb"}},
       "inLanguage": "en-US",
-      "datePublished": "2026-07-05",
-      "dateModified": "{modified}",
+      "datePublished": "{iso_dt('2026-07-05')}",
+      "dateModified": "{iso_dt(modified)}",
       "publisher": {{"@type": "Organization", "@id": "{SITE}/#org", "name": "The Jersey City Sound", "url": "{SITE}/",
         "publishingPrinciples": "{SITE}/verify.html", "correctionsPolicy": "{SITE}/corrections.html"}}{primary_img}
     }},
@@ -2047,7 +2062,7 @@ def write_report_issue(entries):
         '      "author": {"@type": "Organization", "name": "The Jersey City Sound", "url": "__SITE__/"},\n'
         '      "publisher": {"@type": "Organization", "@id": "__SITE__/#org", "name": "The Jersey City Sound", "url": "__SITE__/", "logo": {"@type": "ImageObject", "url": "__SITE__/assets/jerseycitysound-primary.png"}},\n'
         '      "image": "__SITE__/assets/og-card.png",\n'
-        '      "datePublished": "2026-07-12",\n'
+        '      "datePublished": "__PUB__",\n'
         '      "dateModified": "__DT__",\n'
         '      "inLanguage": "en-US"\n'
         '    },\n'
@@ -2064,7 +2079,7 @@ def write_report_issue(entries):
         '      "url": "__CANON__#latifah",\n'
         '      "claimReviewed": "Queen Latifah is from Jersey City.",\n'
         '      "author": {"@type": "Organization", "name": "The Jersey City Sound", "url": "__SITE__/"},\n'
-        '      "datePublished": "2026-07-12",\n'
+        '      "datePublished": "__PUB__",\n'
         '      "reviewRating": {"@type": "Rating", "ratingValue": 1, "bestRating": 5, "worstRating": 1, "alternateName": "False"},\n'
         '      "itemReviewed": {"@type": "Claim", "appearance": {"@type": "CreativeWork", "name": "Widely syndicated online lists of Jersey City musicians"}}\n'
         '    },\n'
@@ -2073,7 +2088,7 @@ def write_report_issue(entries):
         '      "url": "__CANON__#hill",\n'
         '      "claimReviewed": "Lauryn Hill is from Jersey City.",\n'
         '      "author": {"@type": "Organization", "name": "The Jersey City Sound", "url": "__SITE__/"},\n'
-        '      "datePublished": "2026-07-12",\n'
+        '      "datePublished": "__PUB__",\n'
         '      "reviewRating": {"@type": "Rating", "ratingValue": 1, "bestRating": 5, "worstRating": 1, "alternateName": "False"},\n'
         '      "itemReviewed": {"@type": "Claim", "appearance": {"@type": "CreativeWork", "name": "Widely syndicated online lists of Jersey City musicians"}}\n'
         '    }\n'
@@ -2137,7 +2152,7 @@ def write_report_issue(entries):
     import hashlib
     modified = lastmod_for("report-001-not-from-jersey-city.html",
                            hashlib.sha256((jsonld + body).encode("utf-8")).hexdigest())
-    jsonld = jsonld.replace("__DT__", modified)
+    jsonld = jsonld.replace("__DT__", iso_dt(modified)).replace("__PUB__", iso_dt("2026-07-12"))
     head_extra = f'<script type="application/ld+json">\n{jsonld}\n</script>\n'
     html = _shell("Is Queen Latifah From Jersey City? No, and the Truth Is Better",
                   "The famous musicians actually from Jersey City, and the two names the internet keeps getting wrong: Queen Latifah and Lauryn Hill are not from the city.",
@@ -2445,6 +2460,9 @@ def stamp_hand_pages():
         date = lastmod_for(name, file_hash(path)) if name not in HUB_DATES else HUB_DATES[name]
         if name in ("legends.html", "charts.html", "sources.html", "archive.html"):
             date = max(LASTMOD.get(f"entry-{e['slug']}", {}).get("date", BUILD_DATE) for e in ALL_ENTRIES)
+        # bare schema dates on hand-built pages become full datetimes (Rich Results Test)
+        s = re.sub(r'("date(?:Published|Modified|Created)"\s*:\s*")(\d{4}-\d{2}-\d{2})(")',
+                   lambda m: m.group(1) + iso_dt(m.group(2)) + m.group(3), s)
         line = f'<p class="record-card__since page-stamp">Last updated {date}</p>'
         if 'class="record-card__since page-stamp"' in s:
             new = re.sub(r'<p class="record-card__since page-stamp">Last updated [^<]*</p>', line, s, count=1)
@@ -2452,7 +2470,7 @@ def stamp_hand_pages():
             new = s.replace("</main>", f"  <div class=\"wrap\" style=\"text-align:center;padding-bottom:1.5rem;\">{line}</div>\n</main>", 1)
         else:
             continue
-        if new != s:
+        if new != path.read_text(encoding="utf-8"):
             path.write_text(new, encoding="utf-8")
 
 
@@ -2559,7 +2577,7 @@ def write_data_page(entries, count):
         "temporalCoverage": span,
         "spatialCoverage": {"@type": "Place", "name": "Jersey City, New Jersey, United States",
                             "geo": {"@type": "GeoCoordinates", "latitude": 40.7178, "longitude": -74.0431}},
-        "dateModified": modified,
+        "dateModified": iso_dt(modified),
         "version": modified,
         "variableMeasured": ["entry_no", "name", "roles", "genres", "years_active", "real_name", "born", "origin",
                              "neighborhoods", "known_for", "status", "sources"],
@@ -2682,7 +2700,7 @@ def write_reports(entries, name_links):
                  "publisher": {"@type": "Organization", "@id": f"{SITE}/#org", "name": "The Jersey City Sound", "url": f"{SITE}/",
                                "logo": {"@type": "ImageObject", "url": f"{SITE}/assets/jerseycitysound-primary.png"}},
                  "image": (f"{SITE}/assets/og/{rel['slug']}.png" if rel else f"{SITE}/assets/og-card.png"),
-                 "datePublished": modified, "dateModified": modified,
+                 "datePublished": iso_dt(modified), "dateModified": iso_dt(modified),
                  "inLanguage": "en-US", "isPartOf": {"@id": f"{SITE}/#website"}},
                 {"@type": "FAQPage", "@id": f"{canonical}#faq",
                  "mainEntity": [{"@type": "Question", "name": it.get("question") or it["title"],
