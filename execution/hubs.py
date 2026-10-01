@@ -208,10 +208,21 @@ def card(e, g):
 
 
 def para(text, g, name_links, self_slug=""):
-    """Escape, then resolve [[slug|Label]] links and first-mention name links."""
-    out = g.linkify(g.esc(text), name_links, self_slug)
-    out = re.sub(r"\[\[([a-z0-9-]+)\|([^\]]+)\]\]", r'<a href="entry-\1.html">\2</a>', out)
-    out = re.sub(r"\[\[([a-z0-9-]+\.html)\|([^\]]+)\]\]", r'<a href="\1">\2</a>', out)
+    """Escape, resolve [[slug|Label]] and [[page.html|Label]] links, then auto-link first
+    mentions of entry names in the remaining text. Explicit links are stashed first so the
+    auto-linker never nests an anchor inside them."""
+    stash = []
+
+    def keep(html_):
+        stash.append(html_)
+        return f"\x01{len(stash) - 1}\x01"
+
+    out = g.esc(text)
+    out = re.sub(r"\[\[([a-z0-9-]+\.html)\|([^\]]+)\]\]", lambda m: keep(f'<a href="{m.group(1)}">{m.group(2)}</a>'), out)
+    out = re.sub(r"\[\[([a-z0-9-]+)\|([^\]]+)\]\]", lambda m: keep(f'<a href="entry-{m.group(1)}.html">{m.group(2)}</a>'), out)
+    out = g.linkify(out, name_links, self_slug)
+    for i, html_ in enumerate(stash):
+        out = out.replace(f"\x01{i}\x01", html_)
     return out
 
 

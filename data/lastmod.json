@@ -1,11 +1,11 @@
 {
  "about.html": {
   "date": "2026-10-01",
-  "hash": "a6c7f744ff91b8488ea57f8ec8ed766a8f28d0465bf67bad8a2d917529a92ffa"
+  "hash": "fe12e7f1d1b24d055ddc0a518ea9e03a053e882761007e9a3b846ddc1589ddf2"
  },
  "archive.html": {
   "date": "2026-10-01",
-  "hash": "7bb811e0d9808212062c15c35eed6ca301fa5a6dad2075a08e89826b4b3a074b"
+  "hash": "3a4ba75a6ae5b1cf4a6ae48d36690d77edaa5b59caab7ca936ae658f3e17ff7d"
  },
  "charts.html": {
   "date": "2026-10-01",
@@ -13,11 +13,11 @@
  },
  "chilltown.html": {
   "date": "2026-10-01",
-  "hash": "21a86e9e3e4455046f78b52dd9629cab835cb49c9c2cbdec75fca6378d741c54"
+  "hash": "649e70da8e278782f208a15590157f275a3241138e616f4ab63dde720a7100d2"
  },
  "corrections.html": {
   "date": "2026-10-01",
-  "hash": "6d09e46f35f7b6904c4d85cad0d40a7a938e9f5b506ad642074830f76cc35d80"
+  "hash": "84ce8c32c03edb044b42348b0a72fa298432789bce3131a61240d116f300c7f8"
  },
  "data.html": {
   "date": "2026-10-01",
@@ -265,7 +265,7 @@
  },
  "entry-dj-dx.html": {
   "date": "2026-10-01",
-  "hash": "e45fe62447cd5da4a5c0fdbe0810e8cbe037a34cb89c95647521ab1109be325e"
+  "hash": "480dc98f2d15c046c2bdf4985114ce5ae5a300650414ddd9b25be4a39adf24f2"
  },
  "entry-dj-dyce": {
   "date": "2026-07-13",
@@ -1093,15 +1093,15 @@
  },
  "history.html": {
   "date": "2026-10-01",
-  "hash": "bd47314beb464c555646b8b3047559969542684bfbb949082497ba992d36d79c"
+  "hash": "7a27ec0e3d3cff9dc863b178ec93b207453b8678397196183129c344cef2a310"
  },
  "index.html": {
   "date": "2026-10-01",
-  "hash": "5ad3b247000af1136c3e3fbe389031d17d5576a939fec235b86becd9c2294bf8"
+  "hash": "905e351b8095d8b828c897324025bad4fdfe30e85e841e97686c824be86414c3"
  },
  "jersey-city-djs.html": {
   "date": "2026-10-01",
-  "hash": "27d302a3a027135fc8fb51f12452cbb2fd22b6c1fd9f08c863631af47c7ee93f"
+  "hash": "4d578ff0b6861cff9b05fe9d2cfbb3a879cbee4c567f241df46d84f779fa0018"
  },
  "jersey-city-high-schools-music.html": {
   "date": "2026-10-01",
@@ -1121,7 +1121,7 @@
  },
  "legends.html": {
   "date": "2026-10-01",
-  "hash": "3984b7d0e992a4b4bfedf602a067b5c9b5ae068875606213fda765482548e619"
+  "hash": "907456d653c1e7f0fdb26d2cfd226948d1d23c8901233b26f8bac2665684265d"
  },
  "neighborhood-greenville.html": {
   "date": "2026-10-01",
@@ -1129,7 +1129,7 @@
  },
  "privacy.html": {
   "date": "2026-10-01",
-  "hash": "d3ec41b449e237f3e990228fe3d6725a05f214be6b4da7c2667cbcc561593d5f"
+  "hash": "46b83e7d2fadc88ed116afc30a30575d3b5df283681528251443b63394f5acc9"
  },
  "rappers-from-jersey-city.html": {
   "date": "2026-10-01",
@@ -1137,7 +1137,7 @@
  },
  "report-001-not-from-jersey-city.html": {
   "date": "2026-10-01",
-  "hash": "f7a58021f05c4a07d96466a532fc1d98bf18ac184442b68156f594bc9b925f81"
+  "hash": "b38914efd792c209763179d43fdc6179c8b85e7cd0e7c2e9d6d4b899179cf9e6"
  },
  "report-002-kool-and-the-gang.html": {
   "date": "2026-10-01",
@@ -1165,18 +1165,18 @@
  },
  "report.html": {
   "date": "2026-10-01",
-  "hash": "b50d08c909bce2404e034283281b6c69626ef289a9da71782782fcda6ddfaeb6"
+  "hash": "0f17008904de273ef9fbd59521a94ff33e5ba1b08669f2284f3095728d2e46ba"
  },
  "sources.html": {
   "date": "2026-10-01",
-  "hash": "4d563b9a2e5c626dee4c8213edce848261ae8527a64a6e810dc1b0c013a24e51"
+  "hash": "82161405618d8f7ce6fa6c55af7d6924346d9ad9b3b966419a3431fa1c3c70aa"
  },
  "terms.html": {
   "date": "2026-10-01",
-  "hash": "a917d1b7148676ebb676281c621cf096ea613607e360de33ecfd524263498bb7"
+  "hash": "8b5d3c6c0050f6a24c87f58a96b5cbac967bddaa4569f8600d7e2de1091f526a"
  },
  "verify.html": {
   "date": "2026-10-01",
-  "hash": "8da1a5684887d3e1e39e299475a6ba63cc837dbd425078486ef617b988ddd60e"
+  "hash": "d835becedd79191b2de3aacf976967c44d1af8c582c99c86313a9679b8873eb8"
  }
 }
