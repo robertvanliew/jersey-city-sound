@@ -2045,7 +2045,8 @@ def write_report_issue(entries):
         '      "description": "The famous musicians actually from Jersey City, and the two names the internet keeps getting wrong.",\n'
         '      "mainEntityOfPage": "__CANON__",\n'
         '      "author": {"@type": "Organization", "name": "The Jersey City Sound", "url": "__SITE__/"},\n'
-        '      "publisher": {"@id": "__SITE__/#org"},\n'
+        '      "publisher": {"@type": "Organization", "@id": "__SITE__/#org", "name": "The Jersey City Sound", "url": "__SITE__/", "logo": {"@type": "ImageObject", "url": "__SITE__/assets/jerseycitysound-primary.png"}},\n'
+        '      "image": "__SITE__/assets/og-card.png",\n'
         '      "datePublished": "2026-07-12",\n'
         '      "dateModified": "__DT__",\n'
         '      "inLanguage": "en-US"\n'
@@ -2678,7 +2679,10 @@ def write_reports(entries, name_links):
                 {"@type": "Article", "@id": f"{canonical}#article", "headline": it["title"],
                  "description": plain_answer[:200], "mainEntityOfPage": canonical,
                  "author": {"@type": "Person", "name": "Robert Van Liew", "url": f"{SITE}/entry-dj-dx.html"},
-                 "publisher": {"@id": f"{SITE}/#org"}, "datePublished": modified, "dateModified": modified,
+                 "publisher": {"@type": "Organization", "@id": f"{SITE}/#org", "name": "The Jersey City Sound", "url": f"{SITE}/",
+                               "logo": {"@type": "ImageObject", "url": f"{SITE}/assets/jerseycitysound-primary.png"}},
+                 "image": (f"{SITE}/assets/og/{rel['slug']}.png" if rel else f"{SITE}/assets/og-card.png"),
+                 "datePublished": modified, "dateModified": modified,
                  "inLanguage": "en-US", "isPartOf": {"@id": f"{SITE}/#website"}},
                 {"@type": "FAQPage", "@id": f"{canonical}#faq",
                  "mainEntity": [{"@type": "Question", "name": it.get("question") or it["title"],
