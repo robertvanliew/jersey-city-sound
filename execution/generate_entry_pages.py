@@ -1025,7 +1025,7 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
     _fb = "https://www.facebook.com/sharer/sharer.php?u=" + urllib.parse.quote(canonical)
     share_block = f"""
       <h2 id="share">Share this entry<a class="anchor" href="#share" aria-label="Link to Share section">§</a></h2>
-      <div class="share" data-noseal data-url="{canonical}" data-title="{esc(_stitle)}" data-name="{esc(name)}" data-card="assets/cards/{slug}.png">
+      <div class="share" data-noseal data-url="{canonical}" data-title="{esc(_stitle)}" data-name="{esc(name)}" data-card="assets/cards/{slug}.jpg">
         <button type="button" class="share__btn share__btn--gold" data-act="story">Share to Story</button>
         <button type="button" class="share__btn" data-act="native">Share&hellip;</button>
         <a class="share__btn" data-act="x" target="_blank" rel="noopener" href="{_x}">X</a>
@@ -1284,7 +1284,7 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
     movie_json = ""
     if film:
         _vid = _yt_id((vids[0].get("id") or vids[0].get("url", ""))) if vids else ""
-        _img = f"https://i.ytimg.com/vi/{_vid}/hqdefault.jpg" if _vid else f"{SITE}/assets/og/{slug}.png"
+        _img = f"https://i.ytimg.com/vi/{_vid}/hqdefault.jpg" if _vid else f"{SITE}/assets/og/{slug}.jpg"
         movie_json = f',\n      "image": "{_img}"'
         if years:
             movie_json += f',\n      "dateCreated": "{years[:4]}"'
@@ -1354,12 +1354,12 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{SITE}/assets/og/{slug}.png">
+<meta property="og:image" content="{SITE}/assets/og/{slug}.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="{esc(name)} — The Jersey City Sound">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="{SITE}/assets/og/{slug}.png">
+<meta name="twitter:image" content="{SITE}/assets/og/{slug}.jpg">
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/sourceserif-latin-37bedc60.woff2" crossorigin>
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 <link rel="stylesheet" href="styles.css">
@@ -1368,12 +1368,12 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
 
 <header class="masthead wrap">
   <div class="masthead__logo masthead__logo--compact">
-    <a href="index.html" aria-label="The Jersey City Sound — home">
+    <a href="/" aria-label="The Jersey City Sound — home">
       <img src="{'assets/jerseycitysound-cream-sm.png' if memorial else 'assets/jerseycitysound-ink-sm.png'}" alt="Jersey City Sound" width="200" height="81" fetchpriority="high">
     </a>
   </div>
   <nav class="nav" aria-label="Primary">
-    <a href="index.html">Home</a>
+    <a href="/">Home</a>
     <a href="archive.html" aria-current="page">The Archive</a>
     <a href="charts.html">On the Charts</a>
     <a href="legends.html">Legends</a>
@@ -1419,7 +1419,7 @@ def page(entry, by_no, name_links, appearances=None, related=None, modified=None
 {share_block}
       <aside class="claim-bar" data-noseal>
         <p><strong>Is this you?</strong> Claim and complete this entry: correct it, add releases and credits, supply a photograph, link your pages.</p>
-        <a href="claim.html?entry={slug}">Claim this entry →</a>
+        <a href="claim.html#entry={slug}">Claim this entry →</a>
         <a href="suggest-edit.html">Suggest an edit →</a>
       </aside>
     </article>
@@ -1620,12 +1620,12 @@ ARCHIVE_PAGE = """<!DOCTYPE html>
 
 <header class="masthead wrap">
   <div class="masthead__logo masthead__logo--compact">
-    <a href="index.html" aria-label="The Jersey City Sound — home">
+    <a href="/" aria-label="The Jersey City Sound — home">
       <img src="assets/jerseycitysound-ink-sm.png" alt="Jersey City Sound" width="200" height="81" fetchpriority="high">
     </a>
   </div>
   <nav class="nav" aria-label="Primary">
-    <a href="index.html">Home</a>
+    <a href="/">Home</a>
     <a href="archive.html" aria-current="page">The Archive</a>
     <a href="charts.html">On the Charts</a>
     <a href="legends.html">Legends</a>
@@ -1809,12 +1809,12 @@ def _shell(title, desc, canonical, body, memorial=False, current="", head_extra=
 
 <header class="masthead wrap">
   <div class="masthead__logo masthead__logo--compact">
-    <a href="index.html" aria-label="The Jersey City Sound — home">
+    <a href="/" aria-label="The Jersey City Sound — home">
       <img src="assets/{logo_sm}" alt="Jersey City Sound" width="200" height="81" fetchpriority="high">
     </a>
   </div>
   <nav class="nav" aria-label="Primary">
-    <a href="index.html"{cur('home')}>Home</a>
+    <a href="/"{cur('home')}>Home</a>
     <a href="archive.html"{cur('archive')}>The Archive</a>
     <a href="charts.html"{cur('charts')}>On the Charts</a>
     <a href="legends.html"{cur('legends')}>Legends</a>
@@ -2476,7 +2476,7 @@ def stamp_hand_pages():
 
 def write_claim_page():
     """claim.html: the claim-your-entry flow. Reuses the Formspree endpoint the suggest-an-edit
-    form posts to; the entry name is prefilled from ?entry=<slug> via the search index."""
+    form posts to; the entry name is prefilled from #entry=<slug> via the search index."""
     canonical = f"{SITE}/claim.html"
     body = """<main class="wrap">
   <header class="entry-header" style="text-align:center;">
@@ -2535,7 +2535,8 @@ def write_claim_page():
 </main>
 <script>
 (function () {
-  var q = new URLSearchParams(location.search).get('entry');
+  // #entry=<slug> (one crawlable URL); ?entry= still read for older links
+  var q = new URLSearchParams(location.hash.slice(1)).get('entry') || new URLSearchParams(location.search).get('entry');
   if (!q) return;
   var hit = (window.JCS_ENTRIES || []).filter(function (e) { return e.href === 'entry-' + q + '.html'; })[0];
   var input = document.getElementById('entry');
@@ -2592,7 +2593,7 @@ def write_data_page(entries, count):
     head_extra = f'<script type="application/ld+json">\n{ld}\n</script>\n'
     body = f"""<main class="wrap">
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="index.html">Home</a><span class="sep">&#8594;</span><a href="about.html">About</a><span class="sep">&#8594;</span><span aria-current="page">Open data</span>
+    <a href="/">Home</a><span class="sep">&#8594;</span><a href="about.html">About</a><span class="sep">&#8594;</span><span aria-current="page">Open data</span>
   </nav>
   <header class="entry-header" style="text-align:center;">
     <span class="entry-no reveal reveal--1">Open data</span>
@@ -2699,7 +2700,7 @@ def write_reports(entries, name_links):
                  "author": {"@type": "Person", "name": "Robert Van Liew", "url": f"{SITE}/entry-dj-dx.html"},
                  "publisher": {"@type": "Organization", "@id": f"{SITE}/#org", "name": "The Jersey City Sound", "url": f"{SITE}/",
                                "logo": {"@type": "ImageObject", "url": f"{SITE}/assets/jerseycitysound-primary.png"}},
-                 "image": (f"{SITE}/assets/og/{rel['slug']}.png" if rel else f"{SITE}/assets/og-card.png"),
+                 "image": (f"{SITE}/assets/og/{rel['slug']}.jpg" if rel else f"{SITE}/assets/og-card.png"),
                  "datePublished": iso_dt(modified), "dateModified": iso_dt(modified),
                  "inLanguage": "en-US", "isPartOf": {"@id": f"{SITE}/#website"}},
                 {"@type": "FAQPage", "@id": f"{canonical}#faq",

@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/entry-man-money.html",
       "destination": "/entry-dj-mad-money.html",
       "permanent": true

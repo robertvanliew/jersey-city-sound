@@ -25,12 +25,12 @@
 
 <header class="masthead wrap">
   <div class="masthead__logo masthead__logo--compact">
-    <a href="index.html" aria-label="The Jersey City Sound — home">
+    <a href="/" aria-label="The Jersey City Sound — home">
       <img src="assets/jerseycitysound-ink-sm.png" alt="Jersey City Sound" width="200" height="81" fetchpriority="high">
     </a>
   </div>
   <nav class="nav" aria-label="Primary">
-    <a href="index.html">Home</a>
+    <a href="/">Home</a>
     <a href="archive.html" aria-current="page">The Archive</a>
     <a href="charts.html">On the Charts</a>
     <a href="legends.html">Legends</a>
@@ -104,7 +104,8 @@
 </main>
 <script>
 (function () {
-  var q = new URLSearchParams(location.search).get('entry');
+  // #entry=<slug> (one crawlable URL); ?entry= still read for older links
+  var q = new URLSearchParams(location.hash.slice(1)).get('entry') || new URLSearchParams(location.search).get('entry');
   if (!q) return;
   var hit = (window.JCS_ENTRIES || []).filter(function (e) { return e.href === 'entry-' + q + '.html'; })[0];
   var input = document.getElementById('entry');

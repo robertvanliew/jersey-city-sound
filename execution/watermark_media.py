@@ -5,6 +5,11 @@ plate) — auto-placed in each photo's emptiest region.
 Sources from the clean originals in ./Media Originals/ and writes to
 design/assets/media/, so it never stacks watermarks and is fully idempotent.
 
+Output is web-sized: the long edge is capped at MAX_EDGE, PNG photos are written as
+WebP (the .png is removed from design/ but the clean .png stays in Media Originals/),
+and JPEGs are re-encoded at web quality. After a PNG converts, point its gallery
+"src" in data/entries.json at the .webp and regenerate.
+
   py execution/watermark_media.py
 """
 import shutil
@@ -17,6 +22,9 @@ MEDIA = ROOT / "design" / "assets" / "media"
 BACKUP = ROOT / "Media Originals"
 EXTS = {".png", ".jpg", ".jpeg", ".webp"}
 SKIP_NAMES = {"catamount-logo.png"}
+MAX_EDGE = 1600      # px, long edge; slideshows display far smaller
+WEBP_Q = 78
+JPEG_Q = 82
 FONT_PATH = "C:/Windows/Fonts/arialbd.ttf"
 TEXT = "THE JERSEY CITY SOUND"
 GOLD = (233, 199, 74, 255)
@@ -66,6 +74,8 @@ def emptiest_spot(gray, mw, mh, W, H, margin):
 
 def watermark(src, dst):
     im = Image.open(src).convert("RGBA")
+    if max(im.size) > MAX_EDGE:
+        im.thumbnail((MAX_EDGE, MAX_EDGE), Image.LANCZOS)
     W, H = im.size
     mw = max(150, min(int(W * 0.26), 360))          # single line ≈ 26% of width
     mark = MARK.resize((mw, max(1, round(MARK.height * mw / MARK.width))), Image.LANCZOS)
@@ -75,27 +85,45 @@ def watermark(src, dst):
     margin = max(12, int(min(W, H) * 0.035))
     x, y = emptiest_spot(im.convert("L"), mkw, mkh, W, H, margin)
     im.alpha_composite(mark, (x, y))
-    ext = src.suffix.lower()
+    ext = dst.suffix.lower()
     if ext in (".jpg", ".jpeg"):
-        im.convert("RGB").save(dst, "JPEG", quality=90)
+        im.convert("RGB").save(dst, "JPEG", quality=JPEG_Q, optimize=True, progressive=True)
     elif ext == ".webp":
-        im.save(dst, "WEBP", quality=92)
+        if im.getextrema()[3][0] == 255:        # fully opaque: drop the alpha channel
+            im = im.convert("RGB")
+        im.save(dst, "WEBP", quality=WEBP_Q, method=6)
     else:
-        im.save(dst, "PNG")
+        im.save(dst, "PNG", optimize=True)
+
+
+def clean_source(p):
+    """The clean original for a design/ media file. A .webp may come from a .png original."""
+    rel = p.relative_to(MEDIA)
+    for cand in [BACKUP / rel] + [BACKUP / rel.with_suffix(x) for x in (".png", ".jpg", ".jpeg")]:
+        if cand.exists():
+            return cand
+    return None
 
 
 def main():
-    done = 0
+    done, converted = 0, []
     for p in sorted(MEDIA.rglob("*")):
         if p.suffix.lower() not in EXTS or p.name in SKIP_NAMES or p.name.startswith("."):
             continue
-        clean = BACKUP / p.relative_to(MEDIA)
-        if not clean.exists():
+        clean = clean_source(p)
+        if clean is None:
+            clean = BACKUP / p.relative_to(MEDIA)
             clean.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(p, clean)
-        watermark(clean, p)
+        dst = p.with_suffix(".webp") if p.suffix.lower() == ".png" else p
+        watermark(clean, dst)
+        if dst != p:
+            p.unlink()
+            converted.append((p, dst))
         done += 1
     print(f"watermarked {done} images (clean single-line wordmark, from {BACKUP.name}/)")
+    for old, new in converted:
+        print(f"  converted {old.relative_to(MEDIA.parent.parent).as_posix()} -> {new.suffix}")
 
 
 if __name__ == "__main__":

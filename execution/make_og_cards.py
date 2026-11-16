@@ -2,7 +2,7 @@
 # These are what WhatsApp / Messenger / Facebook / X / iMessage render when an
 # entry URL is shared. Same branding as the 1080x1920 story cards: a darkened
 # "capture" of the person's photo when one exists, else a clean ink-and-gold
-# typographic card. Written to design/assets/og/{slug}.png.
+# typographic card. Written to design/assets/og/{slug}.jpg.
 #
 # Run:  py execution/make_og_cards.py
 import json, sys
@@ -140,7 +140,7 @@ def make_card(name, roles, no, lead, backdrop_src, out_path):
 
     center(d, H - 92, spaced("jerseycitysound.com", 1), font(SANS, 24), CREAM)
 
-    img.save(out_path)
+    img.convert("RGB").save(out_path, "JPEG", quality=82, optimize=True, progressive=True)
 
 
 def first_image(e):
@@ -161,7 +161,7 @@ def main():
     for e in entries:
         lead = (e.get("facts") or [""])[0]
         make_card(e["name"], e.get("roles") or [], e["entry_no"], lead,
-                  first_image(e), OUT / f"{e['slug']}.png")
+                  first_image(e), OUT / f"{e['slug']}.jpg")
         n += 1
     print(f"generated {n} OG cards -> {OUT}")
 

@@ -42,8 +42,9 @@
       e.preventDefault();
       var b = btn("story");
       var slug = name.replace(/[^\w]+/g, "-").toLowerCase().replace(/^-|-$/g, "");
+      var ext = (card.match(/\.(\w+)$/) || [0, "jpg"])[1];
       fetch(card).then(function (r) { return r.blob(); }).then(function (blob) {
-        var file = new File([blob], "jersey-city-sound-" + slug + ".png", { type: "image/png" });
+        var file = new File([blob], "jersey-city-sound-" + slug + "." + ext, { type: blob.type || "image/jpeg" });
         if (navigator.canShare && navigator.canShare({ files: [file] })) {
           return navigator.share({ files: [file], title: title, text: name + " · jerseycitysound.com", url: url });
         }
@@ -51,7 +52,7 @@
       }).catch(function () {
         // Fallback: download the card so it can be posted manually
         var a = document.createElement("a");
-        a.href = card; a.download = "jersey-city-sound-" + slug + ".png";
+        a.href = card; a.download = "jersey-city-sound-" + slug + "." + ext;
         document.body.appendChild(a); a.click(); a.remove();
         flash(b, "Card saved");
       });

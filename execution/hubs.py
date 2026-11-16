@@ -232,7 +232,11 @@ def para(text, g, name_links, self_slug=""):
 
     out = g.esc(text)
     out = re.sub(r"\[\[([a-z0-9-]+\.html)\|([^\]]+)\]\]", lambda m: keep(f'<a href="{m.group(1)}">{m.group(2)}</a>'), out)
-    out = re.sub(r"\[\[([a-z0-9-]+)\|([^\]]+)\]\]", lambda m: keep(f'<a href="entry-{m.group(1)}.html">{m.group(2)}</a>'), out)
+    def entry_link(m):
+        if not (g.OUT / f"entry-{m.group(1)}.html").exists():
+            raise SystemExit(f"hubs.json links to unknown entry slug '{m.group(1)}'")
+        return keep(f'<a href="entry-{m.group(1)}.html">{m.group(2)}</a>')
+    out = re.sub(r"\[\[([a-z0-9-]+)\|([^\]]+)\]\]", entry_link, out)
     out = g.linkify(out, name_links, self_slug)
     for i, html_ in enumerate(stash):
         out = out.replace(f"\x01{i}\x01", html_)
@@ -372,7 +376,7 @@ def write_hub(spec, copy, specs, g, name_links):
 
     body = f"""<main class="wrap">{research_html}
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="index.html">Home</a><span class="sep">&#8594;</span><a href="archive.html">The Archive</a><span class="sep">&#8594;</span><span aria-current="page">{g.esc(spec['h1'])}</span>
+    <a href="/">Home</a><span class="sep">&#8594;</span><a href="archive.html">The Archive</a><span class="sep">&#8594;</span><span aria-current="page">{g.esc(spec['h1'])}</span>
   </nav>
   <header class="entry-header" style="text-align:center;">
     <span class="entry-no reveal reveal--1">The Archive · {g.esc(spec['kicker'])}</span>

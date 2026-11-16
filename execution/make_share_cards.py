@@ -149,7 +149,7 @@ def make_card(name, roles, no, lead, backdrop_src, out_path):
     center(d, H - 246, spaced("jerseycitysound.com", 1), font(SANS, 34), CREAM)
     center(d, H - 190, "Every voice in the city, on the record.", font(SERIF_I, 32), MUTED)
 
-    img.save(out_path)
+    img.convert("RGB").save(out_path, "JPEG", quality=82, optimize=True, progressive=True)
 
 
 def first_image(e):
@@ -171,7 +171,7 @@ def main():
     for e in entries:
         lead = (e.get("facts") or [""])[0]
         make_card(e["name"], e.get("roles") or [], e["entry_no"], lead,
-                  first_image(e), OUT / f"{e['slug']}.png")
+                  first_image(e), OUT / f"{e['slug']}.jpg")
         n += 1
     print(f"generated {n} share cards -> {OUT}")
 
